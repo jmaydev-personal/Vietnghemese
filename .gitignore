@@ -1,6 +1,7 @@
 # Anki source files (large, not needed for the web app)
 *.apkg
 *.csv
+*.zip
 
 # Python
 __pycache__/
