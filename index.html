@@ -277,45 +277,6 @@
     50% { height: 26px; }
   }
 
-  /* ── CONTROLS ── */
-  .controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    padding: 20px 20px 28px;
-    flex-shrink: 0;
-  }
-  .btn {
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.1s, opacity 0.2s;
-    -webkit-tap-highlight-color: transparent;
-    flex-shrink: 0;
-  }
-  .btn:active { transform: scale(0.92); }
-  .btn-skip {
-    width: 52px; height: 52px;
-    background: rgba(255,255,255,0.08);
-    color: var(--text-dim);
-    font-size: 22px;
-  }
-  .btn-play {
-    width: 72px; height: 72px;
-    background: var(--accent);
-    color: white;
-    font-size: 30px;
-    box-shadow: 0 4px 20px rgba(233,69,96,0.4);
-    transition: background 0.3s, box-shadow 0.3s, transform 0.1s;
-  }
-  .btn-play.sent-play {
-    background: var(--accent2);
-    box-shadow: 0 4px 20px rgba(91,141,238,0.4);
-  }
 
   /* ── SETTINGS PANEL ── */
   .settings-overlay {
@@ -525,11 +486,8 @@
     </div>
   </div>
 
-  <div class="controls">
-    <button class="btn btn-skip" onclick="prevWord()"   aria-label="Previous">⏮</button>
-    <button class="btn btn-play" id="playBtn" onclick="togglePlay()" aria-label="Play/Pause">▶</button>
-    <button class="btn btn-skip" onclick="nextWord()"   aria-label="Next">⏭</button>
-  </div>
+  <!-- hidden play button still needed for JS state -->
+  <button id="playBtn" style="display:none" aria-hidden="true"></button>
 </div>
 
 <!-- Settings overlay -->
