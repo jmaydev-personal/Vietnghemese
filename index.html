@@ -386,6 +386,74 @@
     box-shadow: 0 1px 4px rgba(0,0,0,0.3);
   }
   .toggle.on::after { transform: translateX(20px); }
+
+  /* ── TUTORIAL OVERLAY ── */
+  .tutorial-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+    backdrop-filter: blur(6px);
+  }
+  .tutorial-overlay.open { display: flex; }
+  .tutorial-title {
+    font-size: 20px; font-weight: 800;
+    margin-bottom: 8px; text-align: center;
+  }
+  .tutorial-sub {
+    font-size: 14px; color: var(--text-dim);
+    margin-bottom: 36px; text-align: center;
+  }
+  .tutorial-hints {
+    display: flex; flex-direction: column;
+    gap: 28px; width: 100%; max-width: 300px;
+    margin-bottom: 40px;
+  }
+  .tutorial-hint {
+    display: flex; align-items: center; gap: 18px;
+  }
+  .hint-icon {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+    position: relative; overflow: hidden;
+  }
+  .hint-arrow {
+    position: absolute; font-size: 20px;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .hint-arrow.left  { animation-name: swipe-left; }
+  .hint-arrow.right { animation-name: swipe-right; }
+  .hint-arrow.up    { animation-name: swipe-up; }
+  @keyframes swipe-left  {
+    0%, 100% { transform: translateX(8px);  opacity: 0; }
+    50%       { transform: translateX(-8px); opacity: 1; }
+  }
+  @keyframes swipe-right {
+    0%, 100% { transform: translateX(-8px); opacity: 0; }
+    50%       { transform: translateX(8px);  opacity: 1; }
+  }
+  @keyframes swipe-up {
+    0%, 100% { transform: translateY(8px);  opacity: 0; }
+    50%       { transform: translateY(-8px); opacity: 1; }
+  }
+  .hint-text { flex: 1; }
+  .hint-action { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+  .hint-desc   { font-size: 13px; color: var(--text-dim); }
+  .tutorial-btn {
+    background: var(--accent); color: white; border: none;
+    border-radius: 14px; padding: 14px 48px;
+    font-size: 16px; font-weight: 700; cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
 </style>
 </head>
 <body>
@@ -523,7 +591,47 @@
         <button class="setting-btn" onclick="jumpToStart()" style="font-size:14px;">↩</button>
       </div>
     </div>
+
+    <div class="setting-row">
+      <div>
+        <div class="setting-label">Gesture tutorial</div>
+        <div class="setting-sublabel">Show swipe controls guide</div>
+      </div>
+      <div class="setting-value">
+        <button class="setting-btn" onclick="showTutorial()" style="font-size:14px;">?</button>
+      </div>
+    </div>
   </div>
+</div>
+
+<!-- Tutorial overlay -->
+<div class="tutorial-overlay" id="tutorialOverlay">
+  <div class="tutorial-title">Swipe to navigate</div>
+  <div class="tutorial-sub">Use gestures anywhere on the player</div>
+  <div class="tutorial-hints">
+    <div class="tutorial-hint">
+      <div class="hint-icon"><span class="hint-arrow left">👆</span></div>
+      <div class="hint-text">
+        <div class="hint-action">Swipe left</div>
+        <div class="hint-desc">Next word</div>
+      </div>
+    </div>
+    <div class="tutorial-hint">
+      <div class="hint-icon"><span class="hint-arrow right">👆</span></div>
+      <div class="hint-text">
+        <div class="hint-action">Swipe right</div>
+        <div class="hint-desc">Previous word</div>
+      </div>
+    </div>
+    <div class="tutorial-hint">
+      <div class="hint-icon"><span class="hint-arrow up">👆</span></div>
+      <div class="hint-text">
+        <div class="hint-action">Swipe up or down</div>
+        <div class="hint-desc">Play / pause</div>
+      </div>
+    </div>
+  </div>
+  <button class="tutorial-btn" onclick="dismissTutorial()">Got it</button>
 </div>
 
 <audio id="audio" preload="auto"></audio>
@@ -622,6 +730,7 @@ function selectLesson(key) {
   playerMode = pickerMode;
   resetPlayer();
   showScreen('screenPlayer');
+  maybeShowTutorial();
 
   const label = document.getElementById('lessonLabel');
   label.textContent = key ? prettyLesson(key) : (playerMode === 'sentences' ? 'All Sentences' : 'All Words');
@@ -892,6 +1001,23 @@ function releaseWakeLock() {
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible' && isPlaying) requestWakeLock();
 });
+
+// ── Tutorial ──────────────────────────
+const TUTORIAL_KEY = 'vng_tutorial_seen';
+
+function showTutorial() {
+  document.getElementById('settingsOverlay').classList.remove('open');
+  document.getElementById('tutorialOverlay').classList.add('open');
+}
+
+function dismissTutorial() {
+  document.getElementById('tutorialOverlay').classList.remove('open');
+  localStorage.setItem(TUTORIAL_KEY, '1');
+}
+
+function maybeShowTutorial() {
+  if (!localStorage.getItem(TUTORIAL_KEY)) showTutorial();
+}
 
 // ── Touch navigation ──────────────────
 (function() {
