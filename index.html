@@ -348,6 +348,49 @@
   }
   .toggle.on::after { transform: translateX(20px); }
 
+  /* ── GLOSSARY ── */
+  .search-bar {
+    padding: 10px 16px 6px;
+    background: var(--bg);
+    flex-shrink: 0;
+  }
+  .search-input {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 10px 14px;
+    color: var(--text);
+    font-size: 15px;
+    outline: none;
+    -webkit-appearance: none;
+  }
+  .search-input::placeholder { color: var(--text-dim); }
+  .search-input:focus { border-color: rgba(233,69,96,0.4); }
+
+  .glossary-list {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 16px 24px;
+  }
+  .glossary-item {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    cursor: default;
+  }
+  .glossary-item:last-child { border-bottom: none; }
+  .glossary-word    { font-size: 17px; font-weight: 700; margin-bottom: 2px; }
+  .glossary-english { font-size: 13px; color: var(--text-dim); margin-bottom: 3px; }
+  .glossary-ipa     {
+    font-size: 12px; color: var(--text-ipa);
+    font-family: 'Courier New', monospace;
+  }
+  .glossary-empty {
+    text-align: center; color: var(--text-dim);
+    padding: 48px 0; font-size: 15px;
+  }
+
   /* ── TUTORIAL OVERLAY ── */
   .tutorial-overlay {
     position: fixed; inset: 0;
@@ -425,6 +468,7 @@
 <div class="screen active" id="screenLessons">
   <div class="header">
     <span class="header-title">Vietnghemese</span>
+    <button class="icon-btn" onclick="showScreen('screenGlossary'); renderGlossary('')" aria-label="Glossary">📖</button>
     <button class="icon-btn" onclick="openSettings()" aria-label="Settings">⚙️</button>
   </div>
 
@@ -560,6 +604,21 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- ═══════════════════════════════
+     SCREEN 3: GLOSSARY
+═══════════════════════════════ -->
+<div class="screen" id="screenGlossary">
+  <div class="header">
+    <button class="icon-btn" onclick="showScreen('screenLessons')" aria-label="Back">←</button>
+    <span class="header-title">Glossary</span>
+    <span class="header-sub" id="glossaryCount"></span>
+  </div>
+  <div class="search-bar">
+    <input class="search-input" id="searchInput" type="search" placeholder="Search words or English…" oninput="renderGlossary(this.value)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  </div>
+  <div class="glossary-list" id="glossaryList"></div>
 </div>
 
 <!-- Tutorial overlay -->
@@ -956,6 +1015,31 @@ function releaseWakeLock() {
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible' && isPlaying) requestWakeLock();
 });
+
+// ── Glossary ──────────────────────────
+function renderGlossary(query) {
+  const q = query.trim().toLowerCase();
+  const matches = q
+    ? WORDS.filter(w =>
+        w.word.toLowerCase().includes(q) ||
+        w.english.toLowerCase().includes(q))
+    : WORDS;
+
+  const list = document.getElementById('glossaryList');
+  document.getElementById('glossaryCount').textContent = matches.length + ' words';
+
+  if (matches.length === 0) {
+    list.innerHTML = '<div class="glossary-empty">No matches</div>';
+    return;
+  }
+
+  list.innerHTML = matches.map(w => `
+    <div class="glossary-item">
+      <div class="glossary-word">${w.word}</div>
+      <div class="glossary-english">${w.english}</div>
+      ${w.ipa ? `<div class="glossary-ipa">[${w.ipa}]</div>` : ''}
+    </div>`).join('');
+}
 
 // ── Tutorial ──────────────────────────
 const TUTORIAL_KEY = 'vng_tutorial_seen';
