@@ -385,6 +385,11 @@
   .glossary-ipa     {
     font-size: 12px; color: var(--text-ipa);
     font-family: 'Courier New', monospace;
+    margin-bottom: 4px;
+  }
+  .glossary-lessons {
+    font-size: 11px; color: var(--text-dim);
+    margin-top: 4px;
   }
   .glossary-empty {
     text-align: center; color: var(--text-dim);
@@ -510,7 +515,6 @@
         <div class="pos-tag" id="posTag"></div>
         <div class="word"    id="wordEl">—</div>
         <div class="english" id="englishEl">—</div>
-        <div class="ipa"     id="ipaEl"></div>
       </div>
 
       <!-- Sentence card content -->
@@ -681,7 +685,6 @@ let activeLessonKey = null;
 // ── DOM refs ──────────────────────────
 const wordEl    = document.getElementById('wordEl');
 const englishEl = document.getElementById('englishEl');
-const ipaEl     = document.getElementById('ipaEl');
 const posTag    = document.getElementById('posTag');
 const sentVi    = document.getElementById('sentVi');
 const sentEn    = document.getElementById('sentEn');
@@ -819,8 +822,6 @@ function showCard() {
   } else {
     wordEl.textContent    = w.word;
     englishEl.textContent = w.english;
-    ipaEl.textContent     = w.ipa || '';
-    ipaEl.style.display   = w.ipa ? 'inline-block' : 'none';
     posTag.textContent    = w.pos || '';
     posTag.style.display  = w.pos ? 'inline-block' : 'none';
   }
@@ -1037,7 +1038,7 @@ function renderGlossary(query) {
     <div class="glossary-item">
       <div class="glossary-word">${w.word}</div>
       <div class="glossary-english">${w.english}</div>
-      ${w.ipa ? `<div class="glossary-ipa">[${w.ipa}]</div>` : ''}
+      ${w.lessons && w.lessons.length ? `<div class="glossary-lessons">${w.lessons.map(l => prettyLesson(l)).join(' · ')}</div>` : ''}
     </div>`).join('');
 }
 
