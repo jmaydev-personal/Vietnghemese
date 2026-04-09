@@ -1020,11 +1020,12 @@ document.addEventListener('visibilitychange', () => {
 // ── Glossary ──────────────────────────
 function renderGlossary(query) {
   const q = query.trim().toLowerCase();
-  const matches = q
+  const matches = (q
     ? WORDS.filter(w =>
         w.word.toLowerCase().includes(q) ||
         w.english.toLowerCase().includes(q))
-    : WORDS;
+    : [...WORDS]
+  ).sort((a, b) => a.word.localeCompare(b.word, 'vi'));
 
   const list = document.getElementById('glossaryList');
   document.getElementById('glossaryCount').textContent = matches.length + ' words';
