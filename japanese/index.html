@@ -1392,6 +1392,9 @@ fetch('words.json')
     CHAPTERS.sort();
     Object.values(CHAPTER_SECTIONS).forEach(arr => arr.sort());
 
+    // Expand all chapters by default so sections are visible up-front
+    CHAPTERS.forEach(c => expandedChapters.add(c));
+
     document.getElementById('allCount').textContent = data.length + ' words';
     document.getElementById('speedDisplay').textContent = speed.toFixed(1) + '×';
 
