@@ -308,6 +308,33 @@
     letter-spacing: 0.3px;
   }
 
+  /* Example sentence under the word */
+  .word-sent-block {
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+  }
+  .word-sent {
+    font-size: clamp(15px, 4.5vw, 19px);
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .word-sent rt { font-size: 0.42em; }
+  .word-sent b {
+    color: var(--accent);
+    font-weight: 800;
+  }
+  .word-sent b rt { color: var(--accent); }
+  .word-sent-en {
+    font-size: clamp(12px, 3.4vw, 14px);
+    color: var(--text-dim);
+    line-height: 1.45;
+    font-style: italic;
+  }
+
   /* Sentence card content */
   .sent-keyword {
     display: inline-block;
@@ -602,6 +629,10 @@
         <div class="word"    id="wordEl">—</div>
         <div class="english" id="englishEl">—</div>
         <div class="alternate" id="altEl" style="display:none"></div>
+        <div class="word-sent-block" id="wordSentBlock" style="display:none">
+          <div class="word-sent"    id="wordSentJa">—</div>
+          <div class="word-sent-en" id="wordSentEn">—</div>
+        </div>
       </div>
 
       <!-- Sentence card content -->
@@ -811,6 +842,9 @@ const wordEl    = document.getElementById('wordEl');
 const englishEl = document.getElementById('englishEl');
 const posTag    = document.getElementById('posTag');
 const altEl     = document.getElementById('altEl');
+const wordSentBlock = document.getElementById('wordSentBlock');
+const wordSentJa    = document.getElementById('wordSentJa');
+const wordSentEn    = document.getElementById('wordSentEn');
 const sentVi    = document.getElementById('sentVi');
 const sentEn    = document.getElementById('sentEn');
 const sentKw    = document.getElementById('sentKeyword');
@@ -1095,6 +1129,19 @@ function showCard() {
       altEl.style.display = 'inline-block';
     } else {
       altEl.style.display = 'none';
+    }
+
+    // Example sentence (no audio available, but shown for context).
+    if (w.sent) {
+      const src = showFurigana ? (w.sentfurigana || w.sent) : w.sent;
+      wordSentJa.innerHTML = showFurigana
+        ? renderFurigana(src)
+        : escapeHtmlWithBold(w.sent);
+      wordSentEn.textContent = w.senten || '';
+      wordSentEn.style.display = w.senten ? '' : 'none';
+      wordSentBlock.style.display = '';
+    } else {
+      wordSentBlock.style.display = 'none';
     }
   }
 
