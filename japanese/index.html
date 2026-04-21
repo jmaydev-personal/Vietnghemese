@@ -1058,17 +1058,39 @@ function showCard() {
       : escapeHtmlWithBold(w.sent);
     sentEn.textContent = w.senten || '—';
   } else {
-    // Word: if the word is pure kana, just show word; otherwise use furigana reading.
-    const wordHtml = showFurigana && w.furigana
-      ? renderFurigana(w.furigana)
-      : escapeHtml(w.word);
+    // Word card: prefer kanji as the primary focus.
+    // Case A: `word` itself contains kanji → use built-in furigana markup (e.g. 父[ちち]).
+    // Case B: `word` is kana and `alternate` has kanji → swap: show kanji as primary,
+    //         with the kana reading as ruby furigana above.
+    // Case C: no kanji anywhere → show the kana word alone (no alt box).
+    const KANJI_RE = /[\u3400-\u4dbf\u4e00-\u9fff]/;
+    const wordHasKanji = KANJI_RE.test(w.word);
+    const altHasKanji  = w.alternate && KANJI_RE.test(w.alternate);
+    const shouldSwap   = !wordHasKanji && altHasKanji;
+
+    let wordHtml;
+    if (shouldSwap) {
+      wordHtml = showFurigana
+        ? '<ruby>' + escapeHtml(w.alternate) + '<rt>' + escapeHtml(w.word) + '</rt></ruby>'
+        : escapeHtml(w.alternate);
+    } else if (showFurigana && w.furigana) {
+      wordHtml = renderFurigana(w.furigana);
+    } else {
+      wordHtml = escapeHtml(w.word);
+    }
     wordEl.innerHTML = wordHtml;
+
     englishEl.textContent = w.english || '—';
     const p = prettyPos(w.pos);
     posTag.textContent = p;
     posTag.style.display = p ? 'inline-block' : 'none';
-    // Show kanji alternate (e.g., わたし → 私) if present
-    if (w.alternate) {
+
+    // Alt box: hidden when swapping (kanji already primary + kana is above as ruby),
+    // shown with the kanji alternate only in the non-swapped kanji-already-primary case
+    // where we still have a different alt form worth surfacing.
+    if (shouldSwap) {
+      altEl.style.display = 'none';
+    } else if (w.alternate && wordHasKanji) {
       altEl.textContent = w.alternate;
       altEl.style.display = 'inline-block';
     } else {
