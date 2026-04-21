@@ -168,8 +168,77 @@
   .lesson-item:active { background: rgba(255,255,255,0.08); }
   .lesson-item.current-words  { border-color: rgba(188,0,45,0.45);  background: rgba(188,0,45,0.08); }
   .lesson-item.current-sents  { border-color: rgba(91,141,238,0.4); background: rgba(91,141,238,0.07); }
-  .lesson-name { font-size: 15px; font-weight: 500; color: var(--text); }
+  .lesson-name { font-size: 15px; font-weight: 500; color: var(--text); flex: 1; min-width: 0; }
   .lesson-count { font-size: 12px; color: var(--text-dim); flex-shrink: 0; margin-left: 12px; }
+
+  /* Chapter dropdown */
+  .chapter-group { margin-bottom: 8px; }
+  .chapter-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 13px 16px;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.05);
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s, border-color 0.15s, border-radius 0.15s;
+  }
+  .chapter-header:active { background: rgba(255,255,255,0.08); }
+  .chapter-group.open .chapter-header {
+    border-radius: 12px 12px 0 0;
+    border-bottom-color: transparent;
+    background: rgba(255,255,255,0.04);
+  }
+  .chapter-chevron {
+    display: inline-block;
+    width: 14px;
+    color: var(--text-dim);
+    font-size: 13px;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  .chapter-group.open .chapter-chevron { transform: rotate(90deg); color: var(--text); }
+
+  .chapter-sections {
+    display: none;
+    padding: 6px 10px 10px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+  }
+  .chapter-group.open .chapter-sections { display: block; }
+  .section-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px 10px 26px;
+    margin: 2px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    transition: background 0.15s;
+  }
+  .section-item::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    width: 6px; height: 1px;
+    background: rgba(255,255,255,0.15);
+  }
+  .section-item:active { background: rgba(255,255,255,0.07); }
+  .section-item.current-words  { background: rgba(188,0,45,0.10); }
+  .section-item.current-sents  { background: rgba(91,141,238,0.10); }
+  .section-item.all-row { font-weight: 600; }
+  .section-item.all-row .section-name { color: var(--accent); }
+  .chapter-group.sent-mode .section-item.all-row .section-name { color: var(--accent2); }
+  .section-name { font-size: 14px; color: var(--text); flex: 1; min-width: 0; }
+  .section-count { font-size: 11px; color: var(--text-dim); flex-shrink: 0; margin-left: 10px; }
 
   /* ── PROGRESS BAR ── */
   .progress-track { height: 3px; background: rgba(255,255,255,0.08); flex-shrink: 0; }
@@ -689,7 +758,13 @@ if ('speechSynthesis' in window) {
   window.speechSynthesis.cancel();
 }
 
-let WORDS = [], LESSONS = [], COUNTS = {}, SCOUNTS = {};
+let WORDS = [];
+let CHAPTERS = [];                // ordered list of chapter keys
+let CHAPTER_SECTIONS = {};        // chapter_key -> ordered list of section keys
+let CHAPTER_WCOUNT = {};          // chapter_key -> word count
+let CHAPTER_SCOUNT = {};          // chapter_key -> sentence count
+let SECTION_WCOUNT = {};          // `${chapter}|${section}` -> word count
+let SECTION_SCOUNT = {};          // `${chapter}|${section}` -> sentence count
 
 // ── State ─────────────────────────────
 let pickerMode      = 'words';
@@ -706,7 +781,10 @@ let showFurigana    = true;
 let gapTimer        = null;
 let watchdogTimer   = null;
 let wakeLock        = null;
-let activeLessonKey = null;
+// activeLesson: null (all) | {chapter} | {chapter, section}
+let activeLesson    = null;
+// chapters currently expanded in the picker
+let expandedChapters = new Set();
 
 // ── POS dictionary: Japanese → English (N5 subset) ──
 const POS_MAP = {
@@ -802,42 +880,110 @@ function setPickerMode(mode) {
 }
 
 function prettyLesson(key) {
+  // "01_自己紹介" → "01. 自己紹介"
+  if (!key) return '';
   const parts = key.split('_');
   const num = parts[0];
   const name = parts.slice(1).join(' ');
   return num + '. ' + name;
 }
 
+function lessonLabel(active) {
+  if (!active) return playerMode === 'sentences' ? 'All Sentences' : 'All Words';
+  if (active.section) return prettyLesson(active.chapter) + ' · ' + prettyLesson(active.section);
+  return prettyLesson(active.chapter);
+}
+
+function toggleChapterExpanded(chapter) {
+  if (expandedChapters.has(chapter)) expandedChapters.delete(chapter);
+  else expandedChapters.add(chapter);
+  buildLessonList();
+}
+
 function buildLessonList() {
   const container = document.getElementById('lessonItems');
   container.innerHTML = '';
   const isSent = pickerMode === 'sentences';
-  LESSONS.forEach(key => {
-    const count = isSent ? (SCOUNTS[key] || 0) : (COUNTS[key] || 0);
-    if (count === 0) return;
-    const isCurrentWords = !isSent && key === activeLessonKey && playerMode === 'words';
-    const isCurrentSents = isSent  && key === activeLessonKey && playerMode === 'sentences';
-    const div = document.createElement('div');
-    div.className = 'lesson-item'
-      + (isCurrentWords ? ' current-words' : '')
-      + (isCurrentSents ? ' current-sents' : '');
-    div.innerHTML =
-      '<span class="lesson-name">' + prettyLesson(key) + '</span>' +
-      '<span class="lesson-count">' + count + (isSent ? ' sentences' : ' words') + '</span>';
-    div.onclick = () => selectLesson(key);
-    container.appendChild(div);
+  const unit = isSent ? ' sentences' : ' words';
+  const chapCounts  = isSent ? CHAPTER_SCOUNT : CHAPTER_WCOUNT;
+  const secCounts   = isSent ? SECTION_SCOUNT : SECTION_WCOUNT;
+
+  CHAPTERS.forEach(chapter => {
+    const cCount = chapCounts[chapter] || 0;
+    if (cCount === 0) return;
+
+    const group = document.createElement('div');
+    group.className = 'chapter-group';
+    if (expandedChapters.has(chapter)) group.classList.add('open');
+    if (isSent) group.classList.add('sent-mode');
+
+    // Chapter header
+    const header = document.createElement('div');
+    header.className = 'chapter-header';
+    const chapSelectedWords = !isSent && activeLesson && activeLesson.chapter === chapter && !activeLesson.section && playerMode === 'words';
+    const chapSelectedSents = isSent  && activeLesson && activeLesson.chapter === chapter && !activeLesson.section && playerMode === 'sentences';
+    if (chapSelectedWords) header.classList.add('current-words');
+    if (chapSelectedSents) header.classList.add('current-sents');
+    header.innerHTML =
+      '<span class="chapter-chevron">▸</span>' +
+      '<span class="lesson-name">' + prettyLesson(chapter) + '</span>' +
+      '<span class="lesson-count">' + cCount + unit + '</span>';
+    header.onclick = () => toggleChapterExpanded(chapter);
+    group.appendChild(header);
+
+    // Expanded sub-list
+    const sub = document.createElement('div');
+    sub.className = 'chapter-sections';
+
+    // "All of chapter" row
+    const allRow = document.createElement('div');
+    allRow.className = 'section-item all-row'
+      + (chapSelectedWords ? ' current-words' : '')
+      + (chapSelectedSents ? ' current-sents' : '');
+    allRow.innerHTML =
+      '<span class="section-name">All of ' + prettyLesson(chapter) + '</span>' +
+      '<span class="section-count">' + cCount + unit + '</span>';
+    allRow.onclick = (e) => {
+      e.stopPropagation();
+      selectLesson({chapter});
+    };
+    sub.appendChild(allRow);
+
+    // Section rows
+    (CHAPTER_SECTIONS[chapter] || []).forEach(section => {
+      const sKey = chapter + '|' + section;
+      const sCount = secCounts[sKey] || 0;
+      if (sCount === 0) return;
+      const selWords = !isSent && activeLesson && activeLesson.chapter === chapter && activeLesson.section === section && playerMode === 'words';
+      const selSents = isSent  && activeLesson && activeLesson.chapter === chapter && activeLesson.section === section && playerMode === 'sentences';
+      const row = document.createElement('div');
+      row.className = 'section-item'
+        + (selWords ? ' current-words' : '')
+        + (selSents ? ' current-sents' : '');
+      row.innerHTML =
+        '<span class="section-name">' + prettyLesson(section) + '</span>' +
+        '<span class="section-count">' + sCount + unit + '</span>';
+      row.onclick = (e) => {
+        e.stopPropagation();
+        selectLesson({chapter, section});
+      };
+      sub.appendChild(row);
+    });
+
+    group.appendChild(sub);
+    container.appendChild(group);
   });
 }
 
-function selectLesson(key) {
-  activeLessonKey = key;
+function selectLesson(lesson) {
+  // lesson: null | {chapter} | {chapter, section}
+  activeLesson = lesson;
   playerMode = pickerMode;
   resetPlayer();
   showScreen('screenPlayer');
   maybeShowTutorial();
 
-  const label = document.getElementById('lessonLabel');
-  label.textContent = key ? prettyLesson(key) : (playerMode === 'sentences' ? 'All Sentences' : 'All Words');
+  document.getElementById('lessonLabel').textContent = lessonLabel(activeLesson);
 
   const isSent = playerMode === 'sentences';
   progress.className = 'progress-fill' + (isSent ? ' sent-fill' : '');
@@ -859,16 +1005,18 @@ function showScreen(id) {
 function buildPlaylist() {
   let pool;
   if (playerMode === 'sentences') {
-    // Show only words that have a sentence (audio is word audio)
-    pool = WORDS
-      .map((w, i) => (w.sent && w.audio ? i : -1))
-      .filter(i => i >= 0);
+    pool = WORDS.map((w, i) => (w.sent && w.audio ? i : -1)).filter(i => i >= 0);
   } else {
     pool = WORDS.map((_, i) => i).filter(i => WORDS[i].audio);
   }
 
-  if (activeLessonKey !== null) {
-    pool = pool.filter(i => WORDS[i].lessons && WORDS[i].lessons.includes(activeLessonKey));
+  if (activeLesson) {
+    pool = pool.filter(i => {
+      const w = WORDS[i];
+      if (w.chapter !== activeLesson.chapter) return false;
+      if (activeLesson.section && w.section !== activeLesson.section) return false;
+      return true;
+    });
   }
 
   playlist = pool;
@@ -1225,17 +1373,25 @@ fetch('words.json')
   .then(data => {
     WORDS = data;
 
-    const seen = new Set();
+    const seenChap = new Set();
+    const seenSect = {};
     data.forEach(w => {
-      (w.lessons || []).forEach(l => {
-        if (!seen.has(l)) { seen.add(l); LESSONS.push(l); }
-        COUNTS[l]  = (COUNTS[l]  || 0) + 1;
-        if (w.sent) SCOUNTS[l] = (SCOUNTS[l] || 0) + 1;
-      });
+      const c = w.chapter;
+      const s = w.section;
+      if (!seenChap.has(c)) { seenChap.add(c); CHAPTERS.push(c); CHAPTER_SECTIONS[c] = []; }
+      CHAPTER_WCOUNT[c] = (CHAPTER_WCOUNT[c] || 0) + 1;
+      if (w.sent) CHAPTER_SCOUNT[c] = (CHAPTER_SCOUNT[c] || 0) + 1;
+      if (s) {
+        const key = c + '|' + s;
+        seenSect[c] = seenSect[c] || new Set();
+        if (!seenSect[c].has(s)) { seenSect[c].add(s); CHAPTER_SECTIONS[c].push(s); }
+        SECTION_WCOUNT[key] = (SECTION_WCOUNT[key] || 0) + 1;
+        if (w.sent) SECTION_SCOUNT[key] = (SECTION_SCOUNT[key] || 0) + 1;
+      }
     });
-    LESSONS.sort();
+    CHAPTERS.sort();
+    Object.values(CHAPTER_SECTIONS).forEach(arr => arr.sort());
 
-    // Populate header counts
     document.getElementById('allCount').textContent = data.length + ' words';
     document.getElementById('speedDisplay').textContent = speed.toFixed(1) + '×';
 
