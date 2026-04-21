@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#000000">
+<title>Nihongo N5</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #000000;
+    --surface: #0d0d0d;
+    --accent: #bc002d;          /* hinomaru red */
+    --accent2: #5b8dee;
+    --text: #eaeaea;
+    --text-dim: #888;
+    --text-furi: #a0c4ff;
+    --radius: 18px;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "Meiryo", 'Segoe UI', sans-serif;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Ruby (furigana) styling */
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.48em;
+    color: var(--text-furi);
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+
+  /* Bold target word inside sentences */
+  .sent-vi b, .sent-fu b {
+    color: var(--accent);
+    font-weight: 800;
+  }
+  .sent-fu b rt { color: var(--accent); }
+
+  /* ── SCREENS ── */
+  .screen { display: none; flex-direction: column; height: 100dvh; }
+  .screen.active { display: flex; }
+
+  /* ── SHARED HEADER ── */
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    background: var(--bg);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    flex-shrink: 0;
+  }
+  .header-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    flex: 1;
+  }
+  .header-sub {
+    font-size: 13px;
+    color: var(--text-dim);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .icon-btn {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 8px;
+    -webkit-tap-highlight-color: transparent;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .icon-btn:active { color: var(--text); }
+
+  /* ── MODE TOGGLE ── */
+  .mode-bar {
+    display: flex;
+    padding: 12px 16px 4px;
+    gap: 8px;
+    flex-shrink: 0;
+    background: var(--bg);
+  }
+  .mode-pill {
+    flex: 1;
+    padding: 9px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s, color 0.2s;
+    background: rgba(255,255,255,0.06);
+    color: var(--text-dim);
+  }
+  .mode-pill.active {
+    background: var(--accent);
+    color: #fff;
+  }
+  .mode-pill.active.sent-mode {
+    background: var(--accent2);
+  }
+
+  /* ── LESSON PICKER ── */
+  .lesson-list {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 12px 16px 24px;
+  }
+  .lesson-all {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(188,0,45,0.12);
+    border: 1px solid rgba(188,0,45,0.32);
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s;
+  }
+  .lesson-all.sent-all {
+    background: rgba(91,141,238,0.10);
+    border-color: rgba(91,141,238,0.28);
+  }
+  .lesson-all:active { background: rgba(188,0,45,0.22); }
+  .lesson-all.sent-all:active { background: rgba(91,141,238,0.20); }
+  .lesson-all-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .lesson-all.sent-all .lesson-all-text { color: var(--accent2); }
+  .lesson-all-count { font-size: 13px; color: var(--text-dim); }
+
+  .lesson-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 13px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.05);
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .lesson-item:active { background: rgba(255,255,255,0.08); }
+  .lesson-item.current-words  { border-color: rgba(188,0,45,0.45);  background: rgba(188,0,45,0.08); }
+  .lesson-item.current-sents  { border-color: rgba(91,141,238,0.4); background: rgba(91,141,238,0.07); }
+  .lesson-name { font-size: 15px; font-weight: 500; color: var(--text); }
+  .lesson-count { font-size: 12px; color: var(--text-dim); flex-shrink: 0; margin-left: 12px; }
+
+  /* ── PROGRESS BAR ── */
+  .progress-track { height: 3px; background: rgba(255,255,255,0.08); flex-shrink: 0; }
+  .progress-fill  { height: 100%; background: var(--accent); transition: width 0.3s ease; }
+  .progress-fill.sent-fill { background: var(--accent2); }
+
+  /* ── PLAYER CARD ── */
+  .player-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
+  }
+  .card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  }
+  .card.playing       { border-color: rgba(188,0,45,0.4); box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(188,0,45,0.2); }
+  .card.playing.sent  { border-color: rgba(91,141,238,0.35); box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(91,141,238,0.15); }
+
+  /* Word card content */
+  .pos-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(188,0,45,0.14);
+    border-radius: 6px;
+    padding: 3px 10px;
+    margin-bottom: 20px;
+  }
+  .word {
+    font-size: clamp(36px, 10vw, 56px);
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+  }
+  .word rt {
+    font-size: 0.34em;
+    font-weight: 500;
+  }
+  .english {
+    font-size: clamp(17px, 4.5vw, 22px);
+    font-weight: 500;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .alternate {
+    font-size: clamp(13px, 3.5vw, 15px);
+    color: var(--text-furi);
+    background: rgba(160,196,255,0.07);
+    border-radius: 8px;
+    padding: 4px 12px;
+    display: inline-block;
+    letter-spacing: 0.3px;
+  }
+
+  /* Sentence card content */
+  .sent-keyword {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--accent2);
+    background: rgba(91,141,238,0.12);
+    border-radius: 6px;
+    padding: 3px 10px;
+    margin-bottom: 20px;
+  }
+  .sent-vi {
+    font-size: clamp(20px, 6vw, 30px);
+    font-weight: 700;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+  .sent-vi rt { font-size: 0.42em; }
+  .sent-en {
+    font-size: clamp(14px, 4vw, 18px);
+    color: var(--text-dim);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  /* Shared wave */
+  .wave {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: 28px;
+    margin-top: 24px;
+  }
+  .wave-bar {
+    width: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+    opacity: 0.3;
+    height: 8px;
+    transition: opacity 0.3s;
+  }
+  .wave.sent-wave .wave-bar { background: var(--accent2); }
+  .wave.active .wave-bar {
+    opacity: 1;
+    animation: wave 1s ease-in-out infinite;
+  }
+  .wave-bar:nth-child(1) { animation-delay: 0s; }
+  .wave-bar:nth-child(2) { animation-delay: 0.1s; }
+  .wave-bar:nth-child(3) { animation-delay: 0.2s; }
+  .wave-bar:nth-child(4) { animation-delay: 0.3s; }
+  .wave-bar:nth-child(5) { animation-delay: 0.4s; }
+  @keyframes wave {
+    0%, 100% { height: 8px; }
+    50% { height: 26px; }
+  }
+
+  /* ── SETTINGS PANEL ── */
+  .settings-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 100;
+    display: none;
+    align-items: flex-end;
+    backdrop-filter: blur(4px);
+  }
+  .settings-overlay.open { display: flex; }
+  .settings-panel {
+    background: #111;
+    border-radius: 24px 24px 0 0;
+    padding: 12px 20px 40px;
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    animation: slide-up 0.25s ease;
+  }
+  @keyframes slide-up {
+    from { transform: translateY(100%); }
+    to   { transform: translateY(0); }
+  }
+  .settings-handle {
+    width: 36px; height: 4px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+    margin: 8px auto 20px;
+  }
+  .settings-title { font-size: 16px; font-weight: 700; margin-bottom: 20px; }
+  .setting-row {
+    display: flex; align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .setting-row:last-child { border-bottom: none; }
+  .setting-label  { font-size: 15px; }
+  .setting-sublabel { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+  .setting-value {
+    display: flex; align-items: center;
+    gap: 12px; color: var(--accent);
+    font-weight: 600; font-size: 16px;
+  }
+  .setting-btn {
+    background: rgba(255,255,255,0.08);
+    border: none; color: var(--text);
+    width: 32px; height: 32px;
+    border-radius: 50%; cursor: pointer;
+    font-size: 18px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .setting-btn:hover { background: rgba(255,255,255,0.15); }
+  .toggle {
+    width: 48px; height: 28px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 14px; position: relative;
+    cursor: pointer; transition: background 0.2s;
+    border: none; flex-shrink: 0;
+  }
+  .toggle.on { background: var(--accent); }
+  .toggle::after {
+    content: ''; position: absolute;
+    top: 3px; left: 3px;
+    width: 22px; height: 22px;
+    background: white; border-radius: 50%;
+    transition: transform 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  }
+  .toggle.on::after { transform: translateX(20px); }
+
+  /* ── GLOSSARY ── */
+  .search-bar {
+    padding: 10px 16px 6px;
+    background: var(--bg);
+    flex-shrink: 0;
+  }
+  .search-input {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 10px 14px;
+    color: var(--text);
+    font-size: 15px;
+    outline: none;
+    -webkit-appearance: none;
+  }
+  .search-input::placeholder { color: var(--text-dim); }
+  .search-input:focus { border-color: rgba(188,0,45,0.4); }
+
+  .glossary-list {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 16px 24px;
+  }
+  .glossary-item {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    cursor: default;
+  }
+  .glossary-item:last-child { border-bottom: none; }
+  .glossary-word    { font-size: 17px; font-weight: 700; margin-bottom: 2px; }
+  .glossary-word rt { font-size: 0.5em; }
+  .glossary-english { font-size: 13px; color: var(--text-dim); margin-bottom: 3px; }
+  .glossary-lessons {
+    font-size: 11px; color: var(--text-dim);
+    margin-top: 4px;
+  }
+  .glossary-empty {
+    text-align: center; color: var(--text-dim);
+    padding: 48px 0; font-size: 15px;
+  }
+
+  /* ── TUTORIAL OVERLAY ── */
+  .tutorial-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.88);
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+    backdrop-filter: blur(6px);
+  }
+  .tutorial-overlay.open { display: flex; }
+  .tutorial-title {
+    font-size: 20px; font-weight: 800;
+    margin-bottom: 8px; text-align: center;
+  }
+  .tutorial-sub {
+    font-size: 14px; color: var(--text-dim);
+    margin-bottom: 36px; text-align: center;
+  }
+  .tutorial-hints {
+    display: flex; flex-direction: column;
+    gap: 28px; width: 100%; max-width: 300px;
+    margin-bottom: 40px;
+  }
+  .tutorial-hint {
+    display: flex; align-items: center; gap: 18px;
+  }
+  .hint-icon {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+    position: relative; overflow: hidden;
+  }
+  .hint-arrow {
+    position: absolute; font-size: 20px;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .hint-arrow.left  { animation-name: swipe-left; }
+  .hint-arrow.right { animation-name: swipe-right; }
+  .hint-arrow.up    { animation-name: swipe-up; }
+  @keyframes swipe-left  {
+    0%, 100% { transform: translateX(8px);  opacity: 0; }
+    50%       { transform: translateX(-8px); opacity: 1; }
+  }
+  @keyframes swipe-right {
+    0%, 100% { transform: translateX(-8px); opacity: 0; }
+    50%       { transform: translateX(8px);  opacity: 1; }
+  }
+  @keyframes swipe-up {
+    0%, 100% { transform: translateY(8px);  opacity: 0; }
+    50%       { transform: translateY(-8px); opacity: 1; }
+  }
+  .hint-text { flex: 1; }
+  .hint-action { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+  .hint-desc   { font-size: 13px; color: var(--text-dim); }
+  .tutorial-btn {
+    background: var(--accent); color: white; border: none;
+    border-radius: 14px; padding: 14px 48px;
+    font-size: 16px; font-weight: 700; cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════
+     SCREEN 1: LESSON PICKER
+═══════════════════════════════ -->
+<div class="screen active" id="screenLessons">
+  <div class="header">
+    <span class="header-title">日本語 N5</span>
+    <button class="icon-btn" onclick="showScreen('screenGlossary'); renderGlossary('')" aria-label="Glossary">📖</button>
+    <button class="icon-btn" onclick="openSettings()" aria-label="Settings">⚙️</button>
+  </div>
+
+  <!-- Mode toggle -->
+  <div class="mode-bar">
+    <button class="mode-pill active" id="modeWords"      onclick="setPickerMode('words')">Words</button>
+    <button class="mode-pill"        id="modeSentences"  onclick="setPickerMode('sentences')">Sentences</button>
+  </div>
+
+  <div class="lesson-list">
+    <div class="lesson-all" id="allRow" onclick="selectLesson(null)">
+      <span class="lesson-all-text" id="allLabel">All Words</span>
+      <span class="lesson-all-count" id="allCount">—</span>
+    </div>
+    <div id="lessonItems"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     SCREEN 2: PLAYER
+═══════════════════════════════ -->
+<div class="screen" id="screenPlayer">
+  <div class="header">
+    <button class="icon-btn" onclick="goToLessons()" aria-label="Back">←</button>
+    <span class="header-title" id="lessonLabel">All Words</span>
+    <span class="header-sub"   id="playerCounter">1 / 1186</span>
+    <button class="icon-btn" onclick="openSettings()" aria-label="Settings">⚙️</button>
+  </div>
+
+  <div class="progress-track">
+    <div class="progress-fill" id="progress" style="width:0%"></div>
+  </div>
+
+  <div class="player-main">
+    <div class="card" id="card">
+
+      <!-- Word card content -->
+      <div id="wordContent">
+        <div class="pos-tag" id="posTag"></div>
+        <div class="word"    id="wordEl">—</div>
+        <div class="english" id="englishEl">—</div>
+        <div class="alternate" id="altEl" style="display:none"></div>
+      </div>
+
+      <!-- Sentence card content -->
+      <div id="sentContent" style="display:none">
+        <div class="sent-keyword" id="sentKeyword"></div>
+        <div class="sent-vi"      id="sentVi">—</div>
+        <div class="sent-en"      id="sentEn">—</div>
+      </div>
+
+      <div class="wave" id="wave">
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <button id="playBtn" style="display:none" aria-hidden="true"></button>
+</div>
+
+<!-- Settings overlay -->
+<div class="settings-overlay" id="settingsOverlay" onclick="closeSettingsOnBg(event)">
+  <div class="settings-panel">
+    <div class="settings-handle"></div>
+    <div class="settings-title">Settings</div>
+
+    <div class="setting-row">
+      <div>
+        <div class="setting-label">Repeat each item</div>
+        <div class="setting-sublabel">Times to play before advancing</div>
+      </div>
+      <div class="setting-value">
+        <button class="setting-btn" onclick="adjustRepeat(-1)">−</button>
+        <span id="repeatDisplay">5×</span>
+        <button class="setting-btn" onclick="adjustRepeat(1)">+</button>
+      </div>
+    </div>
+
+    <div class="setting-row">
+      <div>
+        <div class="setting-label">Gap between items</div>
+        <div class="setting-sublabel">Pause after each one</div>
+      </div>
+      <div class="setting-value">
+        <button class="setting-btn" onclick="adjustGap(-0.5)">−</button>
+        <span id="gapDisplay">1.5s</span>
+        <button class="setting-btn" onclick="adjustGap(0.5)">+</button>
+      </div>
+    </div>
+
+    <div class="setting-row">
+      <div>
+        <div class="setting-label">Playback speed</div>
+        <div class="setting-sublabel">Audio speed</div>
+      </div>
+      <div class="setting-value">
+        <button class="setting-btn" onclick="adjustSpeed(-0.1)">−</button>
+        <span id="speedDisplay">0.8×</span>
+        <button class="setting-btn" onclick="adjustSpeed(0.1)">+</button>
+      </div>
+    </div>
+
+    <div class="setting-row">
+      <div>
+        <div class="setting-label">Show furigana</div>
+        <div class="setting-sublabel">Hiragana readings above kanji</div>
+      </div>
+      <button class="toggle on" id="furiToggle" onclick="toggleFurigana()"></button>
+    </div>
+
+    <div class="setting-row">
+      <div>
+        <div class="setting-label">Shuffle</div>
+        <div class="setting-sublabel">Randomize order</div>
+      </div>
+      <button class="toggle" id="shuffleToggle" onclick="toggleShuffle()"></button>
+    </div>
+
+    <div class="setting-row">
+      <div>
+        <div class="setting-label">Restart</div>
+        <div class="setting-sublabel">Jump back to the first item</div>
+      </div>
+      <div class="setting-value">
+        <button class="setting-btn" onclick="jumpToStart()" style="font-size:14px;">↩</button>
+      </div>
+    </div>
+
+    <div class="setting-row">
+      <div>
+        <div class="setting-label">Gesture tutorial</div>
+        <div class="setting-sublabel">Show swipe controls guide</div>
+      </div>
+      <div class="setting-value">
+        <button class="setting-btn" onclick="showTutorial()" style="font-size:14px;">?</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     SCREEN 3: GLOSSARY
+═══════════════════════════════ -->
+<div class="screen" id="screenGlossary">
+  <div class="header">
+    <button class="icon-btn" onclick="showScreen('screenLessons')" aria-label="Back">←</button>
+    <span class="header-title">Glossary</span>
+    <span class="header-sub" id="glossaryCount"></span>
+  </div>
+  <div class="search-bar">
+    <input class="search-input" id="searchInput" type="search" placeholder="Search Japanese, reading, or English…" oninput="renderGlossary(this.value)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  </div>
+  <div class="glossary-list" id="glossaryList"></div>
+</div>
+
+<!-- Tutorial overlay -->
+<div class="tutorial-overlay" id="tutorialOverlay">
+  <div class="tutorial-title">Swipe to navigate</div>
+  <div class="tutorial-sub">Use gestures anywhere on the player</div>
+  <div class="tutorial-hints">
+    <div class="tutorial-hint">
+      <div class="hint-icon"><span class="hint-arrow left">👆</span></div>
+      <div class="hint-text">
+        <div class="hint-action">Swipe left</div>
+        <div class="hint-desc">Next word</div>
+      </div>
+    </div>
+    <div class="tutorial-hint">
+      <div class="hint-icon"><span class="hint-arrow right">👆</span></div>
+      <div class="hint-text">
+        <div class="hint-action">Swipe right</div>
+        <div class="hint-desc">Previous word</div>
+      </div>
+    </div>
+    <div class="tutorial-hint">
+      <div class="hint-icon"><span class="hint-arrow up">👆</span></div>
+      <div class="hint-text">
+        <div class="hint-action">Swipe up or down</div>
+        <div class="hint-desc">Play / pause</div>
+      </div>
+    </div>
+  </div>
+  <button class="tutorial-btn" onclick="dismissTutorial()">Got it</button>
+</div>
+
+<audio id="audio" preload="auto"></audio>
+
+<script>
+// Disable Web Speech API entirely — never fall back to TTS
+if ('speechSynthesis' in window) {
+  window.speechSynthesis.speak = () => {};
+  window.speechSynthesis.cancel();
+}
+
+let WORDS = [], LESSONS = [], COUNTS = {}, SCOUNTS = {};
+
+// ── State ─────────────────────────────
+let pickerMode      = 'words';
+let playerMode      = 'words';
+let playlist        = [];
+let currentIndex    = 0;
+let isPlaying       = false;
+let gap             = 1.5;
+let speed           = 0.8;
+let shuffle         = false;
+let repeatCount     = 5;
+let currentRepeat   = 0;
+let showFurigana    = true;
+let gapTimer        = null;
+let watchdogTimer   = null;
+let wakeLock        = null;
+let activeLessonKey = null;
+
+// ── POS dictionary: Japanese → English (N5 subset) ──
+const POS_MAP = {
+  '名詞': 'noun',
+  '代名詞': 'pronoun',
+  '動詞': 'verb',
+  '形容詞': 'i-adj',
+  '形状詞': 'na-adj',
+  '副詞': 'adverb',
+  '助詞': 'particle',
+  '助動詞': 'aux',
+  '接続詞': 'conj',
+  '接頭辞': 'prefix',
+  '接尾辞': 'suffix',
+  '感動詞': 'interj',
+  '連体詞': 'adnom',
+  '記号': 'symbol',
+  '数詞': 'numeral',
+};
+function prettyPos(p) { return POS_MAP[p] || p || ''; }
+
+// ── DOM refs ──────────────────────────
+const wordEl    = document.getElementById('wordEl');
+const englishEl = document.getElementById('englishEl');
+const posTag    = document.getElementById('posTag');
+const altEl     = document.getElementById('altEl');
+const sentVi    = document.getElementById('sentVi');
+const sentEn    = document.getElementById('sentEn');
+const sentKw    = document.getElementById('sentKeyword');
+const counter   = document.getElementById('playerCounter');
+const progress  = document.getElementById('progress');
+const playBtn   = document.getElementById('playBtn');
+const wave      = document.getElementById('wave');
+const card      = document.getElementById('card');
+const audio     = document.getElementById('audio');
+
+// ── Furigana parsing ──────────────────
+// Anki inline format: "漢字[よみ]" or " 漢字[よみ]" (leading space is a separator)
+// Convert to <ruby>漢字<rt>よみ</rt></ruby>. <b>...</b> tags are preserved.
+function escapeHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function renderFurigana(rawWithFuri, stripLeadSpaces = true) {
+  if (!rawWithFuri) return '';
+  // First, extract <b>...</b> regions by tokenising: split on <b> and </b>
+  // but the simpler approach: process the whole string as text + furigana,
+  // then re-introduce <b>/</b> by not escaping them.
+  // Strategy: temporarily replace <b> and </b> with placeholders,
+  // escape, convert furigana, restore bold.
+  const B_OPEN = '\uE001', B_CLOSE = '\uE002';
+  let s = rawWithFuri.replace(/<b>/g, B_OPEN).replace(/<\/b>/g, B_CLOSE);
+  s = escapeHtml(s);
+  // Convert furigana: bind the reading only to the kanji cluster before '['.
+  // Optional leading space is Anki's separator and is consumed.
+  // Kanji range covers CJK Unified Ideographs + CJK Ext A + iteration marks 々〆〇.
+  s = s.replace(/ ?([\u3400-\u4dbf\u4e00-\u9fff々〆〇ヶ]+)\[([^\]]+)\]/g, (_, base, reading) => {
+    return '<ruby>' + base + '<rt>' + reading + '</rt></ruby>';
+  });
+  s = s.replace(new RegExp(B_OPEN, 'g'), '<b>').replace(new RegExp(B_CLOSE, 'g'), '</b>');
+  return s;
+}
+
+// Strip Anki furigana markup to get plain base text: "漢字[よみ]" → "漢字"
+function stripFurigana(s) {
+  if (!s) return '';
+  return s.replace(/ ?([\u3400-\u4dbf\u4e00-\u9fff々〆〇ヶ]+)\[([^\]]+)\]/g, '$1');
+}
+// Get reading-only text: kanji is replaced by its reading, keeping surrounding kana.
+function toReading(s) {
+  if (!s) return '';
+  return s.replace(/ ?([\u3400-\u4dbf\u4e00-\u9fff々〆〇ヶ]+)\[([^\]]+)\]/g, '$2');
+}
+
+// ── Picker mode toggle ─────────────────
+function setPickerMode(mode) {
+  pickerMode = mode;
+  document.getElementById('modeWords').classList.toggle('active', mode === 'words');
+  document.getElementById('modeSentences').classList.toggle('active', mode === 'sentences');
+  document.getElementById('modeSentences').classList.toggle('sent-mode', mode === 'sentences');
+
+  const isSent = mode === 'sentences';
+  const allRow = document.getElementById('allRow');
+  allRow.classList.toggle('sent-all', isSent);
+  document.getElementById('allLabel').textContent = isSent ? 'All Sentences' : 'All Words';
+
+  const totalWords = WORDS.length;
+  const totalSents = WORDS.filter(w => w.sent).length;
+  document.getElementById('allCount').textContent = isSent
+    ? totalSents + ' sentences'
+    : totalWords + ' words';
+
+  buildLessonList();
+}
+
+function prettyLesson(key) {
+  const parts = key.split('_');
+  const num = parts[0];
+  const name = parts.slice(1).join(' ');
+  return num + '. ' + name;
+}
+
+function buildLessonList() {
+  const container = document.getElementById('lessonItems');
+  container.innerHTML = '';
+  const isSent = pickerMode === 'sentences';
+  LESSONS.forEach(key => {
+    const count = isSent ? (SCOUNTS[key] || 0) : (COUNTS[key] || 0);
+    if (count === 0) return;
+    const isCurrentWords = !isSent && key === activeLessonKey && playerMode === 'words';
+    const isCurrentSents = isSent  && key === activeLessonKey && playerMode === 'sentences';
+    const div = document.createElement('div');
+    div.className = 'lesson-item'
+      + (isCurrentWords ? ' current-words' : '')
+      + (isCurrentSents ? ' current-sents' : '');
+    div.innerHTML =
+      '<span class="lesson-name">' + prettyLesson(key) + '</span>' +
+      '<span class="lesson-count">' + count + (isSent ? ' sentences' : ' words') + '</span>';
+    div.onclick = () => selectLesson(key);
+    container.appendChild(div);
+  });
+}
+
+function selectLesson(key) {
+  activeLessonKey = key;
+  playerMode = pickerMode;
+  resetPlayer();
+  showScreen('screenPlayer');
+  maybeShowTutorial();
+
+  const label = document.getElementById('lessonLabel');
+  label.textContent = key ? prettyLesson(key) : (playerMode === 'sentences' ? 'All Sentences' : 'All Words');
+
+  const isSent = playerMode === 'sentences';
+  progress.className = 'progress-fill' + (isSent ? ' sent-fill' : '');
+  wave.classList.toggle('sent-wave', isSent);
+}
+
+function goToLessons() {
+  pause();
+  buildLessonList();
+  showScreen('screenLessons');
+}
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+// ── Playlist ──────────────────────────
+function buildPlaylist() {
+  let pool;
+  if (playerMode === 'sentences') {
+    // Show only words that have a sentence (audio is word audio)
+    pool = WORDS
+      .map((w, i) => (w.sent && w.audio ? i : -1))
+      .filter(i => i >= 0);
+  } else {
+    pool = WORDS.map((_, i) => i).filter(i => WORDS[i].audio);
+  }
+
+  if (activeLessonKey !== null) {
+    pool = pool.filter(i => WORDS[i].lessons && WORDS[i].lessons.includes(activeLessonKey));
+  }
+
+  playlist = pool;
+  if (shuffle) shuffleArray(playlist);
+}
+
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
+
+function resetPlayer() {
+  pause();
+  currentIndex = 0;
+  currentRepeat = 0;
+  buildPlaylist();
+  showCard();
+}
+
+// ── Display ───────────────────────────
+function currentWord() { return WORDS[playlist[currentIndex]]; }
+
+function showCard() {
+  const w = currentWord();
+  if (!w) return;
+
+  const isSent = playerMode === 'sentences';
+  document.getElementById('wordContent').style.display = isSent ? 'none' : '';
+  document.getElementById('sentContent').style.display = isSent ? ''     : 'none';
+
+  if (isSent) {
+    // Keyword bubble: plain word (no furigana markup inside small label)
+    sentKw.textContent = w.word;
+    const sentSrc = showFurigana ? (w.sentfurigana || w.sent) : w.sent;
+    sentVi.innerHTML = showFurigana
+      ? renderFurigana(sentSrc)
+      : escapeHtmlWithBold(w.sent);
+    sentEn.textContent = w.senten || '—';
+  } else {
+    // Word: if the word is pure kana, just show word; otherwise use furigana reading.
+    const wordHtml = showFurigana && w.furigana
+      ? renderFurigana(w.furigana)
+      : escapeHtml(w.word);
+    wordEl.innerHTML = wordHtml;
+    englishEl.textContent = w.english || '—';
+    const p = prettyPos(w.pos);
+    posTag.textContent = p;
+    posTag.style.display = p ? 'inline-block' : 'none';
+    // Show kanji alternate (e.g., わたし → 私) if present
+    if (w.alternate) {
+      altEl.textContent = w.alternate;
+      altEl.style.display = 'inline-block';
+    } else {
+      altEl.style.display = 'none';
+    }
+  }
+
+  counter.textContent  = (currentIndex + 1) + ' / ' + playlist.length;
+  progress.style.width = ((currentIndex + 1) / playlist.length * 100) + '%';
+}
+
+function escapeHtmlWithBold(s) {
+  // Escape HTML but preserve <b>...</b>
+  const B_OPEN = '\uE001', B_CLOSE = '\uE002';
+  let out = s.replace(/<b>/g, B_OPEN).replace(/<\/b>/g, B_CLOSE);
+  out = escapeHtml(out);
+  return out.replace(new RegExp(B_OPEN, 'g'), '<b>').replace(new RegExp(B_CLOSE, 'g'), '</b>');
+}
+
+// ── Playback ──────────────────────────
+function getAudioFile(w) {
+  // No sentence audio in this deck — use word audio in both modes
+  return w.audio;
+}
+
+function clearWatchdog() {
+  clearTimeout(watchdogTimer);
+  watchdogTimer = null;
+}
+
+function armWatchdog() {
+  clearWatchdog();
+  watchdogTimer = setTimeout(() => {
+    wave.classList.remove('active');
+    card.classList.remove('playing');
+    card.classList.remove('sent');
+    currentRepeat = 0;
+    if (isPlaying) advanceWord();
+  }, 15000);
+}
+
+function playCurrentWord() {
+  const w = currentWord();
+  if (!w) return;
+  showCard();
+  const file = getAudioFile(w);
+  if (!file) { advanceWord(); return; }
+  audio.src          = 'audio/' + file;
+  audio.playbackRate = speed;
+  audio.play().catch(() => {
+    clearWatchdog();
+    if (isPlaying) advanceWord();
+  });
+  card.classList.add('playing');
+  if (playerMode === 'sentences') card.classList.add('sent');
+  wave.classList.add('active');
+  armWatchdog();
+}
+
+function replayWord() {
+  const w = currentWord();
+  const file = getAudioFile(w);
+  audio.src = 'audio/' + file;
+  audio.playbackRate = speed;
+  audio.play().catch(() => {
+    clearWatchdog();
+    if (isPlaying) advanceWord();
+  });
+  wave.classList.add('active');
+  card.classList.add('playing');
+  if (playerMode === 'sentences') card.classList.add('sent');
+  armWatchdog();
+}
+
+audio.addEventListener('ended', () => {
+  clearWatchdog();
+  currentRepeat++;
+  if (isPlaying && currentRepeat < repeatCount) {
+    wave.classList.remove('active');
+    card.classList.remove('playing');
+    card.classList.remove('sent');
+    gapTimer = setTimeout(replayWord, gap * 0.5 * 1000);
+  } else {
+    wave.classList.remove('active');
+    card.classList.remove('playing');
+    card.classList.remove('sent');
+    if (isPlaying) {
+      gapTimer = setTimeout(() => {
+        currentRepeat = 0;
+        advanceWord();
+      }, gap * 1000);
+    }
+  }
+});
+
+audio.addEventListener('error', () => {
+  clearWatchdog();
+  wave.classList.remove('active');
+  card.classList.remove('playing');
+  card.classList.remove('sent');
+  if (isPlaying) advanceWord();
+});
+
+function advanceWord() {
+  currentIndex++;
+  if (currentIndex >= playlist.length) {
+    currentIndex = 0;
+    if (shuffle) shuffleArray(playlist);
+  }
+  if (isPlaying) playCurrentWord(); else showCard();
+}
+
+function togglePlay() { isPlaying ? pause() : play(); }
+
+function play() {
+  isPlaying = true;
+  playBtn.textContent = '⏸';
+  playCurrentWord();
+  requestWakeLock();
+}
+
+function pause() {
+  isPlaying = false;
+  playBtn.textContent = '▶';
+  audio.pause();
+  clearWatchdog();
+  wave.classList.remove('active');
+  card.classList.remove('playing');
+  card.classList.remove('sent');
+  clearTimeout(gapTimer);
+  currentRepeat = 0;
+  releaseWakeLock();
+}
+
+function nextWord() {
+  clearTimeout(gapTimer); clearWatchdog(); audio.pause();
+  wave.classList.remove('active');
+  card.classList.remove('playing'); card.classList.remove('sent');
+  currentRepeat = 0;
+  currentIndex = (currentIndex + 1) % playlist.length;
+  if (isPlaying) playCurrentWord(); else showCard();
+}
+
+function prevWord() {
+  clearTimeout(gapTimer); clearWatchdog(); audio.pause();
+  wave.classList.remove('active');
+  card.classList.remove('playing'); card.classList.remove('sent');
+  currentRepeat = 0;
+  currentIndex = (currentIndex - 1 + playlist.length) % playlist.length;
+  if (isPlaying) playCurrentWord(); else showCard();
+}
+
+// ── Settings ──────────────────────────
+function openSettings() { document.getElementById('settingsOverlay').classList.add('open'); }
+function closeSettingsOnBg(e) {
+  if (e.target === document.getElementById('settingsOverlay'))
+    document.getElementById('settingsOverlay').classList.remove('open');
+}
+function adjustRepeat(d) {
+  repeatCount = Math.max(1, Math.min(10, repeatCount + d));
+  document.getElementById('repeatDisplay').textContent = repeatCount + '×';
+}
+function adjustGap(d) {
+  gap = Math.max(0.5, Math.min(10, Math.round((gap + d) * 10) / 10));
+  document.getElementById('gapDisplay').textContent = gap.toFixed(1) + 's';
+}
+function adjustSpeed(d) {
+  speed = Math.max(0.5, Math.min(2.0, Math.round((speed + d) * 10) / 10));
+  document.getElementById('speedDisplay').textContent = speed.toFixed(1) + '×';
+  audio.playbackRate = speed;
+}
+function toggleShuffle() {
+  shuffle = !shuffle;
+  document.getElementById('shuffleToggle').classList.toggle('on', shuffle);
+  const cur = playlist[currentIndex];
+  if (shuffle) {
+    playlist = playlist.filter(i => i !== cur);
+    shuffleArray(playlist);
+    playlist.unshift(cur);
+  } else { buildPlaylist(); }
+  currentIndex = 0;
+  showCard();
+}
+function toggleFurigana() {
+  showFurigana = !showFurigana;
+  document.getElementById('furiToggle').classList.toggle('on', showFurigana);
+  showCard();
+  // Re-render glossary if on it
+  if (document.getElementById('screenGlossary').classList.contains('active')) {
+    renderGlossary(document.getElementById('searchInput').value);
+  }
+}
+function jumpToStart() {
+  clearTimeout(gapTimer); clearWatchdog(); audio.pause();
+  wave.classList.remove('active');
+  card.classList.remove('playing'); card.classList.remove('sent');
+  currentRepeat = 0; currentIndex = 0;
+  if (shuffle) buildPlaylist();
+  if (isPlaying) playCurrentWord(); else showCard();
+}
+
+// ── Wake Lock ─────────────────────────
+async function requestWakeLock() {
+  if ('wakeLock' in navigator) {
+    try { wakeLock = await navigator.wakeLock.request('screen'); } catch(e) {}
+  }
+}
+function releaseWakeLock() {
+  if (wakeLock) { wakeLock.release(); wakeLock = null; }
+}
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && isPlaying) requestWakeLock();
+});
+
+// ── Glossary ──────────────────────────
+function renderGlossary(query) {
+  const q = query.trim().toLowerCase();
+  const matches = (q
+    ? WORDS.filter(w => {
+        const reading = toReading(w.furigana || '').toLowerCase();
+        return w.word.toLowerCase().includes(q)
+            || reading.includes(q)
+            || (w.english || '').toLowerCase().includes(q)
+            || (w.alternate || '').toLowerCase().includes(q);
+      })
+    : [...WORDS]
+  ).sort((a, b) => (a.furigana || a.word).localeCompare(b.furigana || b.word, 'ja'));
+
+  const list = document.getElementById('glossaryList');
+  document.getElementById('glossaryCount').textContent = matches.length + ' words';
+
+  if (matches.length === 0) {
+    list.innerHTML = '<div class="glossary-empty">No matches</div>';
+    return;
+  }
+
+  list.innerHTML = matches.map(w => {
+    const wordHtml = showFurigana && w.furigana
+      ? renderFurigana(w.furigana)
+      : escapeHtml(w.word);
+    return `
+    <div class="glossary-item">
+      <div class="glossary-word">${wordHtml}</div>
+      <div class="glossary-english">${escapeHtml(w.english || '')}${w.alternate ? ' · ' + escapeHtml(w.alternate) : ''}</div>
+      ${w.lessons && w.lessons.length ? `<div class="glossary-lessons">${w.lessons.map(l => prettyLesson(l)).join(' · ')}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+// ── Tutorial ──────────────────────────
+const TUTORIAL_KEY = 'jpn_tutorial_seen';
+
+function showTutorial() {
+  document.getElementById('settingsOverlay').classList.remove('open');
+  document.getElementById('tutorialOverlay').classList.add('open');
+}
+
+function dismissTutorial() {
+  document.getElementById('tutorialOverlay').classList.remove('open');
+  localStorage.setItem(TUTORIAL_KEY, '1');
+}
+
+function maybeShowTutorial() {
+  if (!localStorage.getItem(TUTORIAL_KEY)) showTutorial();
+}
+
+// ── Touch navigation ──────────────────
+(function() {
+  const SWIPE_MIN   = 40;
+  const SWIPE_MAX_Y = 80;
+  let startX = 0, startY = 0, moved = false;
+
+  const player = document.getElementById('screenPlayer');
+
+  player.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    moved  = false;
+  }, { passive: true });
+
+  player.addEventListener('touchmove', e => {
+    moved = true;
+  }, { passive: true });
+
+  player.addEventListener('touchend', e => {
+    if (!moved) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    const absDx = Math.abs(dx), absDy = Math.abs(dy);
+
+    if (absDx > SWIPE_MIN && absDy < SWIPE_MAX_Y) {
+      if (dx < 0) nextWord(); else prevWord();
+    } else if (absDy > SWIPE_MIN && absDx < SWIPE_MAX_Y) {
+      togglePlay();
+    }
+  }, { passive: true });
+})();
+
+// ── Init ──────────────────────────────
+fetch('words.json')
+  .then(r => r.json())
+  .then(data => {
+    WORDS = data;
+
+    const seen = new Set();
+    data.forEach(w => {
+      (w.lessons || []).forEach(l => {
+        if (!seen.has(l)) { seen.add(l); LESSONS.push(l); }
+        COUNTS[l]  = (COUNTS[l]  || 0) + 1;
+        if (w.sent) SCOUNTS[l] = (SCOUNTS[l] || 0) + 1;
+      });
+    });
+    LESSONS.sort();
+
+    // Populate header counts
+    document.getElementById('allCount').textContent = data.length + ' words';
+    document.getElementById('speedDisplay').textContent = speed.toFixed(1) + '×';
+
+    buildLessonList();
+    buildPlaylist();
+    showCard();
+  })
+  .catch(err => {
+    document.body.innerHTML = '<p style="color:#bc002d;padding:32px;font-family:sans-serif">Failed to load words.json: ' + err + '</p>';
+  });
+</script>
+
+</body>
+</html>
