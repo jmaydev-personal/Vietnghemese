@@ -69,6 +69,7 @@
     color: var(--accent);
     flex: 1;
   }
+  .header-title.n4 { color: var(--accent2); }
   .header-sub {
     font-size: 13px;
     color: var(--text-dim);
@@ -955,7 +956,9 @@ function setPickerLevel(level) {
     btn.classList.toggle('sent-mode', lv === 'n4' && level === 'n4');
   });
 
-  document.getElementById('pickerTitle').textContent = '日本語 ' + level.toUpperCase();
+  const pickerTitleEl = document.getElementById('pickerTitle');
+  pickerTitleEl.textContent = '日本語 ' + level.toUpperCase();
+  pickerTitleEl.classList.toggle('n4', level === 'n4');
 
   const listWrap  = document.getElementById('lessonListWrap');
   const comingEl  = document.getElementById('comingSoon');
@@ -1088,9 +1091,11 @@ function selectLesson(lesson) {
   showScreen('screenPlayer');
   maybeShowTutorial();
 
-  document.getElementById('lessonLabel').textContent = lessonLabel(activeLesson);
+  const lessonLabelEl = document.getElementById('lessonLabel');
+  lessonLabelEl.textContent = lessonLabel(activeLesson);
 
   const isN4 = playerLevel === 'n4';
+  lessonLabelEl.classList.toggle('n4', isN4);
   progress.className = 'progress-fill' + (isN4 ? ' sent-fill' : '');
   wave.classList.toggle('sent-wave', isN4);
 }
