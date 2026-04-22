@@ -55,10 +55,13 @@ class Handler(http.server.BaseHTTPRequestHandler):
         elif path == '/words.json':
             self.send_file(os.path.join(SCRIPT_DIR, 'words.json'), 'application/json; charset=utf-8')
 
+        elif path == '/words_n4.json':
+            self.send_file(os.path.join(SCRIPT_DIR, 'words_n4.json'), 'application/json; charset=utf-8')
+
         elif path.startswith('/audio/'):
             filename = path[len('/audio/'):]
-            # Allow only JLPT_Tango_N5_####.mp3
-            if (filename.startswith('JLPT_Tango_N5_')
+            # Allow JLPT_Tango_N5_####.mp3 or JLPT_Tango_N4_####.mp3
+            if ((filename.startswith('JLPT_Tango_N5_') or filename.startswith('JLPT_Tango_N4_'))
                     and filename.endswith('.mp3')
                     and '/' not in filename
                     and '..' not in filename):
@@ -75,7 +78,7 @@ if __name__ == '__main__':
     local_ip = get_local_ip()
 
     print()
-    print("  日本語 N5 - JLPT Tango Word Player")
+    print("  日本語 N5/N4 - JLPT Tango Word Player")
     print("  " + "─" * 40)
     print(f"  Local:   http://localhost:{PORT}")
     print(f"  Mobile:  http://{local_ip}:{PORT}")

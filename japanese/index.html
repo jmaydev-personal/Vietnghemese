@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#000000">
-<title>Nihongo N5</title>
+<title>Nihongo N5/N4</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -584,16 +584,16 @@
 ═══════════════════════════════ -->
 <div class="screen active" id="screenLessons">
   <div class="header">
-    <span class="header-title">日本語 N5</span>
+    <span class="header-title" id="pickerTitle">日本語 N5</span>
     <button class="icon-btn" onclick="showScreen('screenGlossary'); renderGlossary('')" aria-label="Glossary">📖</button>
     <a class="icon-btn" href="../" aria-label="Switch to Vietnamese" style="text-decoration:none;">🇻🇳</a>
     <button class="icon-btn" onclick="openSettings()" aria-label="Settings">⚙️</button>
   </div>
 
-  <!-- Mode toggle -->
+  <!-- Level toggle -->
   <div class="mode-bar">
-    <button class="mode-pill active" id="modeWords"      onclick="setPickerMode('words')">N5</button>
-    <button class="mode-pill"        id="modeSentences"  onclick="setPickerMode('sentences')">N4</button>
+    <button class="mode-pill active" id="modeN5" onclick="setPickerLevel('n5')">N5</button>
+    <button class="mode-pill"        id="modeN4" onclick="setPickerLevel('n4')">N4</button>
   </div>
 
   <div class="lesson-list">
@@ -623,7 +623,7 @@
   <div class="player-main">
     <div class="card" id="card">
 
-      <!-- Word card content -->
+      <!-- Word card content (with embedded example sentence) -->
       <div id="wordContent">
         <div class="pos-tag" id="posTag"></div>
         <div class="word"    id="wordEl">—</div>
@@ -633,13 +633,6 @@
           <div class="word-sent"    id="wordSentJa">—</div>
           <div class="word-sent-en" id="wordSentEn">—</div>
         </div>
-      </div>
-
-      <!-- Sentence card content -->
-      <div id="sentContent" style="display:none">
-        <div class="sent-keyword" id="sentKeyword"></div>
-        <div class="sent-vi"      id="sentVi">—</div>
-        <div class="sent-en"      id="sentEn">—</div>
       </div>
 
       <div class="wave" id="wave">
@@ -789,17 +782,21 @@ if ('speechSynthesis' in window) {
   window.speechSynthesis.cancel();
 }
 
+// Per-level data stores
+const DATA = {
+  n5: { WORDS: [], CHAPTERS: [], CHAPTER_SECTIONS: {}, CHAPTER_COUNT: {}, SECTION_COUNT: {} },
+  n4: { WORDS: [], CHAPTERS: [], CHAPTER_SECTIONS: {}, CHAPTER_COUNT: {}, SECTION_COUNT: {} },
+};
+// Active view — mirrors DATA[currentLevel] to keep the rest of the code simple
 let WORDS = [];
-let CHAPTERS = [];                // ordered list of chapter keys
-let CHAPTER_SECTIONS = {};        // chapter_key -> ordered list of section keys
-let CHAPTER_WCOUNT = {};          // chapter_key -> word count
-let CHAPTER_SCOUNT = {};          // chapter_key -> sentence count
-let SECTION_WCOUNT = {};          // `${chapter}|${section}` -> word count
-let SECTION_SCOUNT = {};          // `${chapter}|${section}` -> sentence count
+let CHAPTERS = [];
+let CHAPTER_SECTIONS = {};
+let CHAPTER_COUNT = {};
+let SECTION_COUNT = {};
 
 // ── State ─────────────────────────────
-let pickerMode      = 'words';
-let playerMode      = 'words';
+let pickerLevel     = 'n5';
+let playerLevel     = 'n5';
 let playlist        = [];
 let currentIndex    = 0;
 let isPlaying       = false;
@@ -845,9 +842,6 @@ const altEl     = document.getElementById('altEl');
 const wordSentBlock = document.getElementById('wordSentBlock');
 const wordSentJa    = document.getElementById('wordSentJa');
 const wordSentEn    = document.getElementById('wordSentEn');
-const sentVi    = document.getElementById('sentVi');
-const sentEn    = document.getElementById('sentEn');
-const sentKw    = document.getElementById('sentKeyword');
 const counter   = document.getElementById('playerCounter');
 const progress  = document.getElementById('progress');
 const playBtn   = document.getElementById('playBtn');
@@ -892,23 +886,38 @@ function toReading(s) {
   return s.replace(/ ?([\u3400-\u4dbf\u4e00-\u9fff々〆〇ヶ]+)\[([^\]]+)\]/g, '$2');
 }
 
-// ── Picker mode toggle ─────────────────
-function setPickerMode(mode) {
-  pickerMode = mode;
-  document.getElementById('modeWords').classList.toggle('active', mode === 'words');
-  document.getElementById('modeSentences').classList.toggle('active', mode === 'sentences');
-  document.getElementById('modeSentences').classList.toggle('sent-mode', mode === 'sentences');
+// ── Picker level toggle ────────────────
+// Swaps the active dataset (N5 ↔ N4) and refreshes the lesson picker.
+// N5 = red accent (default classes), N4 = blue accent (reuses .sent-* classes).
+function applyActiveLevel(level) {
+  const d = DATA[level];
+  WORDS = d.WORDS;
+  CHAPTERS = d.CHAPTERS;
+  CHAPTER_SECTIONS = d.CHAPTER_SECTIONS;
+  CHAPTER_COUNT = d.CHAPTER_COUNT;
+  SECTION_COUNT = d.SECTION_COUNT;
+}
 
-  const isSent = mode === 'sentences';
+function setPickerLevel(level) {
+  if (pickerLevel === level) return;
+  pickerLevel = level;
+  activeLesson = null;                 // leaving old level; reset selection
+  applyActiveLevel(level);
+
+  // New level → expand all of its chapters so the sections are visible up-front
+  expandedChapters = new Set(CHAPTERS);
+
+  const isN4 = level === 'n4';
+  document.getElementById('modeN5').classList.toggle('active', !isN4);
+  document.getElementById('modeN4').classList.toggle('active',  isN4);
+  // Re-use the "sent-mode" style tokens for N4 (blue accent)
+  document.getElementById('modeN4').classList.toggle('sent-mode', isN4);
+
   const allRow = document.getElementById('allRow');
-  allRow.classList.toggle('sent-all', isSent);
-  document.getElementById('allLabel').textContent = isSent ? 'All Sentences' : 'All Words';
-
-  const totalWords = WORDS.length;
-  const totalSents = WORDS.filter(w => w.sent).length;
-  document.getElementById('allCount').textContent = isSent
-    ? totalSents + ' sentences'
-    : totalWords + ' words';
+  allRow.classList.toggle('sent-all', isN4);
+  document.getElementById('allLabel').textContent = 'All Words';
+  document.getElementById('allCount').textContent = WORDS.length + ' words';
+  document.getElementById('pickerTitle').textContent = isN4 ? '日本語 N4' : '日本語 N5';
 
   buildLessonList();
 }
@@ -923,7 +932,7 @@ function prettyLesson(key) {
 }
 
 function lessonLabel(active) {
-  if (!active) return playerMode === 'sentences' ? 'All Sentences' : 'All Words';
+  if (!active) return 'All Words';
   if (active.section) return prettyLesson(active.chapter) + ' · ' + prettyLesson(active.section);
   return prettyLesson(active.chapter);
 }
@@ -937,27 +946,26 @@ function toggleChapterExpanded(chapter) {
 function buildLessonList() {
   const container = document.getElementById('lessonItems');
   container.innerHTML = '';
-  const isSent = pickerMode === 'sentences';
-  const unit = isSent ? ' sentences' : ' words';
-  const chapCounts  = isSent ? CHAPTER_SCOUNT : CHAPTER_WCOUNT;
-  const secCounts   = isSent ? SECTION_SCOUNT : SECTION_WCOUNT;
+  const isN4 = pickerLevel === 'n4';
+  const unit = ' words';
 
   CHAPTERS.forEach(chapter => {
-    const cCount = chapCounts[chapter] || 0;
+    const cCount = CHAPTER_COUNT[chapter] || 0;
     if (cCount === 0) return;
 
     const group = document.createElement('div');
     group.className = 'chapter-group';
     if (expandedChapters.has(chapter)) group.classList.add('open');
-    if (isSent) group.classList.add('sent-mode');
+    if (isN4) group.classList.add('sent-mode');
+
+    // Only highlight selection if both picker and player are on the same level
+    const selectionVisible = activeLesson && playerLevel === pickerLevel;
+    const chapSelected = selectionVisible && activeLesson.chapter === chapter && !activeLesson.section;
+    const selectedClass = chapSelected ? (isN4 ? ' current-sents' : ' current-words') : '';
 
     // Chapter header
     const header = document.createElement('div');
-    header.className = 'chapter-header';
-    const chapSelectedWords = !isSent && activeLesson && activeLesson.chapter === chapter && !activeLesson.section && playerMode === 'words';
-    const chapSelectedSents = isSent  && activeLesson && activeLesson.chapter === chapter && !activeLesson.section && playerMode === 'sentences';
-    if (chapSelectedWords) header.classList.add('current-words');
-    if (chapSelectedSents) header.classList.add('current-sents');
+    header.className = 'chapter-header' + selectedClass;
     header.innerHTML =
       '<span class="chapter-chevron">▸</span>' +
       '<span class="lesson-name">' + prettyLesson(chapter) + '</span>' +
@@ -971,9 +979,7 @@ function buildLessonList() {
 
     // "All of chapter" row
     const allRow = document.createElement('div');
-    allRow.className = 'section-item all-row'
-      + (chapSelectedWords ? ' current-words' : '')
-      + (chapSelectedSents ? ' current-sents' : '');
+    allRow.className = 'section-item all-row' + selectedClass;
     allRow.innerHTML =
       '<span class="section-name">All of ' + prettyLesson(chapter) + '</span>' +
       '<span class="section-count">' + cCount + unit + '</span>';
@@ -986,14 +992,14 @@ function buildLessonList() {
     // Section rows
     (CHAPTER_SECTIONS[chapter] || []).forEach(section => {
       const sKey = chapter + '|' + section;
-      const sCount = secCounts[sKey] || 0;
+      const sCount = SECTION_COUNT[sKey] || 0;
       if (sCount === 0) return;
-      const selWords = !isSent && activeLesson && activeLesson.chapter === chapter && activeLesson.section === section && playerMode === 'words';
-      const selSents = isSent  && activeLesson && activeLesson.chapter === chapter && activeLesson.section === section && playerMode === 'sentences';
+      const sel = selectionVisible
+        && activeLesson.chapter === chapter
+        && activeLesson.section === section;
+      const selCls = sel ? (isN4 ? ' current-sents' : ' current-words') : '';
       const row = document.createElement('div');
-      row.className = 'section-item'
-        + (selWords ? ' current-words' : '')
-        + (selSents ? ' current-sents' : '');
+      row.className = 'section-item' + selCls;
       row.innerHTML =
         '<span class="section-name">' + prettyLesson(section) + '</span>' +
         '<span class="section-count">' + sCount + unit + '</span>';
@@ -1012,16 +1018,16 @@ function buildLessonList() {
 function selectLesson(lesson) {
   // lesson: null | {chapter} | {chapter, section}
   activeLesson = lesson;
-  playerMode = pickerMode;
+  playerLevel = pickerLevel;
   resetPlayer();
   showScreen('screenPlayer');
   maybeShowTutorial();
 
   document.getElementById('lessonLabel').textContent = lessonLabel(activeLesson);
 
-  const isSent = playerMode === 'sentences';
-  progress.className = 'progress-fill' + (isSent ? ' sent-fill' : '');
-  wave.classList.toggle('sent-wave', isSent);
+  const isN4 = playerLevel === 'n4';
+  progress.className = 'progress-fill' + (isN4 ? ' sent-fill' : '');
+  wave.classList.toggle('sent-wave', isN4);
 }
 
 function goToLessons() {
@@ -1037,12 +1043,8 @@ function showScreen(id) {
 
 // ── Playlist ──────────────────────────
 function buildPlaylist() {
-  let pool;
-  if (playerMode === 'sentences') {
-    pool = WORDS.map((w, i) => (w.sent && w.audio ? i : -1)).filter(i => i >= 0);
-  } else {
-    pool = WORDS.map((_, i) => i).filter(i => WORDS[i].audio);
-  }
+  // Use the level-active WORDS (set by applyActiveLevel at selection time)
+  let pool = WORDS.map((_, i) => i).filter(i => WORDS[i].audio);
 
   if (activeLesson) {
     pool = pool.filter(i => {
@@ -1079,70 +1081,53 @@ function showCard() {
   const w = currentWord();
   if (!w) return;
 
-  const isSent = playerMode === 'sentences';
-  document.getElementById('wordContent').style.display = isSent ? 'none' : '';
-  document.getElementById('sentContent').style.display = isSent ? ''     : 'none';
+  // Word card: prefer kanji as the primary focus.
+  // Case A: `word` itself contains kanji → use built-in furigana markup (e.g. 父[ちち]).
+  // Case B: `word` is kana and `alternate` has kanji → swap: show kanji as primary,
+  //         with the kana reading as ruby furigana above.
+  // Case C: no kanji anywhere → show the kana word alone (no alt box).
+  const KANJI_RE = /[\u3400-\u4dbf\u4e00-\u9fff]/;
+  const wordHasKanji = KANJI_RE.test(w.word);
+  const altHasKanji  = w.alternate && KANJI_RE.test(w.alternate);
+  const shouldSwap   = !wordHasKanji && altHasKanji;
 
-  if (isSent) {
-    // Keyword bubble: plain word (no furigana markup inside small label)
-    sentKw.textContent = w.word;
-    const sentSrc = showFurigana ? (w.sentfurigana || w.sent) : w.sent;
-    sentVi.innerHTML = showFurigana
-      ? renderFurigana(sentSrc)
-      : escapeHtmlWithBold(w.sent);
-    sentEn.textContent = w.senten || '—';
+  let wordHtml;
+  if (shouldSwap) {
+    wordHtml = showFurigana
+      ? '<ruby>' + escapeHtml(w.alternate) + '<rt>' + escapeHtml(w.word) + '</rt></ruby>'
+      : escapeHtml(w.alternate);
+  } else if (showFurigana && w.furigana) {
+    wordHtml = renderFurigana(w.furigana);
   } else {
-    // Word card: prefer kanji as the primary focus.
-    // Case A: `word` itself contains kanji → use built-in furigana markup (e.g. 父[ちち]).
-    // Case B: `word` is kana and `alternate` has kanji → swap: show kanji as primary,
-    //         with the kana reading as ruby furigana above.
-    // Case C: no kanji anywhere → show the kana word alone (no alt box).
-    const KANJI_RE = /[\u3400-\u4dbf\u4e00-\u9fff]/;
-    const wordHasKanji = KANJI_RE.test(w.word);
-    const altHasKanji  = w.alternate && KANJI_RE.test(w.alternate);
-    const shouldSwap   = !wordHasKanji && altHasKanji;
+    wordHtml = escapeHtml(w.word);
+  }
+  wordEl.innerHTML = wordHtml;
 
-    let wordHtml;
-    if (shouldSwap) {
-      wordHtml = showFurigana
-        ? '<ruby>' + escapeHtml(w.alternate) + '<rt>' + escapeHtml(w.word) + '</rt></ruby>'
-        : escapeHtml(w.alternate);
-    } else if (showFurigana && w.furigana) {
-      wordHtml = renderFurigana(w.furigana);
-    } else {
-      wordHtml = escapeHtml(w.word);
-    }
-    wordEl.innerHTML = wordHtml;
+  englishEl.textContent = w.english || '—';
+  const p = prettyPos(w.pos);
+  posTag.textContent = p;
+  posTag.style.display = p ? 'inline-block' : 'none';
 
-    englishEl.textContent = w.english || '—';
-    const p = prettyPos(w.pos);
-    posTag.textContent = p;
-    posTag.style.display = p ? 'inline-block' : 'none';
+  if (shouldSwap) {
+    altEl.style.display = 'none';
+  } else if (w.alternate && wordHasKanji) {
+    altEl.textContent = w.alternate;
+    altEl.style.display = 'inline-block';
+  } else {
+    altEl.style.display = 'none';
+  }
 
-    // Alt box: hidden when swapping (kanji already primary + kana is above as ruby),
-    // shown with the kanji alternate only in the non-swapped kanji-already-primary case
-    // where we still have a different alt form worth surfacing.
-    if (shouldSwap) {
-      altEl.style.display = 'none';
-    } else if (w.alternate && wordHasKanji) {
-      altEl.textContent = w.alternate;
-      altEl.style.display = 'inline-block';
-    } else {
-      altEl.style.display = 'none';
-    }
-
-    // Example sentence (no audio available, but shown for context).
-    if (w.sent) {
-      const src = showFurigana ? (w.sentfurigana || w.sent) : w.sent;
-      wordSentJa.innerHTML = showFurigana
-        ? renderFurigana(src)
-        : escapeHtmlWithBold(w.sent);
-      wordSentEn.textContent = w.senten || '';
-      wordSentEn.style.display = w.senten ? '' : 'none';
-      wordSentBlock.style.display = '';
-    } else {
-      wordSentBlock.style.display = 'none';
-    }
+  // Example sentence (no audio available, but shown for context).
+  if (w.sent) {
+    const src = showFurigana ? (w.sentfurigana || w.sent) : w.sent;
+    wordSentJa.innerHTML = showFurigana
+      ? renderFurigana(src)
+      : escapeHtmlWithBold(w.sent);
+    wordSentEn.textContent = w.senten || '';
+    wordSentEn.style.display = w.senten ? '' : 'none';
+    wordSentBlock.style.display = '';
+  } else {
+    wordSentBlock.style.display = 'none';
   }
 
   counter.textContent  = (currentIndex + 1) + ' / ' + playlist.length;
@@ -1192,7 +1177,7 @@ function playCurrentWord() {
     if (isPlaying) advanceWord();
   });
   card.classList.add('playing');
-  if (playerMode === 'sentences') card.classList.add('sent');
+  if (playerLevel === 'n4') card.classList.add('sent');
   wave.classList.add('active');
   armWatchdog();
 }
@@ -1208,7 +1193,7 @@ function replayWord() {
   });
   wave.classList.add('active');
   card.classList.add('playing');
-  if (playerMode === 'sentences') card.classList.add('sent');
+  if (playerLevel === 'n4') card.classList.add('sent');
   armWatchdog();
 }
 
@@ -1437,34 +1422,42 @@ function maybeShowTutorial() {
 })();
 
 // ── Init ──────────────────────────────
-fetch('words.json')
-  .then(r => r.json())
-  .then(data => {
-    WORDS = data;
+function indexLevel(level, data) {
+  const d = DATA[level];
+  d.WORDS = data;
+  const seenChap = new Set();
+  const seenSect = {};
+  data.forEach(w => {
+    const c = w.chapter;
+    const s = w.section;
+    if (!seenChap.has(c)) { seenChap.add(c); d.CHAPTERS.push(c); d.CHAPTER_SECTIONS[c] = []; }
+    d.CHAPTER_COUNT[c] = (d.CHAPTER_COUNT[c] || 0) + 1;
+    if (s) {
+      const key = c + '|' + s;
+      seenSect[c] = seenSect[c] || new Set();
+      if (!seenSect[c].has(s)) { seenSect[c].add(s); d.CHAPTER_SECTIONS[c].push(s); }
+      d.SECTION_COUNT[key] = (d.SECTION_COUNT[key] || 0) + 1;
+    }
+  });
+  d.CHAPTERS.sort();
+  Object.values(d.CHAPTER_SECTIONS).forEach(arr => arr.sort());
+}
 
-    const seenChap = new Set();
-    const seenSect = {};
-    data.forEach(w => {
-      const c = w.chapter;
-      const s = w.section;
-      if (!seenChap.has(c)) { seenChap.add(c); CHAPTERS.push(c); CHAPTER_SECTIONS[c] = []; }
-      CHAPTER_WCOUNT[c] = (CHAPTER_WCOUNT[c] || 0) + 1;
-      if (w.sent) CHAPTER_SCOUNT[c] = (CHAPTER_SCOUNT[c] || 0) + 1;
-      if (s) {
-        const key = c + '|' + s;
-        seenSect[c] = seenSect[c] || new Set();
-        if (!seenSect[c].has(s)) { seenSect[c].add(s); CHAPTER_SECTIONS[c].push(s); }
-        SECTION_WCOUNT[key] = (SECTION_WCOUNT[key] || 0) + 1;
-        if (w.sent) SECTION_SCOUNT[key] = (SECTION_SCOUNT[key] || 0) + 1;
-      }
-    });
-    CHAPTERS.sort();
-    Object.values(CHAPTER_SECTIONS).forEach(arr => arr.sort());
+Promise.all([
+  fetch('words.json').then(r => r.json()),
+  fetch('words_n4.json').then(r => r.json()),
+])
+  .then(([n5, n4]) => {
+    indexLevel('n5', n5);
+    indexLevel('n4', n4);
 
-    // Expand all chapters by default so sections are visible up-front
-    CHAPTERS.forEach(c => expandedChapters.add(c));
+    // Start on N5
+    applyActiveLevel('n5');
 
-    document.getElementById('allCount').textContent = data.length + ' words';
+    // Expand all chapters of the active level by default
+    expandedChapters = new Set(CHAPTERS);
+
+    document.getElementById('allCount').textContent = WORDS.length + ' words';
     document.getElementById('speedDisplay').textContent = speed.toFixed(1) + '×';
 
     buildLessonList();
@@ -1472,7 +1465,7 @@ fetch('words.json')
     showCard();
   })
   .catch(err => {
-    document.body.innerHTML = '<p style="color:#bc002d;padding:32px;font-family:sans-serif">Failed to load words.json: ' + err + '</p>';
+    document.body.innerHTML = '<p style="color:#bc002d;padding:32px;font-family:sans-serif">Failed to load deck data: ' + err + '</p>';
   });
 </script>
 
