@@ -904,8 +904,8 @@ function setPickerLevel(level) {
   activeLesson = null;                 // leaving old level; reset selection
   applyActiveLevel(level);
 
-  // New level → expand all of its chapters so the sections are visible up-front
-  expandedChapters = new Set(CHAPTERS);
+  // New level → start with all chapters collapsed
+  expandedChapters = new Set();
 
   const isN4 = level === 'n4';
   document.getElementById('modeN5').classList.toggle('active', !isN4);
@@ -1454,8 +1454,8 @@ Promise.all([
     // Start on N5
     applyActiveLevel('n5');
 
-    // Expand all chapters of the active level by default
-    expandedChapters = new Set(CHAPTERS);
+    // Start with all chapters collapsed
+    expandedChapters = new Set();
 
     document.getElementById('allCount').textContent = WORDS.length + ' words';
     document.getElementById('speedDisplay').textContent = speed.toFixed(1) + '×';
