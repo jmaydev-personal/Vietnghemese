@@ -117,6 +117,39 @@
   .mode-pill.active.sent-mode {
     background: var(--accent2);
   }
+  .mode-pill.locked {
+    opacity: 0.5;
+  }
+  .mode-pill.active.locked {
+    background: rgba(255,255,255,0.18);
+    color: var(--text);
+    opacity: 1;
+  }
+
+  /* Coming-soon placeholder */
+  .coming-soon {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--text-dim);
+  }
+  .coming-soon.open { display: flex; }
+  .coming-soon-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+  .coming-soon-sub {
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 260px;
+  }
 
   /* ── LESSON PICKER ── */
   .lesson-list {
@@ -594,14 +627,22 @@
   <div class="mode-bar">
     <button class="mode-pill active" id="modeN5" onclick="setPickerLevel('n5')">N5</button>
     <button class="mode-pill"        id="modeN4" onclick="setPickerLevel('n4')">N4</button>
+    <button class="mode-pill locked" id="modeN3" onclick="setPickerLevel('n3')">N3</button>
+    <button class="mode-pill locked" id="modeN2" onclick="setPickerLevel('n2')">N2</button>
+    <button class="mode-pill locked" id="modeN1" onclick="setPickerLevel('n1')">N1</button>
   </div>
 
-  <div class="lesson-list">
+  <div class="lesson-list" id="lessonListWrap">
     <div class="lesson-all" id="allRow" onclick="selectLesson(null)">
       <span class="lesson-all-text" id="allLabel">All Words</span>
       <span class="lesson-all-count" id="allCount">—</span>
     </div>
     <div id="lessonItems"></div>
+  </div>
+
+  <div class="coming-soon" id="comingSoon">
+    <div class="coming-soon-title" id="comingSoonTitle">N3 — Coming Soon!</div>
+    <div class="coming-soon-sub">This level isn't available yet. N5 and N4 are ready to go — tap them above.</div>
   </div>
 </div>
 
@@ -898,9 +939,39 @@ function applyActiveLevel(level) {
   SECTION_COUNT = d.SECTION_COUNT;
 }
 
+const LOCKED_LEVELS = new Set(['n3', 'n2', 'n1']);
+const LEVEL_IDS = ['n5', 'n4', 'n3', 'n2', 'n1'];
+
 function setPickerLevel(level) {
   if (pickerLevel === level) return;
   pickerLevel = level;
+
+  // Update pill states (active + sent-mode coloring) for all 5 pills
+  LEVEL_IDS.forEach(lv => {
+    const btn = document.getElementById('mode' + lv.toUpperCase());
+    if (!btn) return;
+    btn.classList.toggle('active', lv === level);
+    // Only N4 uses the blue (sent-mode) accent when active
+    btn.classList.toggle('sent-mode', lv === 'n4' && level === 'n4');
+  });
+
+  document.getElementById('pickerTitle').textContent = '日本語 ' + level.toUpperCase();
+
+  const listWrap  = document.getElementById('lessonListWrap');
+  const comingEl  = document.getElementById('comingSoon');
+
+  if (LOCKED_LEVELS.has(level)) {
+    // Placeholder state — no data swap, no playable lesson
+    listWrap.style.display = 'none';
+    comingEl.classList.add('open');
+    document.getElementById('comingSoonTitle').textContent = level.toUpperCase() + ' — Coming Soon!';
+    return;
+  }
+
+  // Unlocked: swap to real dataset and show the lesson list
+  listWrap.style.display = '';
+  comingEl.classList.remove('open');
+
   activeLesson = null;                 // leaving old level; reset selection
   applyActiveLevel(level);
 
@@ -908,16 +979,10 @@ function setPickerLevel(level) {
   expandedChapters = new Set();
 
   const isN4 = level === 'n4';
-  document.getElementById('modeN5').classList.toggle('active', !isN4);
-  document.getElementById('modeN4').classList.toggle('active',  isN4);
-  // Re-use the "sent-mode" style tokens for N4 (blue accent)
-  document.getElementById('modeN4').classList.toggle('sent-mode', isN4);
-
   const allRow = document.getElementById('allRow');
   allRow.classList.toggle('sent-all', isN4);
   document.getElementById('allLabel').textContent = 'All Words';
   document.getElementById('allCount').textContent = WORDS.length + ' words';
-  document.getElementById('pickerTitle').textContent = isN4 ? '日本語 N4' : '日本語 N5';
 
   buildLessonList();
 }
