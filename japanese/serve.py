@@ -58,10 +58,23 @@ class Handler(http.server.BaseHTTPRequestHandler):
         elif path == '/words_n4.json':
             self.send_file(os.path.join(SCRIPT_DIR, 'words_n4.json'), 'application/json; charset=utf-8')
 
+        elif path == '/words_n3.json':
+            self.send_file(os.path.join(SCRIPT_DIR, 'words_n3.json'), 'application/json; charset=utf-8')
+
+        elif path == '/words_n2.json':
+            self.send_file(os.path.join(SCRIPT_DIR, 'words_n2.json'), 'application/json; charset=utf-8')
+
+        elif path == '/words_n1.json':
+            self.send_file(os.path.join(SCRIPT_DIR, 'words_n1.json'), 'application/json; charset=utf-8')
+
         elif path.startswith('/audio/'):
             filename = path[len('/audio/'):]
-            # Allow JLPT_Tango_N5_####.mp3 or JLPT_Tango_N4_####.mp3
-            if ((filename.startswith('JLPT_Tango_N5_') or filename.startswith('JLPT_Tango_N4_'))
+            # Allow JLPT_Tango_N5/N4/N3/N2/N1_####.mp3
+            allowed_prefixes = (
+                'JLPT_Tango_N5_', 'JLPT_Tango_N4_', 'JLPT_Tango_N3_',
+                'JLPT_Tango_N2_', 'JLPT_Tango_N1_',
+            )
+            if (filename.startswith(allowed_prefixes)
                     and filename.endswith('.mp3')
                     and '/' not in filename
                     and '..' not in filename):
@@ -78,7 +91,7 @@ if __name__ == '__main__':
     local_ip = get_local_ip()
 
     print()
-    print("  日本語 N5/N4 - JLPT Tango Word Player")
+    print("  日本語 N5/N4/N3/N2/N1 - JLPT Tango Word Player")
     print("  " + "─" * 40)
     print(f"  Local:   http://localhost:{PORT}")
     print(f"  Mobile:  http://{local_ip}:{PORT}")

@@ -11,13 +11,18 @@
   :root {
     --bg: #000000;
     --surface: #0d0d0d;
-    --accent: #bc002d;          /* hinomaru red */
-    --accent2: #5b8dee;
+    --accent: #bc002d;             /* hinomaru red — N5 default */
+    --accent-rgb: 188, 0, 45;
     --text: #eaeaea;
     --text-dim: #888;
     --text-furi: #a0c4ff;
     --radius: 18px;
   }
+  /* Per-level theme: body class flips the single accent everything derives from */
+  body.level-n4 { --accent: #5b8dee; --accent-rgb: 91, 141, 238; }
+  body.level-n3 { --accent: #3db06e; --accent-rgb: 61, 176, 110; }
+  body.level-n2 { --accent: #d98be6; --accent-rgb: 217, 139, 230; }
+  body.level-n1 { --accent: #e8a94d; --accent-rgb: 232, 169, 77; }
 
   body {
     background: var(--bg);
@@ -41,13 +46,6 @@
     line-height: 1;
   }
 
-  /* Bold target word inside sentences */
-  .sent-vi b, .sent-fu b {
-    color: var(--accent);
-    font-weight: 800;
-  }
-  .sent-fu b rt { color: var(--accent); }
-
   /* ── SCREENS ── */
   .screen { display: none; flex-direction: column; height: 100dvh; }
   .screen.active { display: flex; }
@@ -69,7 +67,6 @@
     color: var(--accent);
     flex: 1;
   }
-  .header-title.n4 { color: var(--accent2); }
   .header-sub {
     font-size: 13px;
     color: var(--text-dim);
@@ -114,9 +111,6 @@
   .mode-pill.active {
     background: var(--accent);
     color: #fff;
-  }
-  .mode-pill.active.sent-mode {
-    background: var(--accent2);
   }
   .mode-pill.locked {
     opacity: 0.5;
@@ -163,8 +157,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(188,0,45,0.12);
-    border: 1px solid rgba(188,0,45,0.32);
+    background: rgba(var(--accent-rgb), 0.12);
+    border: 1px solid rgba(var(--accent-rgb), 0.32);
     border-radius: 14px;
     padding: 14px 18px;
     margin-bottom: 16px;
@@ -172,18 +166,12 @@
     -webkit-tap-highlight-color: transparent;
     transition: background 0.15s;
   }
-  .lesson-all.sent-all {
-    background: rgba(91,141,238,0.10);
-    border-color: rgba(91,141,238,0.28);
-  }
-  .lesson-all:active { background: rgba(188,0,45,0.22); }
-  .lesson-all.sent-all:active { background: rgba(91,141,238,0.20); }
+  .lesson-all:active { background: rgba(var(--accent-rgb), 0.22); }
   .lesson-all-text {
     font-size: 16px;
     font-weight: 700;
     color: var(--accent);
   }
-  .lesson-all.sent-all .lesson-all-text { color: var(--accent2); }
   .lesson-all-count { font-size: 13px; color: var(--text-dim); }
 
   .lesson-item {
@@ -200,8 +188,7 @@
     transition: background 0.15s, border-color 0.15s;
   }
   .lesson-item:active { background: rgba(255,255,255,0.08); }
-  .lesson-item.current-words  { border-color: rgba(188,0,45,0.45);  background: rgba(188,0,45,0.08); }
-  .lesson-item.current-sents  { border-color: rgba(91,141,238,0.4); background: rgba(91,141,238,0.07); }
+  .lesson-item.current { border-color: rgba(var(--accent-rgb), 0.45); background: rgba(var(--accent-rgb), 0.08); }
   .lesson-name { font-size: 15px; font-weight: 500; color: var(--text); flex: 1; min-width: 0; }
   .lesson-count { font-size: 12px; color: var(--text-dim); flex-shrink: 0; margin-left: 12px; }
 
@@ -266,18 +253,15 @@
     background: rgba(255,255,255,0.15);
   }
   .section-item:active { background: rgba(255,255,255,0.07); }
-  .section-item.current-words  { background: rgba(188,0,45,0.10); }
-  .section-item.current-sents  { background: rgba(91,141,238,0.10); }
+  .section-item.current { background: rgba(var(--accent-rgb), 0.10); }
   .section-item.all-row { font-weight: 600; }
   .section-item.all-row .section-name { color: var(--accent); }
-  .chapter-group.sent-mode .section-item.all-row .section-name { color: var(--accent2); }
   .section-name { font-size: 14px; color: var(--text); flex: 1; min-width: 0; }
   .section-count { font-size: 11px; color: var(--text-dim); flex-shrink: 0; margin-left: 10px; }
 
   /* ── PROGRESS BAR ── */
   .progress-track { height: 3px; background: rgba(255,255,255,0.08); flex-shrink: 0; }
   .progress-fill  { height: 100%; background: var(--accent); transition: width 0.3s ease; }
-  .progress-fill.sent-fill { background: var(--accent2); }
 
   /* ── PLAYER CARD ── */
   .player-main {
@@ -298,8 +282,7 @@
     border: 1px solid rgba(255,255,255,0.06);
     box-shadow: 0 8px 32px rgba(0,0,0,0.6);
   }
-  .card.playing       { border-color: rgba(188,0,45,0.4); box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(188,0,45,0.2); }
-  .card.playing.sent  { border-color: rgba(91,141,238,0.35); box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(91,141,238,0.15); }
+  .card.playing { border-color: rgba(var(--accent-rgb), 0.4); box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(var(--accent-rgb), 0.2); }
 
   /* Word card content */
   .pos-tag {
@@ -309,7 +292,7 @@
     letter-spacing: 0.8px;
     text-transform: uppercase;
     color: var(--accent);
-    background: rgba(188,0,45,0.14);
+    background: rgba(var(--accent-rgb), 0.14);
     border-radius: 6px;
     padding: 3px 10px;
     margin-bottom: 20px;
@@ -369,33 +352,6 @@
     font-style: italic;
   }
 
-  /* Sentence card content */
-  .sent-keyword {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    color: var(--accent2);
-    background: rgba(91,141,238,0.12);
-    border-radius: 6px;
-    padding: 3px 10px;
-    margin-bottom: 20px;
-  }
-  .sent-vi {
-    font-size: clamp(20px, 6vw, 30px);
-    font-weight: 700;
-    line-height: 1.7;
-    margin-bottom: 18px;
-  }
-  .sent-vi rt { font-size: 0.42em; }
-  .sent-en {
-    font-size: clamp(14px, 4vw, 18px);
-    color: var(--text-dim);
-    line-height: 1.5;
-    font-style: italic;
-  }
-
   /* Shared wave */
   .wave {
     display: flex;
@@ -413,7 +369,6 @@
     height: 8px;
     transition: opacity 0.3s;
   }
-  .wave.sent-wave .wave-bar { background: var(--accent2); }
   .wave.active .wave-bar {
     opacity: 1;
     animation: wave 1s ease-in-out infinite;
@@ -516,7 +471,7 @@
     -webkit-appearance: none;
   }
   .search-input::placeholder { color: var(--text-dim); }
-  .search-input:focus { border-color: rgba(188,0,45,0.4); }
+  .search-input:focus { border-color: rgba(var(--accent-rgb), 0.4); }
 
   .glossary-list {
     flex: 1;
@@ -628,9 +583,9 @@
   <div class="mode-bar">
     <button class="mode-pill active" id="modeN5" onclick="setPickerLevel('n5')">N5</button>
     <button class="mode-pill"        id="modeN4" onclick="setPickerLevel('n4')">N4</button>
-    <button class="mode-pill locked" id="modeN3" onclick="setPickerLevel('n3')">N3</button>
-    <button class="mode-pill locked" id="modeN2" onclick="setPickerLevel('n2')">N2</button>
-    <button class="mode-pill locked" id="modeN1" onclick="setPickerLevel('n1')">N1</button>
+    <button class="mode-pill"        id="modeN3" onclick="setPickerLevel('n3')">N3</button>
+    <button class="mode-pill"        id="modeN2" onclick="setPickerLevel('n2')">N2</button>
+    <button class="mode-pill"        id="modeN1" onclick="setPickerLevel('n1')">N1</button>
   </div>
 
   <div class="lesson-list" id="lessonListWrap">
@@ -642,8 +597,8 @@
   </div>
 
   <div class="coming-soon" id="comingSoon">
-    <div class="coming-soon-title" id="comingSoonTitle">N3 — Coming Soon!</div>
-    <div class="coming-soon-sub">This level isn't available yet. N5 and N4 are ready to go — tap them above.</div>
+    <div class="coming-soon-title" id="comingSoonTitle">N1 — Coming Soon!</div>
+    <div class="coming-soon-sub">This level isn't available yet. N5, N4, N3 and N2 are ready to go — tap them above.</div>
   </div>
 </div>
 
@@ -828,6 +783,9 @@ if ('speechSynthesis' in window) {
 const DATA = {
   n5: { WORDS: [], CHAPTERS: [], CHAPTER_SECTIONS: {}, CHAPTER_COUNT: {}, SECTION_COUNT: {} },
   n4: { WORDS: [], CHAPTERS: [], CHAPTER_SECTIONS: {}, CHAPTER_COUNT: {}, SECTION_COUNT: {} },
+  n3: { WORDS: [], CHAPTERS: [], CHAPTER_SECTIONS: {}, CHAPTER_COUNT: {}, SECTION_COUNT: {} },
+  n2: { WORDS: [], CHAPTERS: [], CHAPTER_SECTIONS: {}, CHAPTER_COUNT: {}, SECTION_COUNT: {} },
+  n1: { WORDS: [], CHAPTERS: [], CHAPTER_SECTIONS: {}, CHAPTER_COUNT: {}, SECTION_COUNT: {} },
 };
 // Active view — mirrors DATA[currentLevel] to keep the rest of the code simple
 let WORDS = [];
@@ -940,50 +898,50 @@ function applyActiveLevel(level) {
   SECTION_COUNT = d.SECTION_COUNT;
 }
 
-const LOCKED_LEVELS = new Set(['n3', 'n2', 'n1']);
+const LOCKED_LEVELS = new Set();
 const LEVEL_IDS = ['n5', 'n4', 'n3', 'n2', 'n1'];
+const THEMED_LEVELS = ['n4', 'n3', 'n2', 'n1'];    // levels that get a body-class theme (N5 is default)
+
+// Reflects current accent theme on the body, which cascades to every themed element.
+function applyBodyTheme(level) {
+  THEMED_LEVELS.forEach(lv => document.body.classList.toggle('level-' + lv, lv === level));
+}
 
 function setPickerLevel(level) {
   if (pickerLevel === level) return;
   pickerLevel = level;
 
-  // Update pill states (active + sent-mode coloring) for all 5 pills
+  // Update pill active state for all 5 pills
   LEVEL_IDS.forEach(lv => {
     const btn = document.getElementById('mode' + lv.toUpperCase());
     if (!btn) return;
     btn.classList.toggle('active', lv === level);
-    // Only N4 uses the blue (sent-mode) accent when active
-    btn.classList.toggle('sent-mode', lv === 'n4' && level === 'n4');
   });
 
-  const pickerTitleEl = document.getElementById('pickerTitle');
-  pickerTitleEl.textContent = '日本語 ' + level.toUpperCase();
-  pickerTitleEl.classList.toggle('n4', level === 'n4');
+  document.getElementById('pickerTitle').textContent = '日本語 ' + level.toUpperCase();
 
   const listWrap  = document.getElementById('lessonListWrap');
   const comingEl  = document.getElementById('comingSoon');
 
   if (LOCKED_LEVELS.has(level)) {
-    // Placeholder state — no data swap, no playable lesson
+    // Placeholder state — don't swap theme or data (keep the previous unlocked level active)
     listWrap.style.display = 'none';
     comingEl.classList.add('open');
     document.getElementById('comingSoonTitle').textContent = level.toUpperCase() + ' — Coming Soon!';
     return;
   }
 
-  // Unlocked: swap to real dataset and show the lesson list
+  // Unlocked: swap to real dataset, theme the UI, and show the lesson list
   listWrap.style.display = '';
   comingEl.classList.remove('open');
 
+  applyBodyTheme(level);
   activeLesson = null;                 // leaving old level; reset selection
   applyActiveLevel(level);
 
   // New level → start with all chapters collapsed
   expandedChapters = new Set();
 
-  const isN4 = level === 'n4';
-  const allRow = document.getElementById('allRow');
-  allRow.classList.toggle('sent-all', isN4);
   document.getElementById('allLabel').textContent = 'All Words';
   document.getElementById('allCount').textContent = WORDS.length + ' words';
 
@@ -1014,7 +972,6 @@ function toggleChapterExpanded(chapter) {
 function buildLessonList() {
   const container = document.getElementById('lessonItems');
   container.innerHTML = '';
-  const isN4 = pickerLevel === 'n4';
   const unit = ' words';
 
   CHAPTERS.forEach(chapter => {
@@ -1024,16 +981,13 @@ function buildLessonList() {
     const group = document.createElement('div');
     group.className = 'chapter-group';
     if (expandedChapters.has(chapter)) group.classList.add('open');
-    if (isN4) group.classList.add('sent-mode');
 
     // Only highlight selection if both picker and player are on the same level
     const selectionVisible = activeLesson && playerLevel === pickerLevel;
     const chapSelected = selectionVisible && activeLesson.chapter === chapter && !activeLesson.section;
-    const selectedClass = chapSelected ? (isN4 ? ' current-sents' : ' current-words') : '';
 
-    // Chapter header
     const header = document.createElement('div');
-    header.className = 'chapter-header' + selectedClass;
+    header.className = 'chapter-header' + (chapSelected ? ' current' : '');
     header.innerHTML =
       '<span class="chapter-chevron">▸</span>' +
       '<span class="lesson-name">' + prettyLesson(chapter) + '</span>' +
@@ -1041,13 +995,11 @@ function buildLessonList() {
     header.onclick = () => toggleChapterExpanded(chapter);
     group.appendChild(header);
 
-    // Expanded sub-list
     const sub = document.createElement('div');
     sub.className = 'chapter-sections';
 
-    // "All of chapter" row
     const allRow = document.createElement('div');
-    allRow.className = 'section-item all-row' + selectedClass;
+    allRow.className = 'section-item all-row' + (chapSelected ? ' current' : '');
     allRow.innerHTML =
       '<span class="section-name">All of ' + prettyLesson(chapter) + '</span>' +
       '<span class="section-count">' + cCount + unit + '</span>';
@@ -1057,7 +1009,6 @@ function buildLessonList() {
     };
     sub.appendChild(allRow);
 
-    // Section rows
     (CHAPTER_SECTIONS[chapter] || []).forEach(section => {
       const sKey = chapter + '|' + section;
       const sCount = SECTION_COUNT[sKey] || 0;
@@ -1065,9 +1016,8 @@ function buildLessonList() {
       const sel = selectionVisible
         && activeLesson.chapter === chapter
         && activeLesson.section === section;
-      const selCls = sel ? (isN4 ? ' current-sents' : ' current-words') : '';
       const row = document.createElement('div');
-      row.className = 'section-item' + selCls;
+      row.className = 'section-item' + (sel ? ' current' : '');
       row.innerHTML =
         '<span class="section-name">' + prettyLesson(section) + '</span>' +
         '<span class="section-count">' + sCount + unit + '</span>';
@@ -1091,13 +1041,8 @@ function selectLesson(lesson) {
   showScreen('screenPlayer');
   maybeShowTutorial();
 
-  const lessonLabelEl = document.getElementById('lessonLabel');
-  lessonLabelEl.textContent = lessonLabel(activeLesson);
-
-  const isN4 = playerLevel === 'n4';
-  lessonLabelEl.classList.toggle('n4', isN4);
-  progress.className = 'progress-fill' + (isN4 ? ' sent-fill' : '');
-  wave.classList.toggle('sent-wave', isN4);
+  // Body theme is already set by setPickerLevel — picker and player share it.
+  document.getElementById('lessonLabel').textContent = lessonLabel(activeLesson);
 }
 
 function goToLessons() {
@@ -1228,7 +1173,6 @@ function armWatchdog() {
   watchdogTimer = setTimeout(() => {
     wave.classList.remove('active');
     card.classList.remove('playing');
-    card.classList.remove('sent');
     currentRepeat = 0;
     if (isPlaying) advanceWord();
   }, 15000);
@@ -1247,7 +1191,6 @@ function playCurrentWord() {
     if (isPlaying) advanceWord();
   });
   card.classList.add('playing');
-  if (playerLevel === 'n4') card.classList.add('sent');
   wave.classList.add('active');
   armWatchdog();
 }
@@ -1263,7 +1206,6 @@ function replayWord() {
   });
   wave.classList.add('active');
   card.classList.add('playing');
-  if (playerLevel === 'n4') card.classList.add('sent');
   armWatchdog();
 }
 
@@ -1273,12 +1215,10 @@ audio.addEventListener('ended', () => {
   if (isPlaying && currentRepeat < repeatCount) {
     wave.classList.remove('active');
     card.classList.remove('playing');
-    card.classList.remove('sent');
     gapTimer = setTimeout(replayWord, gap * 0.5 * 1000);
   } else {
     wave.classList.remove('active');
     card.classList.remove('playing');
-    card.classList.remove('sent');
     if (isPlaying) {
       gapTimer = setTimeout(() => {
         currentRepeat = 0;
@@ -1292,7 +1232,6 @@ audio.addEventListener('error', () => {
   clearWatchdog();
   wave.classList.remove('active');
   card.classList.remove('playing');
-  card.classList.remove('sent');
   if (isPlaying) advanceWord();
 });
 
@@ -1321,7 +1260,6 @@ function pause() {
   clearWatchdog();
   wave.classList.remove('active');
   card.classList.remove('playing');
-  card.classList.remove('sent');
   clearTimeout(gapTimer);
   currentRepeat = 0;
   releaseWakeLock();
@@ -1330,7 +1268,7 @@ function pause() {
 function nextWord() {
   clearTimeout(gapTimer); clearWatchdog(); audio.pause();
   wave.classList.remove('active');
-  card.classList.remove('playing'); card.classList.remove('sent');
+  card.classList.remove('playing');
   currentRepeat = 0;
   currentIndex = (currentIndex + 1) % playlist.length;
   if (isPlaying) playCurrentWord(); else showCard();
@@ -1339,7 +1277,7 @@ function nextWord() {
 function prevWord() {
   clearTimeout(gapTimer); clearWatchdog(); audio.pause();
   wave.classList.remove('active');
-  card.classList.remove('playing'); card.classList.remove('sent');
+  card.classList.remove('playing');
   currentRepeat = 0;
   currentIndex = (currentIndex - 1 + playlist.length) % playlist.length;
   if (isPlaying) playCurrentWord(); else showCard();
@@ -1388,7 +1326,7 @@ function toggleFurigana() {
 function jumpToStart() {
   clearTimeout(gapTimer); clearWatchdog(); audio.pause();
   wave.classList.remove('active');
-  card.classList.remove('playing'); card.classList.remove('sent');
+  card.classList.remove('playing');
   currentRepeat = 0; currentIndex = 0;
   if (shuffle) buildPlaylist();
   if (isPlaying) playCurrentWord(); else showCard();
@@ -1516,12 +1454,19 @@ function indexLevel(level, data) {
 Promise.all([
   fetch('words.json').then(r => r.json()),
   fetch('words_n4.json').then(r => r.json()),
+  fetch('words_n3.json').then(r => r.json()),
+  fetch('words_n2.json').then(r => r.json()),
+  fetch('words_n1.json').then(r => r.json()),
 ])
-  .then(([n5, n4]) => {
+  .then(([n5, n4, n3, n2, n1]) => {
     indexLevel('n5', n5);
     indexLevel('n4', n4);
+    indexLevel('n3', n3);
+    indexLevel('n2', n2);
+    indexLevel('n1', n1);
 
-    // Start on N5
+    // Start on N5 (default theme — no body class needed)
+    applyBodyTheme('n5');
     applyActiveLevel('n5');
 
     // Start with all chapters collapsed
