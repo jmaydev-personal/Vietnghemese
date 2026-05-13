@@ -245,6 +245,63 @@
     font-style: italic;
   }
 
+  /* Grammar mode: explanation block and footer nav */
+  .sent-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin: 22px 0 18px;
+  }
+  .sent-explanation {
+    font-size: clamp(14px, 4vw, 17px);
+    line-height: 1.65;
+    color: var(--text);
+    white-space: pre-wrap;
+  }
+  .sent-explanation.empty {
+    color: var(--text-dim);
+    font-style: italic;
+  }
+  /* In Grammar mode, the card becomes a scrollable article rather than a centered card. */
+  .player-main.grammar {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    align-items: stretch;
+    padding-bottom: 16px;
+  }
+  .player-main.grammar .card {
+    height: auto;
+    min-height: 0;
+    align-items: stretch;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 24px;
+  }
+  .player-main.grammar .sent-keyword { align-self: flex-start; }
+  .grammar-nav {
+    display: none;
+    gap: 10px;
+    padding: 14px 16px 22px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .grammar-nav.open { display: flex; }
+  .grammar-nav-btn {
+    flex: 1;
+    background: rgba(91,141,238,0.10);
+    color: var(--accent2);
+    border: 1px solid rgba(91,141,238,0.25);
+    border-radius: 12px;
+    padding: 13px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .grammar-nav-btn:active { background: rgba(91,141,238,0.20); }
+  .grammar-nav-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
   /* Shared wave */
   .wave {
     display: flex;
@@ -523,6 +580,8 @@
         <div class="sent-keyword" id="sentKeyword"></div>
         <div class="sent-vi"      id="sentVi">—</div>
         <div class="sent-en"      id="sentEn">—</div>
+        <div class="sent-divider" id="sentDivider"></div>
+        <div class="sent-explanation" id="sentExplanation">—</div>
       </div>
 
       <div class="wave" id="wave">
@@ -537,6 +596,12 @@
 
   <!-- hidden play button still needed for JS state -->
   <button id="playBtn" style="display:none" aria-hidden="true"></button>
+
+  <!-- Grammar mode footer nav (hidden in Words mode) -->
+  <div class="grammar-nav" id="grammarNav">
+    <button class="grammar-nav-btn" id="grammarPrevBtn" onclick="prevWord()">← Previous grammar point</button>
+    <button class="grammar-nav-btn" id="grammarNextBtn" onclick="nextWord()">Next grammar point →</button>
+  </div>
 </div>
 
 <!-- Settings overlay -->
@@ -690,6 +755,9 @@ const posTag    = document.getElementById('posTag');
 const sentVi    = document.getElementById('sentVi');
 const sentEn    = document.getElementById('sentEn');
 const sentKw    = document.getElementById('sentKeyword');
+const sentExp   = document.getElementById('sentExplanation');
+const grammarNav = document.getElementById('grammarNav');
+const playerMain = document.querySelector('.player-main');
 const counter   = document.getElementById('playerCounter');
 const progress  = document.getElementById('progress');
 const playBtn   = document.getElementById('playBtn');
@@ -758,6 +826,11 @@ function selectLesson(key) {
   progress.className = 'progress-fill' + (isSent ? ' sent-fill' : '');
   playBtn.classList.toggle('sent-play', isSent);
   wave.classList.toggle('sent-wave', isSent);
+
+  // Grammar mode is a scrollable, audio-less reading view with a footer nav.
+  playerMain.classList.toggle('grammar', isSent);
+  wave.style.display = isSent ? 'none' : '';
+  grammarNav.classList.toggle('open', isSent);
 }
 
 function goToLessons() {
@@ -775,8 +848,10 @@ function showScreen(id) {
 function buildPlaylist() {
   let pool;
   if (playerMode === 'sentences') {
+    // Grammar mode shows every entry that has an example sentence to anchor
+    // the explanation. Audio isn't required.
     pool = WORDS
-      .map((w, i) => (w.sentaudio ? i : -1))
+      .map((w, i) => (w.sent ? i : -1))
       .filter(i => i >= 0);
   } else {
     pool = WORDS.map((_, i) => i);
@@ -820,6 +895,16 @@ function showCard() {
     sentKw.textContent = w.word;
     sentVi.textContent = w.sent  || '—';
     sentEn.textContent = w.senten || '—';
+    const exp = (w.explanation || '').trim();
+    if (exp) {
+      sentExp.textContent = exp;
+      sentExp.classList.remove('empty');
+    } else {
+      sentExp.textContent = 'No explanation yet.';
+      sentExp.classList.add('empty');
+    }
+    // Scroll the explanation page back to the top whenever we change cards.
+    if (playerMain) playerMain.scrollTop = 0;
   } else {
     wordEl.textContent    = w.word;
     englishEl.textContent = w.english;
@@ -1058,6 +1143,8 @@ function dismissTutorial() {
 }
 
 function maybeShowTutorial() {
+  // Tutorial describes swipe gestures that only apply in Words mode.
+  if (playerMode === 'sentences') return;
   if (!localStorage.getItem(TUTORIAL_KEY)) showTutorial();
 }
 
@@ -1089,8 +1176,8 @@ function maybeShowTutorial() {
       // Horizontal swipe — skip word
       if (dx < 0) nextWord(); else prevWord();
     } else if (absDy > SWIPE_MIN && absDx < SWIPE_MAX_Y) {
-      // Vertical swipe — play/pause
-      togglePlay();
+      // Vertical swipe — play/pause (Words mode only; Grammar is silent)
+      if (playerMode !== 'sentences') togglePlay();
     }
   }, { passive: true });
 })();
@@ -1107,7 +1194,7 @@ fetch('words.json')
       (w.lessons || []).forEach(l => {
         if (!seen.has(l)) { seen.add(l); LESSONS.push(l); }
         COUNTS[l]  = (COUNTS[l]  || 0) + 1;
-        if (w.sentaudio) SCOUNTS[l] = (SCOUNTS[l] || 0) + 1;
+        if (w.sent) SCOUNTS[l] = (SCOUNTS[l] || 0) + 1;
       });
     });
     LESSONS.sort();
