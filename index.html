@@ -335,122 +335,6 @@
     color: var(--text-dim);
     font-style: italic;
   }
-
-  /* Grammar mode: JLPT N5 entry-card content */
-  .ja-word {
-    font-size: clamp(28px, 8vw, 40px);
-    font-weight: 800;
-    line-height: 1.2;
-    letter-spacing: -0.3px;
-    margin-bottom: 6px;
-  }
-  .ja-furigana {
-    font-size: clamp(13px, 3.6vw, 15px);
-    color: var(--text-dim);
-    margin-bottom: 12px;
-    line-height: 1.4;
-  }
-  .ja-furigana:empty { display: none; }
-  .ja-pos {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    color: var(--accent2);
-    background: rgba(91,141,238,0.10);
-    border-radius: 6px;
-    padding: 2px 8px;
-    margin-bottom: 14px;
-  }
-  .ja-pos:empty { display: none; }
-  .meaning {
-    font-size: clamp(15px, 4.3vw, 18px);
-    line-height: 1.45;
-  }
-  .meaning-en { color: var(--text); margin-bottom: 4px; }
-  .meaning-vi { color: var(--text-dim); font-style: italic; }
-  .meaning-vi:empty { display: none; }
-
-  .ex-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    margin-bottom: 10px;
-  }
-  .ex-ja {
-    font-size: clamp(17px, 5vw, 22px);
-    line-height: 1.5;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  .ex-ja:empty { display: none; }
-  .ex-en {
-    font-size: clamp(14px, 4vw, 16px);
-    color: var(--text-dim);
-    line-height: 1.5;
-    margin-bottom: 4px;
-  }
-  .ex-en:empty { display: none; }
-  .ex-vi {
-    font-size: clamp(14px, 4vw, 16px);
-    color: var(--text-dim);
-    font-style: italic;
-    line-height: 1.5;
-  }
-  .ex-vi:empty { display: none; }
-
-  /* Bolded keyword inside example sentences */
-  .ex-ja b, .ex-ja strong { color: var(--accent2); font-weight: 700; }
-
-  /* Section row inside the chapter dropdown (Grammar mode) */
-  .section-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 13px 16px 13px 30px;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transition: background 0.15s;
-  }
-  .section-row:last-child { border-bottom: none; }
-  .section-row:active { background: rgba(91,141,238,0.10); }
-  .section-row.current { background: rgba(91,141,238,0.14); }
-  .section-num {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--accent2);
-    background: rgba(91,141,238,0.14);
-    border-radius: 6px;
-    padding: 2px 8px;
-    margin-right: 10px;
-    flex-shrink: 0;
-  }
-  .section-title {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text);
-    flex: 1;
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .section-sub {
-    font-size: 12px;
-    color: var(--text-dim);
-    margin-left: 6px;
-  }
-  .section-count {
-    font-size: 12px;
-    color: var(--text-dim);
-    flex-shrink: 0;
-    margin-left: 12px;
-  }
   /* In Grammar mode, the card becomes a scrollable article rather than a centered card. */
   .player-main.grammar {
     overflow-y: auto;
@@ -765,24 +649,13 @@
         <div class="english" id="englishEl">—</div>
       </div>
 
-      <!-- Sentence card content (Grammar mode: JLPT N5 entry view) -->
+      <!-- Sentence card content -->
       <div id="sentContent" style="display:none">
         <div class="sent-keyword" id="sentKeyword"></div>
-        <div class="ja-word"      id="jaWord">—</div>
-        <div class="ja-furigana"  id="jaFurigana"></div>
-        <div class="ja-pos"       id="jaPos"></div>
-        <div class="meaning meaning-en" id="meaningEn">—</div>
-        <div class="meaning meaning-vi" id="meaningVi"></div>
-
-        <div class="sent-divider"></div>
-        <div class="ex-label">Example</div>
-        <div class="ex-ja"       id="exampleJa"></div>
-        <div class="ex-en"       id="exampleEn"></div>
-        <div class="ex-vi"       id="exampleVi"></div>
-
-        <div class="sent-divider"></div>
-        <div class="ex-label">Notes</div>
-        <div class="sent-explanation" id="sentExplanation">No explanation yet.</div>
+        <div class="sent-vi"      id="sentVi">—</div>
+        <div class="sent-en"      id="sentEn">—</div>
+        <div class="sent-divider" id="sentDivider"></div>
+        <div class="sent-explanation" id="sentExplanation">—</div>
       </div>
 
       <div class="wave" id="wave">
@@ -933,27 +806,6 @@ if ('speechSynthesis' in window) {
 
 let WORDS = [], LESSONS = [], COUNTS = {}, SCOUNTS = {};
 
-// Grammar-mode (JLPT N5) state
-let GRAMMAR          = [];     // array of entries from grammar.json
-let CHAPTERS         = [];     // ordered chapter keys, e.g. "01_自己紹介"
-let CHAPTER_SECTIONS = {};     // chapter -> [section, ...]
-let SECTION_INDEX    = {};     // "chapter/section" -> [grammarEntryIdx, ...]
-let CHAPTER_COUNTS   = {};     // chapter -> total entries
-
-// Optional human labels per chapter (English from the PDF TOC).
-const CHAPTER_LABELS_EN = {
-  '01_自己紹介':  'Self Introduction',
-  '02_勉強':      'Study',
-  '03_仕事':      'Work',
-  '04_友達':      'Friend',
-  '05_今日のご飯':"Today's Meal",
-  '06_趣味':      'Hobby',
-  '07_買い物':    'Shopping',
-  '08_休みの日':  'Holiday',
-  '09_住む':      'Living',
-  '10_健康など':  'Health etc.',
-};
-
 // ── State ─────────────────────────────
 let pickerMode      = 'words';     // 'words' | 'sentences'
 let playerMode      = 'words';     // locked when entering player
@@ -997,10 +849,10 @@ function setPickerMode(mode) {
   const isSent = mode === 'sentences';
   const allRow = document.getElementById('allRow');
   allRow.classList.toggle('sent-all', isSent);
-  document.getElementById('allLabel').textContent  = isSent ? 'All Grammar (N5)' : 'All Words';
+  document.getElementById('allLabel').textContent  = isSent ? 'All Grammar' : 'All Words';
   document.getElementById('allCount').textContent  = isSent
-    ? GRAMMAR.length + ' entries'
-    : WORDS.length + ' words';
+    ? Object.values(SCOUNTS).reduce((a,b)=>a+b,0) + ' grammar items'
+    : '950 words';
 
   buildLessonList();
 }
@@ -1012,29 +864,6 @@ function prettyLesson(key) {
   return num + '. ' + name;
 }
 
-// Grammar-mode formatters. Chapter/section keys look like "01_自己紹介".
-function chapterTitle(chKey) {
-  const m = chKey && chKey.match(/^(\d+)_(.+)$/);
-  if (!m) return chKey || '';
-  const en = CHAPTER_LABELS_EN[chKey];
-  return m[1] + '. ' + m[2] + (en ? '  ·  ' + en : '');
-}
-function sectionTitle(scKey) {
-  const m = scKey && scKey.match(/^(\d+)_(.+)$/);
-  return m ? m[2] : (scKey || '');
-}
-function sectionNum(scKey) {
-  const m = scKey && scKey.match(/^(\d+)_/);
-  return m ? m[1] : '';
-}
-// "chapter/section" -> human label for the player header
-function prettySectionKey(key) {
-  if (!key) return '';
-  const [ch, sc] = key.split('/');
-  const m = ch.match(/^(\d+)_/);
-  return 'Ch.' + (m ? m[1] : '') + '  ·  ' + sectionTitle(sc);
-}
-
 function escapeHtml(s) {
   return String(s == null ? '' : s)
     .replace(/&/g, '&amp;')
@@ -1044,8 +873,8 @@ function escapeHtml(s) {
     .replace(/'/g, '&#39;');
 }
 
-// Persisted expand-state for grammar chapter dropdowns
-let expandedChapters = new Set();
+// Persisted expand-state for grammar lesson dropdowns
+let expandedLessons = new Set();
 
 function buildLessonList() {
   const container = document.getElementById('lessonItems');
@@ -1053,7 +882,7 @@ function buildLessonList() {
   const isSent = pickerMode === 'sentences';
 
   if (!isSent) {
-    // Words mode: flat Vietnamese-vocab lesson list (unchanged).
+    // Words mode: flat list (unchanged)
     LESSONS.forEach(key => {
       const count = COUNTS[key] || 0;
       if (count === 0) return;
@@ -1069,51 +898,45 @@ function buildLessonList() {
     return;
   }
 
-  // Grammar mode: chapter dropdowns containing section rows (JLPT N5).
-  CHAPTERS.forEach(chKey => {
-    const sections = CHAPTER_SECTIONS[chKey] || [];
-    if (sections.length === 0) return;
+  // Grammar mode: expandable groups, one per lesson, listing inner grammar items.
+  LESSONS.forEach(key => {
+    const count = SCOUNTS[key] || 0;
+    if (count === 0) return;
 
-    const isCurrentChapter = activeLessonKey
-      && activeLessonKey.startsWith(chKey + '/')
-      && playerMode === 'sentences';
-    const isOpen = expandedChapters.has(chKey);
+    const isCurrent = key === activeLessonKey && playerMode === 'sentences';
+    const isOpen    = expandedLessons.has(key);
 
     const group = document.createElement('div');
     group.className = 'lesson-group'
-      + (isCurrentChapter ? ' current-sents' : '')
-      + (isOpen           ? ' open'         : '');
-    group.dataset.chapter = chKey;
+      + (isCurrent ? ' current-sents' : '')
+      + (isOpen    ? ' open'          : '');
 
-    // Chapter header
+    // Header (clickable to expand/collapse)
     const header = document.createElement('div');
     header.className = 'lesson-header';
     header.innerHTML =
       '<div class="lesson-header-left">' +
         '<span class="lesson-chevron"></span>' +
-        '<span class="lesson-name">' + escapeHtml(chapterTitle(chKey)) + '</span>' +
+        '<span class="lesson-name">' + escapeHtml(prettyLesson(key)) + '</span>' +
       '</div>' +
-      '<span class="lesson-count">' + (CHAPTER_COUNTS[chKey] || 0) + ' entries</span>';
-    header.onclick = () => toggleLessonGroup(chKey);
+      '<span class="lesson-count">' + count + ' grammar items</span>';
+    header.onclick = () => toggleLessonGroup(key);
     group.appendChild(header);
 
-    // Section rows (the leaves)
+    // Inner item list (rendered now, hidden via CSS until .open)
     const items = document.createElement('div');
     items.className = 'lesson-items';
-    sections.forEach(scKey => {
-      const composite = chKey + '/' + scKey;
-      const count = (SECTION_INDEX[composite] || []).length;
-      const isCurrent = composite === activeLessonKey && playerMode === 'sentences';
-
+    WORDS.forEach((w, i) => {
+      if (!w.sent) return;
+      if (!w.lessons || !w.lessons.includes(key)) return;
       const row = document.createElement('div');
-      row.className = 'section-row' + (isCurrent ? ' current' : '');
+      row.className = 'grammar-item-row';
       row.innerHTML =
-        '<span class="section-num">§' + escapeHtml(sectionNum(scKey)) + '</span>' +
-        '<span class="section-title">' + escapeHtml(sectionTitle(scKey)) + '</span>' +
-        '<span class="section-count">' + count + '</span>';
+        '<span class="gi-word">' + escapeHtml(w.word) + '</span>' +
+        '<span class="gi-english">' + escapeHtml(w.english || '') + '</span>';
       row.onclick = (ev) => {
         ev.stopPropagation();
-        selectLesson(composite);
+        selectLesson(key, i);
       };
       items.appendChild(row);
     });
@@ -1123,32 +946,47 @@ function buildLessonList() {
   });
 }
 
-function toggleLessonGroup(chKey) {
-  if (expandedChapters.has(chKey)) {
-    expandedChapters.delete(chKey);
-  } else {
-    expandedChapters.add(chKey);
-  }
-  // Find the group in-place to preserve scroll position.
+function toggleLessonGroup(key) {
   const container = document.getElementById('lessonItems');
-  const group = container.querySelector('.lesson-group[data-chapter="' + chKey.replace(/"/g, '\\"') + '"]');
-  if (group) group.classList.toggle('open', expandedChapters.has(chKey));
+  // Find the group element for this key without rebuilding the whole list
+  // (rebuilding loses scroll position on long lists).
+  if (expandedLessons.has(key)) {
+    expandedLessons.delete(key);
+  } else {
+    expandedLessons.add(key);
+  }
+  // Toggle the .open class on the matching group in place.
+  const groups = container.querySelectorAll('.lesson-group');
+  let idx = 0;
+  for (const k of LESSONS) {
+    if ((SCOUNTS[k] || 0) === 0) continue;
+    if (k === key) {
+      groups[idx].classList.toggle('open', expandedLessons.has(key));
+      break;
+    }
+    idx++;
+  }
 }
 
-function selectLesson(key) {
+function selectLesson(key, startWordIndex) {
   activeLessonKey = key;
   playerMode = pickerMode;
   resetPlayer();
+
+  // If a specific grammar item was tapped, jump the playlist to that index.
+  if (startWordIndex !== undefined && startWordIndex !== null) {
+    const pos = playlist.indexOf(startWordIndex);
+    if (pos >= 0) {
+      currentIndex = pos;
+      showCard();
+    }
+  }
 
   showScreen('screenPlayer');
   maybeShowTutorial();
 
   const label = document.getElementById('lessonLabel');
-  if (playerMode === 'sentences') {
-    label.textContent = key ? prettySectionKey(key) : 'All Grammar (N5)';
-  } else {
-    label.textContent = key ? prettyLesson(key) : 'All Words';
-  }
+  label.textContent = key ? prettyLesson(key) : (playerMode === 'sentences' ? 'All Grammar' : 'All Words');
 
   // Tint player for sentence mode
   const isSent = playerMode === 'sentences';
@@ -1175,24 +1013,21 @@ function showScreen(id) {
 
 // ── Playlist ──────────────────────────
 function buildPlaylist() {
+  let pool;
   if (playerMode === 'sentences') {
-    // Grammar mode plays over the JLPT N5 grammar entries.
-    let pool;
-    if (activeLessonKey && SECTION_INDEX[activeLessonKey]) {
-      pool = SECTION_INDEX[activeLessonKey].slice();
-    } else {
-      pool = GRAMMAR.map((_, i) => i);
-    }
-    playlist = pool;
-    if (shuffle) shuffleArray(playlist);
-    return;
+    // Grammar mode shows every entry that has an example sentence to anchor
+    // the explanation. Audio isn't required.
+    pool = WORDS
+      .map((w, i) => (w.sent ? i : -1))
+      .filter(i => i >= 0);
+  } else {
+    pool = WORDS.map((_, i) => i);
   }
 
-  // Words mode: Vietnamese vocab.
-  let pool = WORDS.map((_, i) => i);
   if (activeLessonKey !== null) {
     pool = pool.filter(i => WORDS[i].lessons && WORDS[i].lessons.includes(activeLessonKey));
   }
+
   playlist = pool;
   if (shuffle) shuffleArray(playlist);
 }
@@ -1213,11 +1048,7 @@ function resetPlayer() {
 }
 
 // ── Display ───────────────────────────
-function currentWord() {
-  return playerMode === 'sentences'
-    ? GRAMMAR[playlist[currentIndex]]
-    : WORDS[playlist[currentIndex]];
-}
+function currentWord() { return WORDS[playlist[currentIndex]]; }
 
 function showCard() {
   const w = currentWord();
@@ -1228,29 +1059,9 @@ function showCard() {
   document.getElementById('sentContent').style.display = isSent ? ''     : 'none';
 
   if (isSent) {
-    // Grammar mode = JLPT N5 entry card.
-    const numLabel = w.n ? '#' + w.n : '';
-    const secLabel = w.section ? sectionTitle(w.section) : '';
-    sentKw.textContent = [numLabel, secLabel].filter(Boolean).join('  ·  ');
-
-    document.getElementById('jaWord').textContent = w.ja || '—';
-
-    // Show furigana only when the reading differs from the surface form
-    // (i.e. the word is written in kanji and furigana is the kana reading).
-    const fr = document.getElementById('jaFurigana');
-    fr.textContent = (w.furigana && w.furigana !== w.ja) ? w.furigana : '';
-
-    document.getElementById('jaPos').textContent = w.pos || '';
-
-    document.getElementById('meaningEn').textContent = w.en || '—';
-    document.getElementById('meaningVi').textContent = w.vi || '';
-
-    // Example sentence — `sent` already contains <b>…</b> around the keyword,
-    // so we render via innerHTML. Source JSON is authored by us, not user input.
-    document.getElementById('exampleJa').innerHTML = w.sent || '';
-    document.getElementById('exampleEn').textContent = w.sent_en || '';
-    document.getElementById('exampleVi').textContent = w.sent_vi || '';
-
+    sentKw.textContent = w.word;
+    sentVi.textContent = w.sent  || '—';
+    sentEn.textContent = w.senten || '—';
     const exp = (w.explanation || '').trim();
     if (exp) {
       sentExp.textContent = exp;
@@ -1259,8 +1070,7 @@ function showCard() {
       sentExp.textContent = 'No explanation yet.';
       sentExp.classList.add('empty');
     }
-
-    // Scroll the article back to the top on card change.
+    // Scroll the explanation page back to the top whenever we change cards.
     if (playerMain) playerMain.scrollTop = 0;
   } else {
     wordEl.textContent    = w.word;
@@ -1275,12 +1085,7 @@ function showCard() {
 
 // ── Playback ──────────────────────────
 function getAudioFile(w) {
-  if (playerMode === 'sentences') {
-    // Grammar mode reuses the JLPT N5 audio at /grammar_audio/. The card
-    // doesn't autoplay, but the file is still resolvable for future use.
-    return w && w.audio ? 'grammar_audio/' + w.audio : '';
-  }
-  return w && w.audio ? 'audio/' + w.audio : '';
+  return playerMode === 'sentences' ? w.sentaudio : w.audio;
 }
 
 function clearWatchdog() {
@@ -1306,7 +1111,7 @@ function playCurrentWord() {
   showCard();
   const file = getAudioFile(w);
   if (!file) { advanceWord(); return; }
-  audio.src          = file;
+  audio.src          = 'audio/' + file;
   audio.playbackRate = speed;
   audio.play().catch(() => {
     clearWatchdog();
@@ -1322,7 +1127,7 @@ function replayWord() {
   // Full src reload — more reliable than seeking to 0 on mobile
   const w = currentWord();
   const file = getAudioFile(w);
-  audio.src = file;
+  audio.src = 'audio/' + file;
   audio.playbackRate = speed;
   audio.play().catch(() => {
     clearWatchdog();
@@ -1545,16 +1350,14 @@ function maybeShowTutorial() {
 })();
 
 // ── Init ──────────────────────────────
-Promise.all([
-  fetch('words.json').then(r => r.json()),
-  fetch('grammar.json').then(r => r.json()),
-])
-  .then(([wordsData, grammarData]) => {
-    WORDS = wordsData;
+fetch('words.json')
+  .then(r => r.json())
+  .then(data => {
+    WORDS = data;
 
-    // Derive LESSONS, COUNTS, SCOUNTS from words
+    // Derive LESSONS, COUNTS, SCOUNTS from data
     const seen = new Set();
-    wordsData.forEach(w => {
+    data.forEach(w => {
       (w.lessons || []).forEach(l => {
         if (!seen.has(l)) { seen.add(l); LESSONS.push(l); }
         COUNTS[l]  = (COUNTS[l]  || 0) + 1;
@@ -1563,35 +1366,12 @@ Promise.all([
     });
     LESSONS.sort();
 
-    // Derive grammar structures from grammar.json
-    GRAMMAR = grammarData.entries || [];
-    const chaptersSeen = new Set();
-    GRAMMAR.forEach(e => {
-      const ch = e.chapter;
-      const sc = e.section;
-      const key = ch + '/' + sc;
-      if (!chaptersSeen.has(ch)) {
-        chaptersSeen.add(ch);
-        CHAPTERS.push(ch);
-        CHAPTER_SECTIONS[ch] = [];
-        CHAPTER_COUNTS[ch] = 0;
-      }
-      if (!SECTION_INDEX[key]) {
-        SECTION_INDEX[key] = [];
-        CHAPTER_SECTIONS[ch].push(sc);
-      }
-      SECTION_INDEX[key].push(e);
-      CHAPTER_COUNTS[ch]++;
-    });
-    CHAPTERS.sort();
-    CHAPTERS.forEach(ch => CHAPTER_SECTIONS[ch].sort());
-
     buildLessonList();
     buildPlaylist();
     showCard();
   })
   .catch(err => {
-    document.body.innerHTML = '<p style="color:#e94560;padding:32px;font-family:sans-serif">Failed to load data: ' + err + '</p>';
+    document.body.innerHTML = '<p style="color:#e94560;padding:32px;font-family:sans-serif">Failed to load words.json: ' + err + '</p>';
   });
 </script>
 
