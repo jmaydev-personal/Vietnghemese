@@ -154,6 +154,80 @@
   .lesson-name { font-size: 15px; font-weight: 500; color: var(--text); }
   .lesson-count { font-size: 12px; color: var(--text-dim); flex-shrink: 0; margin-left: 12px; }
 
+  /* Grammar mode: expandable lesson groups */
+  .lesson-group {
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  .lesson-group.current-sents { border-color: rgba(91,141,238,0.4); background: rgba(91,141,238,0.07); }
+  .lesson-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 16px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s;
+  }
+  .lesson-header:active { background: rgba(255,255,255,0.08); }
+  .lesson-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+  .lesson-chevron {
+    width: 10px; height: 10px;
+    border-right: 2px solid var(--text-dim);
+    border-bottom: 2px solid var(--text-dim);
+    transform: rotate(-45deg);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 2px;
+  }
+  .lesson-group.open .lesson-chevron {
+    transform: rotate(45deg);
+    border-right-color: var(--accent2);
+    border-bottom-color: var(--accent2);
+  }
+  .lesson-items {
+    display: none;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    background: rgba(0,0,0,0.18);
+  }
+  .lesson-group.open .lesson-items { display: block; }
+  .grammar-item-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 12px 16px 12px 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s;
+  }
+  .grammar-item-row:last-child { border-bottom: none; }
+  .grammar-item-row:active { background: rgba(91,141,238,0.10); }
+  .gi-word {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    flex-shrink: 0;
+  }
+  .gi-english {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.35;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+  }
+
   /* ── PROGRESS BAR ── */
   .progress-track { height: 3px; background: rgba(255,255,255,0.08); flex-shrink: 0; }
   .progress-fill  { height: 100%; background: var(--accent); transition: width 0.3s ease; }
@@ -790,31 +864,124 @@ function prettyLesson(key) {
   return num + '. ' + name;
 }
 
+function escapeHtml(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Persisted expand-state for grammar lesson dropdowns
+let expandedLessons = new Set();
+
 function buildLessonList() {
   const container = document.getElementById('lessonItems');
   container.innerHTML = '';
   const isSent = pickerMode === 'sentences';
+
+  if (!isSent) {
+    // Words mode: flat list (unchanged)
+    LESSONS.forEach(key => {
+      const count = COUNTS[key] || 0;
+      if (count === 0) return;
+      const isCurrent = key === activeLessonKey && playerMode === 'words';
+      const div = document.createElement('div');
+      div.className = 'lesson-item' + (isCurrent ? ' current-words' : '');
+      div.innerHTML =
+        '<span class="lesson-name">' + escapeHtml(prettyLesson(key)) + '</span>' +
+        '<span class="lesson-count">' + count + ' words</span>';
+      div.onclick = () => selectLesson(key);
+      container.appendChild(div);
+    });
+    return;
+  }
+
+  // Grammar mode: expandable groups, one per lesson, listing inner grammar items.
   LESSONS.forEach(key => {
-    const count = isSent ? (SCOUNTS[key] || 0) : (COUNTS[key] || 0);
+    const count = SCOUNTS[key] || 0;
     if (count === 0) return;
-    const isCurrentWords = !isSent && key === activeLessonKey && playerMode === 'words';
-    const isCurrentSents = isSent  && key === activeLessonKey && playerMode === 'sentences';
-    const div = document.createElement('div');
-    div.className = 'lesson-item'
-      + (isCurrentWords ? ' current-words' : '')
-      + (isCurrentSents ? ' current-sents' : '');
-    div.innerHTML =
-      '<span class="lesson-name">' + prettyLesson(key) + '</span>' +
-      '<span class="lesson-count">' + count + (isSent ? ' grammar items' : ' words') + '</span>';
-    div.onclick = () => selectLesson(key);
-    container.appendChild(div);
+
+    const isCurrent = key === activeLessonKey && playerMode === 'sentences';
+    const isOpen    = expandedLessons.has(key);
+
+    const group = document.createElement('div');
+    group.className = 'lesson-group'
+      + (isCurrent ? ' current-sents' : '')
+      + (isOpen    ? ' open'          : '');
+
+    // Header (clickable to expand/collapse)
+    const header = document.createElement('div');
+    header.className = 'lesson-header';
+    header.innerHTML =
+      '<div class="lesson-header-left">' +
+        '<span class="lesson-chevron"></span>' +
+        '<span class="lesson-name">' + escapeHtml(prettyLesson(key)) + '</span>' +
+      '</div>' +
+      '<span class="lesson-count">' + count + ' grammar items</span>';
+    header.onclick = () => toggleLessonGroup(key);
+    group.appendChild(header);
+
+    // Inner item list (rendered now, hidden via CSS until .open)
+    const items = document.createElement('div');
+    items.className = 'lesson-items';
+    WORDS.forEach((w, i) => {
+      if (!w.sent) return;
+      if (!w.lessons || !w.lessons.includes(key)) return;
+      const row = document.createElement('div');
+      row.className = 'grammar-item-row';
+      row.innerHTML =
+        '<span class="gi-word">' + escapeHtml(w.word) + '</span>' +
+        '<span class="gi-english">' + escapeHtml(w.english || '') + '</span>';
+      row.onclick = (ev) => {
+        ev.stopPropagation();
+        selectLesson(key, i);
+      };
+      items.appendChild(row);
+    });
+    group.appendChild(items);
+
+    container.appendChild(group);
   });
 }
 
-function selectLesson(key) {
+function toggleLessonGroup(key) {
+  const container = document.getElementById('lessonItems');
+  // Find the group element for this key without rebuilding the whole list
+  // (rebuilding loses scroll position on long lists).
+  if (expandedLessons.has(key)) {
+    expandedLessons.delete(key);
+  } else {
+    expandedLessons.add(key);
+  }
+  // Toggle the .open class on the matching group in place.
+  const groups = container.querySelectorAll('.lesson-group');
+  let idx = 0;
+  for (const k of LESSONS) {
+    if ((SCOUNTS[k] || 0) === 0) continue;
+    if (k === key) {
+      groups[idx].classList.toggle('open', expandedLessons.has(key));
+      break;
+    }
+    idx++;
+  }
+}
+
+function selectLesson(key, startWordIndex) {
   activeLessonKey = key;
   playerMode = pickerMode;
   resetPlayer();
+
+  // If a specific grammar item was tapped, jump the playlist to that index.
+  if (startWordIndex !== undefined && startWordIndex !== null) {
+    const pos = playlist.indexOf(startWordIndex);
+    if (pos >= 0) {
+      currentIndex = pos;
+      showCard();
+    }
+  }
+
   showScreen('screenPlayer');
   maybeShowTutorial();
 
