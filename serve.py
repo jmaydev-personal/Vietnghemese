@@ -14,6 +14,9 @@ PORT = 8765
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 AUDIO_DIR = os.path.join(SCRIPT_DIR, 'audio')
 INDEX_FILE = os.path.join(SCRIPT_DIR, 'index.html')
+# Grammar mode reuses the N5 audio that already lives under the Japanese
+# section, so we serve those files through a separate URL prefix.
+GRAMMAR_AUDIO_DIR = os.path.join(SCRIPT_DIR, 'japanese', 'audio')
 
 
 def get_local_ip():
@@ -56,11 +59,26 @@ class Handler(http.server.BaseHTTPRequestHandler):
         elif path == '/words.json':
             self.send_file(os.path.join(SCRIPT_DIR, 'words.json'), 'application/json; charset=utf-8')
 
+        elif path == '/grammar.json':
+            self.send_file(os.path.join(SCRIPT_DIR, 'grammar.json'), 'application/json; charset=utf-8')
+
         elif path.startswith('/audio/'):
             filename = path[len('/audio/'):]
             # Security: only allow fptai-*.mp3 filenames
             if filename.startswith('fptai-') and filename.endswith('.mp3') and '/' not in filename and '..' not in filename:
                 audio_path = os.path.join(AUDIO_DIR, filename)
+                self.send_file(audio_path, 'audio/mpeg')
+            else:
+                self.send_error(403, "Forbidden")
+
+        elif path.startswith('/grammar_audio/'):
+            filename = path[len('/grammar_audio/'):]
+            # Reuse the JLPT N5 audio already on disk in /japanese/audio
+            if (filename.startswith('JLPT_Tango_N5_')
+                    and filename.endswith('.mp3')
+                    and '/' not in filename
+                    and '..' not in filename):
+                audio_path = os.path.join(GRAMMAR_AUDIO_DIR, filename)
                 self.send_file(audio_path, 'audio/mpeg')
             else:
                 self.send_error(403, "Forbidden")
