@@ -481,7 +481,7 @@
   <!-- Mode toggle -->
   <div class="mode-bar">
     <button class="mode-pill active" id="modeWords"      onclick="setPickerMode('words')">Words</button>
-    <button class="mode-pill"        id="modeSentences"  onclick="setPickerMode('sentences')">Sentences</button>
+    <button class="mode-pill"        id="modeSentences"  onclick="setPickerMode('sentences')">Grammar</button>
   </div>
 
   <div class="lesson-list">
@@ -707,9 +707,9 @@ function setPickerMode(mode) {
   const isSent = mode === 'sentences';
   const allRow = document.getElementById('allRow');
   allRow.classList.toggle('sent-all', isSent);
-  document.getElementById('allLabel').textContent  = isSent ? 'All Sentences' : 'All Words';
+  document.getElementById('allLabel').textContent  = isSent ? 'All Grammar' : 'All Words';
   document.getElementById('allCount').textContent  = isSent
-    ? Object.values(SCOUNTS).reduce((a,b)=>a+b,0) + ' sentences'
+    ? Object.values(SCOUNTS).reduce((a,b)=>a+b,0) + ' grammar items'
     : '950 words';
 
   buildLessonList();
@@ -737,7 +737,7 @@ function buildLessonList() {
       + (isCurrentSents ? ' current-sents' : '');
     div.innerHTML =
       '<span class="lesson-name">' + prettyLesson(key) + '</span>' +
-      '<span class="lesson-count">' + count + (isSent ? ' sentences' : ' words') + '</span>';
+      '<span class="lesson-count">' + count + (isSent ? ' grammar items' : ' words') + '</span>';
     div.onclick = () => selectLesson(key);
     container.appendChild(div);
   });
@@ -751,7 +751,7 @@ function selectLesson(key) {
   maybeShowTutorial();
 
   const label = document.getElementById('lessonLabel');
-  label.textContent = key ? prettyLesson(key) : (playerMode === 'sentences' ? 'All Sentences' : 'All Words');
+  label.textContent = key ? prettyLesson(key) : (playerMode === 'sentences' ? 'All Grammar' : 'All Words');
 
   // Tint player for sentence mode
   const isSent = playerMode === 'sentences';
