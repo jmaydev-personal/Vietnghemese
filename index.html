@@ -372,12 +372,14 @@
     font-weight: 500;
   }
 
-  /* Example block */
+  /* Example block — stack multiple {vi, en} pairs */
+  .gr-ex-pair { margin-bottom: 14px; }
+  .gr-ex-pair:last-child { margin-bottom: 0; }
   .gr-ex-vi {
-    font-size: clamp(18px, 5.2vw, 24px);
+    font-size: clamp(18px, 5.2vw, 22px);
     line-height: 1.5;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
   .gr-ex-vi:empty { display: none; }
   .gr-ex-vi b, .gr-ex-vi strong { color: var(--accent3); font-weight: 700; }
@@ -734,12 +736,11 @@
           <div class="gr-details" id="grDetails"></div>
         </div>
 
-        <!-- Example -->
-        <div class="gr-section">
-          <div class="gr-section-header">Example</div>
-          <div class="gr-ex-vi" id="grExVi"></div>
-          <div class="gr-ex-en" id="grExEn"></div>
-          <div class="gr-ex-empty" id="grExEmpty" style="display:none">No example sentence.</div>
+        <!-- Examples (rendered dynamically) -->
+        <div class="gr-section" id="grExamplesSection">
+          <div class="gr-section-header">Examples</div>
+          <div id="grExamples"></div>
+          <div class="gr-ex-empty" id="grExEmpty" style="display:none">No example sentences.</div>
         </div>
 
         <!-- Your Notes -->
@@ -896,6 +897,11 @@ if ('speechSynthesis' in window) {
 }
 
 let WORDS = [], LESSONS = [], COUNTS = {}, SCOUNTS = {};
+// Grammar dataset (separate from vocab): array of entries with
+// {id, unit, unit_vi, unit_en, header, title, meaning, examples[], notes, warning}
+let GRAMMAR = [];
+// Ordered list of unit keys like '01_Xin chào'; UCOUNTS maps key -> entry count
+let UNITS = [], UCOUNTS = {};
 
 // ── State ─────────────────────────────
 let pickerMode      = 'words';     // 'words' | 'sentences'
@@ -922,8 +928,7 @@ const grWord       = document.getElementById('grWord');
 const grMeaningEn  = document.getElementById('grMeaningEn');
 const grWarning    = document.getElementById('grWarning');
 const grDetails    = document.getElementById('grDetails');
-const grExVi       = document.getElementById('grExVi');
-const grExEn       = document.getElementById('grExEn');
+const grExamples   = document.getElementById('grExamples');
 const grExEmpty    = document.getElementById('grExEmpty');
 const grNotes      = document.getElementById('grNotes');
 
@@ -1021,9 +1026,9 @@ function buildLessonList() {
     return;
   }
 
-  // Grammar mode: expandable groups, one per lesson, listing inner grammar items.
-  LESSONS.forEach(key => {
-    const count = SCOUNTS[key] || 0;
+  // Grammar mode: expandable groups, one per UNIT, listing inner grammar entries.
+  UNITS.forEach(key => {
+    const count = UCOUNTS[key] || 0;
     if (count === 0) return;
 
     const isCurrent = key === activeLessonKey && playerMode === 'sentences';
@@ -1049,14 +1054,13 @@ function buildLessonList() {
     // Inner item list (rendered now, hidden via CSS until .open)
     const items = document.createElement('div');
     items.className = 'lesson-items';
-    WORDS.forEach((w, i) => {
-      if (!w.sent) return;
-      if (!w.lessons || !w.lessons.includes(key)) return;
+    GRAMMAR.forEach((e, i) => {
+      if (e._unitKey !== key) return;
       const row = document.createElement('div');
       row.className = 'grammar-item-row';
       row.innerHTML =
-        '<span class="gi-word">' + escapeHtml(w.word) + '</span>' +
-        '<span class="gi-english">' + escapeHtml(w.english || '') + '</span>';
+        '<span class="gi-word">' + escapeHtml(e.title || '') + '</span>' +
+        '<span class="gi-english">' + escapeHtml(e.meaning || '') + '</span>';
       row.onclick = (ev) => {
         ev.stopPropagation();
         selectLesson(key, i);
@@ -1516,14 +1520,16 @@ function maybeShowTutorial() {
 })();
 
 // ── Init ──────────────────────────────
-fetch('words.json')
-  .then(r => r.json())
-  .then(data => {
-    WORDS = data;
+Promise.all([
+  fetch('words.json').then(r => r.json()),
+  fetch('grammar.json').then(r => r.json()),
+])
+  .then(([wordsData, grammarData]) => {
+    WORDS = wordsData;
 
-    // Derive LESSONS, COUNTS, SCOUNTS from data
+    // Derive LESSONS, COUNTS, SCOUNTS from vocab
     const seen = new Set();
-    data.forEach(w => {
+    WORDS.forEach(w => {
       (w.lessons || []).forEach(l => {
         if (!seen.has(l)) { seen.add(l); LESSONS.push(l); }
         COUNTS[l]  = (COUNTS[l]  || 0) + 1;
@@ -1532,12 +1538,24 @@ fetch('words.json')
     });
     LESSONS.sort();
 
+    // Index grammar by unit. Unit key format: '01_Xin chào' (pad number,
+    // join with vi name) so prettyLesson('01_Xin chào') → '1. Xin chào'.
+    GRAMMAR = grammarData.entries || [];
+    const unitSeen = new Set();
+    GRAMMAR.forEach(e => {
+      const key = String(e.unit).padStart(2, '0') + '_' + (e.unit_vi || '');
+      e._unitKey = key;
+      if (!unitSeen.has(key)) { unitSeen.add(key); UNITS.push(key); }
+      UCOUNTS[key] = (UCOUNTS[key] || 0) + 1;
+    });
+    UNITS.sort();   // sort by leading number
+
     buildLessonList();
     buildPlaylist();
     showCard();
   })
   .catch(err => {
-    document.body.innerHTML = '<p style="color:#e94560;padding:32px;font-family:sans-serif">Failed to load words.json: ' + err + '</p>';
+    document.body.innerHTML = '<p style="color:#e94560;padding:32px;font-family:sans-serif">Failed to load data: ' + err + '</p>';
   });
 </script>
 
