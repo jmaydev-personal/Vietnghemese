@@ -13,6 +13,8 @@
     --surface: #0d0d0d;
     --accent: #e94560;
     --accent2: #5b8dee;
+    --accent3: #a259ff;     /* Purple — grammar hero word */
+    --warn:    #f0a040;     /* Amber — grammar warning callout */
     --text: #eaeaea;
     --text-dim: #888;
     --text-ipa: #a0c4ff;
@@ -293,45 +295,114 @@
     letter-spacing: 0.3px;
   }
 
-  /* Sentence card content */
-  .sent-keyword {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    color: var(--accent2);
-    background: rgba(91,141,238,0.12);
-    border-radius: 6px;
-    padding: 3px 10px;
-    margin-bottom: 20px;
+  /* ── Grammar card (Bunpro-style, single-scroll) ─────────────── */
+  /* Hero: centered word + meaning + optional warning */
+  .gr-hero {
+    text-align: center;
+    padding: 4px 0 22px;
   }
-  .sent-vi {
-    font-size: clamp(20px, 6vw, 30px);
-    font-weight: 700;
+  .gr-word {
+    font-size: clamp(44px, 12vw, 64px);
+    font-weight: 800;
+    color: var(--accent3);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+    word-break: break-word;
+  }
+  .gr-meaning-en {
+    font-size: clamp(17px, 4.8vw, 20px);
+    color: var(--text);
     line-height: 1.4;
-    margin-bottom: 18px;
   }
-  .sent-en {
-    font-size: clamp(14px, 4vw, 18px);
+  .gr-warning {
+    display: none;            /* shown only when non-empty */
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 4px 0;
+    font-size: 13px;
+    color: var(--warn);
+    line-height: 1.45;
+    text-align: left;
+  }
+  .gr-warning.show { display: flex; }
+  .gr-warning::before {
+    content: "⚠️";
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  /* Section block (Details, Example, Your Notes) */
+  .gr-section {
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .gr-section-header {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 14px;
+  }
+
+  /* Details list (single column for now) */
+  .gr-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .gr-detail-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .gr-detail-label {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.3;
+  }
+  .gr-detail-value {
+    font-size: 16px;
+    color: var(--text);
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  /* Example block */
+  .gr-ex-vi {
+    font-size: clamp(18px, 5.2vw, 24px);
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .gr-ex-vi:empty { display: none; }
+  .gr-ex-vi b, .gr-ex-vi strong { color: var(--accent3); font-weight: 700; }
+  .gr-ex-en {
+    font-size: clamp(14px, 4vw, 16px);
     color: var(--text-dim);
     line-height: 1.5;
     font-style: italic;
   }
-
-  /* Grammar mode: explanation block and footer nav */
-  .sent-divider {
-    height: 1px;
-    background: rgba(255,255,255,0.08);
-    margin: 22px 0 18px;
+  .gr-ex-en:empty { display: none; }
+  .gr-ex-empty {
+    color: var(--text-dim);
+    font-style: italic;
+    font-size: 14px;
   }
-  .sent-explanation {
-    font-size: clamp(14px, 4vw, 17px);
-    line-height: 1.65;
+
+  /* Notes block */
+  .gr-notes {
+    font-size: 15px;
+    line-height: 1.6;
     color: var(--text);
     white-space: pre-wrap;
+    min-height: 48px;
   }
-  .sent-explanation.empty {
+  .gr-notes.empty {
     color: var(--text-dim);
     font-style: italic;
   }
@@ -350,7 +421,6 @@
     text-align: left;
     padding: 24px;
   }
-  .player-main.grammar .sent-keyword { align-self: flex-start; }
   .grammar-nav {
     display: none;
     gap: 10px;
@@ -649,13 +719,34 @@
         <div class="english" id="englishEl">—</div>
       </div>
 
-      <!-- Sentence card content -->
+      <!-- Sentence (Grammar mode) card content -->
       <div id="sentContent" style="display:none">
-        <div class="sent-keyword" id="sentKeyword"></div>
-        <div class="sent-vi"      id="sentVi">—</div>
-        <div class="sent-en"      id="sentEn">—</div>
-        <div class="sent-divider" id="sentDivider"></div>
-        <div class="sent-explanation" id="sentExplanation">—</div>
+        <!-- Hero: keyword + meaning + optional warning -->
+        <div class="gr-hero">
+          <div class="gr-word"       id="grWord">—</div>
+          <div class="gr-meaning-en" id="grMeaningEn"></div>
+          <div class="gr-warning"    id="grWarning"></div>
+        </div>
+
+        <!-- Details -->
+        <div class="gr-section">
+          <div class="gr-section-header">Details</div>
+          <div class="gr-details" id="grDetails"></div>
+        </div>
+
+        <!-- Example -->
+        <div class="gr-section">
+          <div class="gr-section-header">Example</div>
+          <div class="gr-ex-vi" id="grExVi"></div>
+          <div class="gr-ex-en" id="grExEn"></div>
+          <div class="gr-ex-empty" id="grExEmpty" style="display:none">No example sentence.</div>
+        </div>
+
+        <!-- Your Notes -->
+        <div class="gr-section">
+          <div class="gr-section-header">Your Notes</div>
+          <div class="gr-notes empty" id="grNotes">No notes yet.</div>
+        </div>
       </div>
 
       <div class="wave" id="wave">
@@ -826,10 +917,42 @@ let activeLessonKey = null;
 const wordEl    = document.getElementById('wordEl');
 const englishEl = document.getElementById('englishEl');
 const posTag    = document.getElementById('posTag');
-const sentVi    = document.getElementById('sentVi');
-const sentEn    = document.getElementById('sentEn');
-const sentKw    = document.getElementById('sentKeyword');
-const sentExp   = document.getElementById('sentExplanation');
+// Grammar-card DOM refs (cached for speed; structure is static)
+const grWord       = document.getElementById('grWord');
+const grMeaningEn  = document.getElementById('grMeaningEn');
+const grWarning    = document.getElementById('grWarning');
+const grDetails    = document.getElementById('grDetails');
+const grExVi       = document.getElementById('grExVi');
+const grExEn       = document.getElementById('grExEn');
+const grExEmpty    = document.getElementById('grExEmpty');
+const grNotes      = document.getElementById('grNotes');
+
+// Human-friendly POS labels for the Details row
+const POS_LABELS = {
+  noun: 'Noun', verb: 'Verb', adj: 'Adjective', adv: 'Adverb',
+  num: 'Number', name: 'Name', prep: 'Preposition', prefix: 'Prefix',
+};
+
+// Highlight every case-insensitive match of `keyword` inside `sentence`.
+// Returns safe HTML with <b>…</b> wrapping each match.
+function boldKeyword(sentence, keyword) {
+  if (!sentence) return '';
+  if (!keyword)  return escapeHtml(sentence);
+  // Escape the keyword for regex; use a Unicode-aware flag so accents match.
+  const safe = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(safe, 'giu');
+  let out = '';
+  let last = 0;
+  let m;
+  while ((m = re.exec(sentence)) !== null) {
+    out += escapeHtml(sentence.slice(last, m.index));
+    out += '<b>' + escapeHtml(m[0]) + '</b>';
+    last = m.index + m[0].length;
+    if (m[0].length === 0) re.lastIndex++; // safety against zero-width matches
+  }
+  out += escapeHtml(sentence.slice(last));
+  return out;
+}
 const grammarNav = document.getElementById('grammarNav');
 const playerMain = document.querySelector('.player-main');
 const counter   = document.getElementById('playerCounter');
@@ -1050,6 +1173,59 @@ function resetPlayer() {
 // ── Display ───────────────────────────
 function currentWord() { return WORDS[playlist[currentIndex]]; }
 
+function renderGrammarCard(w) {
+  // Hero
+  grWord.textContent      = w.word    || '—';
+  grMeaningEn.textContent = w.english || '';
+
+  // Warning callout — reserved for future content. Hide unless a `warning`
+  // field is set on the entry.
+  const warning = (w.warning || '').trim();
+  if (warning) {
+    grWarning.textContent = warning;
+    grWarning.classList.add('show');
+  } else {
+    grWarning.textContent = '';
+    grWarning.classList.remove('show');
+  }
+
+  // Details — single-column list. Rows we always show:
+  //   • Part of Speech (mapped to a human label, or em-dash if unknown)
+  //   • Lessons (comma-joined list)
+  const posLabel = POS_LABELS[w.pos] || (w.pos ? w.pos : '—');
+  const lessons  = (w.lessons || []).map(prettyLesson).join(', ') || '—';
+  grDetails.innerHTML =
+      '<div class="gr-detail-row">'
+    +   '<div class="gr-detail-label">Part of Speech</div>'
+    +   '<div class="gr-detail-value">' + escapeHtml(posLabel) + '</div>'
+    + '</div>'
+    + '<div class="gr-detail-row">'
+    +   '<div class="gr-detail-label">Lessons</div>'
+    +   '<div class="gr-detail-value">' + escapeHtml(lessons) + '</div>'
+    + '</div>';
+
+  // Example — bold the keyword inline; show empty state when no sentence.
+  if (w.sent) {
+    grExVi.innerHTML       = boldKeyword(w.sent, w.word);
+    grExEn.textContent     = w.senten || '';
+    grExEmpty.style.display = 'none';
+  } else {
+    grExVi.innerHTML        = '';
+    grExEn.textContent      = '';
+    grExEmpty.style.display = '';
+  }
+
+  // Notes — empty state until an entry has a populated `explanation`.
+  const exp = (w.explanation || '').trim();
+  if (exp) {
+    grNotes.textContent = exp;
+    grNotes.classList.remove('empty');
+  } else {
+    grNotes.textContent = 'No notes yet.';
+    grNotes.classList.add('empty');
+  }
+}
+
 function showCard() {
   const w = currentWord();
   if (!w) return;
@@ -1059,18 +1235,8 @@ function showCard() {
   document.getElementById('sentContent').style.display = isSent ? ''     : 'none';
 
   if (isSent) {
-    sentKw.textContent = w.word;
-    sentVi.textContent = w.sent  || '—';
-    sentEn.textContent = w.senten || '—';
-    const exp = (w.explanation || '').trim();
-    if (exp) {
-      sentExp.textContent = exp;
-      sentExp.classList.remove('empty');
-    } else {
-      sentExp.textContent = 'No explanation yet.';
-      sentExp.classList.add('empty');
-    }
-    // Scroll the explanation page back to the top whenever we change cards.
+    renderGrammarCard(w);
+    // Scroll the article back to the top whenever we change cards.
     if (playerMain) playerMain.scrollTop = 0;
   } else {
     wordEl.textContent    = w.word;
