@@ -413,15 +413,16 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     align-items: stretch;
+    justify-content: flex-start;
     padding-bottom: 16px;
   }
   .player-main.grammar .card {
     height: auto;
-    min-height: 0;
-    align-items: stretch;
-    justify-content: flex-start;
+    flex-shrink: 0;
+    align-self: stretch;
     text-align: left;
     padding: 24px;
+    margin: 0 auto;
   }
   .grammar-nav {
     display: none;
