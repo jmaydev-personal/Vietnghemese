@@ -165,6 +165,7 @@
     overflow: hidden;
   }
   .lesson-group.current-sents { border-color: rgba(91,141,238,0.4); background: rgba(91,141,238,0.07); }
+  .lesson-group.current-words { border-color: rgba(233,69,96,0.4);  background: rgba(233,69,96,0.07); }
   .lesson-header {
     display: flex;
     align-items: center;
@@ -214,6 +215,17 @@
   }
   .grammar-item-row:last-child { border-bottom: none; }
   .grammar-item-row:active { background: rgba(91,141,238,0.10); }
+  .vocab-section-header {
+    padding: 10px 16px 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    background: rgba(0,0,0,0.10);
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+  .vocab-section-header:first-child { border-top: none; }
   .gi-word {
     font-size: 15px;
     font-weight: 600;
@@ -1043,34 +1055,24 @@ function buildLessonList() {
   container.innerHTML = '';
   const isSent = pickerMode === 'sentences';
 
-  if (!isSent) {
-    // Words mode: flat list (unchanged)
-    LESSONS.forEach(key => {
-      const count = COUNTS[key] || 0;
-      if (count === 0) return;
-      const isCurrent = key === activeLessonKey && playerMode === 'words';
-      const div = document.createElement('div');
-      div.className = 'lesson-item' + (isCurrent ? ' current-words' : '');
-      div.innerHTML =
-        '<span class="lesson-name">' + escapeHtml(prettyLesson(key)) + '</span>' +
-        '<span class="lesson-count">' + count + ' words</span>';
-      div.onclick = () => selectLesson(key);
-      container.appendChild(div);
-    });
-    return;
-  }
+  // Both modes now render expandable groups: a header (clickable to expand /
+  // collapse) and an inner list of tappable rows.
+  const keys      = isSent ? UNITS   : LESSONS;
+  const counts    = isSent ? UCOUNTS : COUNTS;
+  const itemLabel = isSent ? 'grammar items' : 'words';
+  const currentCls = isSent ? 'current-sents' : 'current-words';
 
-  // Grammar mode: expandable groups, one per UNIT, listing inner grammar entries.
-  UNITS.forEach(key => {
-    const count = UCOUNTS[key] || 0;
+  keys.forEach(key => {
+    const count = counts[key] || 0;
     if (count === 0) return;
 
-    const isCurrent = key === activeLessonKey && playerMode === 'sentences';
-    const isOpen    = expandedLessons.has(key);
+    const isCurrent = key === activeLessonKey
+      && playerMode === (isSent ? 'sentences' : 'words');
+    const isOpen = expandedLessons.has(key);
 
     const group = document.createElement('div');
     group.className = 'lesson-group'
-      + (isCurrent ? ' current-sents' : '')
+      + (isCurrent ? ' ' + currentCls : '')
       + (isOpen    ? ' open'          : '');
 
     // Header (clickable to expand/collapse)
@@ -1081,26 +1083,65 @@ function buildLessonList() {
         '<span class="lesson-chevron"></span>' +
         '<span class="lesson-name">' + escapeHtml(prettyLesson(key)) + '</span>' +
       '</div>' +
-      '<span class="lesson-count">' + count + ' grammar items</span>';
+      '<span class="lesson-count">' + count + ' ' + itemLabel + '</span>';
     header.onclick = () => toggleLessonGroup(key);
     group.appendChild(header);
 
     // Inner item list (rendered now, hidden via CSS until .open)
     const items = document.createElement('div');
     items.className = 'lesson-items';
-    GRAMMAR.forEach((e, i) => {
-      if (e._unitKey !== key) return;
-      const row = document.createElement('div');
-      row.className = 'grammar-item-row';
-      row.innerHTML =
-        '<span class="gi-word">' + escapeHtml(e.title || '') + '</span>' +
-        '<span class="gi-english">' + escapeHtml(e.meaning || '') + '</span>';
-      row.onclick = (ev) => {
-        ev.stopPropagation();
-        selectLesson(key, i);
-      };
-      items.appendChild(row);
-    });
+
+    if (isSent) {
+      GRAMMAR.forEach((e, i) => {
+        if (e._unitKey !== key) return;
+        const row = document.createElement('div');
+        row.className = 'grammar-item-row';
+        row.innerHTML =
+          '<span class="gi-word">' + escapeHtml(e.title || '') + '</span>' +
+          '<span class="gi-english">' + escapeHtml(e.meaning || '') + '</span>';
+        row.onclick = (ev) => {
+          ev.stopPropagation();
+          selectLesson(key, i);
+        };
+        items.appendChild(row);
+      });
+    } else {
+      // Group words by textbook vocab section within this lesson.
+      // Each word has parallel `lessons` + `sections` arrays — the section
+      // index corresponds to the same position as the lesson key.
+      const bySection = {};
+      WORDS.forEach((w, i) => {
+        if (!w.lessons) return;
+        const lessonIdx = w.lessons.indexOf(key);
+        if (lessonIdx === -1) return;
+        const sec = (w.sections && w.sections[lessonIdx]) || 0;
+        if (!bySection[sec]) bySection[sec] = [];
+        bySection[sec].push([w, i]);
+      });
+      const sectionKeys = Object.keys(bySection).map(Number).sort((a, b) => a - b);
+      // If there's only one section and it's 0 (Beyond textbook), skip header.
+      const hideHeaders = sectionKeys.length === 1 && sectionKeys[0] === 0;
+      sectionKeys.forEach(sec => {
+        if (sec > 0 && !hideHeaders) {
+          const sh = document.createElement('div');
+          sh.className = 'vocab-section-header';
+          sh.textContent = 'Section ' + sec;
+          items.appendChild(sh);
+        }
+        bySection[sec].forEach(([w, i]) => {
+          const row = document.createElement('div');
+          row.className = 'grammar-item-row';
+          row.innerHTML =
+            '<span class="gi-word">' + escapeHtml(w.word || '') + '</span>' +
+            '<span class="gi-english">' + escapeHtml(w.english || '') + '</span>';
+          row.onclick = (ev) => {
+            ev.stopPropagation();
+            selectLesson(key, i);
+          };
+          items.appendChild(row);
+        });
+      });
+    }
     group.appendChild(items);
 
     container.appendChild(group);
@@ -1116,13 +1157,13 @@ function toggleLessonGroup(key) {
   } else {
     expandedLessons.add(key);
   }
-  // Toggle the .open class on the matching group in place. In grammar mode
-  // we iterate UNITS; otherwise this code path isn't reached (words mode
-  // has no expandable groups).
+  const isSent = pickerMode === 'sentences';
+  const keys   = isSent ? UNITS   : LESSONS;
+  const counts = isSent ? UCOUNTS : COUNTS;
   const groups = container.querySelectorAll('.lesson-group');
   let idx = 0;
-  for (const k of UNITS) {
-    if ((UCOUNTS[k] || 0) === 0) continue;
+  for (const k of keys) {
+    if ((counts[k] || 0) === 0) continue;
     if (k === key) {
       groups[idx].classList.toggle('open', expandedLessons.has(key));
       break;
