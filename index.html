@@ -1207,13 +1207,17 @@ function renderGrammarCard(e) {
     grWarning.classList.remove('show');
   }
 
-  // Details — show the hand-written structural template (e.g.
-  // "chào + [name / term of address]") so the user sees the shape of the
-  // construction at a glance. Falls back to the textbook header if no
-  // pattern is available.
-  const structure = (e.pattern && e.pattern.trim()) || e.header || '—';
+  // Details — show the textbook header (the framing description) and the
+  // hand-written structural template (e.g. "chào + [name / term of address]")
+  // so the user sees both the framing and the shape of the construction.
+  const description = e.header || '—';
+  const structure   = (e.pattern && e.pattern.trim()) || e.header || '—';
   grDetails.innerHTML =
       '<div class="gr-detail-row">'
+    +   '<div class="gr-detail-label">Description</div>'
+    +   '<div class="gr-detail-value">' + escapeHtml(description) + '</div>'
+    + '</div>'
+    + '<div class="gr-detail-row">'
     +   '<div class="gr-detail-label">Structure</div>'
     +   '<div class="gr-detail-value gr-pattern">' + escapeHtml(structure) + '</div>'
     + '</div>';
