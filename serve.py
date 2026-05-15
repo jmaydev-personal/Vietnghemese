@@ -56,6 +56,9 @@ class Handler(http.server.BaseHTTPRequestHandler):
         elif path == '/words.json':
             self.send_file(os.path.join(SCRIPT_DIR, 'words.json'), 'application/json; charset=utf-8')
 
+        elif path == '/grammar.json':
+            self.send_file(os.path.join(SCRIPT_DIR, 'grammar.json'), 'application/json; charset=utf-8')
+
         elif path.startswith('/audio/'):
             filename = path[len('/audio/'):]
             # Security: only allow fptai-*.mp3 filenames

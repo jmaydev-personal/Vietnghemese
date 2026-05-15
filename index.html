@@ -979,7 +979,7 @@ function setPickerMode(mode) {
   allRow.classList.toggle('sent-all', isSent);
   document.getElementById('allLabel').textContent  = isSent ? 'All Grammar' : 'All Words';
   document.getElementById('allCount').textContent  = isSent
-    ? Object.values(SCOUNTS).reduce((a,b)=>a+b,0) + ' grammar items'
+    ? GRAMMAR.length + ' grammar items'
     : '950 words';
 
   buildLessonList();
@@ -1082,11 +1082,13 @@ function toggleLessonGroup(key) {
   } else {
     expandedLessons.add(key);
   }
-  // Toggle the .open class on the matching group in place.
+  // Toggle the .open class on the matching group in place. In grammar mode
+  // we iterate UNITS; otherwise this code path isn't reached (words mode
+  // has no expandable groups).
   const groups = container.querySelectorAll('.lesson-group');
   let idx = 0;
-  for (const k of LESSONS) {
-    if ((SCOUNTS[k] || 0) === 0) continue;
+  for (const k of UNITS) {
+    if ((UCOUNTS[k] || 0) === 0) continue;
     if (k === key) {
       groups[idx].classList.toggle('open', expandedLessons.has(key));
       break;
@@ -1142,17 +1144,16 @@ function showScreen(id) {
 function buildPlaylist() {
   let pool;
   if (playerMode === 'sentences') {
-    // Grammar mode shows every entry that has an example sentence to anchor
-    // the explanation. Audio isn't required.
-    pool = WORDS
-      .map((w, i) => (w.sent ? i : -1))
-      .filter(i => i >= 0);
+    // Grammar mode: playlist indexes into the GRAMMAR array (not WORDS).
+    pool = GRAMMAR.map((_, i) => i);
+    if (activeLessonKey !== null) {
+      pool = pool.filter(i => GRAMMAR[i]._unitKey === activeLessonKey);
+    }
   } else {
     pool = WORDS.map((_, i) => i);
-  }
-
-  if (activeLessonKey !== null) {
-    pool = pool.filter(i => WORDS[i].lessons && WORDS[i].lessons.includes(activeLessonKey));
+    if (activeLessonKey !== null) {
+      pool = pool.filter(i => WORDS[i].lessons && WORDS[i].lessons.includes(activeLessonKey));
+    }
   }
 
   playlist = pool;
@@ -1175,16 +1176,20 @@ function resetPlayer() {
 }
 
 // ── Display ───────────────────────────
-function currentWord() { return WORDS[playlist[currentIndex]]; }
+// In grammar mode, playlist indexes into GRAMMAR; otherwise WORDS.
+function currentWord() {
+  return playerMode === 'sentences'
+    ? GRAMMAR[playlist[currentIndex]]
+    : WORDS[playlist[currentIndex]];
+}
 
-function renderGrammarCard(w) {
-  // Hero
-  grWord.textContent      = w.word    || '—';
-  grMeaningEn.textContent = w.english || '';
+function renderGrammarCard(e) {
+  // Hero: big purple Vietnamese title + English meaning subtitle.
+  grWord.textContent      = e.title   || '—';
+  grMeaningEn.textContent = e.meaning || '';
 
-  // Warning callout — reserved for future content. Hide unless a `warning`
-  // field is set on the entry.
-  const warning = (w.warning || '').trim();
+  // Warning callout — only shown when the entry sets a `warning` field.
+  const warning = (e.warning || '').trim();
   if (warning) {
     grWarning.textContent = warning;
     grWarning.classList.add('show');
@@ -1193,36 +1198,43 @@ function renderGrammarCard(w) {
     grWarning.classList.remove('show');
   }
 
-  // Details — single-column list. Rows we always show:
-  //   • Part of Speech (mapped to a human label, or em-dash if unknown)
-  //   • Lessons (comma-joined list)
-  const posLabel = POS_LABELS[w.pos] || (w.pos ? w.pos : '—');
-  const lessons  = (w.lessons || []).map(prettyLesson).join(', ') || '—';
+  // Details — show Unit (Vietnamese name + English gloss) and the full
+  // textbook header so the user sees how the entry was framed.
+  const unitLabel = e.unit
+    ? (e.unit + '. ' + (e.unit_vi || '') + ' (' + (e.unit_en || '') + ')')
+    : '—';
   grDetails.innerHTML =
       '<div class="gr-detail-row">'
-    +   '<div class="gr-detail-label">Part of Speech</div>'
-    +   '<div class="gr-detail-value">' + escapeHtml(posLabel) + '</div>'
+    +   '<div class="gr-detail-label">Unit</div>'
+    +   '<div class="gr-detail-value">' + escapeHtml(unitLabel) + '</div>'
     + '</div>'
     + '<div class="gr-detail-row">'
-    +   '<div class="gr-detail-label">Lessons</div>'
-    +   '<div class="gr-detail-value">' + escapeHtml(lessons) + '</div>'
+    +   '<div class="gr-detail-label">Description</div>'
+    +   '<div class="gr-detail-value">' + escapeHtml(e.header || '—') + '</div>'
     + '</div>';
 
-  // Example — bold the keyword inline; show empty state when no sentence.
-  if (w.sent) {
-    grExVi.innerHTML       = boldKeyword(w.sent, w.word);
-    grExEn.textContent     = w.senten || '';
+  // Examples — render each {vi, en} pair, bolding the title keyword in the
+  // Vietnamese line so it stands out.
+  const examples = Array.isArray(e.examples) ? e.examples : [];
+  if (examples.length) {
+    grExamples.innerHTML = examples.map(ex => {
+      const viHtml = boldKeyword(ex.vi || '', e.title || '');
+      const enHtml = escapeHtml(ex.en || '');
+      return '<div class="gr-ex-pair">'
+        +    '<div class="gr-ex-vi">' + viHtml + '</div>'
+        +    '<div class="gr-ex-en">' + enHtml + '</div>'
+        +  '</div>';
+    }).join('');
     grExEmpty.style.display = 'none';
   } else {
-    grExVi.innerHTML        = '';
-    grExEn.textContent      = '';
+    grExamples.innerHTML    = '';
     grExEmpty.style.display = '';
   }
 
-  // Notes — empty state until an entry has a populated `explanation`.
-  const exp = (w.explanation || '').trim();
-  if (exp) {
-    grNotes.textContent = exp;
+  // Notes from the textbook (extra explanations / NB clauses).
+  const notes = (e.notes || '').trim();
+  if (notes) {
+    grNotes.textContent = notes;
     grNotes.classList.remove('empty');
   } else {
     grNotes.textContent = 'No notes yet.';
