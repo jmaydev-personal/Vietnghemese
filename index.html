@@ -1125,7 +1125,7 @@ function buildLessonList() {
         if (sec > 0 && !hideHeaders) {
           const sh = document.createElement('div');
           sh.className = 'vocab-section-header';
-          sh.textContent = 'Section ' + sec;
+          sh.textContent = sec === 99 ? 'More vocab' : ('Section ' + sec);
           items.appendChild(sh);
         }
         bySection[sec].forEach(([w, i]) => {
