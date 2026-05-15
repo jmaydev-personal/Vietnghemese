@@ -371,6 +371,14 @@
     line-height: 1.4;
     font-weight: 500;
   }
+  /* Pattern template — use a slightly monospace feel so the [placeholders]
+     read as slots rather than literal words. */
+  .gr-pattern {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.55;
+    font-weight: 500;
+  }
 
   /* Example block — stack multiple {vi, en} pairs */
   .gr-ex-pair { margin-bottom: 14px; }
@@ -1199,19 +1207,15 @@ function renderGrammarCard(e) {
     grWarning.classList.remove('show');
   }
 
-  // Details — show Unit (Vietnamese name + English gloss) and the full
-  // textbook header so the user sees how the entry was framed.
-  const unitLabel = e.unit
-    ? (e.unit + '. ' + (e.unit_vi || '') + ' (' + (e.unit_en || '') + ')')
-    : '—';
+  // Details — show the hand-written structural template (e.g.
+  // "chào + [name / term of address]") so the user sees the shape of the
+  // construction at a glance. Falls back to the textbook header if no
+  // pattern is available.
+  const structure = (e.pattern && e.pattern.trim()) || e.header || '—';
   grDetails.innerHTML =
       '<div class="gr-detail-row">'
-    +   '<div class="gr-detail-label">Unit</div>'
-    +   '<div class="gr-detail-value">' + escapeHtml(unitLabel) + '</div>'
-    + '</div>'
-    + '<div class="gr-detail-row">'
-    +   '<div class="gr-detail-label">Description</div>'
-    +   '<div class="gr-detail-value">' + escapeHtml(e.header || '—') + '</div>'
+    +   '<div class="gr-detail-label">Structure</div>'
+    +   '<div class="gr-detail-value gr-pattern">' + escapeHtml(structure) + '</div>'
     + '</div>';
 
   // Examples — render each {vi, en} pair, bolding the title keyword in the

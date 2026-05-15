@@ -24,7 +24,8 @@
         }
       ],
       "notes": "Chào means both hello and goodbye. It is followed by a name or a term of address or both.",
-      "warning": ""
+      "warning": "",
+      "pattern": "chào + [name / term of address]"
     },
     {
       "id": "u01_gi",
@@ -45,7 +46,8 @@
         }
       ],
       "notes": "The question word “gì” is always placed at the end of the sentence. Also, “anh tên” and “tên anh” can be used interchangeably, with “anh tên” sounding a little more formal.",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] tên là gì?"
     },
     {
       "id": "u01_xin",
@@ -66,7 +68,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "xin + [pronoun] + [verb phrase]"
     },
     {
       "id": "u01_co_khong",
@@ -87,7 +90,8 @@
         }
       ],
       "notes": "Có is placed before the verb and không at the end of the sentence. In an informal register, có is optional.",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] có + [verb/adjective] + không?"
     },
     {
       "id": "u01_subject_adjective",
@@ -108,7 +112,8 @@
         }
       ],
       "notes": "In Vietnamese, the verb “to be” is omitted in this sentence pattern. “Tôi là khỏe” sounds very awkward. Vietnamese adjectives simply function differently from English adjectives. Also, the response to the question có … không can be có/vâng (in the positive) or không (in the negative). • Anh có khoẻ không? How are you? (Are you well no?) Vâng, tôi khoẻ. (Yes), Iʼm fine. • Chị có vui không? Are you happy? (Are you happy no?) Không, tôi không vui. No, Iʼm not happy.",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [adjective]   (no “là”)"
     },
     {
       "id": "u01_xin_loi",
@@ -129,7 +134,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "xin lỗi + [pronoun], + [clause]"
     },
     {
       "id": "u01_terms_of_address_part_1",
@@ -141,7 +147,8 @@
       "meaning": "",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "anh / chị / em / bà / ông / cô / chú / …"
     },
     {
       "id": "u01_adopting_an_informal_tone",
@@ -162,7 +169,8 @@
         }
       ],
       "notes": "The omission of là in both the question and the response indicates that the speakers have chosen to adopt an informal tone for their conversation. The intentional omission of có in “Em khỏe không?” is part of this same strategy.",
-      "warning": ""
+      "warning": "",
+      "pattern": "[pronoun] tên + [name]   (no “là”, informal)"
     },
     {
       "id": "u01_ai",
@@ -183,7 +191,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "ai + [verb]?   /   [verb] + với ai?"
     },
     {
       "id": "u01_using_n_and_s_to_indicate_dialectal_variations",
@@ -195,7 +204,8 @@
       "meaning": "",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[word] (N)   vs.   [word] (S)"
     },
     {
       "id": "u01_cua",
@@ -220,7 +230,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[noun] + của + [possessor]"
     },
     {
       "id": "u01_qua",
@@ -241,7 +252,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [adjective] + quá!"
     },
     {
       "id": "u01_day",
@@ -266,7 +278,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [verb] + đây"
     },
     {
       "id": "u02_nao",
@@ -287,7 +300,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[noun] + nào?"
     },
     {
       "id": "u02_noun_adjective",
@@ -332,7 +346,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[noun] + [adjective]"
     },
     {
       "id": "u02_de_lam_gi",
@@ -353,7 +368,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [verb] + để làm gì?"
     },
     {
       "id": "u02_co_phai_khong",
@@ -382,7 +398,8 @@
         }
       ],
       "notes": "If the information is correct, the response to this type of tag question is phải/vâng. If the information is incorrect, the response should be không phải.",
-      "warning": ""
+      "warning": "",
+      "pattern": "[statement], (có) phải không?"
     },
     {
       "id": "u02_se",
@@ -403,7 +420,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] sẽ + [verb phrase]"
     },
     {
       "id": "u02_dau",
@@ -432,7 +450,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [verb] + đâu?"
     },
     {
       "id": "u02_using_numbers_from_0_to_20",
@@ -444,7 +463,8 @@
       "meaning": "",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "0–20: không, một, hai, ba, …, hai mươi"
     },
     {
       "id": "u02_lam",
@@ -469,7 +489,8 @@
         }
       ],
       "notes": "Lắm comes after the adjective or adverb that it modifies, whereas rất comes before. Also, lắm sounds a little less formal than rất.",
-      "warning": ""
+      "warning": "",
+      "pattern": "[adjective / adverb] + lắm"
     },
     {
       "id": "u02_day",
@@ -518,7 +539,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "đây / kia / đó / đấy + là + [noun]"
     },
     {
       "id": "u02_some_basic_colors_in_vietnamese",
@@ -530,7 +552,8 @@
       "meaning": "",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "màu + [color]   (đỏ, vàng, xanh, …)"
     },
     {
       "id": "u02_terms_of_address_part_2",
@@ -551,7 +574,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "chúng tôi (excl.)   vs.   chúng ta (incl.)"
     },
     {
       "id": "u02_moi",
@@ -572,7 +596,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "mời + [pronoun] + [verb phrase]"
     },
     {
       "id": "u02_xe",
@@ -613,7 +638,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "xe + [type]   (xe đạp, xe máy, xe buýt, …)"
     },
     {
       "id": "u02_dang",
@@ -634,7 +660,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] đang + [verb]"
     },
     {
       "id": "u03_bao_nhieu",
@@ -659,7 +686,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[noun] + bao nhiêu?   /   bao nhiêu + [noun]?"
     },
     {
       "id": "u03_may",
@@ -684,7 +712,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "mấy + [countable noun]?"
     },
     {
       "id": "u03_trong",
@@ -705,7 +734,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "trong / trên + [noun]"
     },
     {
       "id": "u03_counting_from_20_to_1005",
@@ -717,7 +747,8 @@
       "meaning": "",
       "examples": [],
       "notes": "Starting from twenty, một is changed to mốt and mười to mươi, with mươi being optional when occurring in parentheses. With regard to tư/bốn, linh/lẻ, nghìn/ngàn, the first choice of each pair is used in the Northern dialects and the second one in the Southern dialects.",
-      "warning": ""
+      "warning": "",
+      "pattern": "[N] mươi + [N]   (e.g. hai mươi mốt = 21)"
     },
     {
       "id": "u03_ngoai",
@@ -738,7 +769,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "ngoài / dưới + [noun]"
     },
     {
       "id": "u03_co",
@@ -759,7 +791,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "có + [noun phrase]   (= “there is/are …”)"
     },
     {
       "id": "u03_talking_about_the_different_parts_of_a_day",
@@ -792,7 +825,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "sáng, trưa, chiều, tối, đêm"
     },
     {
       "id": "u03_talking_about_the_different_meals",
@@ -817,7 +851,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "bữa sáng, bữa trưa, bữa tối"
     },
     {
       "id": "u03_using_some_common_time_expressions",
@@ -862,7 +897,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[time word] + nay / mai / qua   (sáng mai, tối qua, …)"
     },
     {
       "id": "u03_eating_the_different_meals",
@@ -887,7 +923,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "ăn + [meal]   (ăn sáng, ăn trưa, ăn tối)"
     },
     {
       "id": "u03_more_terms_of_address_part_3",
@@ -899,7 +936,8 @@
       "meaning": "",
       "examples": [],
       "notes": "Ấy is added to turn a second person into a third person, and các is a plural marker turning a term of address from the singular into the plural.",
-      "warning": ""
+      "warning": "",
+      "pattern": "[term of address] + ấy (3rd person)   /   các + [term] (plural)"
     },
     {
       "id": "u03_nhung",
@@ -920,7 +958,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[clause 1], nhưng + [clause 2]"
     },
     {
       "id": "u04_making_a_phone_call",
@@ -932,7 +971,8 @@
       "meaning": "",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Alô… / Xin lỗi, cho tôi nói chuyện với + [name]"
     },
     {
       "id": "u04_do_vay",
@@ -953,7 +993,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[question] + đó / vậy?"
     },
     {
       "id": "u04_moi",
@@ -974,7 +1015,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] mới + [verb phrase]"
     },
     {
       "id": "u04_goi_dien_thoai",
@@ -995,7 +1037,8 @@
         }
       ],
       "notes": "Cho is used when you want to place a call to someone, and đến when you phone an office or a hotel. Also, some Vietnamese speakers may say gọi điện instead of gọi điện thoại.",
-      "warning": ""
+      "warning": "",
+      "pattern": "gọi điện thoại + cho / đến + [person / place]"
     },
     {
       "id": "u04_khi_nao",
@@ -1024,7 +1067,8 @@
         }
       ],
       "notes": "Sẽ can be omitted and used mostly for emphasis.",
-      "warning": ""
+      "warning": "",
+      "pattern": "Khi nào + [subject] (sẽ) + [verb]?"
     },
     {
       "id": "u04_days_of_the_week",
@@ -1036,7 +1080,8 @@
       "meaning": "",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "thứ hai, thứ ba, …, thứ bảy, chủ nhật"
     },
     {
       "id": "u04_months_of_the_year",
@@ -1048,7 +1093,8 @@
       "meaning": "",
       "examples": [],
       "notes": "Tháng giêng and tháng chạp are used in the lunar calendar.",
-      "warning": ""
+      "warning": "",
+      "pattern": "tháng một, tháng hai, …, tháng mười hai"
     },
     {
       "id": "u04_duoc",
@@ -1069,7 +1115,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [verb] + … (được) không?"
     },
     {
       "id": "u04_luc_may_gio",
@@ -1094,7 +1141,8 @@
         }
       ],
       "notes": "Lúc is omitted when the question phrase is placed at the beginning of the sentence. This omission produces a more colloquial tone. Thus, when we want to be less formal, we will say: • Mấy giờ chúng ta (sẽ) gặp ở khách sạn? What time will we meet up at the hotel? • Mấy giờ Angela đến khách sạn? What time did Angela arrive at the hotel? • Mấy giờ chúng ta (sẽ) ǎn tối? What time will we have dinner? Also, since time markers such as sẽ are usually omitted in spoken Vietnamese, usually we have to rely on the context of an utterance or a time expression to figure out whether the speaker is talking about a past or future event/activity.",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [verb] + … lúc mấy giờ?"
     },
     {
       "id": "u04_telling_the_time_in_vietnamese",
@@ -1123,7 +1171,8 @@
         }
       ],
       "notes": "Phút means “minute” and is optional for the number 5 and the multiples of 5. Thus, we can say: • 2 giờ (lẻ) 5 (phút) 5 past 2 • 2 giờ 10 (phút) 10 past 2 • 2 giờ 25 (phút) 2:25 When it is past 30 minutes, for instance 2:40, many Vietnamese tend to say 3 minus 20, using kém (N) or thiếu (S). Thus, • 2 giờ 40 (phút) can also be expressed as 3 giờ kém/thiếu 20 (phút) • 2 giờ 47 phút can also be expressed as 3 giờ kém/thiếu 13 phút Furthermore, they tend to add the proper part of the day to the time expression, saying: • 6 giờ sáng 6 (in the morning period) • 2 giờ trưa 2 (in the noon period) • 5 giờ chiều 5 (in the evening period) • 7 giờ tối 7 (at night) • 11 giờ đêm 11 (in the late night period)",
-      "warning": ""
+      "warning": "",
+      "pattern": "[N] giờ [N] (phút)   /   [N] giờ rưỡi   /   kém [N] phút"
     },
     {
       "id": "u04_da",
@@ -1144,7 +1193,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] đã + [verb phrase]"
     },
     {
       "id": "u04_vi_tai_sao",
@@ -1165,7 +1215,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Vì / Tại sao + [subject] + [verb]?"
     },
     {
       "id": "u04_nhe",
@@ -1182,7 +1233,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[suggestion] + nhé"
     },
     {
       "id": "u05_from_to",
@@ -1207,7 +1259,8 @@
         }
       ],
       "notes": "Vào literally means “enter” or “go in/into” and ra means “out” or “go out (to).”",
-      "warning": ""
+      "warning": "",
+      "pattern": "từ + [A] + đến / sang / vào / ra + [B]"
     },
     {
       "id": "u05_mat",
@@ -1228,7 +1281,8 @@
         }
       ],
       "notes": "We can also use a different word order, minus để, to express the same idea. Thus, we can say: • Bay từ Mỹ sang Việt Nam mất bảy trǎm đô. It costs 700 dollars to fly from America to Vietnam. • Bay từ Huế ra Hà Nội mất một tiếng. It takes an hour to fly from Hue to Hanoi.",
-      "warning": ""
+      "warning": "",
+      "pattern": "Mất + [money / time] + để + [verb phrase]"
     },
     {
       "id": "u05_bao_xa",
@@ -1253,7 +1307,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Từ + [A] + đến + [B] + bao xa?"
     },
     {
       "id": "u05_bao_lau",
@@ -1274,7 +1329,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [verb phrase] + bao lâu?"
     },
     {
       "id": "u05_mat_bao_lau",
@@ -1295,7 +1351,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[verb phrase] + mất bao lâu?"
     },
     {
       "id": "u05_bang_gi",
@@ -1320,7 +1377,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [verb of motion] + bằng gì?"
     },
     {
       "id": "u05_lam",
@@ -1341,7 +1399,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "có + [adj] + lắm không?   /   không + [adj] + lắm"
     },
     {
       "id": "u05_ngoai_ra",
@@ -1362,7 +1421,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Ngoài ra, + [additional clause]"
     },
     {
       "id": "u06_nghe_noi",
@@ -1383,7 +1443,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] nghe nói + [reported clause]"
     },
     {
       "id": "u06_oi",
@@ -1404,7 +1465,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[term of address] + ơi!"
     },
     {
       "id": "u06_da_chua",
@@ -1425,7 +1487,8 @@
         }
       ],
       "notes": "When answering in the affirmative, we say rồi, which means “already”; and when answering in the negative, we say chưa, which means “not yet.” Thus, the possible responses to the above questions are: • Anh/Chị đã đi thǎm Nha Trang chưa? Have you visited Nha Trang yet?",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] đã + [verb] + … chưa?"
     },
     {
       "id": "u06_the_nao",
@@ -1450,7 +1513,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[topic] + thế nào?"
     },
     {
       "id": "u06_di",
@@ -1479,7 +1543,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[clause] + đi"
     },
     {
       "id": "u06_de",
@@ -1500,7 +1565,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Để + [person] + [verb phrase]"
     },
     {
       "id": "u06_that_ra",
@@ -1521,7 +1587,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Thật ra, + [clause]"
     },
     {
       "id": "u06_khong_nua",
@@ -1538,7 +1605,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] không + [verb] + … nữa"
     },
     {
       "id": "u06_neu_thi",
@@ -1559,7 +1627,8 @@
         }
       ],
       "notes": "Thì is optional in this structure.",
-      "warning": ""
+      "warning": "",
+      "pattern": "Nếu + [condition] + (thì) + [result]"
     },
     {
       "id": "u06_dung",
@@ -1580,7 +1649,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Đừng + [verb phrase]"
     },
     {
       "id": "u07_a",
@@ -1601,7 +1671,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[statement] + à?"
     },
     {
       "id": "u07_using_classifiers_to_talk_about_individual_members",
@@ -1630,7 +1701,8 @@
         }
       ],
       "notes": "We donʼt need to use classifiers when talking about whole classes of nouns. Thus, we say: • Tôi thích ǎn cam. I like to eat oranges. • Họ không thích táo. They donʼt like apples.",
-      "warning": ""
+      "warning": "",
+      "pattern": "[number] + quả / trái + [fruit]"
     },
     {
       "id": "u07_using_classifiers_to_talk_about_individual_members",
@@ -1667,7 +1739,8 @@
         }
       ],
       "notes": "There is no need for classifiers when whole classes of nouns are mentioned. Thus, we can say: • Angela thích mặc áo dài. Angela likes to wear ao dai. • Họ không thích đi xe buýt. They donʼt like to take buses. • Chúng ta cần thêm ghế. We need more chairs.",
-      "warning": ""
+      "warning": "",
+      "pattern": "[number] + chiếc + [vehicle / garment]"
     },
     {
       "id": "u07_bao_gio",
@@ -1679,7 +1752,8 @@
       "meaning": "to ask when something happened or will happen, placing it at the end of the question for the past and at the beginning for the future",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Bao giờ + [future verb]?   /   [past verb] + bao giờ?"
     },
     {
       "id": "u07_using_classifiers_to_talk_about_individual_members",
@@ -1704,7 +1778,8 @@
         }
       ],
       "notes": "Classifiers are not needed when whole classes of nouns are mentioned. Thus, we can say: • Angela thích mua sách. Angela likes to buy books. • Angela thích đọc sách. Angela likes to read books.",
-      "warning": ""
+      "warning": "",
+      "pattern": "[number] + quyển / cuốn + [book / notebook]"
     },
     {
       "id": "u07_some_more_numbers",
@@ -1753,7 +1828,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[N] nghìn/ngàn + [N] trăm + [N] mươi + [N]"
     },
     {
       "id": "u07_xong",
@@ -1774,7 +1850,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [verb] + xong + [object]"
     },
     {
       "id": "u07_using_classifiers_to_form_nouns_from_verbs",
@@ -1795,7 +1872,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "chuyến + [verb of motion]   (chuyến bay, chuyến du lịch, …)"
     },
     {
       "id": "u07_using_some_common_adverbs_of_frequency",
@@ -1812,7 +1890,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + thường / hay / luôn luôn + [verb]"
     },
     {
       "id": "u08_troi",
@@ -1857,7 +1936,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Trời + [adjective]   (Trời nắng, Trời mưa, …)"
     },
     {
       "id": "u08_day",
@@ -1882,7 +1962,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[statement] + đấy"
     },
     {
       "id": "u08_chac_la",
@@ -1911,7 +1992,8 @@
         }
       ],
       "notes": "When chắc (là) is used as an adjective or adverb, it means “sure” or “for sure.”",
-      "warning": ""
+      "warning": "",
+      "pattern": "Chắc (là) + [clause]"
     },
     {
       "id": "u08_cung",
@@ -1948,7 +2030,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[wh-word / pronoun] + cũng + [verb / adj]"
     },
     {
       "id": "u08_hon",
@@ -1969,7 +2052,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[A] + [adj / verb] + hơn + [B]"
     },
     {
       "id": "u08_minh",
@@ -1990,7 +2074,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Mình + [verb phrase]   (informal “I”)"
     },
     {
       "id": "u08_using_classifiers_when_talking_about_individual_me",
@@ -2015,7 +2100,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "bức + [flat thing]   (bức tượng, bức tranh, bức tường, …)"
     },
     {
       "id": "u08_ca_nua",
@@ -2036,7 +2122,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [verb] + cả + [noun] + nữa"
     },
     {
       "id": "u08_using_some_reduplications",
@@ -2077,7 +2164,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[adj] → [adj][adj]   (xinh → xinh xinh, nhỏ → nho nhỏ)"
     },
     {
       "id": "u08_chu",
@@ -2102,7 +2190,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[statement] + chứ"
     },
     {
       "id": "u08_lam_gi_ma_duoc",
@@ -2127,7 +2216,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Làm gì mà + [verb phrase] + được"
     },
     {
       "id": "u08_tuc_la",
@@ -2148,7 +2238,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Tức là + [clause]"
     },
     {
       "id": "u09_hang_ngay",
@@ -2173,7 +2264,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Hàng ngày + [subject] + [verb phrase]"
     },
     {
       "id": "u09_cu",
@@ -2194,7 +2286,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Cứ + [verb phrase]   /   vẫn cứ + [verb]"
     },
     {
       "id": "u09_thu_xem",
@@ -2215,7 +2308,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[verb] + thử xem"
     },
     {
       "id": "u09_hay_la",
@@ -2236,7 +2330,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Hay là + [alternative]?"
     },
     {
       "id": "u09_khong_ca",
@@ -2257,7 +2352,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] không + [verb] + … cả"
     },
     {
       "id": "u09_sau_khi",
@@ -2286,7 +2382,8 @@
         }
       ],
       "notes": "Sau is used instead of sau khi in the structure “after + noun phrase.”",
-      "warning": ""
+      "warning": "",
+      "pattern": "Sau khi + [verb phrase], + [main clause]"
     },
     {
       "id": "u09_hoi",
@@ -2311,7 +2408,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[A] hỏi (+ [B]) + [indirect question]"
     },
     {
       "id": "u09_lo_gi",
@@ -2332,7 +2430,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[clause], lo gì"
     },
     {
       "id": "u09_khong_dau",
@@ -2357,7 +2456,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] không + [verb] + … đâu"
     },
     {
       "id": "u09_va_lai",
@@ -2378,7 +2478,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Vả lại, + [clause]"
     },
     {
       "id": "u09_mua",
@@ -2407,7 +2508,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "mùa + [season]   (mùa xuân, hè, thu, đông)"
     },
     {
       "id": "u09_luon",
@@ -2428,7 +2530,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[clause 1] rồi + [clause 2] + luôn"
     },
     {
       "id": "u09_neu_la_toi",
@@ -2449,7 +2552,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Nếu là tôi thì tôi sẽ + [verb phrase]"
     },
     {
       "id": "u10_that_la",
@@ -2461,7 +2565,8 @@
       "meaning": "(truly) to form a mild exclamation",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Thật là + [adjective]!"
     },
     {
       "id": "u10_that_ra_thi",
@@ -2473,7 +2578,8 @@
       "meaning": "to express “as a matter of fact”",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Thật ra (thì), + [clause]"
     },
     {
       "id": "u10_co_hay_khong",
@@ -2485,7 +2591,8 @@
       "meaning": "to ask a yes–no question",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + có + [verb] + … hay không?"
     },
     {
       "id": "u10_nhat",
@@ -2522,7 +2629,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[adjective] + nhất"
     },
     {
       "id": "u10_ordinal_numbers",
@@ -2559,7 +2667,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "thứ + [number]   (thứ nhất, thứ hai, thứ ba, …)"
     },
     {
       "id": "u10_duoc",
@@ -2580,7 +2689,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + được + [agent] + [verb]   (passive)"
     },
     {
       "id": "u10_cach_day",
@@ -2605,7 +2715,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[event] + cách đây + [time period]"
     },
     {
       "id": "u10_talking_about_different_regions_in_vietnam",
@@ -2617,7 +2728,8 @@
       "meaning": "",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "miền Bắc / miền Trung / miền Nam"
     },
     {
       "id": "u10_cho_nen",
@@ -2629,7 +2741,8 @@
       "meaning": "to express a logical explanation",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[cause], cho nên + [effect]"
     },
     {
       "id": "u10_using_some_reduplications_cont",
@@ -2658,7 +2771,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[adj] → [adj-mod][adj]   (chậm → chầm chậm, nhanh → nhanh nhanh)"
     },
     {
       "id": "u10_uoc_gi",
@@ -2670,7 +2784,8 @@
       "meaning": "to express a wish which is hard to be realized",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Ước gì + [wish clause]"
     },
     {
       "id": "u10_luc_nao_cung",
@@ -2682,7 +2797,8 @@
       "meaning": "to express “always”",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + lúc nào cũng + [verb / adj]"
     },
     {
       "id": "u11_goc",
@@ -2707,7 +2823,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "người + [nationality A] + gốc + [nationality B]"
     },
     {
       "id": "u11_thao_nao",
@@ -2728,7 +2845,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[fact]. Thảo nào + [consequence]."
     },
     {
       "id": "u11_nhau",
@@ -2757,7 +2875,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[reciprocal verb] + nhau   (yêu nhau, gặp nhau, …)"
     },
     {
       "id": "u11_khi",
@@ -2774,7 +2893,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[main clause] + khi + [subordinate clause]"
     },
     {
       "id": "u11_nhat_la",
@@ -2795,7 +2915,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[general statement], nhất là + [specific]"
     },
     {
       "id": "u11_ai_ma_chang",
@@ -2816,7 +2937,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Ai mà chẳng + [verb phrase]"
     },
     {
       "id": "u11_co_le",
@@ -2837,7 +2959,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Có lẽ + [clause]"
     },
     {
       "id": "u11_noi_chung",
@@ -2858,7 +2981,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Nói chung, + [clause]"
     },
     {
       "id": "u11_dac_biet_la",
@@ -2879,7 +3003,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[general statement], đặc biệt là + [specific]"
     },
     {
       "id": "u11_names_of_some_continents",
@@ -2891,7 +3016,8 @@
       "meaning": "",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "châu Á / châu Âu / châu Mỹ / châu Phi / châu Úc"
     },
     {
       "id": "u12_cho",
@@ -2912,7 +3038,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[verb phrase] + cho + [adj / state]"
     },
     {
       "id": "u12_ton",
@@ -2937,7 +3064,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[activity] + tốn + [amount of money]"
     },
     {
       "id": "u12_nao_do",
@@ -2958,7 +3086,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[noun] + nào đó"
     },
     {
       "id": "u12_duoc_khong",
@@ -2979,7 +3108,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[clause], được không?"
     },
     {
       "id": "u12_neu_khong_thi",
@@ -3000,7 +3130,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[clause 1]. Nếu không (thì) + [clause 2]"
     },
     {
       "id": "u12_thuong_thuc",
@@ -3025,7 +3156,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "thưởng thức + [thing to enjoy]"
     },
     {
       "id": "u12_some_common_symptoms_and_illnesses",
@@ -3037,7 +3169,8 @@
       "meaning": "",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "sốt, cảm, ho, đau bụng, đau đầu, …"
     },
     {
       "id": "u12_bi",
@@ -3058,7 +3191,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] bị + [symptom / illness]"
     },
     {
       "id": "u12_van_hon",
@@ -3079,7 +3213,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[action] + vẫn hơn"
     },
     {
       "id": "u12_truoc_khi",
@@ -3108,7 +3243,8 @@
         }
       ],
       "notes": "Trước is used instead of trước khi in the structure “before + noun phrase.”",
-      "warning": ""
+      "warning": "",
+      "pattern": "Trước khi + [verb phrase], + [main clause]"
     },
     {
       "id": "u13_hay",
@@ -3129,7 +3265,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] hãy + [verb phrase]"
     },
     {
       "id": "u13_truoc",
@@ -3150,7 +3287,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[verb phrase] + trước"
     },
     {
       "id": "u13_lo",
@@ -3171,7 +3309,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[main clause], lỡ + [contingency]"
     },
     {
       "id": "u13_that",
@@ -3192,7 +3331,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[adjective] + thật"
     },
     {
       "id": "u13_chu",
@@ -3204,7 +3344,8 @@
       "meaning": "to express “for surely …”",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[clause] + chứ"
     },
     {
       "id": "u13_nao_thi",
@@ -3225,7 +3366,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Nào thì + [verb phrase]"
     },
     {
       "id": "u13_kia",
@@ -3246,7 +3388,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[clause] + kìa"
     },
     {
       "id": "u13_toan_la",
@@ -3267,7 +3410,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + toàn là + [noun]"
     },
     {
       "id": "u13_thi",
@@ -3284,7 +3428,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[verb] thì [verb]   (Ăn thì ăn, Đi thì đi, …)"
     },
     {
       "id": "u13_gi",
@@ -3296,7 +3441,8 @@
       "meaning": "after “sợ” or “lo” to express “What is there to be … about?”",
       "examples": [],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + sợ / lo + gì?"
     },
     {
       "id": "u13_bao_lau_roi",
@@ -3317,7 +3463,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [verb] + … được bao lâu rồi?"
     },
     {
       "id": "u13_ke_ca",
@@ -3338,7 +3485,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[clause], kể cả + [included items]"
     },
     {
       "id": "u13_hoi_nao",
@@ -3359,7 +3507,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] + [past verb] + hồi nào?"
     },
     {
       "id": "u13_bao_lau_nua",
@@ -3380,7 +3529,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[subject] (sẽ) + [verb] + … bao lâu nữa?"
     },
     {
       "id": "u14_ca_deu",
@@ -3401,7 +3551,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Cả + [A] + (và + [B]) + đều + [verb / adj]"
     },
     {
       "id": "u14_vi_vay",
@@ -3422,7 +3573,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[cause], vì vậy + [effect]"
     },
     {
       "id": "u14_moi_ngay_nao",
@@ -3443,7 +3595,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Mới ngày nào + [past clause]"
     },
     {
       "id": "u14_neu_the",
@@ -3464,7 +3617,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Nếu thế, + [clause]"
     },
     {
       "id": "u14_thoi",
@@ -3485,7 +3639,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Thôi, + [clause]"
     },
     {
       "id": "u14_theo",
@@ -3506,7 +3661,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[clause 1] + và + [clause 2] + theo"
     },
     {
       "id": "u14_chuc",
@@ -3523,7 +3679,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "Chúc + [person] + [wish / event]"
     },
     {
       "id": "u14_thu_tieng",
@@ -3544,7 +3701,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[number] + thứ tiếng   (counting languages)"
     },
     {
       "id": "u14_giong_nhu",
@@ -3565,7 +3723,8 @@
         }
       ],
       "notes": "",
-      "warning": ""
+      "warning": "",
+      "pattern": "[A] + (giống) như + [B]"
     }
   ]
 }
