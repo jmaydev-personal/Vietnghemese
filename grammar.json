@@ -81,11 +81,11 @@
       "meaning": "to ask yes–no questions",
       "examples": [
         {
-          "vi": "Anh có khỏe không?",
+          "vi": "Anh **có** khỏe **không**?",
           "en": "How are you? (Are you well no?)"
         },
         {
-          "vi": "Chị có vui không?",
+          "vi": "Chị **có** vui **không**?",
           "en": "Are you happy?"
         }
       ],
@@ -103,11 +103,11 @@
       "meaning": "",
       "examples": [
         {
-          "vi": "Tôi khoẻ.",
+          "vi": "Tôi **khoẻ**.",
           "en": "Iʼm fine."
         },
         {
-          "vi": "Tôi vui.",
+          "vi": "Tôi **vui**.",
           "en": "Iʼm happy."
         }
       ],
@@ -313,35 +313,35 @@
       "meaning": "",
       "examples": [
         {
-          "vi": "người Mỹ",
+          "vi": "người **Mỹ**",
           "en": "American (person)"
         },
         {
-          "vi": "người Nhật",
+          "vi": "người **Nhật**",
           "en": "Japanese (person)"
         },
         {
-          "vi": "người Việt",
+          "vi": "người **Việt**",
           "en": "Vietnamese (person)"
         },
         {
-          "vi": "người Anh",
+          "vi": "người **Anh**",
           "en": "British (person)"
         },
         {
-          "vi": "người Úc",
+          "vi": "người **Úc**",
           "en": "Australian (person)"
         },
         {
-          "vi": "người Ɖức",
+          "vi": "người **Ɖức**",
           "en": "German (person)"
         },
         {
-          "vi": "người Ɖài Loan",
+          "vi": "người **Ɖài Loan**",
           "en": "Taiwanese (person)"
         },
         {
-          "vi": "người Pháp",
+          "vi": "người **Pháp**",
           "en": "French (person)"
         }
       ],
@@ -1246,15 +1246,15 @@
       "meaning": "",
       "examples": [
         {
-          "vi": "từ Mỹ đến/sang Việt Nam",
+          "vi": "**từ** Mỹ **đến/sang** Việt Nam",
           "en": "from America to Vietnam"
         },
         {
-          "vi": "từ Hà Nội vào Sài Gòn",
+          "vi": "**từ** Hà Nội **vào** Sài Gòn",
           "en": "from Hanoi to Saigon"
         },
         {
-          "vi": "từ Sài Gòn ra Huế",
+          "vi": "**từ** Sài Gòn **ra** Huế",
           "en": "from Saigon to Hue"
         }
       ],
@@ -1478,11 +1478,11 @@
       "meaning": "to ask whether someone has ever done something",
       "examples": [
         {
-          "vi": "Anh/Chị đã đi thǎm Nha Trang chưa?",
+          "vi": "Anh/Chị **đã** đi thǎm Nha Trang **chưa**?",
           "en": "Have you visited Nha Trang yet?"
         },
         {
-          "vi": "Anh/Chị đã thử món ăn này chưa?",
+          "vi": "Anh/Chị **đã** thử món ăn này **chưa**?",
           "en": "Have you tried this dish yet?"
         }
       ],
@@ -1526,19 +1526,19 @@
       "meaning": "to make a suggestion or to give an order",
       "examples": [
         {
-          "vi": "Chúng ta chờ họ ở đây đi.",
+          "vi": "Chúng ta chờ họ ở đây **đi.**",
           "en": "Letʼs wait for them here."
         },
         {
-          "vi": "Mình ǎn tối ở nhà hàng này đi.",
+          "vi": "Mình ǎn tối ở nhà hàng này **đi.**",
           "en": "Letʼs have dinner in this restaurant."
         },
         {
-          "vi": "Ngồi xuống đi, Thùy Dương.",
+          "vi": "Ngồi xuống **đi,** Thùy Dương.",
           "en": "Sit down, Thùy Dương."
         },
         {
-          "vi": "Con đi ngủ đi.",
+          "vi": "Con đi ngủ **đi.**",
           "en": "Go to bed, child."
         }
       ],
@@ -1600,7 +1600,7 @@
       "meaning": "to express “not … anymore”",
       "examples": [
         {
-          "vi": "Tôi không muốn ở khách sạn này nữa.",
+          "vi": "Tôi **không** muốn ở khách sạn này **nữa**.",
           "en": "I donʼt want to stay at this hotel anymore."
         }
       ],
@@ -1618,11 +1618,11 @@
       "meaning": "to express the conditional",
       "examples": [
         {
-          "vi": "Nếu lạc đường thì gọi điện thoại cho tôi.",
+          "vi": "**Nếu** lạc đường **thì** gọi điện thoại cho tôi.",
           "en": "If you get lost, give me a call."
         },
         {
-          "vi": "Nếu ngon thì tôi sẽ ǎn thêm.",
+          "vi": "**Nếu** ngon **thì** tôi sẽ ǎn thêm.",
           "en": "If it is delicious, I will eat some more."
         }
       ],
@@ -1684,19 +1684,19 @@
       "meaning": "",
       "examples": [
         {
-          "vi": "một quả/trái cam",
+          "vi": "một **quả/trái** cam",
           "en": "an/one orange"
         },
         {
-          "vi": "hai quả/trái chuối",
+          "vi": "hai **quả/trái** chuối",
           "en": "two bananas"
         },
         {
-          "vi": "ba quả/trái táo",
+          "vi": "ba **quả/trái** táo",
           "en": "three apples"
         },
         {
-          "vi": "bốn quả/trái đào",
+          "vi": "bốn **quả/trái** đào",
           "en": "four peaches"
         }
       ],
@@ -1714,27 +1714,27 @@
       "meaning": "",
       "examples": [
         {
-          "vi": "một chiếc áo dài",
+          "vi": "một **chiếc** áo dài",
           "en": "an/one ao dai"
         },
         {
-          "vi": "hai chiếc (xe) tắc-xi",
+          "vi": "hai **chiếc** (xe) tắc-xi",
           "en": "three taxis"
         },
         {
-          "vi": "ba chiếc xe buýt",
+          "vi": "ba **chiếc** xe buýt",
           "en": "four buses"
         },
         {
-          "vi": "bốn cái áo sơ-mi",
+          "vi": "bốn **cái** áo sơ-mi",
           "en": "four shirts"
         },
         {
-          "vi": "nǎm cái ghế",
+          "vi": "nǎm **cái** ghế",
           "en": "five chairs"
         },
         {
-          "vi": "sáu cái bàn",
+          "vi": "sáu **cái** bàn",
           "en": "six tables"
         }
       ],
@@ -1765,15 +1765,15 @@
       "meaning": "",
       "examples": [
         {
-          "vi": "một quyển/cuốn sách",
+          "vi": "một **quyển/cuốn** sách",
           "en": "a/one book"
         },
         {
-          "vi": "hai quyển/cuốn vở",
+          "vi": "hai **quyển/cuốn** vở",
           "en": "two notebooks"
         },
         {
-          "vi": "ba quyển/cuốn tiểu thuyết",
+          "vi": "ba **quyển/cuốn** tiểu thuyết",
           "en": "three novels"
         }
       ],
@@ -1885,7 +1885,7 @@
       "meaning": "",
       "examples": [
         {
-          "vi": "Angela thường thức khuya.",
+          "vi": "Angela **thường** thức khuya.",
           "en": "Angela usually stays up late."
         }
       ],
@@ -2087,15 +2087,15 @@
       "meaning": "",
       "examples": [
         {
-          "vi": "bức tượng",
+          "vi": "**bức** tượng",
           "en": "statue"
         },
         {
-          "vi": "bức tường",
+          "vi": "**bức** tường",
           "en": "wall"
         },
         {
-          "vi": "bức tranh",
+          "vi": "**bức** tranh",
           "en": "painting"
         }
       ],
@@ -2113,11 +2113,11 @@
       "meaning": "to express “also”",
       "examples": [
         {
-          "vi": "Ellen biết nói cả tiếng Ý nữa.",
+          "vi": "Ellen biết nói **cả** tiếng Ý **nữa**.",
           "en": "Ellen can also speak Italian."
         },
         {
-          "vi": "Tôi sẽ mua cả cuốn sách này nữa.",
+          "vi": "Tôi sẽ mua **cả** cuốn sách này **nữa**.",
           "en": "I will buy this book too."
         }
       ],
@@ -2203,15 +2203,15 @@
       "meaning": "to express the impossibility of something",
       "examples": [
         {
-          "vi": "Làm gì mà thắng một triệu đô được.",
+          "vi": "**Làm gì mà** thắng một triệu đô **được**.",
           "en": "Thereʼs no way (you) can win a million dollars."
         },
         {
-          "vi": "Làm gì mà thi trượt được.",
+          "vi": "**Làm gì mà** thi trượt **được**.",
           "en": "Thereʼs no way (you) will fail the exam."
         },
         {
-          "vi": "Làm gì mà dịch thơ Hồ Xuân Hương được.",
+          "vi": "**Làm gì mà** dịch thơ Hồ Xuân Hương **được**.",
           "en": "Thereʼs no way (you) can translate Hồ Xuân Hươngʼs poetry."
         }
       ],
@@ -2229,11 +2229,11 @@
       "meaning": "to express “that means …”",
       "examples": [
         {
-          "vi": "Tức là họ rất giàu.",
+          "vi": "**Tức là** họ rất giàu.",
           "en": "That means they are very rich."
         },
         {
-          "vi": "Tức là anh ấy rất nghèo.",
+          "vi": "**Tức là** anh ấy rất nghèo.",
           "en": "That means he is very poor."
         }
       ],
@@ -2343,11 +2343,11 @@
       "meaning": "to express “not any … at all”",
       "examples": [
         {
-          "vi": "Tôi không nhớ gì cả.",
+          "vi": "Tôi **không** nhớ gì **cả**.",
           "en": "I donʼt remember anything at all."
         },
         {
-          "vi": "Họ sẽ không đi đâu cả.",
+          "vi": "Họ sẽ **không** đi đâu **cả**.",
           "en": "They wonʼt go anywhere at all."
         }
       ],
@@ -2443,15 +2443,15 @@
       "meaning": "to express one’s strong opinion about something",
       "examples": [
         {
-          "vi": "Tôi không muốn hát đâu.",
+          "vi": "Tôi **không** muốn hát **đâu**.",
           "en": "I donʼt want to sing."
         },
         {
-          "vi": "Cô ấy không muốn gặp họ đâu.",
+          "vi": "Cô ấy **không** muốn gặp họ **đâu**.",
           "en": "She doesnʼt want to see them."
         },
         {
-          "vi": "Chiều mai sẽ không mưa đâu.",
+          "vi": "Chiều mai sẽ **không** mưa **đâu**.",
           "en": "It wonʼt rain tomorrow afternoon."
         }
       ],
@@ -2521,11 +2521,11 @@
       "meaning": "to express “also”",
       "examples": [
         {
-          "vi": "Mình đi thǎm Ɖà Lạt rồi đi Nha Trang luôn.",
+          "vi": "Mình đi thǎm Ɖà Lạt rồi đi Nha Trang **luôn**.",
           "en": "We visit Dalat and then Nha Trang also."
         },
         {
-          "vi": "Họ muốn mua nhà rồi mua xe hơi luôn.",
+          "vi": "Họ muốn mua nhà rồi mua xe hơi **luôn**.",
           "en": "They want to buy a house and then a car too."
         }
       ],
@@ -3542,11 +3542,11 @@
       "meaning": "to express “both” or “all”",
       "examples": [
         {
-          "vi": "Cả Angela và Thùy Dương đều thích Nha Trang.",
+          "vi": "**Cả** Angela và Thùy Dương **đều** thích Nha Trang.",
           "en": "Both Angela and Thùy Dương like Nha Trang."
         },
         {
-          "vi": "Cả bốn người đều thích ǎn các món ǎn Nhật.",
+          "vi": "**Cả** bốn người **đều** thích ǎn các món ǎn Nhật.",
           "en": "All four of them like to eat Japanese food. ậ"
         }
       ],
