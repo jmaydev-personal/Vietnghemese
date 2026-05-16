@@ -1,0 +1,3730 @@
+{
+  "source": "Colloquial Vietnamese (Routledge, 2012)",
+  "entries": [
+    {
+      "id": "u01_chao",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Using “chào” to greet someone",
+      "title": "chào",
+      "meaning": "to greet someone",
+      "examples": [
+        {
+          "vi": "Chào chị.",
+          "en": "Hello (to a female peer)."
+        },
+        {
+          "vi": "Chào chị Anna.",
+          "en": "Hello (to a female peer named Anna)."
+        },
+        {
+          "vi": "Chào anh Andrew.",
+          "en": "Hello (to a male peer named Andrew)."
+        }
+      ],
+      "notes": "Chào means both hello and goodbye. It is followed by a name or a term of address or both.",
+      "warning": "",
+      "pattern": "chào + [name / term of address]"
+    },
+    {
+      "id": "u01_gi",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Using the question word “gì” to ask someone’s name",
+      "title": "gì",
+      "meaning": "to ask someone’s name",
+      "examples": [
+        {
+          "vi": "Anh tên là gì?",
+          "en": "What is your name? (to a male peer)"
+        },
+        {
+          "vi": "Tên chị là gì?",
+          "en": "What is your name? (to a female peer)"
+        }
+      ],
+      "notes": "The question word “gì” is always placed at the end of the sentence. Also, “anh tên” and “tên anh” can be used interchangeably, with “anh tên” sounding a little more formal.",
+      "warning": "",
+      "pattern": "[subject] tên là gì?"
+    },
+    {
+      "id": "u01_xin",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Using “xin” to make polite requests",
+      "title": "xin",
+      "meaning": "to make polite requests",
+      "examples": [
+        {
+          "vi": "Xin chị ngồi đây.",
+          "en": "Please sit here."
+        },
+        {
+          "vi": "Xin anh chị đứng đây.",
+          "en": "Please stand here."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "xin + [pronoun] + [verb phrase]"
+    },
+    {
+      "id": "u01_co_khong",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Using “có … không” to ask yes–no questions",
+      "title": "có … không",
+      "meaning": "to ask yes–no questions",
+      "examples": [
+        {
+          "vi": "Anh **có** khỏe **không**?",
+          "en": "How are you? (Are you well no?)"
+        },
+        {
+          "vi": "Chị **có** vui **không**?",
+          "en": "Are you happy?"
+        }
+      ],
+      "notes": "Có is placed before the verb and không at the end of the sentence. In an informal register, có is optional.",
+      "warning": "",
+      "pattern": "[subject] có + [verb/adjective] + không?"
+    },
+    {
+      "id": "u01_subject_adjective",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Using the structure “subject + adjective”",
+      "title": "subject + adjective",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "Tôi **khoẻ**.",
+          "en": "Iʼm fine."
+        },
+        {
+          "vi": "Tôi **vui**.",
+          "en": "Iʼm happy."
+        }
+      ],
+      "notes": "In Vietnamese, the verb “to be” is omitted in this sentence pattern. “Tôi là khỏe” sounds very awkward. Vietnamese adjectives simply function differently from English adjectives. Also, the response to the question có … không can be có/vâng (in the positive) or không (in the negative). • Anh có khoẻ không? How are you? (Are you well no?) Vâng, tôi khoẻ. (Yes), Iʼm fine. • Chị có vui không? Are you happy? (Are you happy no?) Không, tôi không vui. No, Iʼm not happy.",
+      "warning": "",
+      "pattern": "[subject] + [adjective]   (no “là”)"
+    },
+    {
+      "id": "u01_xin_loi",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Using “xin lỗi” to politely get someone’s attention",
+      "title": "xin lỗi",
+      "meaning": "to politely get someone’s attention",
+      "examples": [
+        {
+          "vi": "Xin lỗi chị, chị tên là gì?",
+          "en": "Excuse me, whatʼs your name? (to a female peer)"
+        },
+        {
+          "vi": "Xin lỗi anh, anh tên là gì?",
+          "en": "Excuse me, whatʼs your name? (to a male peer)"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "xin lỗi + [pronoun], + [clause]"
+    },
+    {
+      "id": "u01_terms_of_address_part_1",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Terms of address (Part 1)",
+      "title": "Terms of address (Part 1)",
+      "meaning": "",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "anh / chị / em / bà / ông / cô / chú / …"
+    },
+    {
+      "id": "u01_adopting_an_informal_tone",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Adopting an informal tone",
+      "title": "Adopting an informal tone",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "Em tên gì?",
+          "en": "Whatʼs your name? (to someone younger than you)"
+        },
+        {
+          "vi": "Em tên Hương.",
+          "en": "My nameʼs Hương."
+        }
+      ],
+      "notes": "The omission of là in both the question and the response indicates that the speakers have chosen to adopt an informal tone for their conversation. The intentional omission of có in “Em khỏe không?” is part of this same strategy.",
+      "warning": "",
+      "pattern": "[pronoun] tên + [name]   (no “là”, informal)"
+    },
+    {
+      "id": "u01_ai",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Using “ai” as a question word",
+      "title": "ai",
+      "meaning": "as a question word",
+      "examples": [
+        {
+          "vi": "Ai đi với em?",
+          "en": "Who is going with you?"
+        },
+        {
+          "vi": "Em đi với ai?",
+          "en": "Who are you going with?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "ai + [verb]?   /   [verb] + với ai?"
+    },
+    {
+      "id": "u01_using_n_and_s_to_indicate_dialectal_variations",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Using (N) and (S) to indicate dialectal variations",
+      "title": "Using (N) and (S) to indicate dialectal variations",
+      "meaning": "",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "[word] (N)   vs.   [word] (S)"
+    },
+    {
+      "id": "u01_cua",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Using “của” to indicate “of” or ownership",
+      "title": "của",
+      "meaning": "to indicate “of” or ownership",
+      "examples": [
+        {
+          "vi": "Ɖây là em gái của tôi.",
+          "en": "This is my younger sister."
+        },
+        {
+          "vi": "Ɖây là em trai của tôi.",
+          "en": "This is my younger brother."
+        },
+        {
+          "vi": "Ɖây là chỗ của tôi.",
+          "en": "This is my seat."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[noun] + của + [possessor]"
+    },
+    {
+      "id": "u01_qua",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Using “quá” to emphasize a feeling or quality of something",
+      "title": "quá",
+      "meaning": "to emphasize a feeling or quality of something",
+      "examples": [
+        {
+          "vi": "Tôi vui quá!",
+          "en": "Iʼm so happy!"
+        },
+        {
+          "vi": "Tôi mệt quá.",
+          "en": "Iʼm so tired."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + [adjective] + quá!"
+    },
+    {
+      "id": "u01_day",
+      "unit": 1,
+      "unit_vi": "Xin chào",
+      "unit_en": "Hello",
+      "header": "Using “đây” as an ending particle to loosely express “now”",
+      "title": "đây",
+      "meaning": "as an ending particle to loosely express “now”",
+      "examples": [
+        {
+          "vi": "Tôi về đây.",
+          "en": "Iʼm going home now."
+        },
+        {
+          "vi": "Tôi đi đây.",
+          "en": "Iʼm going/leaving now."
+        },
+        {
+          "vi": "Tôi đi ngủ đây.",
+          "en": "Iʼm going to bed now."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + [verb] + đây"
+    },
+    {
+      "id": "u02_nao",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Using “nào” to express “which” in a question",
+      "title": "nào",
+      "meaning": "to express “which” in a question",
+      "examples": [
+        {
+          "vi": "Anh là người nước nào?",
+          "en": "Which country are you from? (to a male peer)"
+        },
+        {
+          "vi": "Bà là người nước nào?",
+          "en": "Which country are you from? (to an elderly woman)"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[noun] + nào?"
+    },
+    {
+      "id": "u02_noun_adjective",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Using the structure “noun + adjective”",
+      "title": "noun + adjective",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "người **Mỹ**",
+          "en": "American (person)"
+        },
+        {
+          "vi": "người **Nhật**",
+          "en": "Japanese (person)"
+        },
+        {
+          "vi": "người **Việt**",
+          "en": "Vietnamese (person)"
+        },
+        {
+          "vi": "người **Anh**",
+          "en": "British (person)"
+        },
+        {
+          "vi": "người **Úc**",
+          "en": "Australian (person)"
+        },
+        {
+          "vi": "người **Ɖức**",
+          "en": "German (person)"
+        },
+        {
+          "vi": "người **Ɖài Loan**",
+          "en": "Taiwanese (person)"
+        },
+        {
+          "vi": "người **Pháp**",
+          "en": "French (person)"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[noun] + [adjective]"
+    },
+    {
+      "id": "u02_de_lam_gi",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Using “để làm gì” to find out someone’s purpose in doing something",
+      "title": "để làm gì",
+      "meaning": "to find out someone’s purpose in doing something",
+      "examples": [
+        {
+          "vi": "Chị học tiếng Việt để làm gì?",
+          "en": "Whatʼs your purpose in learning Vietnamese?"
+        },
+        {
+          "vi": "Anh đi Sài Gòn để làm gì?",
+          "en": "Whatʼs your purpose in going to Saigon?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + [verb] + để làm gì?"
+    },
+    {
+      "id": "u02_co_phai_khong",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Using “(có) phải không” to seek confirmation of certain information",
+      "title": "(có) phải không",
+      "meaning": "to seek confirmation of certain information",
+      "examples": [
+        {
+          "vi": "Anh là Peter, phải không?",
+          "en": "Youʼre Peter, right?"
+        },
+        {
+          "vi": "Chị tên là Jennifer, có phải không?",
+          "en": "Your nameʼs Jennifer, right?"
+        },
+        {
+          "vi": "Anh là Peter, phải không?",
+          "en": "You are Peter, right? Vâng/Phải, tôi là Peter.  Yes, Iʼm Peter."
+        },
+        {
+          "vi": "Anh là Peter, phải không?",
+          "en": "You are Peter, right? Không phải, tôi không   No, Iʼm not Peter. phải là Peter."
+        }
+      ],
+      "notes": "If the information is correct, the response to this type of tag question is phải/vâng. If the information is incorrect, the response should be không phải.",
+      "warning": "",
+      "pattern": "[statement], (có) phải không?"
+    },
+    {
+      "id": "u02_se",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Using “sẽ” to talk about future activities",
+      "title": "sẽ",
+      "meaning": "to talk about future activities",
+      "examples": [
+        {
+          "vi": "Tôi sẽ đón chị ở sân bay/phi trường.",
+          "en": "I will pick you up at the airport."
+        },
+        {
+          "vi": "Tôi sẽ gặp họ ở khách sạn.",
+          "en": "I will meet them at the hotel."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] sẽ + [verb phrase]"
+    },
+    {
+      "id": "u02_dau",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Using “đâu” to ask about a place or location",
+      "title": "đâu",
+      "meaning": "to ask about a place or location",
+      "examples": [
+        {
+          "vi": "Bà muốn đi đâu?",
+          "en": "Where do you want to go?"
+        },
+        {
+          "vi": "Tom muốn ngồi đâu?",
+          "en": "Where do you want to sit, Tom?"
+        },
+        {
+          "vi": "Anh sống ở đâu?",
+          "en": "Where do you live (at/in)?"
+        },
+        {
+          "vi": "Bà làm việc ở đâu?",
+          "en": "Where do you work (at/in)?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + [verb] + đâu?"
+    },
+    {
+      "id": "u02_using_numbers_from_0_to_20",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Using numbers from 0 to 20",
+      "title": "Using numbers from 0 to 20",
+      "meaning": "",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "0–20: không, một, hai, ba, …, hai mươi"
+    },
+    {
+      "id": "u02_lam",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Using “lắm” instead of “rất” to express “very”",
+      "title": "lắm",
+      "meaning": "instead of “rất” to express “very”",
+      "examples": [
+        {
+          "vi": "Tôi vui lắm.",
+          "en": "Iʼm very happy."
+        },
+        {
+          "vi": "Tôi đói lắm.",
+          "en": "Iʼm very hungry."
+        },
+        {
+          "vi": "Tôi khát nước lắm.",
+          "en": "Iʼm very thirsty."
+        }
+      ],
+      "notes": "Lắm comes after the adjective or adverb that it modifies, whereas rất comes before. Also, lắm sounds a little less formal than rất.",
+      "warning": "",
+      "pattern": "[adjective / adverb] + lắm"
+    },
+    {
+      "id": "u02_day",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Using “đây,” “kia,” “đó,” “đấy” to indicate or point out things or people",
+      "title": "đây,",
+      "meaning": "“kia,” “đó,” “đấy” to indicate or point out things or people",
+      "examples": [
+        {
+          "vi": "Ɖây là chị Lan.",
+          "en": "This is Lan."
+        },
+        {
+          "vi": "Ɖây là anh Oscar.",
+          "en": "This is Oscar."
+        },
+        {
+          "vi": "Ɖây là bà Woolf.",
+          "en": "This is Mrs. Woolf. Ɖó/Ɖấy (there, that) is used when talking about something or someone far from the speaker but close to the listener."
+        },
+        {
+          "vi": "Ɖó/Ɖấy là va-li của tôi.",
+          "en": "That is my suitcase."
+        },
+        {
+          "vi": "Ɖó/Ɖấy là ông Wilde.",
+          "en": "That is Mr. Wilde."
+        },
+        {
+          "vi": "Ɖó/Ɖấy là Khách sạn Rex.",
+          "en": "That is the Rex Hotel. Kia (there, that) is used when talking about something or someone far from both the speaker and the listener."
+        },
+        {
+          "vi": "Kia là hành lý của tôi.",
+          "en": "That is my luggage."
+        },
+        {
+          "vi": "Kia là nhà của tôi.",
+          "en": "That is my house."
+        },
+        {
+          "vi": "Kia là Alice.",
+          "en": "That is Alice."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "đây / kia / đó / đấy + là + [noun]"
+    },
+    {
+      "id": "u02_some_basic_colors_in_vietnamese",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Some basic colors in Vietnamese",
+      "title": "Some basic colors in Vietnamese",
+      "meaning": "",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "màu + [color]   (đỏ, vàng, xanh, …)"
+    },
+    {
+      "id": "u02_terms_of_address_part_2",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Terms of address (Part 2)",
+      "title": "Terms of address (Part 2)",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "John and Emily are talking to a customs officer:",
+          "en": "“Ɖây là va-li của chúng tôi.” (This excludes the customs officer. The suitcase belongs to John and Emily.)"
+        },
+        {
+          "vi": "John is talking to Emily:",
+          "en": "“Ɖây là va-li của chúng ta.” (This includes Emily. The suitcase belongs to both John and Emily.)"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "chúng tôi (excl.)   vs.   chúng ta (incl.)"
+    },
+    {
+      "id": "u02_moi",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Using “mời” to politely ask someone to do something",
+      "title": "mời",
+      "meaning": "to politely ask someone to do something",
+      "examples": [
+        {
+          "vi": "Mời anh chị ngồi đây.",
+          "en": "Please sit here."
+        },
+        {
+          "vi": "Mời anh chị uống nước.",
+          "en": "Please have some water."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "mời + [pronoun] + [verb phrase]"
+    },
+    {
+      "id": "u02_xe",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Using “xe” to talk about various means of transport and/or types of vehicles",
+      "title": "xe",
+      "meaning": "to talk about various means of transport and/or types of vehicles",
+      "examples": [
+        {
+          "vi": "xe xích-lô",
+          "en": "cyclo, pedicab"
+        },
+        {
+          "vi": "xe đạp",
+          "en": "bike"
+        },
+        {
+          "vi": "xe (gắn) máy",
+          "en": "motorbike"
+        },
+        {
+          "vi": "xe buýt",
+          "en": "bus"
+        },
+        {
+          "vi": "xe ô-tô (N), xe hơi (S)",
+          "en": "car"
+        },
+        {
+          "vi": "xe ôm",
+          "en": "motorbike taxi"
+        },
+        {
+          "vi": "xe cấp cứu (N),",
+          "en": "ambulance cứu thương (S)"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "xe + [type]   (xe đạp, xe máy, xe buýt, …)"
+    },
+    {
+      "id": "u02_dang",
+      "unit": 2,
+      "unit_vi": "Ở sân bay",
+      "unit_en": "At the airport",
+      "header": "Using “đang” to talk about an activity that is happening now or was happening at a certain time in the past",
+      "title": "đang",
+      "meaning": "to talk about an activity that is happening now or was happening at a certain time in the past",
+      "examples": [
+        {
+          "vi": "Họ đang đến.",
+          "en": "Theyʼre coming."
+        },
+        {
+          "vi": "Angela đang nói chuyện với Lan.",
+          "en": "Angelaʼs talking with Lan."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] đang + [verb]"
+    },
+    {
+      "id": "u03_bao_nhieu",
+      "unit": 3,
+      "unit_vi": "Đến khách sạn",
+      "unit_en": "Arriving at the hotel",
+      "header": "Using “bao nhiêu” with both countable and uncountable nouns",
+      "title": "bao nhiêu",
+      "meaning": "with both countable and uncountable nouns",
+      "examples": [
+        {
+          "vi": "Xe đạp này giá bao nhiêu?",
+          "en": "How much does this bike cost?"
+        },
+        {
+          "vi": "Khách sạn này có bao nhiêu phòng?",
+          "en": "How many rooms does this hotel have?"
+        },
+        {
+          "vi": "Ông Tony Blair được bao nhiêu tuổi?",
+          "en": "How old is Mr. Tony Blair?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[noun] + bao nhiêu?   /   bao nhiêu + [noun]?"
+    },
+    {
+      "id": "u03_may",
+      "unit": 3,
+      "unit_vi": "Đến khách sạn",
+      "unit_en": "Arriving at the hotel",
+      "header": "Using “mấy” mostly with countable nouns",
+      "title": "mấy",
+      "meaning": "mostly with countable nouns",
+      "examples": [
+        {
+          "vi": "Anh chị sẽ ở đây mấy tháng?",
+          "en": "How many months will you be staying here?"
+        },
+        {
+          "vi": "Chị có mấy con?",
+          "en": "How many children do you have?"
+        },
+        {
+          "vi": "Cháu mấy tuổi?",
+          "en": "How old are you, niece/nephew?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "mấy + [countable noun]?"
+    },
+    {
+      "id": "u03_trong",
+      "unit": 3,
+      "unit_vi": "Đến khách sạn",
+      "unit_en": "Arriving at the hotel",
+      "header": "Using the prepositions “trong” and “trên”",
+      "title": "trong",
+      "meaning": "and “trên”",
+      "examples": [
+        {
+          "vi": "Chúng tôi ở trong phòng.",
+          "en": "We are inside the room."
+        },
+        {
+          "vi": "Tôi ở trên tầng nǎm.",
+          "en": "I am on the 5th floor."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "trong / trên + [noun]"
+    },
+    {
+      "id": "u03_counting_from_20_to_1005",
+      "unit": 3,
+      "unit_vi": "Đến khách sạn",
+      "unit_en": "Arriving at the hotel",
+      "header": "Counting from 20 to 1005",
+      "title": "Counting from 20 to 1005",
+      "meaning": "",
+      "examples": [],
+      "notes": "Starting from twenty, một is changed to mốt and mười to mươi, with mươi being optional when occurring in parentheses. With regard to tư/bốn, linh/lẻ, nghìn/ngàn, the first choice of each pair is used in the Northern dialects and the second one in the Southern dialects.",
+      "warning": "",
+      "pattern": "[N] mươi + [N]   (e.g. hai mươi mốt = 21)"
+    },
+    {
+      "id": "u03_ngoai",
+      "unit": 3,
+      "unit_vi": "Đến khách sạn",
+      "unit_en": "Arriving at the hotel",
+      "header": "Using the prepositions “ngoài” and “dưới”",
+      "title": "ngoài",
+      "meaning": "and “dưới”",
+      "examples": [
+        {
+          "vi": "Xe tắc-xi chờ ngoài khách sạn.",
+          "en": "A taxi is waiting outside the hotel."
+        },
+        {
+          "vi": "Thùy Dương chờ Angela ở dưới.",
+          "en": "Thùy Dương is waiting for Angela downstairs."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "ngoài / dưới + [noun]"
+    },
+    {
+      "id": "u03_co",
+      "unit": 3,
+      "unit_vi": "Đến khách sạn",
+      "unit_en": "Arriving at the hotel",
+      "header": "Using “có” to name or list things",
+      "title": "có",
+      "meaning": "to name or list things",
+      "examples": [
+        {
+          "vi": "Có nhiều khách sạn và nhà hàng ở Hội An.",
+          "en": "There are many hotels and restaurants in Hội An."
+        },
+        {
+          "vi": "Có nhiều phòng trống trong khách sạn này.",
+          "en": "There are many vacancies in this hotel."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "có + [noun phrase]   (= “there is/are …”)"
+    },
+    {
+      "id": "u03_talking_about_the_different_parts_of_a_day",
+      "unit": 3,
+      "unit_vi": "Đến khách sạn",
+      "unit_en": "Arriving at the hotel",
+      "header": "Talking about the different parts of a day",
+      "title": "Talking about the different parts of a day",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "sáng",
+          "en": "morning (generally, the period from 3 a.m. to 10 a.m.)"
+        },
+        {
+          "vi": "trưa",
+          "en": "noon (generally, the period from 11 a.m. to 2 p.m.)"
+        },
+        {
+          "vi": "chiều",
+          "en": "evening (generally, the period from 3 p.m. to 6 p.m.)"
+        },
+        {
+          "vi": "tối",
+          "en": "night (generally, the period from 7 p.m. to 9 p.m.)"
+        },
+        {
+          "vi": "đêm",
+          "en": "late at night (generally, the period from 10 p.m. to 2 a.m.)"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "sáng, trưa, chiều, tối, đêm"
+    },
+    {
+      "id": "u03_talking_about_the_different_meals",
+      "unit": 3,
+      "unit_vi": "Đến khách sạn",
+      "unit_en": "Arriving at the hotel",
+      "header": "Talking about the different meals",
+      "title": "Talking about the different meals",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "bữa sáng",
+          "en": "breakfast"
+        },
+        {
+          "vi": "bữa trưa",
+          "en": "lunch"
+        },
+        {
+          "vi": "bữa tối",
+          "en": "dinner"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "bữa sáng, bữa trưa, bữa tối"
+    },
+    {
+      "id": "u03_using_some_common_time_expressions",
+      "unit": 3,
+      "unit_vi": "Đến khách sạn",
+      "unit_en": "Arriving at the hotel",
+      "header": "Using some common time expressions",
+      "title": "Using some common time expressions",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "sáng mai",
+          "en": "tomorrow morning"
+        },
+        {
+          "vi": "sáng nay",
+          "en": "this morning"
+        },
+        {
+          "vi": "trưa nay",
+          "en": "noon today"
+        },
+        {
+          "vi": "chiều nay",
+          "en": "this evening"
+        },
+        {
+          "vi": "tối nay",
+          "en": "tonight"
+        },
+        {
+          "vi": "hôm nay",
+          "en": "today"
+        },
+        {
+          "vi": "ngày mai",
+          "en": "tomorrow"
+        },
+        {
+          "vi": "hôm qua",
+          "en": "yesterday"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[time word] + nay / mai / qua   (sáng mai, tối qua, …)"
+    },
+    {
+      "id": "u03_eating_the_different_meals",
+      "unit": 3,
+      "unit_vi": "Đến khách sạn",
+      "unit_en": "Arriving at the hotel",
+      "header": "Eating the different meals",
+      "title": "Eating the different meals",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "ǎn sáng",
+          "en": "have breakfast"
+        },
+        {
+          "vi": "ǎn trưa",
+          "en": "have lunch"
+        },
+        {
+          "vi": "ǎn tối",
+          "en": "have dinner"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "ăn + [meal]   (ăn sáng, ăn trưa, ăn tối)"
+    },
+    {
+      "id": "u03_more_terms_of_address_part_3",
+      "unit": 3,
+      "unit_vi": "Đến khách sạn",
+      "unit_en": "Arriving at the hotel",
+      "header": "More terms of address (Part 3)",
+      "title": "More terms of address (Part 3)",
+      "meaning": "",
+      "examples": [],
+      "notes": "Ấy is added to turn a second person into a third person, and các is a plural marker turning a term of address from the singular into the plural.",
+      "warning": "",
+      "pattern": "[term of address] + ấy (3rd person)   /   các + [term] (plural)"
+    },
+    {
+      "id": "u03_nhung",
+      "unit": 3,
+      "unit_vi": "Đến khách sạn",
+      "unit_en": "Arriving at the hotel",
+      "header": "Using “nhưng” to express “but”",
+      "title": "nhưng",
+      "meaning": "to express “but”",
+      "examples": [
+        {
+          "vi": "Angela vui nhưng hơi mệt.",
+          "en": "Angela is happy but rather tired."
+        },
+        {
+          "vi": "Phòng này lớn nhưng hơi tối.",
+          "en": "This room is large but rather dark."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[clause 1], nhưng + [clause 2]"
+    },
+    {
+      "id": "u04_making_a_phone_call",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Making a phone call",
+      "title": "Making a phone call",
+      "meaning": "",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "Alô… / Xin lỗi, cho tôi nói chuyện với + [name]"
+    },
+    {
+      "id": "u04_do_vay",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Using “đó/vậy” to soften the tone of a question",
+      "title": "đó/vậy",
+      "meaning": "to soften the tone of a question",
+      "examples": [
+        {
+          "vi": "Jenny đang đi đâu đó/vậy?",
+          "en": "Where are you going, Jenny?"
+        },
+        {
+          "vi": "Ai gõ cửa đó/vậy?",
+          "en": "Whoʼs knocking on the door?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[question] + đó / vậy?"
+    },
+    {
+      "id": "u04_moi",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Using “mới” to talk about an activity or event that just happened",
+      "title": "mới",
+      "meaning": "to talk about an activity or event that just happened",
+      "examples": [
+        {
+          "vi": "Tôi mới gặp Angela ở khách sạn.",
+          "en": "I just met Angela at the hotel."
+        },
+        {
+          "vi": "Angela mới gọi điện thoại cho Thùy Dương.",
+          "en": "Angela just called Thùy Dương."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] mới + [verb phrase]"
+    },
+    {
+      "id": "u04_goi_dien_thoai",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Using “gọi điện thoại” idiomatically",
+      "title": "gọi điện thoại",
+      "meaning": "idiomatically",
+      "examples": [
+        {
+          "vi": "Angela muốn gọi điện thoại cho Thùy Dương.",
+          "en": "Angela wants to call Thùy Dương."
+        },
+        {
+          "vi": "Thùy Dương muốn gọi điện thoại đến khách sạn.",
+          "en": "Thùy Dương wants to call the hotel."
+        }
+      ],
+      "notes": "Cho is used when you want to place a call to someone, and đến when you phone an office or a hotel. Also, some Vietnamese speakers may say gọi điện instead of gọi điện thoại.",
+      "warning": "",
+      "pattern": "gọi điện thoại + cho / đến + [person / place]"
+    },
+    {
+      "id": "u04_khi_nao",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Using “khi nào” to ask when a certain activity or event will take place",
+      "title": "khi nào",
+      "meaning": "to ask when a certain activity or event will take place",
+      "examples": [
+        {
+          "vi": "Khi nào anh (sẽ) đến đón tôi?",
+          "en": "When will you pick me up?"
+        },
+        {
+          "vi": "Khi nào chị muốn đi ǎn với chúng tôi?",
+          "en": "When do you want to go eat with us?"
+        },
+        {
+          "vi": "Khi nào anh chị (sẽ) đi thǎm Huế?",
+          "en": "When will you visit Hue?"
+        },
+        {
+          "vi": "Khi nào chúng ta (sẽ) gặp bác ấy?",
+          "en": "When will we see him?"
+        }
+      ],
+      "notes": "Sẽ can be omitted and used mostly for emphasis.",
+      "warning": "",
+      "pattern": "Khi nào + [subject] (sẽ) + [verb]?"
+    },
+    {
+      "id": "u04_days_of_the_week",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Days of the week",
+      "title": "Days of the week",
+      "meaning": "",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "thứ hai, thứ ba, …, thứ bảy, chủ nhật"
+    },
+    {
+      "id": "u04_months_of_the_year",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Months of the year",
+      "title": "Months of the year",
+      "meaning": "",
+      "examples": [],
+      "notes": "Tháng giêng and tháng chạp are used in the lunar calendar.",
+      "warning": "",
+      "pattern": "tháng một, tháng hai, …, tháng mười hai"
+    },
+    {
+      "id": "u04_duoc",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Using “được” to express the ability to do something",
+      "title": "được",
+      "meaning": "to express the ability to do something",
+      "examples": [
+        {
+          "vi": "Chúng ta gặp ở khách sạn, được không?",
+          "en": "Can we meet up at the hotel?"
+        },
+        {
+          "vi": "Tôi không đến thǎm anh chị ngày mai được.",
+          "en": "I canʼt come visit you tomorrow."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + [verb] + … (được) không?"
+    },
+    {
+      "id": "u04_luc_may_gio",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Using “lúc mấy giờ” to find out what time some activity happened or will happen",
+      "title": "lúc mấy giờ",
+      "meaning": "to find out what time some activity happened or will happen",
+      "examples": [
+        {
+          "vi": "Chúng ta (sẽ) gặp ở khách sạn lúc mấy giờ?",
+          "en": "What time will we meet up at the hotel?"
+        },
+        {
+          "vi": "Angela đến khách sạn lúc mấy giờ?",
+          "en": "What time did Angela arrive at the hotel?"
+        },
+        {
+          "vi": "Chúng ta (sẽ) ǎn tối lúc mấy giờ?",
+          "en": "What time will we have dinner?"
+        }
+      ],
+      "notes": "Lúc is omitted when the question phrase is placed at the beginning of the sentence. This omission produces a more colloquial tone. Thus, when we want to be less formal, we will say: • Mấy giờ chúng ta (sẽ) gặp ở khách sạn? What time will we meet up at the hotel? • Mấy giờ Angela đến khách sạn? What time did Angela arrive at the hotel? • Mấy giờ chúng ta (sẽ) ǎn tối? What time will we have dinner? Also, since time markers such as sẽ are usually omitted in spoken Vietnamese, usually we have to rely on the context of an utterance or a time expression to figure out whether the speaker is talking about a past or future event/activity.",
+      "warning": "",
+      "pattern": "[subject] + [verb] + … lúc mấy giờ?"
+    },
+    {
+      "id": "u04_telling_the_time_in_vietnamese",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Telling the time in Vietnamese",
+      "title": "Telling the time in Vietnamese",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "Bây giờ là mấy giờ?",
+          "en": "What time is it now?"
+        },
+        {
+          "vi": "Bây giờ là 2 giờ.",
+          "en": "Itʼs 2 oʼclock now."
+        },
+        {
+          "vi": "Bây giờ là 2 giờ rưỡi.",
+          "en": "Itʼs 2:30 now."
+        },
+        {
+          "vi": "Bây giờ là 2 giờ mười tám phút.",
+          "en": "Itʼs 2:18 now."
+        }
+      ],
+      "notes": "Phút means “minute” and is optional for the number 5 and the multiples of 5. Thus, we can say: • 2 giờ (lẻ) 5 (phút) 5 past 2 • 2 giờ 10 (phút) 10 past 2 • 2 giờ 25 (phút) 2:25 When it is past 30 minutes, for instance 2:40, many Vietnamese tend to say 3 minus 20, using kém (N) or thiếu (S). Thus, • 2 giờ 40 (phút) can also be expressed as 3 giờ kém/thiếu 20 (phút) • 2 giờ 47 phút can also be expressed as 3 giờ kém/thiếu 13 phút Furthermore, they tend to add the proper part of the day to the time expression, saying: • 6 giờ sáng 6 (in the morning period) • 2 giờ trưa 2 (in the noon period) • 5 giờ chiều 5 (in the evening period) • 7 giờ tối 7 (at night) • 11 giờ đêm 11 (in the late night period)",
+      "warning": "",
+      "pattern": "[N] giờ [N] (phút)   /   [N] giờ rưỡi   /   kém [N] phút"
+    },
+    {
+      "id": "u04_da",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Using “đã” to emphasize a past action",
+      "title": "đã",
+      "meaning": "to emphasize a past action",
+      "examples": [
+        {
+          "vi": "Hôm qua tôi đã đi đến khách sạn.",
+          "en": "Yesterday I did go to the hotel."
+        },
+        {
+          "vi": "Sáng nay tôi đã gặp cha của Tom.",
+          "en": "This morning I did see Tomʼs father."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] đã + [verb phrase]"
+    },
+    {
+      "id": "u04_vi_tai_sao",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Using “vì/tại sao” to ask the question “why?”",
+      "title": "vì/tại sao",
+      "meaning": "to ask the question “why?”",
+      "examples": [
+        {
+          "vi": "Vì/Tại sao Angela sang Việt Nam?",
+          "en": "Why did Angela come to Vietnam?"
+        },
+        {
+          "vi": "Vì/Tại sao Angela học tiếng Việt?",
+          "en": "Why did Angela study Vietnamese?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Vì / Tại sao + [subject] + [verb]?"
+    },
+    {
+      "id": "u04_nhe",
+      "unit": 4,
+      "unit_vi": "Gọi điện thoại",
+      "unit_en": "Making a phone call",
+      "header": "Using “nhé” to make a suggestion",
+      "title": "nhé",
+      "meaning": "to make a suggestion",
+      "examples": [
+        {
+          "vi": "Chiều nay tôi sẽ gọi điện cho chị nhé.",
+          "en": "Iʼll call you this evening, OK?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[suggestion] + nhé"
+    },
+    {
+      "id": "u05_from_to",
+      "unit": 5,
+      "unit_vi": "Trên đường phố",
+      "unit_en": "On the streets",
+      "header": "Learning to say “from … to”",
+      "title": "from … to",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "**từ** Mỹ **đến/sang** Việt Nam",
+          "en": "from America to Vietnam"
+        },
+        {
+          "vi": "**từ** Hà Nội **vào** Sài Gòn",
+          "en": "from Hanoi to Saigon"
+        },
+        {
+          "vi": "**từ** Sài Gòn **ra** Huế",
+          "en": "from Saigon to Hue"
+        }
+      ],
+      "notes": "Vào literally means “enter” or “go in/into” and ra means “out” or “go out (to).”",
+      "warning": "",
+      "pattern": "từ + [A] + đến / sang / vào / ra + [B]"
+    },
+    {
+      "id": "u05_mat",
+      "unit": 5,
+      "unit_vi": "Trên đường phố",
+      "unit_en": "On the streets",
+      "header": "Using “mất” to talk about money or time spent on doing something",
+      "title": "mất",
+      "meaning": "to talk about money or time spent on doing something",
+      "examples": [
+        {
+          "vi": "Mất bảy trǎm đô để bay từ Mỹ sang Việt Nam.",
+          "en": "It costs 700 dollars to fly from America to Vietnam."
+        },
+        {
+          "vi": "Mất một tiếng để bay từ Huế ra Hà Nội.",
+          "en": "It takes an hour to fly from Hue to Hanoi."
+        }
+      ],
+      "notes": "We can also use a different word order, minus để, to express the same idea. Thus, we can say: • Bay từ Mỹ sang Việt Nam mất bảy trǎm đô. It costs 700 dollars to fly from America to Vietnam. • Bay từ Huế ra Hà Nội mất một tiếng. It takes an hour to fly from Hue to Hanoi.",
+      "warning": "",
+      "pattern": "Mất + [money / time] + để + [verb phrase]"
+    },
+    {
+      "id": "u05_bao_xa",
+      "unit": 5,
+      "unit_vi": "Trên đường phố",
+      "unit_en": "On the streets",
+      "header": "Using the question word “bao xa” to ask how far a place might be",
+      "title": "bao xa",
+      "meaning": "to ask how far a place might be",
+      "examples": [
+        {
+          "vi": "Từ đây đến khách sạn bao xa?",
+          "en": "How far is it from here to the hotel?"
+        },
+        {
+          "vi": "Từ đây đến nhà hàng bao xa?",
+          "en": "How far is it from here to the restaurant?"
+        },
+        {
+          "vi": "Từ đây đến sân bay bao xa?",
+          "en": "How far is it from here to the airport?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Từ + [A] + đến + [B] + bao xa?"
+    },
+    {
+      "id": "u05_bao_lau",
+      "unit": 5,
+      "unit_vi": "Trên đường phố",
+      "unit_en": "On the streets",
+      "header": "Using the question word “bao lâu” to ask how long an activity went on or will go on",
+      "title": "bao lâu",
+      "meaning": "to ask how long an activity went on or will go on",
+      "examples": [
+        {
+          "vi": "Angela sẽ ở Việt Nam bao lâu?",
+          "en": "How long will Angela be in Vietnam?"
+        },
+        {
+          "vi": "Thùy Dương du học ở Mỹ bao lâu?",
+          "en": "How long did Thùy Dương study abroad in America?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + [verb phrase] + bao lâu?"
+    },
+    {
+      "id": "u05_mat_bao_lau",
+      "unit": 5,
+      "unit_vi": "Trên đường phố",
+      "unit_en": "On the streets",
+      "header": "Using “mất bao lâu” to ask how long it will take to perform a certain task",
+      "title": "mất bao lâu",
+      "meaning": "to ask how long it will take to perform a certain task",
+      "examples": [
+        {
+          "vi": "Nói tiếng Việt giỏi sẽ mất bao lâu?",
+          "en": "How long will it take to speak Vietnamese well enough?"
+        },
+        {
+          "vi": "Ɖi tắc-xi về khách sạn mất bao lâu?",
+          "en": "How long does it take to get to the hotel by taxi?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[verb phrase] + mất bao lâu?"
+    },
+    {
+      "id": "u05_bang_gi",
+      "unit": 5,
+      "unit_vi": "Trên đường phố",
+      "unit_en": "On the streets",
+      "header": "Using “bằng gì” to ask how someone gets/ got to a certain place",
+      "title": "bằng gì",
+      "meaning": "to ask how someone gets/ got to a certain place",
+      "examples": [
+        {
+          "vi": "Angela đến Mỹ bằng gì?",
+          "en": "How did Angela come to America?"
+        },
+        {
+          "vi": "Thùy Dương (sẽ) đi đến khách sạn bằng gì?",
+          "en": "How will Thùy Dương go to the hotel?"
+        },
+        {
+          "vi": "Angela (sẽ) đi đến chùa Một Cột bằng gì?",
+          "en": "How will Angela go to the One-Pillar Temple?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + [verb of motion] + bằng gì?"
+    },
+    {
+      "id": "u05_lam",
+      "unit": 5,
+      "unit_vi": "Trên đường phố",
+      "unit_en": "On the streets",
+      "header": "Using “lắm” in questions and negative statements",
+      "title": "lắm",
+      "meaning": "in questions and negative statements",
+      "examples": [
+        {
+          "vi": "Từ đây đến chùa có xa lắm không?",
+          "en": "Is it very far from here to the temple?"
+        },
+        {
+          "vi": "Từ đây đến chùa không xa lắm.",
+          "en": "It isnʼt very far from here to the temple."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "có + [adj] + lắm không?   /   không + [adj] + lắm"
+    },
+    {
+      "id": "u05_ngoai_ra",
+      "unit": 5,
+      "unit_vi": "Trên đường phố",
+      "unit_en": "On the streets",
+      "header": "Using “ngoài ra” to add some information to what you are mentioning",
+      "title": "ngoài ra",
+      "meaning": "to add some information to what you are mentioning",
+      "examples": [
+        {
+          "vi": "Ngoài ra, họ rất tử tế.",
+          "en": "In addition, they are very kind."
+        },
+        {
+          "vi": "Ngoài ra, họ rất hiếu khách.",
+          "en": "In addition, they are very hospitable."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Ngoài ra, + [additional clause]"
+    },
+    {
+      "id": "u06_nghe_noi",
+      "unit": 6,
+      "unit_vi": "Trong nhà hàng",
+      "unit_en": "In a restaurant",
+      "header": "Using “nghe nói” to talk about some information picked up by word of mouth",
+      "title": "nghe nói",
+      "meaning": "to talk about some information picked up by word of mouth",
+      "examples": [
+        {
+          "vi": "Tôi nghe nói chùa Một Cột rất đẹp.",
+          "en": "I hear that the One-Pillar Temple is very beautiful."
+        },
+        {
+          "vi": "Tôi nghe nói nhà hàng này rất rẻ.",
+          "en": "Iʼm told that this restaurantʼs very cheap."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] nghe nói + [reported clause]"
+    },
+    {
+      "id": "u06_oi",
+      "unit": 6,
+      "unit_vi": "Trong nhà hàng",
+      "unit_en": "In a restaurant",
+      "header": "Using “ơi” to catch someone’s attention",
+      "title": "ơi",
+      "meaning": "to catch someone’s attention",
+      "examples": [
+        {
+          "vi": "Cô ơi !",
+          "en": "Young lady!"
+        },
+        {
+          "vi": "Bà ơi !",
+          "en": "Maʼam!"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[term of address] + ơi!"
+    },
+    {
+      "id": "u06_da_chua",
+      "unit": 6,
+      "unit_vi": "Trong nhà hàng",
+      "unit_en": "In a restaurant",
+      "header": "Using “đã … chưa” to ask whether someone has ever done something",
+      "title": "đã … chưa",
+      "meaning": "to ask whether someone has ever done something",
+      "examples": [
+        {
+          "vi": "Anh/Chị **đã** đi thǎm Nha Trang **chưa**?",
+          "en": "Have you visited Nha Trang yet?"
+        },
+        {
+          "vi": "Anh/Chị **đã** thử món ăn này **chưa**?",
+          "en": "Have you tried this dish yet?"
+        }
+      ],
+      "notes": "When answering in the affirmative, we say rồi, which means “already”; and when answering in the negative, we say chưa, which means “not yet.” Thus, the possible responses to the above questions are: • Anh/Chị đã đi thǎm Nha Trang chưa? Have you visited Nha Trang yet?",
+      "warning": "",
+      "pattern": "[subject] đã + [verb] + … chưa?"
+    },
+    {
+      "id": "u06_the_nao",
+      "unit": 6,
+      "unit_vi": "Trong nhà hàng",
+      "unit_en": "In a restaurant",
+      "header": "Using “thế nào” to ask about the quality of something or the character of someone",
+      "title": "thế nào",
+      "meaning": "to ask about the quality of something or the character of someone",
+      "examples": [
+        {
+          "vi": "Ɖường phố Hà Nội thế nào?",
+          "en": "How are Hanoiʼs streets?"
+        },
+        {
+          "vi": "Khách sạn Hòa Bình thế nào?",
+          "en": "How is the Hòa Bình Hotel?"
+        },
+        {
+          "vi": "Cha mẹ của Thùy Dương thế nào?",
+          "en": "How are Thùy Dươngʼs parents?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[topic] + thế nào?"
+    },
+    {
+      "id": "u06_di",
+      "unit": 6,
+      "unit_vi": "Trong nhà hàng",
+      "unit_en": "In a restaurant",
+      "header": "Using “… đi” to make a suggestion or to give an order",
+      "title": "… đi",
+      "meaning": "to make a suggestion or to give an order",
+      "examples": [
+        {
+          "vi": "Chúng ta chờ họ ở đây **đi.**",
+          "en": "Letʼs wait for them here."
+        },
+        {
+          "vi": "Mình ǎn tối ở nhà hàng này **đi.**",
+          "en": "Letʼs have dinner in this restaurant."
+        },
+        {
+          "vi": "Ngồi xuống **đi,** Thùy Dương.",
+          "en": "Sit down, Thùy Dương."
+        },
+        {
+          "vi": "Con đi ngủ **đi.**",
+          "en": "Go to bed, child."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[clause] + đi"
+    },
+    {
+      "id": "u06_de",
+      "unit": 6,
+      "unit_vi": "Trong nhà hàng",
+      "unit_en": "In a restaurant",
+      "header": "Using “để” to make a suggestion",
+      "title": "để",
+      "meaning": "to make a suggestion",
+      "examples": [
+        {
+          "vi": "Ɖể tôi nói chuyện với họ.",
+          "en": "Let me talk to them."
+        },
+        {
+          "vi": "Ɖể Thùy Dương đến đón Angela ở khách sạn.",
+          "en": "Let Thùy Dương pick Angela up at the hotel."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Để + [person] + [verb phrase]"
+    },
+    {
+      "id": "u06_that_ra",
+      "unit": 6,
+      "unit_vi": "Trong nhà hàng",
+      "unit_en": "In a restaurant",
+      "header": "Using “thật ra” to express “to tell the truth”",
+      "title": "thật ra",
+      "meaning": "to express “to tell the truth”",
+      "examples": [
+        {
+          "vi": "Thật ra, tôi rất lo.",
+          "en": "To tell the truth, I was very worried."
+        },
+        {
+          "vi": "Thật ra, tôi rất mệt.",
+          "en": "To tell the truth, I was very tired."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Thật ra, + [clause]"
+    },
+    {
+      "id": "u06_khong_nua",
+      "unit": 6,
+      "unit_vi": "Trong nhà hàng",
+      "unit_en": "In a restaurant",
+      "header": "Using “không … nữa” to express “not … anymore”",
+      "title": "không … nữa",
+      "meaning": "to express “not … anymore”",
+      "examples": [
+        {
+          "vi": "Tôi **không** muốn ở khách sạn này **nữa**.",
+          "en": "I donʼt want to stay at this hotel anymore."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] không + [verb] + … nữa"
+    },
+    {
+      "id": "u06_neu_thi",
+      "unit": 6,
+      "unit_vi": "Trong nhà hàng",
+      "unit_en": "In a restaurant",
+      "header": "Using “nếu … thì” to express the conditional",
+      "title": "nếu … thì",
+      "meaning": "to express the conditional",
+      "examples": [
+        {
+          "vi": "**Nếu** lạc đường **thì** gọi điện thoại cho tôi.",
+          "en": "If you get lost, give me a call."
+        },
+        {
+          "vi": "**Nếu** ngon **thì** tôi sẽ ǎn thêm.",
+          "en": "If it is delicious, I will eat some more."
+        }
+      ],
+      "notes": "Thì is optional in this structure.",
+      "warning": "",
+      "pattern": "Nếu + [condition] + (thì) + [result]"
+    },
+    {
+      "id": "u06_dung",
+      "unit": 6,
+      "unit_vi": "Trong nhà hàng",
+      "unit_en": "In a restaurant",
+      "header": "Using “đừng” to tell someone not to do something",
+      "title": "đừng",
+      "meaning": "to tell someone not to do something",
+      "examples": [
+        {
+          "vi": "Ɖừng đi xe ôm.",
+          "en": "Donʼt take a motorbike taxi."
+        },
+        {
+          "vi": "Ɖừng ǎn ở nhà hàng này.",
+          "en": "Donʼt eat in this restaurant."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Đừng + [verb phrase]"
+    },
+    {
+      "id": "u07_a",
+      "unit": 7,
+      "unit_vi": "Ở chợ",
+      "unit_en": "At the market",
+      "header": "Using “à” to ask for confirmation or to express some mild surprise",
+      "title": "à",
+      "meaning": "to ask for confirmation or to express some mild surprise",
+      "examples": [
+        {
+          "vi": "Anh là người Mỹ à?",
+          "en": "You are American?"
+        },
+        {
+          "vi": "Cháu thích ǎn phở à?",
+          "en": "You like to eat pho?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[statement] + à?"
+    },
+    {
+      "id": "u07_using_classifiers_to_talk_about_individual_members",
+      "unit": 7,
+      "unit_vi": "Ở chợ",
+      "unit_en": "At the market",
+      "header": "Using classifiers to talk about individual members of classes of nouns",
+      "title": "Using classifiers to talk about individual members of classes of nouns",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "một **quả/trái** cam",
+          "en": "an/one orange"
+        },
+        {
+          "vi": "hai **quả/trái** chuối",
+          "en": "two bananas"
+        },
+        {
+          "vi": "ba **quả/trái** táo",
+          "en": "three apples"
+        },
+        {
+          "vi": "bốn **quả/trái** đào",
+          "en": "four peaches"
+        }
+      ],
+      "notes": "We donʼt need to use classifiers when talking about whole classes of nouns. Thus, we say: • Tôi thích ǎn cam. I like to eat oranges. • Họ không thích táo. They donʼt like apples.",
+      "warning": "",
+      "pattern": "[number] + quả / trái + [fruit]"
+    },
+    {
+      "id": "u07_using_classifiers_to_talk_about_individual_members",
+      "unit": 7,
+      "unit_vi": "Ở chợ",
+      "unit_en": "At the market",
+      "header": "Using classifiers to talk about individual members of classes of nouns (cont.)",
+      "title": "Using classifiers to talk about individual members of classes of nouns (cont.)",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "một **chiếc** áo dài",
+          "en": "an/one ao dai"
+        },
+        {
+          "vi": "hai **chiếc** (xe) tắc-xi",
+          "en": "three taxis"
+        },
+        {
+          "vi": "ba **chiếc** xe buýt",
+          "en": "four buses"
+        },
+        {
+          "vi": "bốn **cái** áo sơ-mi",
+          "en": "four shirts"
+        },
+        {
+          "vi": "nǎm **cái** ghế",
+          "en": "five chairs"
+        },
+        {
+          "vi": "sáu **cái** bàn",
+          "en": "six tables"
+        }
+      ],
+      "notes": "There is no need for classifiers when whole classes of nouns are mentioned. Thus, we can say: • Angela thích mặc áo dài. Angela likes to wear ao dai. • Họ không thích đi xe buýt. They donʼt like to take buses. • Chúng ta cần thêm ghế. We need more chairs.",
+      "warning": "",
+      "pattern": "[number] + chiếc + [vehicle / garment]"
+    },
+    {
+      "id": "u07_bao_gio",
+      "unit": 7,
+      "unit_vi": "Ở chợ",
+      "unit_en": "At the market",
+      "header": "Using “bao giờ” to ask when something happened or will happen, placing it at the end of the question for the past and at the beginning for the future",
+      "title": "bao giờ",
+      "meaning": "to ask when something happened or will happen, placing it at the end of the question for the past and at the beginning for the future",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "Bao giờ + [future verb]?   /   [past verb] + bao giờ?"
+    },
+    {
+      "id": "u07_using_classifiers_to_talk_about_individual_members",
+      "unit": 7,
+      "unit_vi": "Ở chợ",
+      "unit_en": "At the market",
+      "header": "Using classifiers to talk about individual members of classes of nouns (cont.)",
+      "title": "Using classifiers to talk about individual members of classes of nouns (cont.)",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "một **quyển/cuốn** sách",
+          "en": "a/one book"
+        },
+        {
+          "vi": "hai **quyển/cuốn** vở",
+          "en": "two notebooks"
+        },
+        {
+          "vi": "ba **quyển/cuốn** tiểu thuyết",
+          "en": "three novels"
+        }
+      ],
+      "notes": "Classifiers are not needed when whole classes of nouns are mentioned. Thus, we can say: • Angela thích mua sách. Angela likes to buy books. • Angela thích đọc sách. Angela likes to read books.",
+      "warning": "",
+      "pattern": "[number] + quyển / cuốn + [book / notebook]"
+    },
+    {
+      "id": "u07_some_more_numbers",
+      "unit": 7,
+      "unit_vi": "Ở chợ",
+      "unit_en": "At the market",
+      "header": "Some more numbers",
+      "title": "Some more numbers",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "một nghìn/ngàn không trǎm chín mươi lǎm",
+          "en": "1095"
+        },
+        {
+          "vi": "một nghìn/ngàn chín trǎm nǎm mươi tư",
+          "en": "1954"
+        },
+        {
+          "vi": "hai nghìn/ngàn không trǎm linh/lẻ tám",
+          "en": "2008"
+        },
+        {
+          "vi": "hai nghìn/ngàn không trǎm mười một",
+          "en": "2011"
+        },
+        {
+          "vi": "mười nghìn/ngàn",
+          "en": "10,000"
+        },
+        {
+          "vi": "tám mươi lǎm nghìn/ngàn",
+          "en": "85,000"
+        },
+        {
+          "vi": "một trǎm nghìn/ngàn",
+          "en": "100,000"
+        },
+        {
+          "vi": "một trǎm hai mươi lǎm nghìn/ngàn",
+          "en": "125,000"
+        },
+        {
+          "vi": "một triệu",
+          "en": "1,000,000"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[N] nghìn/ngàn + [N] trăm + [N] mươi + [N]"
+    },
+    {
+      "id": "u07_xong",
+      "unit": 7,
+      "unit_vi": "Ở chợ",
+      "unit_en": "At the market",
+      "header": "Using “xong” to express the completion of an activity",
+      "title": "xong",
+      "meaning": "to express the completion of an activity",
+      "examples": [
+        {
+          "vi": "Angela đã đọc xong quyển/cuốn sách này.",
+          "en": "Angela has finished (reading) this book."
+        },
+        {
+          "vi": "Tôi mới ǎn xong bữa sáng.",
+          "en": "I just finshed (eating) my breakfast."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + [verb] + xong + [object]"
+    },
+    {
+      "id": "u07_using_classifiers_to_form_nouns_from_verbs",
+      "unit": 7,
+      "unit_vi": "Ở chợ",
+      "unit_en": "At the market",
+      "header": "Using classifiers to form nouns from verbs",
+      "title": "Using classifiers to form nouns from verbs",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "du lịch",
+          "en": "to travel chuyến du lịch  (the) trip"
+        },
+        {
+          "vi": "bay",
+          "en": "to fly chuyến bay  (the) flight"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "chuyến + [verb of motion]   (chuyến bay, chuyến du lịch, …)"
+    },
+    {
+      "id": "u07_using_some_common_adverbs_of_frequency",
+      "unit": 7,
+      "unit_vi": "Ở chợ",
+      "unit_en": "At the market",
+      "header": "Using some common adverbs of frequency",
+      "title": "Using some common adverbs of frequency",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "Angela **thường** thức khuya.",
+          "en": "Angela usually stays up late."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + thường / hay / luôn luôn + [verb]"
+    },
+    {
+      "id": "u08_troi",
+      "unit": 8,
+      "unit_vi": "Đi thăm thắng cảnh Hà Nội và Huế",
+      "unit_en": "Visiting sights in Hanoi and Hue",
+      "header": "Using “trời” to talk about the weather",
+      "title": "trời",
+      "meaning": "to talk about the weather",
+      "examples": [
+        {
+          "vi": "Trời nắng.",
+          "en": "Itʼs sunny."
+        },
+        {
+          "vi": "Trời nóng.",
+          "en": "Itʼs hot."
+        },
+        {
+          "vi": "Trời ấm.",
+          "en": "Itʼs warm."
+        },
+        {
+          "vi": "Trời lạnh.",
+          "en": "Itʼs cold."
+        },
+        {
+          "vi": "Trời mát.",
+          "en": "Itʼs cool."
+        },
+        {
+          "vi": "Trời tối.",
+          "en": "Itʼs dark."
+        },
+        {
+          "vi": "Trời sáng.",
+          "en": "Itʼs light."
+        },
+        {
+          "vi": "Trời đang mưa.",
+          "en": "Itʼs raining."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Trời + [adjective]   (Trời nắng, Trời mưa, …)"
+    },
+    {
+      "id": "u08_day",
+      "unit": 8,
+      "unit_vi": "Đi thăm thắng cảnh Hà Nội và Huế",
+      "unit_en": "Visiting sights in Hanoi and Hue",
+      "header": "Using the ending particle “đấy” to express affirmation",
+      "title": "đấy",
+      "meaning": "to express affirmation",
+      "examples": [
+        {
+          "vi": "Chị nói đúng đấy.",
+          "en": "You are absolutely right."
+        },
+        {
+          "vi": "Tôi nói thật đấy.",
+          "en": "Iʼm definitely telling the truth."
+        },
+        {
+          "vi": "Anh ấy nói đùa đấy.",
+          "en": "Heʼs only kidding."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[statement] + đấy"
+    },
+    {
+      "id": "u08_chac_la",
+      "unit": 8,
+      "unit_vi": "Đi thăm thắng cảnh Hà Nội và Huế",
+      "unit_en": "Visiting sights in Hanoi and Hue",
+      "header": "Using the introductory phrase “chắc (là)” to express “probably”",
+      "title": "chắc (là)",
+      "meaning": "to express “probably”",
+      "examples": [
+        {
+          "vi": "Chắc (là) ở đây cái gì cũng đắt.",
+          "en": "Probably everything is expensive here."
+        },
+        {
+          "vi": "Chắc (là) ngày mai trời nắng.",
+          "en": "Probably tomorrow itʼll be sunny."
+        },
+        {
+          "vi": "Anh có chắc không đấy?",
+          "en": "Are you sure?"
+        },
+        {
+          "vi": "Tôi biết chắc (là) họ sẽ đến.",
+          "en": "I know for sure they will come."
+        }
+      ],
+      "notes": "When chắc (là) is used as an adjective or adverb, it means “sure” or “for sure.”",
+      "warning": "",
+      "pattern": "Chắc (là) + [clause]"
+    },
+    {
+      "id": "u08_cung",
+      "unit": 8,
+      "unit_vi": "Đi thăm thắng cảnh Hà Nội và Huế",
+      "unit_en": "Visiting sights in Hanoi and Hue",
+      "header": "Using “cũng” to express “every”",
+      "title": "cũng",
+      "meaning": "to express “every”",
+      "examples": [
+        {
+          "vi": "Cái gì cũng đắt.",
+          "en": "Everything is expensive."
+        },
+        {
+          "vi": "Cái gì cũng đẹp.",
+          "en": "Everything is beautiful."
+        },
+        {
+          "vi": "Cái gì cũng rẻ.",
+          "en": "Everything is cheap."
+        },
+        {
+          "vi": "Người nào cũng tốt.",
+          "en": "Everyone is kind/nice/good."
+        },
+        {
+          "vi": "Người nào cũng giỏi.",
+          "en": "Everyone is talented/good."
+        },
+        {
+          "vi": "Ai cũng vui.",
+          "en": "Everyone is happy."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[wh-word / pronoun] + cũng + [verb / adj]"
+    },
+    {
+      "id": "u08_hon",
+      "unit": 8,
+      "unit_vi": "Đi thăm thắng cảnh Hà Nội và Huế",
+      "unit_en": "Visiting sights in Hanoi and Hue",
+      "header": "Using “hơn” to express the comparative degree",
+      "title": "hơn",
+      "meaning": "to express the comparative degree",
+      "examples": [
+        {
+          "vi": "Chiếc áo dài này đẹp hơn chiếc áo dài kia.",
+          "en": "This ao dai is more beautiful than that one."
+        },
+        {
+          "vi": "Tôi thích đọc sách hơn đi xem phim.",
+          "en": "I prefer reading books to going to the movies."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[A] + [adj / verb] + hơn + [B]"
+    },
+    {
+      "id": "u08_minh",
+      "unit": 8,
+      "unit_vi": "Đi thăm thắng cảnh Hà Nội và Huế",
+      "unit_en": "Visiting sights in Hanoi and Hue",
+      "header": "Using the personal pronoun “mình” to refer to oneself when talking to close friends",
+      "title": "mình",
+      "meaning": "to refer to oneself when talking to close friends",
+      "examples": [
+        {
+          "vi": "Mình nghe nói Việt Nam có nhiều thắng cảnh.",
+          "en": "Iʼve heard that in Vietnam there are many scenic spots."
+        },
+        {
+          "vi": "Mình thích uống nước trà hơn (là) cà-phê.",
+          "en": "I prefer tea to coffee."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Mình + [verb phrase]   (informal “I”)"
+    },
+    {
+      "id": "u08_using_classifiers_when_talking_about_individual_me",
+      "unit": 8,
+      "unit_vi": "Đi thăm thắng cảnh Hà Nội và Huế",
+      "unit_en": "Visiting sights in Hanoi and Hue",
+      "header": "Using classifiers when talking about individual members of a given category of things (cont.)",
+      "title": "Using classifiers when talking about individual members of a given category of things (cont.)",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "**bức** tượng",
+          "en": "statue"
+        },
+        {
+          "vi": "**bức** tường",
+          "en": "wall"
+        },
+        {
+          "vi": "**bức** tranh",
+          "en": "painting"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "bức + [flat thing]   (bức tượng, bức tranh, bức tường, …)"
+    },
+    {
+      "id": "u08_ca_nua",
+      "unit": 8,
+      "unit_vi": "Đi thăm thắng cảnh Hà Nội và Huế",
+      "unit_en": "Visiting sights in Hanoi and Hue",
+      "header": "Using “cả … nữa” to express “also”",
+      "title": "cả … nữa",
+      "meaning": "to express “also”",
+      "examples": [
+        {
+          "vi": "Ellen biết nói **cả** tiếng Ý **nữa**.",
+          "en": "Ellen can also speak Italian."
+        },
+        {
+          "vi": "Tôi sẽ mua **cả** cuốn sách này **nữa**.",
+          "en": "I will buy this book too."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + [verb] + cả + [noun] + nữa"
+    },
+    {
+      "id": "u08_using_some_reduplications",
+      "unit": 8,
+      "unit_vi": "Đi thăm thắng cảnh Hà Nội và Huế",
+      "unit_en": "Visiting sights in Hanoi and Hue",
+      "header": "Using some reduplications",
+      "title": "Using some reduplications",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "xinh xinh",
+          "en": "pretty, cute"
+        },
+        {
+          "vi": "nho nhỏ",
+          "en": "smallish"
+        },
+        {
+          "vi": "hồng hồng",
+          "en": "pinkish"
+        },
+        {
+          "vi": "buồn buồn",
+          "en": "rather sad"
+        },
+        {
+          "vi": "nằng nặng",
+          "en": "pretty heavy"
+        },
+        {
+          "vi": "đo đỏ",
+          "en": "reddish"
+        },
+        {
+          "vi": "trǎng trắng",
+          "en": "whitish"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[adj] → [adj][adj]   (xinh → xinh xinh, nhỏ → nho nhỏ)"
+    },
+    {
+      "id": "u08_chu",
+      "unit": 8,
+      "unit_vi": "Đi thăm thắng cảnh Hà Nội và Huế",
+      "unit_en": "Visiting sights in Hanoi and Hue",
+      "header": "Using “chứ” to ask for confirmation",
+      "title": "chứ",
+      "meaning": "to ask for confirmation",
+      "examples": [
+        {
+          "vi": "Cô ấy sẽ đến chứ.",
+          "en": "Surely she will come."
+        },
+        {
+          "vi": "John hát đi chứ.",
+          "en": "Surely you will sing, John?"
+        },
+        {
+          "vi": "Sau khi ǎn no thì phải ngồi nghỉ chứ.",
+          "en": "After a full meal, surely we have to sit and rest."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[statement] + chứ"
+    },
+    {
+      "id": "u08_lam_gi_ma_duoc",
+      "unit": 8,
+      "unit_vi": "Đi thăm thắng cảnh Hà Nội và Huế",
+      "unit_en": "Visiting sights in Hanoi and Hue",
+      "header": "Using the structure “làm gì mà … được” to express the impossibility of something",
+      "title": "làm gì mà … được",
+      "meaning": "to express the impossibility of something",
+      "examples": [
+        {
+          "vi": "**Làm gì mà** thắng một triệu đô **được**.",
+          "en": "Thereʼs no way (you) can win a million dollars."
+        },
+        {
+          "vi": "**Làm gì mà** thi trượt **được**.",
+          "en": "Thereʼs no way (you) will fail the exam."
+        },
+        {
+          "vi": "**Làm gì mà** dịch thơ Hồ Xuân Hương **được**.",
+          "en": "Thereʼs no way (you) can translate Hồ Xuân Hươngʼs poetry."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Làm gì mà + [verb phrase] + được"
+    },
+    {
+      "id": "u08_tuc_la",
+      "unit": 8,
+      "unit_vi": "Đi thăm thắng cảnh Hà Nội và Huế",
+      "unit_en": "Visiting sights in Hanoi and Hue",
+      "header": "Using the structure “tức là …” to express “that means …”",
+      "title": "tức là …",
+      "meaning": "to express “that means …”",
+      "examples": [
+        {
+          "vi": "**Tức là** họ rất giàu.",
+          "en": "That means they are very rich."
+        },
+        {
+          "vi": "**Tức là** anh ấy rất nghèo.",
+          "en": "That means he is very poor."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Tức là + [clause]"
+    },
+    {
+      "id": "u09_hang_ngay",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “hàng ngày” to talk about daily activities",
+      "title": "hàng ngày",
+      "meaning": "to talk about daily activities",
+      "examples": [
+        {
+          "vi": "Hàng ngày Thùy Dương đi làm lúc 7 giờ sáng.",
+          "en": "Every day Thùy Dương goes to work at 7 a.m."
+        },
+        {
+          "vi": "Hàng ngày Thùy Dương xem ti-vi lúc 9 giờ tối.",
+          "en": "Every day Thùy Dương watches television at 9 p.m."
+        },
+        {
+          "vi": "Hàng ngày Thùy Dương đi ngủ sớm.",
+          "en": "Every day Thùy Dương goes to bed early."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Hàng ngày + [subject] + [verb phrase]"
+    },
+    {
+      "id": "u09_cu",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “cứ” to express “just go ahead and do something”",
+      "title": "cứ",
+      "meaning": "to express “just go ahead and do something”",
+      "examples": [
+        {
+          "vi": "Trời mưa lớn nhưng họ vẫn cứ đi xem xi-nê.",
+          "en": "It rained heavily but they still went to the movies."
+        },
+        {
+          "vi": "Cứ gọi điện thoại cho tôi, nếu lạc đường.",
+          "en": "Just go ahead and call me if you get lost."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Cứ + [verb phrase]   /   vẫn cứ + [verb]"
+    },
+    {
+      "id": "u09_thu_xem",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “thử xem” to make a suggestion",
+      "title": "thử xem",
+      "meaning": "to make a suggestion",
+      "examples": [
+        {
+          "vi": "Ăn thử xem.",
+          "en": "Try this food."
+        },
+        {
+          "vi": "Uống thử xem.",
+          "en": "Try this drink."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[verb] + thử xem"
+    },
+    {
+      "id": "u09_hay_la",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “hay là” to express an alternative or another option",
+      "title": "hay là",
+      "meaning": "to express an alternative or another option",
+      "examples": [
+        {
+          "vi": "Hay là mình đi ǎn nhà hàng tối nay?",
+          "en": "Or we can eat out tonight?"
+        },
+        {
+          "vi": "Hay là tuần sau?",
+          "en": "What about next week?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Hay là + [alternative]?"
+    },
+    {
+      "id": "u09_khong_ca",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “không … cả” to express “not any … at all”",
+      "title": "không … cả",
+      "meaning": "to express “not any … at all”",
+      "examples": [
+        {
+          "vi": "Tôi **không** nhớ gì **cả**.",
+          "en": "I donʼt remember anything at all."
+        },
+        {
+          "vi": "Họ sẽ **không** đi đâu **cả**.",
+          "en": "They wonʼt go anywhere at all."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] không + [verb] + … cả"
+    },
+    {
+      "id": "u09_sau_khi",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “sau khi” to express “after + verb phrase”",
+      "title": "sau khi",
+      "meaning": "to express “after + verb phrase”",
+      "examples": [
+        {
+          "vi": "Sau khi ǎn tối, họ đi dạo.",
+          "en": "After having had dinner, they took a walk."
+        },
+        {
+          "vi": "Sau khi đến Huế, họ thuê phòng trong một khách sạn.",
+          "en": "After arriving in Hue, they got a room in a hotel."
+        },
+        {
+          "vi": "Sau bữa tối, họ đi dạo.",
+          "en": "After dinner, they took a walk."
+        },
+        {
+          "vi": "Họ về khách sạn sau tám giờ tối.",
+          "en": "They got back to the hotel after 8 p.m."
+        }
+      ],
+      "notes": "Sau is used instead of sau khi in the structure “after + noun phrase.”",
+      "warning": "",
+      "pattern": "Sau khi + [verb phrase], + [main clause]"
+    },
+    {
+      "id": "u09_hoi",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “hỏi” in reported or indirect speech",
+      "title": "hỏi",
+      "meaning": "in reported or indirect speech",
+      "examples": [
+        {
+          "vi": "Anh xích-lô hỏi có phải Angela là người Mỹ không.",
+          "en": "The cyclo driver asked Angela if she was an American."
+        },
+        {
+          "vi": "Anh ấy cũng hỏi Angela bao nhiêu tuổi.",
+          "en": "He also asked Angela how old she was."
+        },
+        {
+          "vi": "Mình có thể hỏi anh ấy nhà ga ở đâu.",
+          "en": "We can ask him where the train station is."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[A] hỏi (+ [B]) + [indirect question]"
+    },
+    {
+      "id": "u09_lo_gi",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “lo gì” to express “what is there to worry about?”",
+      "title": "lo gì",
+      "meaning": "to express “what is there to worry about?”",
+      "examples": [
+        {
+          "vi": "Mưa sẽ tạnh, lo gì.",
+          "en": "The rain will soon let up, what is there to worry about?"
+        },
+        {
+          "vi": "Nghỉ đi, rồi ngày mai làm tiếp, lo gì.",
+          "en": "Letʼs call it a day and continue tomorrow, what is there to worry about?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[clause], lo gì"
+    },
+    {
+      "id": "u09_khong_dau",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “không … đâu” to express one’s strong opinion about something",
+      "title": "không … đâu",
+      "meaning": "to express one’s strong opinion about something",
+      "examples": [
+        {
+          "vi": "Tôi **không** muốn hát **đâu**.",
+          "en": "I donʼt want to sing."
+        },
+        {
+          "vi": "Cô ấy **không** muốn gặp họ **đâu**.",
+          "en": "She doesnʼt want to see them."
+        },
+        {
+          "vi": "Chiều mai sẽ **không** mưa **đâu**.",
+          "en": "It wonʼt rain tomorrow afternoon."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] không + [verb] + … đâu"
+    },
+    {
+      "id": "u09_va_lai",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “vả lại” to express “furthermore” or “besides”",
+      "title": "vả lại",
+      "meaning": "to express “furthermore” or “besides”",
+      "examples": [
+        {
+          "vi": "Vả lại, ai cũng muốn được hạnh phúc.",
+          "en": "Furthermore, everyone wants to enjoy happiness."
+        },
+        {
+          "vi": "Vả lại, tôi cần ngủ tám tiếng.",
+          "en": "Furthermore, I need to sleep for eight hours."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Vả lại, + [clause]"
+    },
+    {
+      "id": "u09_mua",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “mùa” to talk about different seasons",
+      "title": "mùa",
+      "meaning": "to talk about different seasons",
+      "examples": [
+        {
+          "vi": "mùa hè",
+          "en": "summer"
+        },
+        {
+          "vi": "mùa thu",
+          "en": "autumn"
+        },
+        {
+          "vi": "mùa đông",
+          "en": "winter"
+        },
+        {
+          "vi": "mùa xuân",
+          "en": "spring"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "mùa + [season]   (mùa xuân, hè, thu, đông)"
+    },
+    {
+      "id": "u09_luon",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “… luôn” to express “also”",
+      "title": "… luôn",
+      "meaning": "to express “also”",
+      "examples": [
+        {
+          "vi": "Mình đi thǎm Ɖà Lạt rồi đi Nha Trang **luôn**.",
+          "en": "We visit Dalat and then Nha Trang also."
+        },
+        {
+          "vi": "Họ muốn mua nhà rồi mua xe hơi **luôn**.",
+          "en": "They want to buy a house and then a car too."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[clause 1] rồi + [clause 2] + luôn"
+    },
+    {
+      "id": "u09_neu_la_toi",
+      "unit": 9,
+      "unit_vi": "Một ngày ở Huế",
+      "unit_en": "A day in Hue",
+      "header": "Using “Nếu là tôi” to express “If it were me”",
+      "title": "Nếu là tôi",
+      "meaning": "to express “If it were me”",
+      "examples": [
+        {
+          "vi": "Nếu là tôi thì tôi sẽ đón xe tắc-xi.",
+          "en": "If it were me, I would take a taxi."
+        },
+        {
+          "vi": "Nếu là tôi thì tôi sẽ không thuê phòng ở khách sạn đó.",
+          "en": "If it were me, I wouldnʼt get a room in that hotel."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Nếu là tôi thì tôi sẽ + [verb phrase]"
+    },
+    {
+      "id": "u10_that_la",
+      "unit": 10,
+      "unit_vi": "Du lịch Đà Lạt và Sài Gòn",
+      "unit_en": "Touring Dalat and Saigon",
+      "header": "Using “thật là” (truly) to form a mild exclamation",
+      "title": "thật là",
+      "meaning": "(truly) to form a mild exclamation",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "Thật là + [adjective]!"
+    },
+    {
+      "id": "u10_that_ra_thi",
+      "unit": 10,
+      "unit_vi": "Du lịch Đà Lạt và Sài Gòn",
+      "unit_en": "Touring Dalat and Saigon",
+      "header": "Using “thật ra (thì)” to express “as a matter of fact”",
+      "title": "thật ra (thì)",
+      "meaning": "to express “as a matter of fact”",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "Thật ra (thì), + [clause]"
+    },
+    {
+      "id": "u10_co_hay_khong",
+      "unit": 10,
+      "unit_vi": "Du lịch Đà Lạt và Sài Gòn",
+      "unit_en": "Touring Dalat and Saigon",
+      "header": "Using the construction “có … hay không” to ask a yes–no question",
+      "title": "có … hay không",
+      "meaning": "to ask a yes–no question",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + có + [verb] + … hay không?"
+    },
+    {
+      "id": "u10_nhat",
+      "unit": 10,
+      "unit_vi": "Du lịch Đà Lạt và Sài Gòn",
+      "unit_en": "Touring Dalat and Saigon",
+      "header": "Superlative constructions with “nhất”",
+      "title": "nhất",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "mới nhất",
+          "en": "newest"
+        },
+        {
+          "vi": "trẻ nhất",
+          "en": "youngest"
+        },
+        {
+          "vi": "lạnh nhất",
+          "en": "coldest"
+        },
+        {
+          "vi": "cuốn phim hay nhất",
+          "en": "the best movie"
+        },
+        {
+          "vi": "Tom thích ǎn phở nhất.",
+          "en": "Tom likes to eat pho the most."
+        },
+        {
+          "vi": "Mary ghét mùa đông ở đây nhất.",
+          "en": "Mary hates winter here the most."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[adjective] + nhất"
+    },
+    {
+      "id": "u10_ordinal_numbers",
+      "unit": 10,
+      "unit_vi": "Du lịch Đà Lạt và Sài Gòn",
+      "unit_en": "Touring Dalat and Saigon",
+      "header": "Ordinal numbers",
+      "title": "Ordinal numbers",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "thứ nhất",
+          "en": "the first"
+        },
+        {
+          "vi": "thứ hai",
+          "en": "the second"
+        },
+        {
+          "vi": "thứ ba",
+          "en": "the third"
+        },
+        {
+          "vi": "thứ tư",
+          "en": "the fourth"
+        },
+        {
+          "vi": "thứ nǎm",
+          "en": "the fifth"
+        },
+        {
+          "vi": "thứ sáu",
+          "en": "the sixth"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "thứ + [number]   (thứ nhất, thứ hai, thứ ba, …)"
+    },
+    {
+      "id": "u10_duoc",
+      "unit": 10,
+      "unit_vi": "Du lịch Đà Lạt và Sài Gòn",
+      "unit_en": "Touring Dalat and Saigon",
+      "header": "Using “được” to express the passive voice",
+      "title": "được",
+      "meaning": "to express the passive voice",
+      "examples": [
+        {
+          "vi": "Angela được bạn bè quý mến.",
+          "en": "Angela is cherished by her friends."
+        },
+        {
+          "vi": "Angela và Thùy Dương được mời đi ǎn tối.",
+          "en": "Angela and Thùy Dương were invited to dinner."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + được + [agent] + [verb]   (passive)"
+    },
+    {
+      "id": "u10_cach_day",
+      "unit": 10,
+      "unit_vi": "Du lịch Đà Lạt và Sài Gòn",
+      "unit_en": "Touring Dalat and Saigon",
+      "header": "Using “cách đây” to express “ago”",
+      "title": "cách đây",
+      "meaning": "to express “ago”",
+      "examples": [
+        {
+          "vi": "Angela đến Việt Nam cách đây một tuần.",
+          "en": "Angela arrived in Vietnam a week ago."
+        },
+        {
+          "vi": "Thùy Dương du học ở Mỹ cách đây ba nǎm.",
+          "en": "Thùy Dương studied abroad in America three years ago."
+        },
+        {
+          "vi": "Jerry bắt đầu học tiếng Việt cách đây ba nǎm.",
+          "en": "Jerry began to study Vietnamese three years ago."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[event] + cách đây + [time period]"
+    },
+    {
+      "id": "u10_talking_about_different_regions_in_vietnam",
+      "unit": 10,
+      "unit_vi": "Du lịch Đà Lạt và Sài Gòn",
+      "unit_en": "Touring Dalat and Saigon",
+      "header": "Talking about different regions in Vietnam",
+      "title": "Talking about different regions in Vietnam",
+      "meaning": "",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "miền Bắc / miền Trung / miền Nam"
+    },
+    {
+      "id": "u10_cho_nen",
+      "unit": 10,
+      "unit_vi": "Du lịch Đà Lạt và Sài Gòn",
+      "unit_en": "Touring Dalat and Saigon",
+      "header": "Using “cho nên” to express a logical explanation",
+      "title": "cho nên",
+      "meaning": "to express a logical explanation",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "[cause], cho nên + [effect]"
+    },
+    {
+      "id": "u10_using_some_reduplications_cont",
+      "unit": 10,
+      "unit_vi": "Du lịch Đà Lạt và Sài Gòn",
+      "unit_en": "Touring Dalat and Saigon",
+      "header": "Using some reduplications (cont.)",
+      "title": "Using some reduplications (cont.)",
+      "meaning": "",
+      "examples": [
+        {
+          "vi": "chầm chậm",
+          "en": "kind of slow"
+        },
+        {
+          "vi": "nhanh nhanh",
+          "en": "kind of fast"
+        },
+        {
+          "vi": "đoi đói",
+          "en": "kind of hungry"
+        },
+        {
+          "vi": "vui vui",
+          "en": "kind of fun"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[adj] → [adj-mod][adj]   (chậm → chầm chậm, nhanh → nhanh nhanh)"
+    },
+    {
+      "id": "u10_uoc_gi",
+      "unit": 10,
+      "unit_vi": "Du lịch Đà Lạt và Sài Gòn",
+      "unit_en": "Touring Dalat and Saigon",
+      "header": "Using “ước gì” to express a wish which is hard to be realized",
+      "title": "ước gì",
+      "meaning": "to express a wish which is hard to be realized",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "Ước gì + [wish clause]"
+    },
+    {
+      "id": "u10_luc_nao_cung",
+      "unit": 10,
+      "unit_vi": "Du lịch Đà Lạt và Sài Gòn",
+      "unit_en": "Touring Dalat and Saigon",
+      "header": "Using “lúc nào cũng” to express “always”",
+      "title": "lúc nào cũng",
+      "meaning": "to express “always”",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + lúc nào cũng + [verb / adj]"
+    },
+    {
+      "id": "u11_goc",
+      "unit": 11,
+      "unit_vi": "Khi thanh niên nói chuyện với nhau",
+      "unit_en": "When young people have a chat",
+      "header": "Using “gốc” to talk about one’s origin or roots",
+      "title": "gốc",
+      "meaning": "to talk about one’s origin or roots",
+      "examples": [
+        {
+          "vi": "một người Việt gốc Hoa",
+          "en": "a Chinese Vietnamese (person)"
+        },
+        {
+          "vi": "một người Ɖức gốc Pháp",
+          "en": "a French German (person)"
+        },
+        {
+          "vi": "một người Úc gốc Nhật",
+          "en": "a Japanese Australian (person)"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "người + [nationality A] + gốc + [nationality B]"
+    },
+    {
+      "id": "u11_thao_nao",
+      "unit": 11,
+      "unit_vi": "Khi thanh niên nói chuyện với nhau",
+      "unit_en": "When young people have a chat",
+      "header": "Using “thảo nào” to express “no wonder”",
+      "title": "thảo nào",
+      "meaning": "to express “no wonder”",
+      "examples": [
+        {
+          "vi": "Henry ǎn rồi. Thảo nào anh ấy không đói.",
+          "en": "Henry already ate. No wonder he isnʼt hungry."
+        },
+        {
+          "vi": "Tối hôm qua trời mưa lớn. Thảo nào hôm nay trời mát quá.",
+          "en": "It rained heavily last night. Small wonder itʼs so cool today."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[fact]. Thảo nào + [consequence]."
+    },
+    {
+      "id": "u11_nhau",
+      "unit": 11,
+      "unit_vi": "Khi thanh niên nói chuyện với nhau",
+      "unit_en": "When young people have a chat",
+      "header": "Using “nhau” to express “each other” or “one another”",
+      "title": "nhau",
+      "meaning": "to express “each other” or “one another”",
+      "examples": [
+        {
+          "vi": "yêu nhau",
+          "en": "love each other/one another"
+        },
+        {
+          "vi": "nói chuyện với nhau",
+          "en": "chat with each other/one another"
+        },
+        {
+          "vi": "đi du lịch với nhau",
+          "en": "travel together"
+        },
+        {
+          "vi": "ngồi gần nhau",
+          "en": "sit next to each other"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[reciprocal verb] + nhau   (yêu nhau, gặp nhau, …)"
+    },
+    {
+      "id": "u11_khi",
+      "unit": 11,
+      "unit_vi": "Khi thanh niên nói chuyện với nhau",
+      "unit_en": "When young people have a chat",
+      "header": "Using “khi” to express the conjunction “when”",
+      "title": "khi",
+      "meaning": "to express the conjunction “when”",
+      "examples": [
+        {
+          "vi": "Nhớ cởi giày khi vào nhà họ nhé.",
+          "en": "Remember to take off your shoes when going into their house, OK?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[main clause] + khi + [subordinate clause]"
+    },
+    {
+      "id": "u11_nhat_la",
+      "unit": 11,
+      "unit_vi": "Khi thanh niên nói chuyện với nhau",
+      "unit_en": "When young people have a chat",
+      "header": "Using “nhất là” to express “especially”",
+      "title": "nhất là",
+      "meaning": "to express “especially”",
+      "examples": [
+        {
+          "vi": "Tôi thích nhiều ca sĩ lắm, nhất là Khánh Ly.",
+          "en": "I like many singers, especially Khánh Ly."
+        },
+        {
+          "vi": "Họ thường xem ti-vi, nhất là vào cuối tuần.",
+          "en": "They often watch television, especially on weekends."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[general statement], nhất là + [specific]"
+    },
+    {
+      "id": "u11_ai_ma_chang",
+      "unit": 11,
+      "unit_vi": "Khi thanh niên nói chuyện với nhau",
+      "unit_en": "When young people have a chat",
+      "header": "Using “ai mà chẳng” to express “who doesn’t”",
+      "title": "ai mà chẳng",
+      "meaning": "to express “who doesn’t”",
+      "examples": [
+        {
+          "vi": "Ai mà chẳng thích ǎn phở.",
+          "en": "Who doesnʼt like to eat pho?"
+        },
+        {
+          "vi": "Ai mà chẳng ghét những người nói láo.",
+          "en": "Who doesnʼt hate liars?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Ai mà chẳng + [verb phrase]"
+    },
+    {
+      "id": "u11_co_le",
+      "unit": 11,
+      "unit_vi": "Khi thanh niên nói chuyện với nhau",
+      "unit_en": "When young people have a chat",
+      "header": "Using “có lẽ” to express “perhaps”",
+      "title": "có lẽ",
+      "meaning": "to express “perhaps”",
+      "examples": [
+        {
+          "vi": "Có lẽ họ đã về nhà.",
+          "en": "Perhaps they have gone home."
+        },
+        {
+          "vi": "Có lẽ họ sẽ bay vào Sài Gòn cuối tuần này.",
+          "en": "Perhaps they will fly to Saigon this coming weekend."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Có lẽ + [clause]"
+    },
+    {
+      "id": "u11_noi_chung",
+      "unit": 11,
+      "unit_vi": "Khi thanh niên nói chuyện với nhau",
+      "unit_en": "When young people have a chat",
+      "header": "Using “nói chung” to express “in general”",
+      "title": "nói chung",
+      "meaning": "to express “in general”",
+      "examples": [
+        {
+          "vi": "Nói chung, người Việt Nam rất là thân thiện.",
+          "en": "Generally speaking, Vietnamese people are very friendly."
+        },
+        {
+          "vi": "Nói chung, khí hậu ở Ɖà Lạt rất tốt cho sức khỏe.",
+          "en": "Generally speaking, the climate in Dalat is really good for oneʼs health."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Nói chung, + [clause]"
+    },
+    {
+      "id": "u11_dac_biet_la",
+      "unit": 11,
+      "unit_vi": "Khi thanh niên nói chuyện với nhau",
+      "unit_en": "When young people have a chat",
+      "header": "Using “đặc biệt là” to express “especially”",
+      "title": "đặc biệt là",
+      "meaning": "to express “especially”",
+      "examples": [
+        {
+          "vi": "Tôi thích nhiều thi sĩ lắm, đặc biệt là Thanh Tâm Tuyền.",
+          "en": "I like many poets, especially Thanh Tâm Tuyền."
+        },
+        {
+          "vi": "Họ thường xem ti-vi, đặc biệt là vào cuối tuần.",
+          "en": "They often watch television, especially on weekends."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[general statement], đặc biệt là + [specific]"
+    },
+    {
+      "id": "u11_names_of_some_continents",
+      "unit": 11,
+      "unit_vi": "Khi thanh niên nói chuyện với nhau",
+      "unit_en": "When young people have a chat",
+      "header": "Names of some continents",
+      "title": "Names of some continents",
+      "meaning": "",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "châu Á / châu Âu / châu Mỹ / châu Phi / châu Úc"
+    },
+    {
+      "id": "u12_cho",
+      "unit": 12,
+      "unit_vi": "Lên kế hoạch tuần sau",
+      "unit_en": "Making travel plans for next week",
+      "header": "Using “cho” to express “for (the purpose of)”",
+      "title": "cho",
+      "meaning": "to express “for (the purpose of)”",
+      "examples": [
+        {
+          "vi": "Chúng ta đi xem phim cho vui.",
+          "en": "Letʼs go to the movies for fun."
+        },
+        {
+          "vi": "Mình ǎn cho no đi.",
+          "en": "Letʼs eat until weʼre full."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[verb phrase] + cho + [adj / state]"
+    },
+    {
+      "id": "u12_ton",
+      "unit": 12,
+      "unit_vi": "Lên kế hoạch tuần sau",
+      "unit_en": "Making travel plans for next week",
+      "header": "Using “tốn” to talk about expenses",
+      "title": "tốn",
+      "meaning": "to talk about expenses",
+      "examples": [
+        {
+          "vi": "Ɖi du lịch tốn rất nhiều tiền.",
+          "en": "Traveling costs a lot of money."
+        },
+        {
+          "vi": "Ɖi học ở đại học này sẽ tốn khoảng ba mươi nghìn/ngàn đô",
+          "en": "một nǎm. Attending this university will cost about thirty thousand dollars a year."
+        },
+        {
+          "vi": "Ɖi bộ cho đỡ tốn tiền.",
+          "en": "Letʼs walk to save some money."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[activity] + tốn + [amount of money]"
+    },
+    {
+      "id": "u12_nao_do",
+      "unit": 12,
+      "unit_vi": "Lên kế hoạch tuần sau",
+      "unit_en": "Making travel plans for next week",
+      "header": "Using “nào đó” to express “unspecified or unknown”",
+      "title": "nào đó",
+      "meaning": "to express “unspecified or unknown”",
+      "examples": [
+        {
+          "vi": "Chúng ta sẽ gặp lại nhau vào một ngày nào đó.",
+          "en": "We will meet again someday."
+        },
+        {
+          "vi": "Alice đang nói chuyện với một người nào đó trên điện thoại.",
+          "en": "Alice is speaking to someone on the phone."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[noun] + nào đó"
+    },
+    {
+      "id": "u12_duoc_khong",
+      "unit": 12,
+      "unit_vi": "Lên kế hoạch tuần sau",
+      "unit_en": "Making travel plans for next week",
+      "header": "Using “được không” to ask about the “possibility of (doing) something”",
+      "title": "được không",
+      "meaning": "to ask about the “possibility of (doing) something”",
+      "examples": [
+        {
+          "vi": "Chúng ta sẽ đi xem xi-nê vào chủ nhật này, được không?",
+          "en": "Can we go to the movies this Sunday?"
+        },
+        {
+          "vi": "Mình ngồi đây nói chuyện với nhau, được không?",
+          "en": "Can we sit here and chat?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[clause], được không?"
+    },
+    {
+      "id": "u12_neu_khong_thi",
+      "unit": 12,
+      "unit_vi": "Lên kế hoạch tuần sau",
+      "unit_en": "Making travel plans for next week",
+      "header": "Using “nếu không (thì)” to express “if not”",
+      "title": "nếu không (thì)",
+      "meaning": "to express “if not”",
+      "examples": [
+        {
+          "vi": "Mình phải chạy. Nếu không (thì) mình sẽ lỡ chuyến xe buýt.",
+          "en": "We must run. If not, we will miss our bus."
+        },
+        {
+          "vi": "Ɖể đèn mà đọc sách. Nếu không (thì) tắt đèn đi.",
+          "en": "Leave the light on to read. If not, just turn it off."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[clause 1]. Nếu không (thì) + [clause 2]"
+    },
+    {
+      "id": "u12_thuong_thuc",
+      "unit": 12,
+      "unit_vi": "Lên kế hoạch tuần sau",
+      "unit_en": "Making travel plans for next week",
+      "header": "Using “thưởng thức” to express “enjoy”",
+      "title": "thưởng thức",
+      "meaning": "to express “enjoy”",
+      "examples": [
+        {
+          "vi": "thưởng thức một quyển/cuốn truyện hay",
+          "en": "enjoy a good novel"
+        },
+        {
+          "vi": "thưởng thức một bản nhạc",
+          "en": "enjoy a song"
+        },
+        {
+          "vi": "thưởng thức những món ǎn Việt Nam",
+          "en": "enjoy Vietnamese dishes"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "thưởng thức + [thing to enjoy]"
+    },
+    {
+      "id": "u12_some_common_symptoms_and_illnesses",
+      "unit": 12,
+      "unit_vi": "Lên kế hoạch tuần sau",
+      "unit_en": "Making travel plans for next week",
+      "header": "Some common symptoms and illnesses",
+      "title": "Some common symptoms and illnesses",
+      "meaning": "",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "sốt, cảm, ho, đau bụng, đau đầu, …"
+    },
+    {
+      "id": "u12_bi",
+      "unit": 12,
+      "unit_vi": "Lên kế hoạch tuần sau",
+      "unit_en": "Making travel plans for next week",
+      "header": "Using “bị” to talk about symptoms and illnesses or negative happenings",
+      "title": "bị",
+      "meaning": "to talk about symptoms and illnesses or negative happenings",
+      "examples": [
+        {
+          "vi": "Tôi đang bị sốt.",
+          "en": "I have a fever."
+        },
+        {
+          "vi": "Tom đang bị cảm.",
+          "en": "Tom has a cold."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] bị + [symptom / illness]"
+    },
+    {
+      "id": "u12_van_hon",
+      "unit": 12,
+      "unit_vi": "Lên kế hoạch tuần sau",
+      "unit_en": "Making travel plans for next week",
+      "header": "Using “vẫn hơn” to express “there’s no harm in”",
+      "title": "vẫn hơn",
+      "meaning": "to express “there’s no harm in”",
+      "examples": [
+        {
+          "vi": "Ɖóng cửa sổ vào buổi tối vẫn hơn.",
+          "en": "Thereʼs no harm in shutting the window at night."
+        },
+        {
+          "vi": "Chờ đến sáng mai rồi lái xe đi vẫn hơn.",
+          "en": "Thereʼs no harm in waiting until tomorrow morning to hit the road."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[action] + vẫn hơn"
+    },
+    {
+      "id": "u12_truoc_khi",
+      "unit": 12,
+      "unit_vi": "Lên kế hoạch tuần sau",
+      "unit_en": "Making travel plans for next week",
+      "header": "Using “trước khi” to express “before + verb phrase”",
+      "title": "trước khi",
+      "meaning": "to express “before + verb phrase”",
+      "examples": [
+        {
+          "vi": "Trước khi ǎn tối, chúng tôi thường đi dạo.",
+          "en": "Before having dinner, we usually take a walk."
+        },
+        {
+          "vi": "Trước khi đi thư viện, họ đi uống cà-phê.",
+          "en": "Before going to the library, they went to a coffee shop."
+        },
+        {
+          "vi": "Trước bữa tối, chúng tôi thường đi dạo.",
+          "en": "Before dinner, we usually take a walk."
+        },
+        {
+          "vi": "Họ về khách sạn trước mười một giờ đêm.",
+          "en": "They got back to the hotel before 11 p.m."
+        }
+      ],
+      "notes": "Trước is used instead of trước khi in the structure “before + noun phrase.”",
+      "warning": "",
+      "pattern": "Trước khi + [verb phrase], + [main clause]"
+    },
+    {
+      "id": "u13_hay",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “hãy” to make a suggestion",
+      "title": "hãy",
+      "meaning": "to make a suggestion",
+      "examples": [
+        {
+          "vi": "Chúng ta hãy ǎn sáng ở khách sạn.",
+          "en": "Letʼs eat breakfast in the hotel."
+        },
+        {
+          "vi": "Mình hãy ghé vào thư viện này một chút.",
+          "en": "Letʼs step into this library for a minute."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] hãy + [verb phrase]"
+    },
+    {
+      "id": "u13_truoc",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “trước” to express “first”",
+      "title": "trước",
+      "meaning": "to express “first”",
+      "examples": [
+        {
+          "vi": "Chúng ta hãy ǎn sáng trước.",
+          "en": "Letʼs eat breakfast first."
+        },
+        {
+          "vi": "Họ cần nước uống trước.",
+          "en": "They need drinking water first."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[verb phrase] + trước"
+    },
+    {
+      "id": "u13_lo",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “lỡ” to express “in case”",
+      "title": "lỡ",
+      "meaning": "to express “in case”",
+      "examples": [
+        {
+          "vi": "Nhớ mang theo ô/dù, lỡ trời mưa.",
+          "en": "Remember to bring an umbrella, in case it rains."
+        },
+        {
+          "vi": "Mình phải cố gắng để dành tiền, lỡ bị thất nghiệp.",
+          "en": "We have to try to save some money, in case we are unemployed."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[main clause], lỡ + [contingency]"
+    },
+    {
+      "id": "u13_that",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “thật” to express “indeed”",
+      "title": "thật",
+      "meaning": "to express “indeed”",
+      "examples": [
+        {
+          "vi": "Không có gì để làm thì chán thật.",
+          "en": "When thereʼs nothing to do, itʼs boring indeed."
+        },
+        {
+          "vi": "Phải bán nhà thì buồn thật.",
+          "en": "If you have to sell your house, itʼs sad indeed."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[adjective] + thật"
+    },
+    {
+      "id": "u13_chu",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “chứ” to express “for surely …”",
+      "title": "chứ",
+      "meaning": "to express “for surely …”",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "[clause] + chứ"
+    },
+    {
+      "id": "u13_nao_thi",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “nào thì” to express “OK, let’s (do something)”",
+      "title": "nào thì",
+      "meaning": "to express “OK, let’s (do something)”",
+      "examples": [
+        {
+          "vi": "Nào thì đi vào.",
+          "en": "OK, letʼs go in."
+        },
+        {
+          "vi": "Nào thì bắt đầu.",
+          "en": "OK, letʼs begin."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Nào thì + [verb phrase]"
+    },
+    {
+      "id": "u13_kia",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “kìa” to emphasize what one is saying",
+      "title": "kìa",
+      "meaning": "to emphasize what one is saying",
+      "examples": [
+        {
+          "vi": "Loan đang chờ mình kìa.",
+          "en": "Loanʼs waiting for us."
+        },
+        {
+          "vi": "Xe buýt đến rồi kìa.",
+          "en": "The bus is coming."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[clause] + kìa"
+    },
+    {
+      "id": "u13_toan_la",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “toàn là” to express “full of”",
+      "title": "toàn là",
+      "meaning": "to express “full of”",
+      "examples": [
+        {
+          "vi": "Thành phố này toàn là khách du lịch, khách sạn và nhà",
+          "en": "hàng. This city is full of tourists, hotels and restaurants."
+        },
+        {
+          "vi": "Thực đơn có toàn là các món ǎn Việt.",
+          "en": "The menu is filled with Vietnamese dishes."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + toàn là + [noun]"
+    },
+    {
+      "id": "u13_thi",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “thì” to express “OK, let’s (do something)”",
+      "title": "thì",
+      "meaning": "to express “OK, let’s (do something)”",
+      "examples": [
+        {
+          "vi": "Ăn thì ǎn.",
+          "en": "OK, letʼs eat."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[verb] thì [verb]   (Ăn thì ăn, Đi thì đi, …)"
+    },
+    {
+      "id": "u13_gi",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “gì” after “sợ” or “lo” to express “What is there to be … about?”",
+      "title": "gì",
+      "meaning": "after “sợ” or “lo” to express “What is there to be … about?”",
+      "examples": [],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + sợ / lo + gì?"
+    },
+    {
+      "id": "u13_bao_lau_roi",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “bao lâu rồi” to express “how long (up till now)”",
+      "title": "bao lâu rồi",
+      "meaning": "to express “how long (up till now)”",
+      "examples": [
+        {
+          "vi": "Mary học tiếng Việt được bao lâu rồi?",
+          "en": "How long has Mary been studying Vietnamese?"
+        },
+        {
+          "vi": "Gia đình Hải sống ở Anh được bao lâu rồi?",
+          "en": "How long has Hảiʼs family been living in England?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + [verb] + … được bao lâu rồi?"
+    },
+    {
+      "id": "u13_ke_ca",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “kể cả” to express “including”",
+      "title": "kể cả",
+      "meaning": "to express “including”",
+      "examples": [
+        {
+          "vi": "Rất nhiều du khách thích Nha Trang, kể cả Mary và Dan.",
+          "en": "Many tourists like Nha Trang, including Mary and Dan."
+        },
+        {
+          "vi": "Mary thích học nhiều ngoại ngữ, kể cả tiếng Việt và tiếng",
+          "en": "Nhật. Mary likes to learn many foreign languages, including Vietnamese and Japanese."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[clause], kể cả + [included items]"
+    },
+    {
+      "id": "u13_hoi_nao",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “hồi nào” to express “when” for things that already happened",
+      "title": "hồi nào",
+      "meaning": "to express “when” for things that already happened",
+      "examples": [
+        {
+          "vi": "Dan bắt đầu học tiếng Việt hồi nào?",
+          "en": "When did you begin to learn Vietnamese, Dan?"
+        },
+        {
+          "vi": "Gia đình Duyên di cư sang Mỹ hồi nào?",
+          "en": "When did Duyênʼs family immigrate to America?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] + [past verb] + hồi nào?"
+    },
+    {
+      "id": "u13_bao_lau_nua",
+      "unit": 13,
+      "unit_vi": "Một ngày ở bãi biển",
+      "unit_en": "A day at the beach",
+      "header": "Using “bao lâu nữa” to express “how much longer”",
+      "title": "bao lâu nữa",
+      "meaning": "to express “how much longer”",
+      "examples": [
+        {
+          "vi": "Angela sẽ ở Việt Nam bao lâu nữa?",
+          "en": "How much longer will Angela be staying in Vietnam?"
+        },
+        {
+          "vi": "Tôi sẽ phải ngồi ở đây chờ họ bao lâu nữa?",
+          "en": "How much longer will I have to sit here waiting for them?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[subject] (sẽ) + [verb] + … bao lâu nữa?"
+    },
+    {
+      "id": "u14_ca_deu",
+      "unit": 14,
+      "unit_vi": "Trở về Hà Nội và chào tạm biệt",
+      "unit_en": "Returning to Hanoi and saying goodbye",
+      "header": "Using “cả … đều” to express “both” or “all”",
+      "title": "cả … đều",
+      "meaning": "to express “both” or “all”",
+      "examples": [
+        {
+          "vi": "**Cả** Angela và Thùy Dương **đều** thích Nha Trang.",
+          "en": "Both Angela and Thùy Dương like Nha Trang."
+        },
+        {
+          "vi": "**Cả** bốn người **đều** thích ǎn các món ǎn Nhật.",
+          "en": "All four of them like to eat Japanese food. ậ"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Cả + [A] + (và + [B]) + đều + [verb / adj]"
+    },
+    {
+      "id": "u14_vi_vay",
+      "unit": 14,
+      "unit_vi": "Trở về Hà Nội và chào tạm biệt",
+      "unit_en": "Returning to Hanoi and saying goodbye",
+      "header": "Using “vì vậy” to express “therefore”",
+      "title": "vì vậy",
+      "meaning": "to express “therefore”",
+      "examples": [
+        {
+          "vi": "Hôm qua trời mưa to, vì vậy họ không đi xem phim.",
+          "en": "Yesterday it rained heavily, therefore they didnʼt go to the movies."
+        },
+        {
+          "vi": "Maria bị bệnh, vì vậy Maria không đi học.",
+          "en": "Maria was sick, therefore she didnʼt go to school."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[cause], vì vậy + [effect]"
+    },
+    {
+      "id": "u14_moi_ngay_nao",
+      "unit": 14,
+      "unit_vi": "Trở về Hà Nội và chào tạm biệt",
+      "unit_en": "Returning to Hanoi and saying goodbye",
+      "header": "Using “mới ngày nào” to express “just the other day”",
+      "title": "mới ngày nào",
+      "meaning": "to express “just the other day”",
+      "examples": [
+        {
+          "vi": "Mới ngày nào tôi đón họ ở sân bay/phi trường.",
+          "en": "Just the other day I went to pick them up at the airport."
+        },
+        {
+          "vi": "Mới ngày nào mình còn ở Nha Trang.",
+          "en": "Just the other day we were still in Nha Trang."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Mới ngày nào + [past clause]"
+    },
+    {
+      "id": "u14_neu_the",
+      "unit": 14,
+      "unit_vi": "Trở về Hà Nội và chào tạm biệt",
+      "unit_en": "Returning to Hanoi and saying goodbye",
+      "header": "Using “nếu thế  ” to express “if so”",
+      "title": "nếu thế",
+      "meaning": "to express “if so”",
+      "examples": [
+        {
+          "vi": "Nếu thế, mình nên dậy sớm và đón xe buýt.",
+          "en": "If so, we should get up early and catch a bus."
+        },
+        {
+          "vi": "Nếu thế, ai sẽ gọi điện thoại cho họ?",
+          "en": "If so, who will call them?"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Nếu thế, + [clause]"
+    },
+    {
+      "id": "u14_thoi",
+      "unit": 14,
+      "unit_vi": "Trở về Hà Nội và chào tạm biệt",
+      "unit_en": "Returning to Hanoi and saying goodbye",
+      "header": "Using “thôi” to express the interjection “well”",
+      "title": "thôi",
+      "meaning": "to express the interjection “well”",
+      "examples": [
+        {
+          "vi": "Thôi, ngày mai mình đi ra hiệu sách cũng được.",
+          "en": "Well, we can visit the bookstore tomorrow, no problem."
+        },
+        {
+          "vi": "Thôi, đừng bàn luận về chính trị nữa.",
+          "en": "Well, donʼt letʼs discuss politics any more."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Thôi, + [clause]"
+    },
+    {
+      "id": "u14_theo",
+      "unit": 14,
+      "unit_vi": "Trở về Hà Nội và chào tạm biệt",
+      "unit_en": "Returning to Hanoi and saying goodbye",
+      "header": "Using “theo” to express “also” or “with”",
+      "title": "theo",
+      "meaning": "to express “also” or “with”",
+      "examples": [
+        {
+          "vi": "Angela cười và mọi người cười theo.",
+          "en": "Angela laughed and everyone laughed with her."
+        },
+        {
+          "vi": "Mary vui và mọi người vui theo.",
+          "en": "Mary was happy and so everyone was happy too."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[clause 1] + và + [clause 2] + theo"
+    },
+    {
+      "id": "u14_chuc",
+      "unit": 14,
+      "unit_vi": "Trở về Hà Nội và chào tạm biệt",
+      "unit_en": "Returning to Hanoi and saying goodbye",
+      "header": "Using “chúc” to wish somebody something",
+      "title": "chúc",
+      "meaning": "to wish somebody something",
+      "examples": [
+        {
+          "vi": "Chúc mọi người một Giáng Sinh vui vẻ.",
+          "en": "I wish everyone a Merry Christmas."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "Chúc + [person] + [wish / event]"
+    },
+    {
+      "id": "u14_thu_tieng",
+      "unit": 14,
+      "unit_vi": "Trở về Hà Nội và chào tạm biệt",
+      "unit_en": "Returning to Hanoi and saying goodbye",
+      "header": "Using “thứ tiếng” when referring to “language(s)”",
+      "title": "thứ tiếng",
+      "meaning": "when referring to “language(s)”",
+      "examples": [
+        {
+          "vi": "Angela biết nói mấy thứ tiếng?",
+          "en": "How many languages can you speak, Angela?"
+        },
+        {
+          "vi": "Tôi biết nói bốn thứ tiếng.",
+          "en": "I can speak four languages. ố  ư"
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[number] + thứ tiếng   (counting languages)"
+    },
+    {
+      "id": "u14_giong_nhu",
+      "unit": 14,
+      "unit_vi": "Trở về Hà Nội và chào tạm biệt",
+      "unit_en": "Returning to Hanoi and saying goodbye",
+      "header": "Using “(giống) như  ” to express “be like”",
+      "title": "(giống) như",
+      "meaning": "to express “be like”",
+      "examples": [
+        {
+          "vi": "Tôi muốn nói tiếng Việt thông thạo, (giống) như Angela.",
+          "en": "I want to speak Vietnamese fluently, just like Angela."
+        },
+        {
+          "vi": "Trời hôm nay đẹp như hôm qua.",
+          "en": "Today it is as beautiful as yesterday."
+        }
+      ],
+      "notes": "",
+      "warning": "",
+      "pattern": "[A] + (giống) như + [B]"
+    }
+  ]
+}
