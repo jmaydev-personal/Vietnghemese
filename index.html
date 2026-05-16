@@ -218,17 +218,58 @@
   }
   .grammar-item-row:last-child { border-bottom: none; }
   .grammar-item-row:active { background: rgba(91,141,238,0.10); }
+  /* Section dropdowns nest inside the lesson-items area */
+  .vocab-section {
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+  .vocab-section:first-child { border-top: none; }
   .vocab-section-header {
-    padding: 10px 16px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px 10px 18px;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--text-dim);
     background: rgba(0,0,0,0.10);
-    border-top: 1px solid rgba(255,255,255,0.04);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s, color 0.15s;
   }
-  .vocab-section-header:first-child { border-top: none; }
+  .vocab-section-header:active { background: rgba(255,255,255,0.05); }
+  .vocab-section-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+  .vocab-section-chevron {
+    width: 7px; height: 7px;
+    border-right: 2px solid var(--text-dim);
+    border-bottom: 2px solid var(--text-dim);
+    transform: rotate(-45deg);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  .vocab-section.open .vocab-section-chevron {
+    transform: rotate(45deg);
+    border-right-color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .vocab-section-count {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    text-transform: none;
+    flex-shrink: 0;
+  }
+  .vocab-section-items {
+    display: none;
+  }
+  .vocab-section.open .vocab-section-items { display: block; }
   .gi-word {
     font-size: 15px;
     font-weight: 600;
@@ -953,6 +994,10 @@ let gapTimer        = null;
 let watchdogTimer   = null;
 let wakeLock        = null;
 let activeLessonKey = null;
+// Index of the section (0-based) within the active lesson — when set, the
+// playlist is scoped to ONLY that section's words (drill mode). null means
+// "all of the active lesson" or, when activeLessonKey is null, "all vocab".
+let activeSectionIdx = null;
 
 // ── DOM refs ──────────────────────────
 const wordEl    = document.getElementById('wordEl');
@@ -1063,6 +1108,9 @@ function escapeHtml(s) {
 
 // Persisted expand-state for grammar lesson dropdowns
 let expandedLessons = new Set();
+// Persisted expand-state for vocab section dropdowns. Keys are
+// `<lesson_key>::<sectionIdx>` (e.g. "01_Xin chào::0").
+let expandedSections = new Set();
 
 function buildLessonList() {
   const container = document.getElementById('lessonItems');
@@ -1129,17 +1177,57 @@ function buildLessonList() {
         // avoid a redundant divider (used for 15_Beyond textbook).
         const hideHeaders = lesson.sections.length === 1
           && (lesson.sections[0].label === 'All' || !lesson.sections[0].label);
-        lesson.sections.forEach(sec => {
-          if (sec.label && !hideHeaders) {
-            const sh = document.createElement('div');
-            sh.className = 'vocab-section-header';
-            sh.textContent = sec.label;
-            items.appendChild(sh);
-          }
+        lesson.sections.forEach((sec, secIdx) => {
+          // Resolve the section's words to (i, w) pairs
+          const wordRefs = [];
           sec.words.forEach(wordStr => {
             const i = WORD_IDX_BY_STR.get(wordStr);
-            if (i === undefined) return;  // word in plan but not in words.json
-            const w = WORDS[i];
+            if (i === undefined) return;
+            wordRefs.push([i, WORDS[i]]);
+          });
+
+          // No header? Just render the rows flat (e.g. 15_Beyond textbook).
+          if (!sec.label || hideHeaders) {
+            wordRefs.forEach(([i, w]) => {
+              const row = document.createElement('div');
+              row.className = 'grammar-item-row';
+              row.innerHTML =
+                '<span class="gi-word">' + escapeHtml(w.word || '') + '</span>' +
+                '<span class="gi-english">' + escapeHtml(w.english || '') + '</span>';
+              row.onclick = (ev) => {
+                ev.stopPropagation();
+                selectLesson(key, i, secIdx);
+              };
+              items.appendChild(row);
+            });
+            return;
+          }
+
+          // Section as a nested dropdown: header toggles open/closed,
+          // tapping a word inside drills the section from that word.
+          const secKey = key + '::' + secIdx;
+          const isOpen = expandedSections.has(secKey);
+
+          const group = document.createElement('div');
+          group.className = 'vocab-section' + (isOpen ? ' open' : '');
+
+          const sh = document.createElement('div');
+          sh.className = 'vocab-section-header';
+          sh.innerHTML =
+            '<div class="vocab-section-header-left">' +
+              '<span class="vocab-section-chevron"></span>' +
+              '<span class="vocab-section-name">' + escapeHtml(sec.label) + '</span>' +
+            '</div>' +
+            '<span class="vocab-section-count">' + wordRefs.length + ' words</span>';
+          sh.onclick = (ev) => {
+            ev.stopPropagation();
+            toggleSection(key, secIdx);
+          };
+          group.appendChild(sh);
+
+          const inner = document.createElement('div');
+          inner.className = 'vocab-section-items';
+          wordRefs.forEach(([i, w]) => {
             const row = document.createElement('div');
             row.className = 'grammar-item-row';
             row.innerHTML =
@@ -1147,10 +1235,13 @@ function buildLessonList() {
               '<span class="gi-english">' + escapeHtml(w.english || '') + '</span>';
             row.onclick = (ev) => {
               ev.stopPropagation();
-              selectLesson(key, i);
+              selectLesson(key, i, secIdx);
             };
-            items.appendChild(row);
+            inner.appendChild(row);
           });
+          group.appendChild(inner);
+
+          items.appendChild(group);
         });
       }
     }
@@ -1184,12 +1275,56 @@ function toggleLessonGroup(key) {
   }
 }
 
-function selectLesson(key, startWordIndex) {
+function toggleSection(key, secIdx) {
+  const secKey = key + '::' + secIdx;
+  if (expandedSections.has(secKey)) {
+    expandedSections.delete(secKey);
+  } else {
+    expandedSections.add(secKey);
+  }
+  // Find the parent lesson group, then the secIdx-th .vocab-section inside it.
+  const container = document.getElementById('lessonItems');
+  const lessonGroups = container.querySelectorAll('.lesson-group');
+  let idx = 0;
+  for (const k of LESSONS) {
+    if ((COUNTS[k] || 0) === 0) continue;
+    if (k === key) {
+      const secs = lessonGroups[idx].querySelectorAll('.vocab-section');
+      if (secs[secIdx]) secs[secIdx].classList.toggle('open', expandedSections.has(secKey));
+      break;
+    }
+    idx++;
+  }
+}
+
+function selectLesson(key, startWordIndex, sectionIdx) {
   activeLessonKey = key;
+  activeSectionIdx = (sectionIdx === undefined || sectionIdx === null) ? null : sectionIdx;
   playerMode = pickerMode;
+
+  // For vocab drills, derive the section from the tapped word if not given.
+  // Drills are always scoped to a single section.
+  if (
+    activeSectionIdx === null
+    && key !== null
+    && startWordIndex !== undefined && startWordIndex !== null
+    && playerMode === 'words'
+  ) {
+    const lesson = LESSON_PLAN.lessons.find(l => l.key === key);
+    if (lesson) {
+      const wstr = WORDS[startWordIndex] && WORDS[startWordIndex].word;
+      for (let i = 0; i < lesson.sections.length; i++) {
+        if (lesson.sections[i].words.indexOf(wstr) !== -1) {
+          activeSectionIdx = i;
+          break;
+        }
+      }
+    }
+  }
+
   resetPlayer();
 
-  // If a specific grammar item was tapped, jump the playlist to that index.
+  // If a specific item was tapped, jump the playlist to that index.
   if (startWordIndex !== undefined && startWordIndex !== null) {
     const pos = playlist.indexOf(startWordIndex);
     if (pos >= 0) {
@@ -1201,8 +1336,19 @@ function selectLesson(key, startWordIndex) {
   showScreen('screenPlayer');
   maybeShowTutorial();
 
+  // Build the lesson label, including section info for vocab drills.
   const label = document.getElementById('lessonLabel');
-  label.textContent = key ? prettyLesson(key) : (playerMode === 'sentences' ? 'All Grammar' : 'All Vocabulary');
+  let lbl;
+  if (!key) {
+    lbl = (playerMode === 'sentences') ? 'All Grammar' : 'All Vocabulary';
+  } else if (playerMode === 'words' && activeSectionIdx !== null) {
+    const lesson = LESSON_PLAN.lessons.find(l => l.key === key);
+    const sec = lesson && lesson.sections[activeSectionIdx];
+    lbl = prettyLesson(key) + (sec ? ' · ' + sec.label : '');
+  } else {
+    lbl = prettyLesson(key);
+  }
+  label.textContent = lbl;
 
   // Tint player for sentence mode
   const isSent = playerMode === 'sentences';
@@ -1238,9 +1384,17 @@ function buildPlaylist() {
     }
   } else {
     if (activeLessonKey !== null) {
-      // Use lesson_plan's ordered word list for this lesson (hand-ordered
-      // by the user). Filter to indices that exist in WORDS.
-      pool = (WORD_IDXS_BY_LESSON.get(activeLessonKey) || []).slice();
+      // Drill mode: if a section is selected, scope the playlist to just
+      // that section's words. Otherwise (no section), use the whole lesson.
+      if (activeSectionIdx !== null) {
+        const lesson = LESSON_PLAN.lessons.find(l => l.key === activeLessonKey);
+        const sec = lesson && lesson.sections[activeSectionIdx];
+        pool = sec
+          ? sec.words.map(s => WORD_IDX_BY_STR.get(s)).filter(i => i !== undefined)
+          : [];
+      } else {
+        pool = (WORD_IDXS_BY_LESSON.get(activeLessonKey) || []).slice();
+      }
     } else {
       pool = WORDS.map((_, i) => i);
     }
