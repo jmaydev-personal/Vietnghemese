@@ -203,7 +203,7 @@
         ],
         [
           "ba (S)",
-          ""
+          "father"
         ],
         [
           "mẹ (N),",
@@ -211,7 +211,7 @@
         ],
         [
           "má (S)",
-          ""
+          "mother"
         ],
         [
           "của",
@@ -241,25 +241,59 @@
           "đây",
           "ending particle, loosely meaning “now”"
         ]
+      ],
+      [
+        [
+          "ngồi",
+          "sit"
+        ],
+        [
+          "dứng",
+          "stand"
+        ],
+        [
+          "gái",
+          "female (person)"
+        ],
+        [
+          "trai",
+          "male (person)"
+        ],
+        [
+          "ngủ",
+          "sleep (v.)"
+        ],
+        [
+          "đi ngủ",
+          "go to bed"
+        ]
       ]
     ],
     "2": [
       [
         [
-          "n viên",
+          "nhân viên",
           "employee"
         ],
         [
-          "quan",
+          "hai quan",
           "customs at"
         ],
         [
-          "bay (N),",
+          "san bay (N)",
           "airport"
         ],
         [
-          "trường (S)",
-          "let see"
+          "phi trường (S)",
+          "airport"
+        ],
+        [
+          "cho",
+          "let"
+        ],
+        [
+          "xem",
+          "see"
         ],
         [
           "hộ chiếu",
@@ -288,24 +322,24 @@
       ],
       [
         [
-          "khách sạ",
-          "n hotel"
+          "đến",
+          "come"
         ],
         [
-          "số",
-          "number"
+          "đế",
+          "in order to"
         ],
         [
-          "mười ch",
-          "ín 19"
+          "làm",
+          "do"
         ],
         [
-          "phố (N)",
-          "street"
+          "du lịch",
+          "travel (for pleasure)"
         ],
         [
-          "đường (S",
-          ")"
+          "lần",
+          "time"
         ],
         [
           "đầu tiên",
@@ -321,11 +355,31 @@
         ],
         [
           "ở",
-          "lịch stay at/in; at/in"
+          "stay at/in; at/in"
         ],
         [
           "đâu",
           "where"
+        ],
+        [
+          "khách sạn",
+          "hotel"
+        ],
+        [
+          "số",
+          "number"
+        ],
+        [
+          "mười chín",
+          "19"
+        ],
+        [
+          "phố (N)",
+          "street"
+        ],
+        [
+          "đường (S)",
+          "street"
         ],
         [
           "nói",
@@ -394,16 +448,12 @@
           "much, a lot"
         ],
         [
-          "Không có",
+          "Không có gì (N)",
           "You are welcome"
         ],
         [
-          "gì (N)/Không",
-          ""
-        ],
-        [
-          "có chi (S)",
-          ""
+          "Không có chi (S)",
+          "You are welcome"
         ]
       ],
       [
@@ -442,6 +492,122 @@
         [
           "đang",
           "time marker, used to describe what is/was happening"
+        ]
+      ],
+      [
+        [
+          "trắng",
+          "white"
+        ],
+        [
+          "đỏ",
+          "red"
+        ],
+        [
+          "đen",
+          "black"
+        ],
+        [
+          "nâu",
+          "brown"
+        ],
+        [
+          "xanh dương",
+          "blue"
+        ],
+        [
+          "da trời",
+          "blue"
+        ],
+        [
+          "nước biển",
+          "blue"
+        ],
+        [
+          "vàng",
+          "yellow"
+        ],
+        [
+          "da cam",
+          "orange"
+        ],
+        [
+          "xám",
+          "grey"
+        ]
+      ],
+      [
+        [
+          "Nhật",
+          "Japanese, Japan"
+        ],
+        [
+          "Việt",
+          "Vietnamese"
+        ],
+        [
+          "Anh",
+          "British, Britain"
+        ],
+        [
+          "Úc",
+          "Australian, Australia"
+        ],
+        [
+          "Đức",
+          "German, Germany"
+        ],
+        [
+          "Đài Loan",
+          "Taiwanese, Taiwan"
+        ],
+        [
+          "Pháp",
+          "French, France"
+        ],
+        [
+          "đón",
+          "pick up"
+        ],
+        [
+          "muốn",
+          "want (v.)"
+        ],
+        [
+          "sống",
+          "live (v.)"
+        ],
+        [
+          "làm việc",
+          "work (v.)"
+        ],
+        [
+          "đói",
+          "hungry"
+        ],
+        [
+          "khát",
+          "thirsty"
+        ],
+        [
+          "nước",
+          "water"
+        ],
+        [
+          "khát nước",
+          "thirsty"
+        ],
+        [
+          "hành lý",
+          "luggage"
+        ],
+        [
+          "nhà",
+          "house"
+        ],
+        [
+          "uống",
+          "drink"
         ]
       ]
     ],
@@ -484,8 +650,144 @@
           "already"
         ],
         [
-          "gửi (N), gởi (S)",
+          "gửi (N)",
           "give"
+        ],
+        [
+          "gởi (S)",
+          "give"
+        ],
+        [
+          "giá",
+          "price"
+        ],
+        [
+          "được",
+          "have"
+        ],
+        [
+          "tuổi",
+          "age"
+        ]
+      ],
+      [
+        [
+          "thuê (N)",
+          "rent"
+        ],
+        [
+          "mướn (S)",
+          "rent"
+        ],
+        [
+          "phòng",
+          "room"
+        ],
+        [
+          "trong",
+          "in"
+        ],
+        [
+          "còn",
+          "still have"
+        ],
+        [
+          "trống",
+          "vacant"
+        ],
+        [
+          "phòng đơn",
+          "single room"
+        ],
+        [
+          "phòng đôi",
+          "double room"
+        ],
+        [
+          "ạ",
+          "polite particle, placed at the end of an utterance"
+        ],
+        [
+          "cho",
+          "give"
+        ],
+        [
+          "phải",
+          "have to, must"
+        ],
+        [
+          "trả",
+          "pay"
+        ],
+        [
+          "đêm",
+          "night"
+        ],
+        [
+          "máy điều hoà (N)",
+          "AC unit"
+        ],
+        [
+          "máy lạnh (S)",
+          "AC unit"
+        ]
+      ],
+      [
+        [
+          "ti-vi, truyền hình",
+          "TV"
+        ],
+        [
+          "điện thoại",
+          "phone"
+        ],
+        [
+          "vòi hoa sen",
+          "shower(head)"
+        ],
+        [
+          "nóng",
+          "hot"
+        ],
+        [
+          "lạnh",
+          "cold"
+        ],
+        [
+          "bồn tắm",
+          "bathtub"
+        ],
+        [
+          "tốt",
+          "good"
+        ],
+        [
+          "sẽ",
+          "will (time marker for the future)"
+        ],
+        [
+          "mấy",
+          "how many"
+        ],
+        [
+          "ngày",
+          "day"
+        ],
+        [
+          "tuần",
+          "week"
+        ],
+        [
+          "ở",
+          "be (at a certain location)"
+        ],
+        [
+          "tầng",
+          "floor"
+        ],
+        [
+          "lầu",
+          "floor"
         ]
       ],
       [
@@ -557,9 +859,147 @@
           "đi theo",
           "follow"
         ]
+      ],
+      [
+        [
+          "đẹp",
+          "beautiful, pretty"
+        ],
+        [
+          "sạch sẽ",
+          "clean"
+        ],
+        [
+          "nhỏ",
+          "small"
+        ],
+        [
+          "thưa",
+          "polite particle preceding a term of address"
+        ],
+        [
+          "để",
+          "put"
+        ],
+        [
+          "ít",
+          "a little"
+        ],
+        [
+          "cà-phê",
+          "coffee"
+        ]
+      ],
+      [
+        [
+          "giá",
+          "price"
+        ],
+        [
+          "được",
+          "have"
+        ],
+        [
+          "tuổi",
+          "age"
+        ],
+        [
+          "chè (N)",
+          "tea"
+        ],
+        [
+          "trà (S)",
+          "tea"
+        ],
+        [
+          "ăn",
+          "eat"
+        ],
+        [
+          "tháng",
+          "month"
+        ],
+        [
+          "con",
+          "one's child(ren)"
+        ],
+        [
+          "lớn",
+          "large, big"
+        ],
+        [
+          "tối",
+          "dark"
+        ]
       ]
     ],
     "4": [
+      [
+        [
+          "gọi (điện thoại)",
+          "call (phone)"
+        ],
+        [
+          "bạn",
+          "friend"
+        ],
+        [
+          "đàu dây",
+          "(the other) end of the line"
+        ],
+        [
+          "đó (N)",
+          "ending particle, used to soften the tone of the question"
+        ],
+        [
+          "vậy (S)",
+          "ending particle, used to soften the tone of the question"
+        ],
+        [
+          "sang",
+          "come over"
+        ],
+        [
+          "thế à (N)",
+          "really"
+        ],
+        [
+          "vậy hả (S)",
+          "really"
+        ],
+        [
+          "giỏi",
+          "well"
+        ],
+        [
+          "có (ở) nhà",
+          "at home"
+        ],
+        [
+          "không có nhà",
+          "hot at home"
+        ],
+        [
+          "đi vắng",
+          "not at home"
+        ],
+        [
+          "nhắn",
+          "leave a message"
+        ],
+        [
+          "nhắc",
+          "remind"
+        ],
+        [
+          "số mấy",
+          "what number"
+        ],
+        [
+          "bảo",
+          "tell"
+        ]
+      ],
       [
         [
           "công ty",
@@ -616,6 +1056,86 @@
         [
           "rưỡi",
           "half"
+        ]
+      ],
+      [
+        [
+          "thứ hai",
+          "Monday"
+        ],
+        [
+          "thứ ba",
+          "Tuesday"
+        ],
+        [
+          "thứ tư",
+          "Wednesday"
+        ],
+        [
+          "thứ năm",
+          "Thursday"
+        ],
+        [
+          "thứ sáu",
+          "Friday"
+        ],
+        [
+          "thứ báy",
+          "Saturday"
+        ],
+        [
+          "chủ nhật",
+          "Sunday"
+        ]
+      ],
+      [
+        [
+          "tháng một (giêng)",
+          "January (lunar)"
+        ],
+        [
+          "tháng hai",
+          "February"
+        ],
+        [
+          "tháng ba",
+          "March"
+        ],
+        [
+          "tháng tư",
+          "April"
+        ],
+        [
+          "tháng năm",
+          "May"
+        ],
+        [
+          "tháng sáu",
+          "June"
+        ],
+        [
+          "tháng báy",
+          "July"
+        ],
+        [
+          "tháng tám",
+          "August"
+        ],
+        [
+          "tháng chín",
+          "September"
+        ],
+        [
+          "tháng mười",
+          "October"
+        ],
+        [
+          "tháng mười một",
+          "November"
+        ],
+        [
+          "tháng mười hai (chạp)",
+          "December (lunar)"
         ]
       ],
       [
@@ -687,29 +1207,39 @@
           "nhé",
           "OK?"
         ]
+      ],
+      [
+        [
+          "gõ",
+          "knock"
+        ],
+        [
+          "cửa",
+          "door"
+        ]
       ]
     ],
     "5": [
       [
         [
-          "t",
-          "cost, take (literally, it means “lose”) expensive"
+          "mất",
+          "cost, take (literally, it means “lose”)"
         ],
         [
-          "c (S)",
-          ""
+          "đắt (N)",
+          "expensive"
+        ],
+        [
+          "mắc (S)",
+          "expensive"
         ],
         [
           "(chỉ) … thôi",
           "only"
         ],
         [
-          "thôi cũng",
+          "thôi cũng được",
           "OK (reluctantly)"
-        ],
-        [
-          "được",
-          ""
         ]
       ],
       [
@@ -751,7 +1281,7 @@
         ],
         [
           "quẹo (S)",
-          ""
+          "turn"
         ],
         [
           "phải (N),",
@@ -759,7 +1289,7 @@
         ],
         [
           "mặt (S)",
-          ""
+          "right"
         ],
         [
           "rồi",
@@ -808,36 +1338,44 @@
       ],
       [
         [
-          "đường",
+          "hỏi",
+          "ask"
+        ],
+        [
+          "hỏi đường",
           "ask for directions"
         ],
         [
-          "a",
-          "temple, pagoda pillar finish light, lamp"
+          "chùa",
+          "temple, pagoda"
         ],
         [
-          "xanh",
+          "cột",
+          "pillar"
+        ],
+        [
+          "hết",
+          "finish"
+        ],
+        [
+          "đèn",
+          "light, lamp"
+        ],
+        [
+          "đèn xanh đèn đỏ",
           "traffic lights"
         ],
         [
-          "đỏ",
-          ""
-        ],
-        [
-          "m … nữa",
+          "thêm … nữa",
           "more"
         ],
         [
-          "phố",
+          "dãy phố",
           "city block"
         ],
         [
-          "y trước",
+          "ngay trước mặt",
           "right in front"
-        ],
-        [
-          "t",
-          ""
         ],
         [
           "gần",
@@ -874,31 +1412,47 @@
       ],
       [
         [
-          "m hiểm",
-          "explore afraid brave"
+          "thám hiểm",
+          "explore"
         ],
         [
-          "đường",
+          "sợ",
+          "afraid"
+        ],
+        [
+          "gan",
+          "brave"
+        ],
+        [
+          "lạc đường",
           "lose oneʼs way"
         ],
         [
-          "p",
+          "giúp",
           "help"
         ],
         [
-          "ài ra",
-          "besides, also practice"
+          "ngoài ra",
+          "besides, also"
         ],
         [
-          "g Anh",
+          "tập",
+          "practice"
+        ],
+        [
+          "tiếng Anh",
           "English"
         ],
         [
-          "ỉ",
-          "rest No. Until 11 only."
+          "nghỉ",
+          "rest"
         ],
         [
-          "ừ (N), ờ (S)",
+          "ừ (N)",
+          "yes, used among close friends or with people younger than you"
+        ],
+        [
+          "ờ (S)",
           "yes, used among close friends or with people younger than you"
         ],
         [
@@ -921,46 +1475,74 @@
           "nửa đêm",
           "midnight"
         ]
+      ],
+      [
+        [
+          "từ tế",
+          "kind"
+        ],
+        [
+          "hiếu khách",
+          "hospitable"
+        ]
       ]
     ],
     "6": [
       [
         [
-          "ời",
+          "người phục vụ",
           "waiter"
         ],
         [
-          "c vụ",
+          "chú",
           "junior uncle, used when addressing someone younger than your parents table"
         ],
         [
-          "a sổ",
+          "bản",
+          "table"
+        ],
+        [
+          "cửa sổ",
           "window"
         ],
         [
-          "c đơn",
+          "thực đơn",
           "menu"
         ],
         [
-          "(cháu)",
+          "tụi (cháu)",
           "informal we/us a few"
         ],
         [
-          "n",
+          "chọn",
           "choose"
         ],
         [
-          "n ǎn",
-          "dish order fish steam"
+          "món ǎn",
+          "dish"
         ],
         [
-          "h",
+          "gọi",
+          "order"
+        ],
+        [
+          "cá",
+          "fish"
+        ],
+        [
+          "hấp",
+          "steam"
+        ],
+        [
+          "canh",
           "soup"
         ],
         [
-          "a",
+          "chua",
           "sour"
-        ],
+        ]
+      ],
+      [
         [
           "cơm",
           "steamed rice"
@@ -998,7 +1580,11 @@
           "ready"
         ],
         [
-          "cốc (N), ly (S)",
+          "cốc (N)",
+          "glass"
+        ],
+        [
+          "ly (S)",
           "glass"
         ],
         [
@@ -1036,12 +1622,8 @@
           "salty"
         ],
         [
-          "món tráng",
+          "món tráng miệng",
           "dessert"
-        ],
-        [
-          "miệng",
-          ""
         ],
         [
           "no",
@@ -1052,11 +1634,19 @@
           "sweet dessert"
         ],
         [
-          "đỗ (N), đậu (S)",
+          "đỗ (N)",
           "bean"
         ],
         [
-          "bát (N), chén (S)",
+          "đậu (S)",
+          "bean"
+        ],
+        [
+          "bát (N)",
+          "bowl"
+        ],
+        [
+          "chén (S)",
           "bowl"
         ],
         [
@@ -1106,44 +1696,44 @@
       ],
       [
         [
-          "m",
+          "sớm",
           "early"
         ],
         [
-          "i gian",
+          "thời gian",
           "time"
         ],
         [
-          "hơi",
+          "đi chơi",
           "go and have fun"
         ],
         [
-          "ng tâm",
+          "trung tâm",
           "center"
         ],
         [
-          "nh phố",
+          "thành phố",
           "city"
         ],
         [
-          "e nhạc",
+          "nghe nhạc",
           "listen to music"
         ],
         [
-          "phim/xi-nê",
+          "xem phim/xi-nê",
           "go to the movies"
         ],
         [
-          "c",
+          "hoặc",
           "or"
         ],
         [
-          "t ra (N),",
-          "in truth, to tell"
+          "thạt ra (N),",
+          "in truth, to tell the truth"
         ],
         [
-          "c ra (S)",
-          "the truth"
+          "thực ra (S)",
+          "in truth, to tell the truth"
         ],
         [
           "bắt đầu",
@@ -1154,12 +1744,12 @@
           "feel"
         ],
         [
-          "lười (N),",
+          "lười (N)",
           "lazy"
         ],
         [
           "làm biếng (S)",
-          ""
+          "lazy"
         ],
         [
           "không … nữa",
@@ -1177,25 +1767,51 @@
           "đừng",
           "donʼt"
         ]
+      ],
+      [
+        [
+          "rẻ",
+          "cheap"
+        ],
+        [
+          "cha",
+          "father (formal)"
+        ],
+        [
+          "thích",
+          "like"
+        ],
+        [
+          "sữa",
+          "milk"
+        ]
       ]
     ],
     "7": [
       [
         [
-          "a",
+          "mua",
           "buy"
         ],
         [
-          "ời",
+          "người bán hàng",
           "seller"
         ],
         [
-          "hàng",
+          "cân (N)",
           "kilo"
         ],
         [
-          "g",
-          "Vietnamese currency a question word used to ask for confirmation"
+          "ký (S)",
+          "kilo"
+        ],
+        [
+          "đòng",
+          "Vietnamese currency"
+        ],
+        [
+          "à",
+          "a question word used to ask for confirmation"
         ],
         [
           "tươi",
@@ -1214,22 +1830,22 @@
           "OK (reluctantly)"
         ],
         [
-          "quả (N),",
-          "classifiers for fruits"
+          "quả (N)",
+          "classifiers for fruits (which can also function as pronouns)"
         ],
         [
           "trái (S)",
-          "(which can also function as pronouns)"
+          "classifiers for fruits (which can also function as pronouns)"
         ]
       ],
       [
         [
-          "cửa hàng (N),",
+          "cửa hàng (N)",
           "store"
         ],
         [
           "cửa tiệm (S)",
-          ""
+          "store"
         ],
         [
           "chiếc",
@@ -1248,6 +1864,10 @@
           "husband"
         ],
         [
+          "vợ",
+          "wife"
+        ],
+        [
           "gia đình",
           "family"
         ],
@@ -1264,6 +1884,10 @@
           "boyfriend"
         ],
         [
+          "bạn gái",
+          "girlfriend"
+        ],
+        [
           "bao giờ",
           "when"
         ],
@@ -1274,6 +1898,60 @@
         [
           "quay lại",
           "return"
+        ]
+      ],
+      [
+        [
+          "hiệu sách (N)",
+          "bookstore"
+        ],
+        [
+          "tiệm sách (S)",
+          "bookstore"
+        ],
+        [
+          "tìm",
+          "look for"
+        ],
+        [
+          "sách",
+          "book"
+        ],
+        [
+          "quyển (N)",
+          "classifier for books (can also function as pronouns)"
+        ],
+        [
+          "cuốn (S)",
+          "classifier for books (can also function as pronouns)"
+        ],
+        [
+          "thơ",
+          "poetry"
+        ],
+        [
+          "tác giả",
+          "author"
+        ],
+        [
+          "truyện",
+          "tale, story"
+        ],
+        [
+          "kia",
+          "other"
+        ],
+        [
+          "tuyển tập",
+          "collection"
+        ],
+        [
+          "mỗi",
+          "each"
+        ],
+        [
+          "nữa",
+          "more"
         ]
       ],
       [
@@ -1358,12 +2036,46 @@
           "get up"
         ],
         [
-          "trễ (S),",
+          "trễ (S)",
           "late"
         ],
         [
           "muộn (N)",
-          ""
+          "late"
+        ]
+      ],
+      [
+        [
+          "chuối",
+          "banana"
+        ],
+        [
+          "táo",
+          "apple"
+        ],
+        [
+          "đào",
+          "peach"
+        ],
+        [
+          "đọc",
+          "read"
+        ],
+        [
+          "thinh thoảng",
+          "sometimes"
+        ],
+        [
+          "luôn luôn",
+          "always"
+        ],
+        [
+          "ít khi",
+          "seldom"
+        ],
+        [
+          "không bao giờ",
+          "never"
         ]
       ]
     ],
@@ -1371,35 +2083,11 @@
       [
         [
           "trời",
-          "the weather (literally meanin “sky”)"
+          "the weather (literally means “sky”)"
         ],
         [
-          "Hồ Hoàn",
-          "Lake of the"
-        ],
-        [
-          "Kiếm",
-          "Restored Sword"
-        ],
-        [
-          "i Hà Nội",
-          "Hanoian, Hanoi resident"
-        ],
-        [
-          "ngoài (N),",
-          "foreign"
-        ],
-        [
-          "quốc (S)",
-          ""
-        ],
-        [
-          "du lịch,",
-          "tourist"
-        ],
-        [
-          "ch",
-          ""
+          "Hồ Hoàn Kiếm",
+          "Lake of the Restored Sword"
         ],
         [
           "thật (là)",
@@ -1414,20 +2102,36 @@
           "right"
         ],
         [
+          "người Hà Nội",
+          "Hanoian, Hanoi resident"
+        ],
+        [
+          "nước ngoài (N),",
+          "foreign"
+        ],
+        [
+          "ngoại quốc (S)",
+          "foreign"
+        ],
+        [
+          "khách du lịch, du khách",
+          "tourist"
+        ],
+        [
           "nơi",
-          "ờ place"
+          "place"
         ],
         [
           "ǎn uống",
-          "dine c"
+          "dine"
         ],
         [
           "thưởng ngoạn",
-          "enjoy ại"
+          "enjoy"
         ],
         [
           "mình",
-          "I, me (intimate, ch used when talking khá to close friends)"
+          "I, me (intimate, used when talking to close friends)"
         ]
       ],
       [
@@ -1510,6 +2214,80 @@
       ],
       [
         [
+          "dạo chơi",
+          "take a stroll"
+        ],
+        [
+          "ảnh (N)",
+          "picture"
+        ],
+        [
+          "hình (S)",
+          "picture"
+        ],
+        [
+          "chụp ảnh/hình",
+          "take pictures"
+        ],
+        [
+          "bức (N)",
+          "classifier for pictures"
+        ],
+        [
+          "tấm (S)",
+          "classifier for pictures"
+        ],
+        [
+          "chỗ",
+          "place"
+        ],
+        [
+          "cầu",
+          "bridge"
+        ],
+        [
+          "trông",
+          "look, seem"
+        ],
+        [
+          "nho nhỏ",
+          "rather small, smallish"
+        ],
+        [
+          "xinh xinh",
+          "pretty, cute"
+        ],
+        [
+          "sử dụng",
+          "use"
+        ],
+        [
+          "cả ... nữa",
+          "also"
+        ],
+        [
+          "từ láy",
+          "reduplication"
+        ],
+        [
+          "liên tục",
+          "continuously, in a row"
+        ],
+        [
+          "tham dự",
+          "attend, participate in"
+        ],
+        [
+          "chương trình",
+          "program"
+        ],
+        [
+          "dĩ nhiên",
+          "certainly, of course"
+        ]
+      ],
+      [
+        [
           "kem",
           "ice cream"
         ],
@@ -1565,17 +2343,99 @@
           "trở lại",
           "return"
         ]
+      ],
+      [
+        [
+          "nắng",
+          "sunny"
+        ],
+        [
+          "ấm",
+          "warm"
+        ],
+        [
+          "mát",
+          "cool"
+        ],
+        [
+          "sáng",
+          "light"
+        ],
+        [
+          "mưa",
+          "rainy, rain"
+        ],
+        [
+          "nói thật",
+          "speak the truth"
+        ],
+        [
+          "nói đùa",
+          "joke, kid"
+        ],
+        [
+          "tốt",
+          "good, nice, kind"
+        ],
+        [
+          "cao",
+          "tall"
+        ],
+        [
+          "thấp",
+          "short"
+        ],
+        [
+          "quý",
+          "precious"
+        ],
+        [
+          "ngôi",
+          "classifier"
+        ],
+        [
+          "thắng",
+          "win"
+        ],
+        [
+          "thi trượt",
+          "fail an exam"
+        ],
+        [
+          "dịch",
+          "translate"
+        ],
+        [
+          "giàu",
+          "rich"
+        ],
+        [
+          "nghèo",
+          "poor"
+        ],
+        [
+          "đoán",
+          "guess"
+        ],
+        [
+          "thân",
+          "close"
+        ],
+        [
+          "bạn thân",
+          "close friend"
+        ],
+        [
+          "rạp xi-nê",
+          "movie theatre"
+        ]
       ]
     ],
     "9": [
       [
         [
-          "ngân hàng,",
+          "ngân hàng, nhà bǎng",
           "bank"
-        ],
-        [
-          "nhà bǎng",
-          ""
         ],
         [
           "đổi (tiền)",
@@ -1614,20 +2474,16 @@
           "or"
         ],
         [
-          "hiệu vàng (N),",
+          "hiệu vàng (N)",
           "jewelry store"
         ],
         [
           "tiệm vàng (S)",
-          ""
+          "jewelry store"
         ],
         [
-          "không …",
+          "không … nào cả",
           "not any … at all"
-        ],
-        [
-          "nào cả",
-          ""
         ],
         [
           "đằng kia",
@@ -1644,7 +2500,11 @@
           "need"
         ],
         [
-          "gửi (N), gởi (S)",
+          "gửi (N)",
+          "send"
+        ],
+        [
+          "gởi (S)",
           "send"
         ],
         [
@@ -1716,7 +2576,9 @@
         [
           "quần",
           "pants"
-        ],
+        ]
+      ],
+      [
         [
           "quần áo",
           "clothes"
@@ -1764,7 +2626,9 @@
         [
           "nghệ thuật",
           "art"
-        ],
+        ]
+      ],
+      [
         [
           "điêu khắc",
           "sculpture"
@@ -1790,12 +2654,8 @@
           "traditional"
         ],
         [
-          "người dân",
-          "ethnic (minority)"
-        ],
-        [
-          "tộc (thiểu số)",
-          "people(s)"
+          "người dân tộc (thiểu số)",
+          "ethnic (minority people(s))"
         ],
         [
           "lấy",
@@ -1810,60 +2670,94 @@
           "done (cannot be changed)"
         ],
         [
-          "mặc cả (N),",
+          "mặc cả (N)",
           "haggle, bargain"
         ],
         [
           "trả giá (S)",
-          ""
+          "haggle, bargain"
+        ]
+      ],
+      [
+        [
+          "nhà ga",
+          "train station"
+        ],
+        [
+          "tạnh",
+          "let up (the rain)"
+        ],
+        [
+          "tiếp",
+          "continue"
+        ],
+        [
+          "hạnh phúc",
+          "happy, happiness"
+        ],
+        [
+          "mùa hè",
+          "Summer"
+        ],
+        [
+          "mùa thu",
+          "Autumn"
+        ],
+        [
+          "mùa đông",
+          "Winter"
+        ],
+        [
+          "mùa xuân",
+          "Spring"
         ]
       ]
     ],
     "10": [
       [
         [
-          "y",
+          "ngay",
           "right, exactly"
         ],
         [
-          "h trí",
+          "cảnh trí",
           "landscape, view"
         ],
         [
-          "mộng",
+          "thơ mộng",
           "romantic"
         ],
         [
-          "theo",
-          "along (the edge of) bank, shore"
+          "ven theo",
+          "along (the edge of)"
         ],
         [
-          "g tiếc",
-          "regrettable even though"
+          "bờ",
+          "bank, shore"
         ],
         [
-          "sĩ,",
+          "đáng tiếc",
+          "regrettable"
+        ],
+        [
+          "dù",
+          "even though"
+        ],
+        [
+          "thi sĩ, nhà thơ",
           "poet"
         ],
         [
-          "thơ",
-          ""
-        ],
-        [
-          "thơ",
+          "làm thơ",
           "compose poetry"
         ],
         [
-          "g",
+          "tặng",
           "offer, dedicate"
         ],
         [
-          "nhà vǎn,",
+          "nhà vǎn, vǎn sĩ",
           "novelist"
-        ],
-        [
-          "vǎn sĩ",
-          ""
         ],
         [
           "một số",
@@ -1882,12 +2776,8 @@
           "write"
         ],
         [
-          "bài hát,",
+          "bài hát, bản nhạc",
           "song"
-        ],
-        [
-          "bản nhạc",
-          ""
         ],
         [
           "bài thơ",
@@ -1912,12 +2802,8 @@
           "biggest, largest"
         ],
         [
-          "lớn thứ nhì/",
+          "lớn thứ nhì/hai",
           "second largest"
-        ],
-        [
-          "hai",
-          ""
         ],
         [
           "lớn thứ ba",
@@ -1944,12 +2830,8 @@
           "ago"
         ],
         [
-          "đông,",
+          "đông, đông người",
           "crowded"
-        ],
-        [
-          "đông người",
-          ""
         ],
         [
           "trong khi đó",
@@ -1990,52 +2872,32 @@
           "fresh and cool"
         ],
         [
-          "quanh nǎ",
-          "m year round"
+          "quanh nǎm",
+          "year round"
         ],
         [
-          "cho nên,",
+          "cho nên, do đó",
           "therefore"
         ],
         [
-          "do đó",
-          ""
-        ],
-        [
-          "thành ph",
-          "ố resort town"
-        ],
-        [
-          "nghỉ mát",
-          ""
+          "thành phố, nghỉ mát",
+          "resort town"
         ],
         [
           "cuộc",
           "classifier"
         ],
         [
-          "cuộc sốn",
-          "g life"
+          "cuộc sống",
+          "life"
         ],
         [
-          "chầm ch",
-          "ậm kind of slow"
+          "chầm chậm",
+          "kind of slow"
         ],
         [
-          "thanh bìn",
-          "h peaceful tree"
-        ],
-        [
-          "với)",
-          "different (from)"
-        ],
-        [
-          "o cũng",
-          "always"
-        ],
-        [
-          "nhịp",
-          "bustling"
+          "thanh bình",
+          "peaceful"
         ],
         [
           "lý tưởng",
@@ -2048,14 +2910,12 @@
         [
           "tách",
           "cup"
-        ],
+        ]
+      ],
+      [
         [
-          "sữa đậu",
+          "sữa đậu nành",
           "soy milk"
-        ],
-        [
-          "nành",
-          ""
         ],
         [
           "khu",
@@ -2082,16 +2942,38 @@
           "warble"
         ],
         [
-          "nhạc sống live m",
-          "usic"
+          "cây",
+          "tree"
         ],
         [
-          "khiêu vũ,  dance",
-          "c ("
+          "khác (với)",
+          "different (from)"
         ],
         [
-          "nhảy đầm",
-          "nà n"
+          "lúc nào cũng",
+          "always"
+        ],
+        [
+          "nhộn nhịp",
+          "bustling"
+        ],
+        [
+          "nhạc sống",
+          "live music"
+        ],
+        [
+          "khiêu vũ, nhảy đầm",
+          "dance"
+        ]
+      ],
+      [
+        [
+          "trẻ",
+          "young"
+        ],
+        [
+          "ghét",
+          "hate"
         ]
       ]
     ],
@@ -2144,7 +3026,9 @@
         [
           "bảng hiệu",
           "signboard"
-        ],
+        ]
+      ],
+      [
         [
           "bằng",
           "in, by"
@@ -2192,68 +3076,62 @@
       ],
       [
         [
-          "vui",
+          "thú vui",
           "hobby"
         ],
         [
-          "h",
+          "rảnh",
           "free (time)"
         ],
         [
-          "nguyện",
+          "tình nguyện",
           "volunteer (v.)"
         ],
         [
-          "h viện (N),",
+          "bệnh viện (N)",
           "hospital"
         ],
         [
-          "thương (S)",
-          ""
+          "nhà thương (S)",
+          "hospital"
         ],
         [
-          "g đồng",
+          "cộng đồng",
           "community"
         ],
         [
-          "c sự",
-          "in fact crazy, passionate (about)"
+          "thực sự",
+          "in fact"
         ],
         [
-          "t là",
+          "mê",
+          "crazy, passionate (about)"
+        ],
+        [
+          "nhất là",
           "especially"
         ],
         [
-          "Thế Giới",
+          "Cup Thế Giới",
           "World Cup"
         ],
         [
-          "ng",
+          "tưởng",
           "(mistakenly) think"
         ],
         [
-          "h bầu dục/",
-          "(American)"
+          "banh bầu dục/cà-na/ Mỹ",
+          "football (American)"
         ],
         [
-          "na/ Mỹ",
-          "football"
-        ],
-        [
-          "g chày,",
+          "bóng chày, dã cầu",
           "baseball"
-        ],
+        ]
+      ],
+      [
         [
-          "cầu",
-          ""
-        ],
-        [
-          "quần vợt,",
+          "quần vợt, ten-nít",
           "tennis"
-        ],
-        [
-          "ten-nít",
-          ""
         ],
         [
           "có lẽ",
@@ -2292,98 +3170,54 @@
           "play"
         ],
         [
-          "vĩ cầm,",
+          "vĩ cầm, vi-ô-lông",
           "violin"
         ],
         [
-          "vi-ô-lông",
-          ""
-        ],
-        [
-          "dương cầm,",
+          "dương cầm, pi-a-nô",
           "piano"
-        ],
-        [
-          "pi-a-nô",
-          ""
         ]
       ],
       [
         [
-          "thanh niê",
-          "n young people"
+          "thanh niên",
+          "young people"
         ],
         [
-          "kể (cho …",
+          "kể (cho … nghe)",
           "tell"
-        ],
-        [
-          "nghe)",
-          ""
         ],
         [
           "lối sống",
           "lifestyle"
         ],
         [
-          "nói chun",
-          "g in general, gener speaking"
+          "nói chung",
+          "in general, generally speaking"
         ],
         [
           "để ý đến",
           "pay attention to"
         ],
         [
-          "thời tran",
-          "g fashion"
+          "thời trang",
+          "fashion"
         ],
         [
-          "Hàn Quố",
-          "c,  South Korea"
+          "Hàn Quốc, Nam Hàn",
+          "South Korea"
         ],
         [
-          "Nam Hàn",
-          ""
-        ],
-        [
-          "ơ",
-          "dream"
-        ],
-        [
-          ", ví dụ",
-          "(for) example"
-        ],
-        [
-          "trị",
-          "politics go into"
-        ],
-        [
-          "ành",
-          "become doctor engineer lawyer"
-        ],
-        [
-          "ngoại ng",
-          "ữ,  foreign language"
-        ],
-        [
-          "tiếng nư",
-          "ớc"
-        ],
-        [
-          "ngoài",
-          ""
+          "ngoại ngữ, tiếng nước ngoài",
+          "foreign language"
         ],
         [
           "đặc biệt",
           "(là) especially"
         ],
         [
-          "ally Anh ngữ",
-          ",  English"
-        ],
-        [
-          "tiếng An",
-          "h"
+          "Anh ngữ, tiếng Anh",
+          "English"
         ],
         [
           "vân vân",
@@ -2394,40 +3228,124 @@
           "how about, what about"
         ],
         [
-          "thực hiệ",
-          "n realize, carry out"
+          "thực hiện",
+          "realize, carry out"
+        ]
+      ],
+      [
+        [
+          "ước mơ",
+          "dream"
+        ],
+        [
+          "thí dụ, ví dụ",
+          "(for) example"
+        ],
+        [
+          "chính trị",
+          "politics"
+        ],
+        [
+          "đi vào",
+          "go into"
+        ],
+        [
+          "trở thành",
+          "become"
+        ],
+        [
+          "bác sĩ",
+          "doctor"
+        ],
+        [
+          "kỹ sư",
+          "engineer"
+        ],
+        [
+          "luật sư",
+          "lawyer"
         ],
         [
           "giáo sư",
-          "c m professor"
+          "professor"
         ],
         [
           "quốc gia",
-          "dụ nation"
+          "nation"
         ],
         [
           "thuộc",
-          "nh  belonging to"
+          "belonging to"
         ],
         [
           "châu",
-          "ào continent"
+          "continent"
         ],
         [
           "Châu Á",
-          "th Asia sĩ"
+          "Asia"
         ],
         [
           "Châu Phi",
           "Africa"
         ],
         [
-          "Châu Mỹ La",
-          "ư Latin America"
+          "Châu Mỹ La Tinh",
+          "Latin America"
+        ]
+      ],
+      [
+        [
+          "Hoa",
+          "Chinese (ethnicity)"
         ],
         [
-          "Tinh",
-          "t sư"
+          "cởi",
+          "take off"
+        ],
+        [
+          "giày",
+          "shoe(s)"
+        ],
+        [
+          "mượn",
+          "borrow, check out"
+        ],
+        [
+          "thư viện",
+          "library"
+        ],
+        [
+          "Tây Ban Nha",
+          "Spanish, Spain"
+        ],
+        [
+          "tốt nghiệp",
+          "graduate"
+        ],
+        [
+          "ca sĩ",
+          "singer"
+        ],
+        [
+          "cuối tuần",
+          "weekend"
+        ],
+        [
+          "nói láo/nói dối",
+          "tell lies"
+        ],
+        [
+          "người nói láo/người nói dối",
+          "liar"
+        ],
+        [
+          "thân thiện",
+          "friendly"
+        ],
+        [
+          "sức khoẻ",
+          "health"
         ]
       ]
     ],
@@ -2500,27 +3418,23 @@
       ],
       [
         [
-          "ng triển lãm",
+          "phòng triển lãm nghệ thuật",
           "art gallery"
         ],
         [
-          "ệ thuật",
-          ""
-        ],
-        [
-          "c mía",
+          "nước mía",
           "sugar cane juice"
         ],
         [
-          "bảo tàng",
+          "viện bảo tàng",
           "museum"
         ],
         [
-          "thú, thảo",
+          "sở thú, thảo cầm viên",
           "zoo"
         ],
         [
-          "viên",
+          "con",
           "classifier, mostly for animals"
         ],
         [
@@ -2550,49 +3464,55 @@
       ],
       [
         [
-          "c đầu",
+          "nhức đầu",
           "headache"
         ],
         [
-          "ng mặt",
+          "chóng mặt",
           "dizzy"
         ],
         [
-          "m",
+          "khám",
           "examine"
         ],
         [
-          "hám bác sĩ",
+          "đi khám bác sĩ",
           "go to the doctor"
         ],
         [
-          "ng sao đâu",
-          "itʼs not serious; itʼs OK; never mind suffer from"
+          "không sao đâu",
+          "itʼs not serious; itʼs OK; never mind"
         ],
         [
-          "h",
+          "bị",
+          "suffer from"
+        ],
+        [
+          "bệnh",
           "sick"
         ],
         [
-          "sức",
+          "kiệt sức",
           "exhaustion"
         ],
         [
-          "gà",
+          "cúm gà",
           "avian flu"
         ],
         [
-          "lợn (N),",
+          "cúm lợn (N),",
           "swine flu"
         ],
         [
-          "heo (S)",
-          ""
+          "cúm heo (S)",
+          "swine flu"
         ],
         [
-          "thận",
+          "cẩn thận",
           "careful(ly)"
-        ],
+        ]
+      ],
+      [
         [
           "không bị sao",
           "fine, OK"
@@ -2622,16 +3542,8 @@
           "diarrhea"
         ],
         [
-          "trúng thực/",
+          "trúng thực/ngộ độc thức ăn",
           "food poisoning"
-        ],
-        [
-          "ngộ độc",
-          ""
-        ],
-        [
-          "thức ăn",
-          ""
         ],
         [
           "lời khuyên",
@@ -2649,40 +3561,74 @@
           "nước đá",
           "ice water"
         ]
+      ],
+      [
+        [
+          "chạy",
+          "run"
+        ],
+        [
+          "lỡ",
+          "miss"
+        ],
+        [
+          "để",
+          "leave"
+        ],
+        [
+          "tắt",
+          "turn off"
+        ],
+        [
+          "năm ngoái",
+          "last year"
+        ],
+        [
+          "tai nạn",
+          "accident"
+        ]
       ]
     ],
     "13": [
       [
         [
-          "biển",
+          "bãi biển",
           "beach"
         ],
         [
-          "i nắng",
-          "sunbathe in case"
+          "phơi nắng",
+          "sunbathe"
         ],
         [
-          "g",
+          "lỡ",
+          "in case"
+        ],
+        [
+          "sóng",
           "wave"
         ],
         [
-          "y mắn",
+          "may mắn",
           "fortunate"
         ],
         [
-          "t",
+          "thật",
           "indeed"
         ],
         [
-          "ây đi đó",
-          "go places for surely"
+          "đi đây đi đó",
+          "go places"
         ],
         [
-          "i",
+          "chứ",
+          "for surely"
+        ],
+        [
+          "mãi",
           "forever"
         ],
         [
-          "g quanh",
+          "vòng quanh",
           "around"
         ],
         [
@@ -2714,22 +3660,30 @@
           "look"
         ],
         [
-          "ngoắc tay (S),",
+          "ngoắc tay (S)",
           "wave"
         ],
         [
           "vẫy tay (N)",
-          ""
+          "wave"
         ]
       ],
       [
         [
-          "ài kia/đó",
-          "out there ship"
+          "ngoài kia/đó",
+          "out there"
         ],
         [
-          "n là",
-          "full of monkey"
+          "tàu",
+          "ship"
+        ],
+        [
+          "toàn là",
+          "full of"
+        ],
+        [
+          "khỉ",
+          "monkey"
         ],
         [
           "đà điểu",
@@ -2793,6 +3747,44 @@
           "trở về",
           "return, go back"
         ]
+      ],
+      [
+        [
+          "ghé vào",
+          "go into"
+        ],
+        [
+          "ô (N)",
+          "umbrella"
+        ],
+        [
+          "dù (S)",
+          "umbrella"
+        ],
+        [
+          "thất nghiệp",
+          "unemployed"
+        ],
+        [
+          "làm",
+          "do"
+        ],
+        [
+          "chán",
+          "boring, bored"
+        ],
+        [
+          "nấu",
+          "cook"
+        ],
+        [
+          "nấu cơm",
+          "prepare a meal"
+        ],
+        [
+          "di cư",
+          "immigrate"
+        ]
       ]
     ],
     "14": [
@@ -2826,12 +3818,8 @@
           "loan, lend"
         ],
         [
-          "gươm/kiếm",
+          "gươm/kiếm thần",
           "magic sword"
-        ],
-        [
-          "thần",
-          ""
         ],
         [
           "chống",
@@ -2856,7 +3844,9 @@
         [
           "có nghĩa là",
           "mean"
-        ],
+        ]
+      ],
+      [
         [
           "rùa",
           "turtle"
@@ -2916,31 +3906,35 @@
       ],
       [
         [
-          "xếp",
+          "tiễn",
+          "see someone off"
+        ],
+        [
+          "sắp xếp",
           "arrange"
         ],
         [
-          "i",
+          "ở lại",
           "stay"
         ],
         [
-          "ệt",
+          "tuyệt",
           "wonderful enough"
         ],
         [
-          "áy bay",
+          "vé máy bay",
           "plane ticket"
         ],
         [
-          "p nơi",
+          "khắp nơi",
           "everywhere"
         ],
         [
-          "i",
+          "thôi",
           "well (used to introduce a change in subject)"
         ],
         [
-          "giờ",
+          "đến giờ",
           "itʼs time"
         ],
         [
@@ -2976,45 +3970,37 @@
           "wish"
         ],
         [
-          "thượng lộ",
+          "thượng lộ bình an",
           "have a safe trip"
         ],
         [
-          "bình an",
-          ""
-        ],
-        [
-          "hẹn ngày",
+          "hẹn ngày gặp lại",
           "see you again"
-        ],
-        [
-          "gặp lại",
-          ""
         ]
       ],
       [
         [
-          "quen",
+          "làm quen",
           "make friends"
         ],
         [
-          "sĩ",
+          "tiến sĩ",
           "PhD"
         ],
         [
-          "o học",
+          "theo học",
           "pursue a field of study"
         ],
         [
-          "sử",
+          "lịch sử",
           "history"
         ],
         [
-          "iên cứu",
+          "nghiên cứu",
           "research"
         ],
         [
-          "liệu",
+          "tài liệu",
           "materials, documents"
         ],
         [
@@ -3022,12 +4008,8 @@
           "dissertation"
         ],
         [
-          "thông thạo,",
+          "thông thạo, rành",
           "fluent(ly)"
-        ],
-        [
-          "rành",
-          ""
         ],
         [
           "thứ",
@@ -3044,6 +4026,44 @@
         [
           "sự ngẫu nhiên",
           "coincidence"
+        ]
+      ],
+      [
+        [
+          "to",
+          "big, heavily"
+        ],
+        [
+          "bàn luận",
+          "discuss"
+        ],
+        [
+          "cười",
+          "laugh, smile"
+        ],
+        [
+          "Giáng Sinh",
+          "Christmas"
+        ],
+        [
+          "vui vẻ",
+          "merry, joyous"
+        ],
+        [
+          "cô dâu",
+          "(the) bride"
+        ],
+        [
+          "chú rể",
+          "(the) groom"
+        ],
+        [
+          "việc làm",
+          "work, job"
+        ],
+        [
+          "sống vui",
+          "lead a happy life"
         ]
       ]
     ]
