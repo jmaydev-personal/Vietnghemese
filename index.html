@@ -74,33 +74,36 @@
   }
   .icon-btn:active { color: var(--text); }
 
-  /* ── MODE TOGGLE ── */
+  /* ── BOTTOM TAB BAR (mode toggle) ── */
   .mode-bar {
     display: flex;
-    padding: 12px 16px 4px;
-    gap: 8px;
     flex-shrink: 0;
-    background: var(--bg);
+    background: var(--surface);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: env(safe-area-inset-bottom, 0);
   }
   .mode-pill {
     flex: 1;
-    padding: 9px 0;
-    border-radius: 10px;
+    padding: 14px 0 16px;
     border: none;
-    font-size: 14px;
+    border-top: 3px solid transparent;
+    background: transparent;
+    color: var(--text-dim);
+    font-size: 13px;
     font-weight: 600;
+    letter-spacing: 0.02em;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    transition: background 0.2s, color 0.2s;
-    background: rgba(255,255,255,0.06);
-    color: var(--text-dim);
+    transition: color 0.2s, border-color 0.2s;
   }
+  .mode-pill:active { background: rgba(255,255,255,0.04); }
   .mode-pill.active {
-    background: var(--accent);
-    color: #fff;
+    color: var(--accent);
+    border-top-color: var(--accent);
   }
   .mode-pill.active.sent-mode {
-    background: var(--accent2);
+    color: var(--accent2);
+    border-top-color: var(--accent2);
   }
 
   /* ── LESSON PICKER ── */
@@ -702,18 +705,18 @@
     <button class="icon-btn" onclick="openSettings()" aria-label="Settings">⚙️</button>
   </div>
 
-  <!-- Mode toggle -->
-  <div class="mode-bar">
-    <button class="mode-pill active" id="modeWords"      onclick="setPickerMode('words')">Words</button>
-    <button class="mode-pill"        id="modeSentences"  onclick="setPickerMode('sentences')">Grammar</button>
-  </div>
-
   <div class="lesson-list">
     <div class="lesson-all" id="allRow" onclick="selectLesson(null)">
       <span class="lesson-all-text" id="allLabel">All Words</span>
       <span class="lesson-all-count" id="allCount">950 words</span>
     </div>
     <div id="lessonItems"></div>
+  </div>
+
+  <!-- Bottom tab bar (mode toggle) -->
+  <div class="mode-bar">
+    <button class="mode-pill active" id="modeWords"      onclick="setPickerMode('words')">Words</button>
+    <button class="mode-pill"        id="modeSentences"  onclick="setPickerMode('sentences')">Grammar</button>
   </div>
 </div>
 
