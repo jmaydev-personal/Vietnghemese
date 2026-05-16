@@ -707,7 +707,7 @@
 
   <div class="lesson-list">
     <div class="lesson-all" id="allRow" onclick="selectLesson(null)">
-      <span class="lesson-all-text" id="allLabel">All Words</span>
+      <span class="lesson-all-text" id="allLabel">All Vocabulary</span>
       <span class="lesson-all-count" id="allCount">950 words</span>
     </div>
     <div id="lessonItems"></div>
@@ -715,7 +715,7 @@
 
   <!-- Bottom tab bar (mode toggle) -->
   <div class="mode-bar">
-    <button class="mode-pill active" id="modeWords"      onclick="setPickerMode('words')">Words</button>
+    <button class="mode-pill active" id="modeWords"      onclick="setPickerMode('words')">Vocabulary</button>
     <button class="mode-pill"        id="modeSentences"  onclick="setPickerMode('sentences')">Grammar</button>
   </div>
 </div>
@@ -726,7 +726,7 @@
 <div class="screen" id="screenPlayer">
   <div class="header">
     <button class="icon-btn" onclick="goToLessons()" aria-label="Back">←</button>
-    <span class="header-title" id="lessonLabel">All Words</span>
+    <span class="header-title" id="lessonLabel">All Vocabulary</span>
     <span class="header-sub"   id="playerCounter">1 / 950</span>
     <button class="icon-btn" onclick="openSettings()" aria-label="Settings">⚙️</button>
   </div>
@@ -1037,7 +1037,7 @@ function setPickerMode(mode) {
   const isSent = mode === 'sentences';
   const allRow = document.getElementById('allRow');
   allRow.classList.toggle('sent-all', isSent);
-  document.getElementById('allLabel').textContent  = isSent ? 'All Grammar' : 'All Words';
+  document.getElementById('allLabel').textContent  = isSent ? 'All Grammar' : 'All Vocabulary';
   document.getElementById('allCount').textContent  = isSent
     ? GRAMMAR.length + ' grammar items'
     : WORDS.length + ' words';
@@ -1202,7 +1202,7 @@ function selectLesson(key, startWordIndex) {
   maybeShowTutorial();
 
   const label = document.getElementById('lessonLabel');
-  label.textContent = key ? prettyLesson(key) : (playerMode === 'sentences' ? 'All Grammar' : 'All Words');
+  label.textContent = key ? prettyLesson(key) : (playerMode === 'sentences' ? 'All Grammar' : 'All Vocabulary');
 
   // Tint player for sentence mode
   const isSent = playerMode === 'sentences';
