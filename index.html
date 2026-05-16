@@ -918,6 +918,17 @@ if ('speechSynthesis' in window) {
 }
 
 let WORDS = [], LESSONS = [], COUNTS = {}, SCOUNTS = {};
+// lesson_plan.json content: { lessons: [ { key, sections: [ { label, words: [...] } ] } ] }
+// This is the SOURCE OF TRUTH for vocab lesson organization (edit by hand).
+let LESSON_PLAN = { lessons: [] };
+// word string → its index in WORDS (for joining lesson_plan word-strings to data)
+let WORD_IDX_BY_STR = new Map();
+// lesson key → ordered list of WORDS indices that belong to that lesson
+// (built from LESSON_PLAN; preserves the user's hand-ordered playlist)
+let WORD_IDXS_BY_LESSON = new Map();
+// word string → list of lesson keys the word appears in (reverse index, used
+// by glossary view to show which lesson(s) each word belongs to)
+let LESSON_KEYS_BY_WORD = new Map();
 // Grammar dataset (separate from vocab): array of entries with
 // {id, unit, unit_vi, unit_en, header, title, meaning, examples[], notes, warning}
 let GRAMMAR = [];
@@ -1026,7 +1037,7 @@ function setPickerMode(mode) {
   document.getElementById('allLabel').textContent  = isSent ? 'All Grammar' : 'All Words';
   document.getElementById('allCount').textContent  = isSent
     ? GRAMMAR.length + ' grammar items'
-    : '950 words';
+    : WORDS.length + ' words';
 
   buildLessonList();
 }
@@ -1106,41 +1117,39 @@ function buildLessonList() {
         items.appendChild(row);
       });
     } else {
-      // Group words by textbook vocab section within this lesson.
-      // Each word has parallel `lessons` + `sections` arrays — the section
-      // index corresponds to the same position as the lesson key.
-      const bySection = {};
-      WORDS.forEach((w, i) => {
-        if (!w.lessons) return;
-        const lessonIdx = w.lessons.indexOf(key);
-        if (lessonIdx === -1) return;
-        const sec = (w.sections && w.sections[lessonIdx]) || 0;
-        if (!bySection[sec]) bySection[sec] = [];
-        bySection[sec].push([w, i]);
-      });
-      const sectionKeys = Object.keys(bySection).map(Number).sort((a, b) => a - b);
-      // If there's only one section and it's 0 (Beyond textbook), skip header.
-      const hideHeaders = sectionKeys.length === 1 && sectionKeys[0] === 0;
-      sectionKeys.forEach(sec => {
-        if (sec > 0 && !hideHeaders) {
-          const sh = document.createElement('div');
-          sh.className = 'vocab-section-header';
-          sh.textContent = sec === 99 ? 'More vocab' : ('Section ' + sec);
-          items.appendChild(sh);
-        }
-        bySection[sec].forEach(([w, i]) => {
-          const row = document.createElement('div');
-          row.className = 'grammar-item-row';
-          row.innerHTML =
-            '<span class="gi-word">' + escapeHtml(w.word || '') + '</span>' +
-            '<span class="gi-english">' + escapeHtml(w.english || '') + '</span>';
-          row.onclick = (ev) => {
-            ev.stopPropagation();
-            selectLesson(key, i);
-          };
-          items.appendChild(row);
+      // Walk the section structure straight from lesson_plan.json — the user
+      // can edit that file to reorder/rename/move words and this picks up
+      // their changes verbatim.
+      const lesson = LESSON_PLAN.lessons.find(l => l.key === key);
+      if (lesson) {
+        // If there's only one section labeled "All", skip its header to
+        // avoid a redundant divider (used for 15_Beyond textbook).
+        const hideHeaders = lesson.sections.length === 1
+          && (lesson.sections[0].label === 'All' || !lesson.sections[0].label);
+        lesson.sections.forEach(sec => {
+          if (sec.label && !hideHeaders) {
+            const sh = document.createElement('div');
+            sh.className = 'vocab-section-header';
+            sh.textContent = sec.label;
+            items.appendChild(sh);
+          }
+          sec.words.forEach(wordStr => {
+            const i = WORD_IDX_BY_STR.get(wordStr);
+            if (i === undefined) return;  // word in plan but not in words.json
+            const w = WORDS[i];
+            const row = document.createElement('div');
+            row.className = 'grammar-item-row';
+            row.innerHTML =
+              '<span class="gi-word">' + escapeHtml(w.word || '') + '</span>' +
+              '<span class="gi-english">' + escapeHtml(w.english || '') + '</span>';
+            row.onclick = (ev) => {
+              ev.stopPropagation();
+              selectLesson(key, i);
+            };
+            items.appendChild(row);
+          });
         });
-      });
+      }
     }
     group.appendChild(items);
 
@@ -1225,9 +1234,12 @@ function buildPlaylist() {
       pool = pool.filter(i => GRAMMAR[i]._unitKey === activeLessonKey);
     }
   } else {
-    pool = WORDS.map((_, i) => i);
     if (activeLessonKey !== null) {
-      pool = pool.filter(i => WORDS[i].lessons && WORDS[i].lessons.includes(activeLessonKey));
+      // Use lesson_plan's ordered word list for this lesson (hand-ordered
+      // by the user). Filter to indices that exist in WORDS.
+      pool = (WORD_IDXS_BY_LESSON.get(activeLessonKey) || []).slice();
+    } else {
+      pool = WORDS.map((_, i) => i);
     }
   }
 
@@ -1545,12 +1557,15 @@ function renderGlossary(query) {
     return;
   }
 
-  list.innerHTML = matches.map(w => `
+  list.innerHTML = matches.map(w => {
+    const ls = LESSON_KEYS_BY_WORD.get(w.word) || [];
+    return `
     <div class="glossary-item">
       <div class="glossary-word">${w.word}</div>
       <div class="glossary-english">${w.english}</div>
-      ${w.lessons && w.lessons.length ? `<div class="glossary-lessons">${w.lessons.map(l => prettyLesson(l)).join(' · ')}</div>` : ''}
-    </div>`).join('');
+      ${ls.length ? `<div class="glossary-lessons">${ls.map(l => prettyLesson(l)).join(' · ')}</div>` : ''}
+    </div>`;
+  }).join('');
 }
 
 // ── Tutorial ──────────────────────────
@@ -1610,20 +1625,37 @@ function maybeShowTutorial() {
 Promise.all([
   fetch('words.json').then(r => r.json()),
   fetch('grammar.json').then(r => r.json()),
+  fetch('lesson_plan.json').then(r => r.json()),
 ])
-  .then(([wordsData, grammarData]) => {
+  .then(([wordsData, grammarData, planData]) => {
     WORDS = wordsData;
+    LESSON_PLAN = planData;
 
-    // Derive LESSONS, COUNTS, SCOUNTS from vocab
-    const seen = new Set();
-    WORDS.forEach(w => {
-      (w.lessons || []).forEach(l => {
-        if (!seen.has(l)) { seen.add(l); LESSONS.push(l); }
-        COUNTS[l]  = (COUNTS[l]  || 0) + 1;
-        if (w.sent) SCOUNTS[l] = (SCOUNTS[l] || 0) + 1;
+    // Build lookups joining lesson_plan ↔ words by exact word string.
+    WORD_IDX_BY_STR = new Map();
+    WORDS.forEach((w, i) => WORD_IDX_BY_STR.set(w.word, i));
+
+    // For each lesson in lesson_plan, collect its ordered word indices.
+    // The order here is the order the user/seeder put them in inside the
+    // lesson plan — this is also the playlist order in the player.
+    LESSON_PLAN.lessons.forEach(l => {
+      const key = l.key;
+      LESSONS.push(key);
+      const indices = [];
+      l.sections.forEach(sec => {
+        sec.words.forEach(s => {
+          const i = WORD_IDX_BY_STR.get(s);
+          if (i !== undefined) indices.push(i);
+          // Reverse index: word string → set of lesson keys
+          if (!LESSON_KEYS_BY_WORD.has(s)) LESSON_KEYS_BY_WORD.set(s, []);
+          const arr = LESSON_KEYS_BY_WORD.get(s);
+          if (arr.indexOf(key) === -1) arr.push(key);
+        });
       });
+      WORD_IDXS_BY_LESSON.set(key, indices);
+      COUNTS[key] = indices.length;
+      // Sentence-count not used for words mode anymore (no SCOUNTS needed).
     });
-    LESSONS.sort();
 
     // Index grammar by unit. Unit key format: '01_Xin chào' (pad number,
     // join with vi name) so prettyLesson('01_Xin chào') → '1. Xin chào'.
@@ -1636,6 +1668,10 @@ Promise.all([
       UCOUNTS[key] = (UCOUNTS[key] || 0) + 1;
     });
     UNITS.sort();   // sort by leading number
+
+    // Update the All-row count now that WORDS is loaded (the static HTML
+    // value is stale).
+    document.getElementById('allCount').textContent = WORDS.length + ' words';
 
     buildLessonList();
     buildPlaylist();
