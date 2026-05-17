@@ -490,58 +490,78 @@
       "unit": 2,
       "unit_vi": "Ở sân bay",
       "unit_en": "At the airport",
-      "header": "Using numbers from 0 to 20",
+      "header": "Using numbers from 0 to 99",
       "title": "Numbers (Part 1)",
-      "meaning": "0 - 20",
+      "meaning": "to use numbers 0-99",
       "examples": [
         {
-          "vi": "0 không",
+          "vi": "không",
+          "en": "zero"
+        },
+        {
+          "vi": "một",
+          "en": "one"
+        },
+        {
+          "vi": "hai",
+          "en": "two"
+        },
+        {
+          "vi": "ba",
+          "en": "three"
+        },
+        {
+          "vi": "bốn",
+          "en": "four"
+        },
+        {
+          "vi": "năm",
+          "en": "five"
+        },
+        {
+          "vi": "sáu",
+          "en": "six"
+        },
+        {
+          "vi": "bảy",
+          "en": "seven"
+        },
+        {
+          "vi": "tám",
+          "en": "eight"
+        },
+        {
+          "vi": "chín",
+          "en": "nine"
+        },
+        {
+          "vi": "muòi",
+          "en": "ten"
+        },
+        {
+          "vi": "mười một",
+          "en": "eleven"
+        },
+        {
+          "vi": "muòi lăm",
+          "en": "fifteen"
+        },
+        {
+          "vi": "hai mươi",
           "en": ""
         },
         {
-          "vi": "1 một     11 muòi một",
-          "en": ""
+          "vi": "năm mươi",
+          "en": "fifty"
         },
         {
-          "vi": "2 hai     12 muòi hai",
-          "en": ""
-        },
-        {
-          "vi": "3 ba      13 muòi ba",
-          "en": ""
-        },
-        {
-          "vi": "4 bốn     14 mười bốn",
-          "en": ""
-        },
-        {
-          "vi": "5 năm     15 muòi lăm",
-          "en": ""
-        },
-        {
-          "vi": "6 sáu     16 muòi sáu",
-          "en": ""
-        },
-        {
-          "vi": "7 bảy     17 muòi bảy",
-          "en": ""
-        },
-        {
-          "vi": "8 tám     18 muòi tám",
-          "en": ""
-        },
-        {
-          "vi": "9 chín    19 muòi chín",
-          "en": ""
-        },
-        {
-          "vi": "10 muòi   20 hai mươi",
-          "en": ""
+          "vi": "chín mươi chín",
+          "en": "ninety nine"
         }
       ],
       "notes": "Mười when occurring after another number becomes mươi. Thus, twenty is “hai mươi,” without the tone mark above the vowel ơ. Some other examples are “ba mươi” (30), “bốn mươi” (40), “nǎm mươi” (50). Also, nǎm is changed to lǎm after mười. For example: “mười lǎm,” “hai mươi lǎm” (25), “ba mươi lǎm” (35), “bốn mươi lǎm” (45).",
       "warning": "",
-      "pattern": "0–20: không, một, hai, ba, …, hai mươi"
+      "pattern": "không, một - mười"
     },
     {
       "id": "u02_lam",
@@ -576,7 +596,7 @@
       "unit_en": "At the airport",
       "header": "Using “đây,” “kia,” “đó,” “đấy” to indicate or point out things or people",
       "title": "đây, kia, đó, đấy",
-      "meaning": "to indicate \"this/that\"",
+      "meaning": "to indicate \"this/that and here/there\"",
       "examples": [
         {
           "vi": "**Ɖây** là chị Lan.",

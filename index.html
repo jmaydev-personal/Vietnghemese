@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#000000">
-<title>Vietnghemese</title>
+<title>Vietnghemese — Vietnamese by ear</title>
+<meta name="description" content="Passive Vietnamese vocabulary practice you can listen to while doing other things. 14 textbook-aligned lessons covering 900+ words.">
+<meta property="og:title" content="Vietnghemese — Vietnamese by ear">
+<meta property="og:description" content="Passive Vietnamese vocabulary practice you can listen to while doing other things.">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -55,6 +58,20 @@
     flex: 1;
   }
   .header-title.sent { color: var(--accent2); }
+  .app-brand {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: 1px;
+  }
+  .app-brand .header-title { flex: initial; }
+  .app-tagline {
+    font-size: 11px;
+    font-style: italic;
+    color: var(--text-dim);
+    letter-spacing: 0.3px;
+  }
   .header-sub {
     font-size: 13px;
     color: var(--text-dim);
@@ -742,7 +759,10 @@
 ═══════════════════════════════ -->
 <div class="screen active" id="screenLessons">
   <div class="header">
-    <span class="header-title">Vietnghemese</span>
+    <div class="app-brand">
+      <span class="header-title" id="appLogo">Vietnghemese</span>
+      <span class="app-tagline">Vietnamese by ear</span>
+    </div>
     <button class="icon-btn" onclick="showScreen('screenGlossary'); renderGlossary('')" aria-label="Glossary">📖</button>
     <a class="icon-btn" href="japanese/" aria-label="Switch to Japanese" style="text-decoration:none;">🇯🇵</a>
     <button class="icon-btn" onclick="openSettings()" aria-label="Settings">⚙️</button>
@@ -1084,6 +1104,7 @@ function setPickerMode(mode) {
   const isSent = mode === 'sentences';
   const allRow = document.getElementById('allRow');
   allRow.classList.toggle('sent-all', isSent);
+  document.getElementById('appLogo').classList.toggle('sent', isSent);
   document.getElementById('allLabel').textContent  = isSent ? 'All Grammar' : 'All Vocabulary';
   document.getElementById('allCount').textContent  = isSent
     ? GRAMMAR.length + ' grammar items'

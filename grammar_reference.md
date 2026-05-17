@@ -58,7 +58,7 @@ Adapted from *Colloquial Vietnamese: The Complete Course for Beginners* (Routled
 
 > **Notes:** Có is placed before the verb and không at the end of the sentence. In an informal register, có is optional.
 
-### Sentence Structure: subject + adjective - *to answer a question*
+### Omitting là (Part 1) - *to answer a question*
 
 **Description:** Using the structure “subject + adjective”
 
@@ -87,7 +87,7 @@ Adapted from *Colloquial Vietnamese: The Complete Course for Beginners* (Routled
 - **Xin lỗi** anh, anh tên là gì?  
   ***Excuse me**, whatʼs your name? (to a male peer)*
 
-### Terms of address (Part 1) - *to address yourself and others depending on context*
+### Pronouns - *to address yourself and others depending on context*
 
 **Description:** Terms of address (Part 1)
 
@@ -108,12 +108,10 @@ Adapted from *Colloquial Vietnamese: The Complete Course for Beginners* (Routled
 - **Cháu**
   ***I -** "self; niece/nephew/grandchild after using bà/ông/bác"*
 
-> **Notes:** The terms of address in Vietnamese are very complicated and vary from situation to situation, depending on many factors such as age, social status and relationship. Vietnamese people are very friendly. They tend to refer to other people in society as family members by calling them older brother, younger sister, aunt, uncle, etc.
-The formal Vietnamese pronouns for “I” and “you” are “tôi” and “anh” (male peer, literally meaning “older brother”) or “chị” (female peer, literally meaning “older sister”). More formal terms for “you” that are appropriate for an elderly person or person of high social status are “ông” (male person, literally meaning “grandfather”), “bà” (female person, literally meaning “grandmother”) and “bác” (either a male or female person, literally meaning “senior uncle/aunt”).
-Once you have addressed an older person as “ông” or “bà” or “bác,” please note that you should refer to yourself as “cháu” (literally, niece/nephew or grandchild), saving the formal “tôi” for when talking to your peers. However, after you have become well acquainted with a peer, it is friendlier to refer to yourself by using an appropriate family term such as “older brother” or “younger sister,” or even by your first name.
-In general, you can usually let your Vietnamese acquaintances take the lead in deciding which terms of address you should be using.
+> **Notes:** The terms of address in Vietnamese are very complicated and vary from situation to situation, depending on many factors such as age, social status and relationship. Vietnamese people are very friendly. They tend to refer to other people in society as family members by calling them older brother, younger sister, aunt, uncle, etc. The formal Vietnamese pronouns for “I” and “you” are “tôi” and “anh” (male peer, literally meaning “older brother”) or “chị” (female peer, literally meaning “older sister”). More formal terms for “you” that are appropriate for an elderly person or person of high social status are “ông” (male person, literally meaning “grandfather”), “bà” (female person, literally meaning “grandmother”) and “bác” (either a male or female person, literally meaning “senior uncle/aunt”).
+Once you have addressed an older person as “ông” or “bà” or “bác,” please note that you should refer to yourself as “cháu” (literally, niece/nephew or grandchild), saving the formal “tôi” for when talking to your peers. However, after you have become well acquainted with a peer, it is friendlier to refer to yourself by using an appropriate family term such as “older brother” or “younger sister,” or even by your first name. In general, you can usually let your Vietnamese acquaintances take the lead in deciding which terms of address you should be using.
 
-### Adopting an informal tone - *omitting "là"*
+### Omitting là (Part 2) - *to adopt an informal tone*
 
 **Description:** Adopting an informal tone
 
@@ -152,18 +150,18 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 - Ɖây là chỗ **của** tôi.  
   *This is **my** seat.*
 
-> **Notes:** Try to think of it as "thing *of* mine", or "thing *of* theirs" rather than "my thing" or "their thing" etc.
+>**Notes:** Try to think of it as "thing *of* mine", or "thing *of* theirs" rather than "my thing" or "their thing" etc.
 
-### quá — *to "emphasize" a feeling/quality*
+### quá — *to emphasize a feeling/quality*
 
 **Description:** Using “quá” to emphasize a feeling or quality of something
 
 **Structure:** `[adjective] + quá!`
 
-- Tôi vui quá!  
-  *Iʼm **so** happy!*
-- Tôi mệt quá.  
-  *Iʼm **so** tired.*
+- Tôi **vui quá**!  
+  *Iʼm **so happy**!*
+- Tôi **mệt quá**.  
+  *Iʼm **so tired**.*
 
 > **Notes:** Always emphasises the adjective it follows.
 
@@ -180,7 +178,7 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 - Tôi đi ngủ **đây**.  
   *Iʼm going to bed **now**.*
 
-> **Notes:** Always used as an ending particle to describe the action it follows.
+> **Notes:** Always used as an ending particle to denote the action it follows.
 
 ## Unit 2 — Ở sân bay (At the airport)
 
@@ -192,12 +190,12 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 
 **Structure:** `[noun] + nào?`
 
-- Anh là người nước nào?  
-  *Which country are you from? (to a male peer)*
-- Bà là người nước nào?  
-  *Which country are you from? (to an elderly woman)*
+- Anh là người nước **nào**?  
+  ***Which** country are you from? (to a male peer)*
+- Bà là người nước **nào**?  
+  ***Which** country are you from? (to an elderly woman)*
 
-### người - *to express "nationality"*
+### người - *to express nationality*
 
 **Description:** Using the structure “noun + adjective”
 
@@ -231,6 +229,8 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 - Anh đi Sài Gòn **để làm gì**?  
   ***Whatʼs your purpose** in going to Saigon?*
 
+> **Notes:** Used "what" rather than "why" to stay consistent with established understanding of "gì" as what.
+
 ### (có) phải không — *to end a question with "right?"*
 
 **Description:** Using “(có) phải không” to seek confirmation of certain information
@@ -239,7 +239,7 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 
 - Anh là Peter, **phải không**?  
   *Youʼre Peter, **right**?*
-- Chị tên là Jennifer, có **phải không**?  
+- Chị tên là Jennifer, **có phải không**?  
   *Your nameʼs Jennifer, **right**?*
 - Q: Anh là Peter, **phải không**?  
   *You are Peter, **right**?*
@@ -250,7 +250,7 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 - Không phải, tôi không phải là Peter. 
   *No, Iʼm not Peter.*
 
-> **Notes:** If the information is correct, the response to this type of tag question is phải/vâng. If the information is incorrect, the response should be không phải.
+> **Notes:** If the information is correct, the response to this type of tag question is phải/vâng (yes). If the information is incorrect, the response should be không phải. Generally used when it's assumed the listener will agree with the question/statement being made.
 
 ### sẽ — *to indicate future actions*
 
@@ -258,10 +258,12 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 
 **Structure:** `[subject] sẽ + [verb phrase]`
 
-- Tôi **sẽ** đón chị ở sân bay/phi trường.  
-  *I **will** pick you up at the airport.*
-- Tôi **sẽ** gặp họ ở khách sạn.  
-  *I **will** meet them at the hotel.*
+- Tôi **sẽ đón chị** ở sân bay/phi trường.  
+  *I **will pick you up** at the airport.*
+- Tôi **sẽ gặp họ** ở khách sạn.  
+  *I **will meet them** at the hotel.*
+
+> **Notes:** Indicates that the action hasn't occurred yet.
 
 ### (ở) đâu — *to ask "Where?"*
 
@@ -275,30 +277,51 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
   ***Where** do you want to sit, Tom?*
 - Anh sống **ở đâu**?  
   ***Where** do you live (at/in)?*
-- Bà làm việc ở **đâu**?  
+- Bà làm việc **ở đâu**?  
   ***Where** do you work (at/in)?*
 
 > **Notes:** ở is used to express at/in in relation to the location where something occurs
 
-### Numbers (Part 1) - *0 - 20*
+### Numbers (Part 1) - *to use numbers 0-99*
 
-**Description:** Using numbers from 0 to 20
+**Description:** Using numbers from 0 to 99
 
-**Structure:** `0–20: không, một, hai, ba, …, hai mươi`
+**Structure:** `không, một - mười`
 
-- 0 không
-- 1 một     11 muòi một
-- 2 hai     12 muòi hai
-- 3 ba      13 muòi ba
-- 4 bốn     14 mười bốn
-- 5 năm     15 muòi lăm
-- 6 sáu     16 muòi sáu
-- 7 bảy     17 muòi bảy
-- 8 tám     18 muòi tám
-- 9 chín    19 muòi chín
-- 10 muòi   20 hai mươi
+- **không**
+  *zero*
+- **một**
+  *one*
+- **hai**
+  *two* 
+- **ba**
+  *three* 
+- **bốn**
+  *four*
+- **năm** 
+  *five*
+- **sáu**
+  *six*  
+- **bảy** 
+  *seven*   
+- **tám**
+  *eight*   
+- **chín**
+  *nine* 
+- **muòi**
+  *ten*
+- **mười một**
+  *eleven*
+- **muòi lăm**
+  *fifteen*
+- **hai mươi**
+  *twenty
+- **năm mươi**
+  *fifty*
+- **chín mươi chín**
+  *ninety nine*
 
-> **Notes:** Mười when occurring after another number becomes mươi. Thus, twenty is “hai mươi,” without the tone mark above the vowel ơ. Some other examples are “ba mươi” (30), “bốn mươi” (40), “nǎm mươi” (50). Also, nǎm is changed to lǎm after mười. For example: “mười lǎm,” “hai mươi lǎm” (25), “ba mươi lǎm” (35), “bốn mươi lǎm” (45).
+>**Notes:** *Mười* when occurring after another number becomes *mươi*. Thus, twenty is “hai mươi,” without the tone mark above the vowel ơ. Some other examples are “ba mươi” (30), “bốn mươi” (40), “nǎm mươi” (50). Also, nǎm is changed to lǎm after mười. For example: “mười lǎm,” “hai mươi lǎm” (25), “ba mươi lǎm” (35), “bốn mươi lǎm” (45).
 
 ### lắm — *to informally emphasise a feeling*
 
@@ -315,7 +338,7 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 
 > **Notes:** Lắm comes after the adjective or adverb that it modifies, whereas rất comes before. Also, lắm sounds a little less formal than rất.
 
-### đây, kia, đó, đấy — *to indicate "this/that"*
+### đây, kia, đó, đấy — *to indicate "this/that and here/there"*
 
 **Description:** Using “đây,” “kia,” “đó,” “đấy” to indicate or point out things or people
 
@@ -340,9 +363,9 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 - **Kia** là Alice.  
   ***That** is Alice.*
 
-> **Notes:** Ɖây (here) is used when talking about something or someone close to the speaker. Ɖó/Ɖấy (there, that) is used when talking about something or someone far from the speaker but close to the listener. Kia (there, that) is used when talking about something or someone far from both the speaker and the listener.*
+> **Notes:** *Ɖây (here)* is used when talking about something or someone close to the speaker. *Ɖó/Ɖấy (there, that)* is used when talking about something or someone far from the speaker but close to the listener. *Kia (there, that)* is used when talking about something or someone far from both the speaker and the listener.*
 
-### màu - to describe colour
+### màu - *to describe colour*
 
 **Description:** Some basic colours in Vietnamese
 
@@ -371,7 +394,7 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 
 > **Notes:** Lots of terms for blue.
 
-### Terms of address (Part 2) - *to address yourself and others in a group context*
+### chúng/các - *to address yourself and others in a group context*
 
 **Description:** Terms of address (Part 2)
 
@@ -381,17 +404,17 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
   ***we** (excludes listener)*
 - **chúng** ta
   ***we** (includes listener)*
-- các ông
+- **các** ông
   ***you** (senior men, grandfathers)*
-- các bà
+- **các** bà
   ***you** (senior women, grandmothers)*
-- các anh
+- **các** anh
   ***you** (male peers, older brothers)*
-- các chị
+- **các** chị
   ***you** (female peers, older sisters)*
-- các cô
+- **các** cô
   ***you** (young ladies, teachers, junior aunts)*
-- các em
+- **các** em
   ***you** (all of them younger than the speaker)*
 
 - John and Emily are talking to a customs officer:  
@@ -428,14 +451,14 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
   *motorbike*
 - **xe** buýt  
   *bus*
-- **xe** ô-tô (N), xe hơi (S)  
+- **xe** ô-tô (N), **xe** hơi (S)  
   *car*
 - **xe** ôm  
   *motorbike taxi*
-- **xe** cấp cứu (N), cứu thương (S) 
+- **xe** cấp cứu (N), **xe** cứu thương (S) 
   *ambulance*
 
-### đang — *to describe an ongoing/recent action/event*
+### đang — *to describe an ongoing/recent action*
 
 **Description:** Using “đang” to talk about an activity that is happening now or was happening at a certain time in the past
 
@@ -446,7 +469,7 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 - Angela **đang nói** chuyện với Lan.  
   *Angelaʼs **talking** with Lan.*
 
-> **Notes:** Designate something as currently happening or recently happened.
+> **Notes:** Designate something as currently happening or having recently happened.
 
 ## Unit 3 — Đến khách sạn (Arriving at the hotel)
 
