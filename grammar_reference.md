@@ -6,7 +6,7 @@ Adapted from *Colloquial Vietnamese: The Complete Course for Beginners* (Routled
 
 *13 grammar point(s)*
 
-### chào — *to greet someone*
+### chào — *to say "hello"*
 
 **Description:** Using “chào” to greet someone
 
@@ -21,7 +21,7 @@ Adapted from *Colloquial Vietnamese: The Complete Course for Beginners* (Routled
 
 > **Notes:** Chào means both hello and goodbye. It is followed by a name or a term of address or both.
 
-### gì — *to ask someone’s name*
+### gì — *to ask "what?"*
 
 **Description:** Using the question word “gì” to ask someone’s name
 
@@ -34,7 +34,7 @@ Adapted from *Colloquial Vietnamese: The Complete Course for Beginners* (Routled
 
 > **Notes:** The question word “gì” is always placed at the end of the sentence. Also, “anh tên” and “tên anh” can be used interchangeably, with “anh tên” sounding a little more formal.
 
-### xin — *to make polite requests*
+### xin — *to say "please"*
 
 **Description:** Using “xin” to make polite requests
 
@@ -45,7 +45,7 @@ Adapted from *Colloquial Vietnamese: The Complete Course for Beginners* (Routled
 - Xin anh chị đứng đây.  
   *Please stand here.*
 
-### có … không — *to ask yes–no questions*
+### có … không — *to ask "yes–no questions"*
 
 **Description:** Using “có … không” to ask yes–no questions
 
@@ -58,61 +58,66 @@ Adapted from *Colloquial Vietnamese: The Complete Course for Beginners* (Routled
 
 > **Notes:** Có is placed before the verb and không at the end of the sentence. In an informal register, có is optional.
 
-### Structure: subject + adjective - *answering a question*
+### Sentence Structure: subject + adjective - *to answer a question*
 
 **Description:** Using the structure “subject + adjective”
 
 **Structure:** `[subject] + [adjective] (no “là”)`
 
-- Tôi **khoẻ**.  
-  *Iʼm fine.*
-- Tôi **vui**.  
-  *Iʼm happy.*
+- Anh có khoẻ không?
+  *How are you? (Are you well no?)*
+- Vâng, **tôi khoẻ**.
+  *(Yes), Iʼm fine.*
 
-> **Notes:** In Vietnamese, the verb “to be” is omitted in this sentence pattern. “Tôi là khỏe” sounds very awkward. Vietnamese adjectives simply function differently from English adjectives. Also, the response to the question có … không can be có/vâng (in the positive) or không (in the negative). 
-• Anh có khoẻ không? How are you? (Are you well no?) Vâng, tôi khoẻ. (Yes), Iʼm fine. 
-• Chị có vui không? Are you happy? (Are you happy no?) Không, tôi không vui. No, Iʼm not happy.
+- Chị có vui không?
+  *Are you happy? (Are you happy no?)*
+- Không, **tôi không vui**.
+  *No, Iʼm not happy.*
 
-### xin lỗi — *to politely get someone’s attention*
+> **Notes:** In Vietnamese, the verb “to be” is omitted in this sentence pattern. “Tôi là khỏe” sounds very awkward. Vietnamese adjectives simply function differently from English adjectives. Also, the response to the question có … không can be có/vâng (in the positive) or không (in the negative).
+
+### xin lỗi — *to say "excuse me"*
 
 **Description:** Using “xin lỗi” to politely get someone’s attention
 
 **Structure:** `xin lỗi + [pronoun], + [clause]`
 
-- Xin lỗi chị, chị tên là gì?  
-  *Excuse me, whatʼs your name? (to a female peer)*
-- Xin lỗi anh, anh tên là gì?  
-  *Excuse me, whatʼs your name? (to a male peer)*
+- **Xin lỗi** chị, chị tên là gì?  
+  ***Excuse me**, whatʼs your name? (to a female peer)*
+- **Xin lỗi** anh, anh tên là gì?  
+  ***Excuse me**, whatʼs your name? (to a male peer)*
 
-### Terms of address (Part 1)
+### Terms of address (Part 1) - *to address yourself and others depending on context*
 
 **Description:** Terms of address (Part 1)
 
 **Structure:** `[noun]`
 
 - **Tôi** 
-  ***I***
+  ***I*** *self; formal*
 - **Anh**
-  male peer; "older brother"  
-- chị  
-- em  
-- bà  
-- ông 
-- cô 
-- chú
+  ***You -*** *male peer; "older brother"*
+- **Chị**
+  ***You -*** *female peer; "older sister"* 
+- **Bà**
+  ***You -*** *female person; "grandmother"*
+- **Ông** 
+  ***You -*** *male person; "grandfather"*
+- **Bác** 
+  ***You -*** *male/female; "senior uncle/aunt"*
+- **Cháu**
+  ***I -*** *"self; niece/nephew/grandchild after using bà/ông/bác"*
 
 **Notes:** The terms of address in Vietnamese are very complicated and vary from situation to situation, depending on many factors such as age, social status and relationship. Vietnamese people are very friendly. They tend to refer to other people in society as family members by calling them older brother, younger sister, aunt, uncle, etc.
-The formal Vietnamese pronouns for “I” and “you” are “tôi” and “anh” (male peer, literally meaning “older brother”) or “chị” (female peer, literally meaning “older sister”). More formal terms for “you” that are
-appropriate for an elderly person or person of high social status are “ông” (male person, literally meaning “grandfather”), “bà” (female person, literally meaning “grandmother”) and “bác” (either a male or female person, literally meaning “senior uncle/aunt”).
-Once you have addressed an older person as “ông” or “bà” or “bác,” please note that you should refer to yourself as “cháu” (literally, niece/nephew or grandchild), saving the formal “tôi” for when talking to your peers. However, after you have become well acquainted with
-a peer, it is friendlier to refer to yourself by using an appropriate family term such as “older brother” or “younger sister,” or even by your first name.
+The formal Vietnamese pronouns for “I” and “you” are “tôi” and “anh” (male peer, literally meaning “older brother”) or “chị” (female peer, literally meaning “older sister”). More formal terms for “you” that are appropriate for an elderly person or person of high social status are “ông” (male person, literally meaning “grandfather”), “bà” (female person, literally meaning “grandmother”) and “bác” (either a male or female person, literally meaning “senior uncle/aunt”).
+Once you have addressed an older person as “ông” or “bà” or “bác,” please note that you should refer to yourself as “cháu” (literally, niece/nephew or grandchild), saving the formal “tôi” for when talking to your peers. However, after you have become well acquainted with a peer, it is friendlier to refer to yourself by using an appropriate family term such as “older brother” or “younger sister,” or even by your first name.
 In general, you can usually let your Vietnamese acquaintances take the lead in deciding which terms of address you should be using.
 
-### Adopting an informal tone
+### Adopting an informal tone - *omitting "là"*
 
 **Description:** Adopting an informal tone
 
-**Structure:** `[pronoun] tên + [name]   (no “là”, informal)`
+**Structure:** `no “là”`
 
 - Em tên gì?  
   *Whatʼs your name? (to someone younger than you)*
@@ -121,22 +126,18 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 
 > **Notes:** The omission of là in both the question and the response indicates that the speakers have chosen to adopt an informal tone for their conversation. The intentional omission of có in “Em khỏe không?” is part of this same strategy.
 
-### ai — *as a question word*
+### ai — *to ask "who?"*
 
 **Description:** Using “ai” as a question word
 
-**Structure:** `ai + [verb]?   /   [verb] + với ai?`
+**Structure:** `ai + [verb]? / [verb] + với ai?`
 
 - Ai đi với em?  
   *Who is going with you?*
 - Em đi với ai?  
   *Who are you going with?*
 
-### Using (N) and (S) to indicate dialectal variations
-
-**Description:** Using (N) and (S) to indicate dialectal variations
-
-**Structure:** `[word] (N)   vs.   [word] (S)`
+> **Notes:** Where you place **ai** in the sentence changes the emphasis
 
 ### của — *to indicate “of” or ownership*
 
@@ -144,25 +145,29 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 
 **Structure:** `[noun] + của + [possessor]`
 
-- Ɖây là em gái của tôi.  
+- Ɖây là em gái **của** tôi.  
   *This is my younger sister.*
-- Ɖây là em trai của tôi.  
+- Ɖây là em trai **của** tôi.  
   *This is my younger brother.*
-- Ɖây là chỗ của tôi.  
+- Ɖây là chỗ **của** tôi.  
   *This is my seat.*
 
-### quá — *to emphasize a feeling or quality of something*
+> **Notes:** Try to think of it as "thing **of** mine", or "thing **of** theirs" rather than "my thing" or "their thing" etc.
+
+### quá — *to "emphasize" a feeling/quality*
 
 **Description:** Using “quá” to emphasize a feeling or quality of something
 
-**Structure:** `[subject] + [adjective] + quá!`
+**Structure:** `[adjective] + quá!`
 
 - Tôi vui quá!  
   *Iʼm so happy!*
 - Tôi mệt quá.  
   *Iʼm so tired.*
 
-### đây — *as an ending particle to loosely express “now”*
+> **Notes:** Always emphasises the adjective it follows.
+
+### đây — *to loosely express “now”*
 
 **Description:** Using “đây” as an ending particle to loosely express “now”
 
@@ -174,6 +179,8 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
   *Iʼm going/leaving now.*
 - Tôi đi ngủ đây.  
   *Iʼm going to bed now.*
+
+> **Notes:** Always used as an ending particle to describe the action it follows.
 
 ## Unit 2 — Ở sân bay (At the airport)
 

@@ -8,7 +8,7 @@
       "unit_en": "Hello",
       "header": "Using “chào” to greet someone",
       "title": "chào",
-      "meaning": "to greet someone",
+      "meaning": "to say \"hello\"",
       "examples": [
         {
           "vi": "Chào chị.",
@@ -34,7 +34,7 @@
       "unit_en": "Hello",
       "header": "Using the question word “gì” to ask someone’s name",
       "title": "gì",
-      "meaning": "to ask someone’s name",
+      "meaning": "to ask \"what?\"",
       "examples": [
         {
           "vi": "Anh tên là gì?",
@@ -56,7 +56,7 @@
       "unit_en": "Hello",
       "header": "Using “xin” to make polite requests",
       "title": "xin",
-      "meaning": "to make polite requests",
+      "meaning": "to say \"please\"",
       "examples": [
         {
           "vi": "Xin chị ngồi đây.",
@@ -78,7 +78,7 @@
       "unit_en": "Hello",
       "header": "Using “có … không” to ask yes–no questions",
       "title": "có … không",
-      "meaning": "to ask yes–no questions",
+      "meaning": "to ask \"yes–no questions\"",
       "examples": [
         {
           "vi": "Anh **có** khỏe **không**?",
@@ -94,21 +94,29 @@
       "pattern": "[subject] có + [verb/adjective] + không?"
     },
     {
-      "id": "u01_structure_subject_adjective",
+      "id": "u01_sentence_structure_subject_adjective",
       "unit": 1,
       "unit_vi": "Xin chào",
       "unit_en": "Hello",
       "header": "Using the structure “subject + adjective”",
-      "title": "Structure: subject + adjective",
-      "meaning": "answering a question",
+      "title": "Sentence Structure: subject + adjective",
+      "meaning": "to answer a question",
       "examples": [
         {
-          "vi": "Tôi **khoẻ**.",
-          "en": "Iʼm fine."
+          "vi": "Anh có khoẻ không?",
+          "en": "How are you? (Are you well no?)"
         },
         {
-          "vi": "Tôi **vui**.",
-          "en": "Iʼm happy."
+          "vi": "Vâng, **tôi khoẻ**.",
+          "en": "(Yes), Iʼm fine."
+        },
+        {
+          "vi": "Chị có vui không?",
+          "en": "Are you happy? (Are you happy no?)"
+        },
+        {
+          "vi": "Không, **tôi không vui**.",
+          "en": "No, Iʼm not happy."
         }
       ],
       "notes": "In Vietnamese, the verb “to be” is omitted in this sentence pattern. “Tôi là khỏe” sounds very awkward. Vietnamese adjectives simply function differently from English adjectives. Also, the response to the question có … không can be có/vâng (in the positive) or không (in the negative).",
@@ -122,15 +130,15 @@
       "unit_en": "Hello",
       "header": "Using “xin lỗi” to politely get someone’s attention",
       "title": "xin lỗi",
-      "meaning": "to politely get someone’s attention",
+      "meaning": "to say \"excuse me\"",
       "examples": [
         {
-          "vi": "Xin lỗi chị, chị tên là gì?",
-          "en": "Excuse me, whatʼs your name? (to a female peer)"
+          "vi": "**Xin lỗi** chị, chị tên là gì?",
+          "en": "**Excuse me**, whatʼs your name? (to a female peer)"
         },
         {
-          "vi": "Xin lỗi anh, anh tên là gì?",
-          "en": "Excuse me, whatʼs your name? (to a male peer)"
+          "vi": "**Xin lỗi** anh, anh tên là gì?",
+          "en": "**Excuse me**, whatʼs your name? (to a male peer)"
         }
       ],
       "notes": "",
@@ -144,39 +152,35 @@
       "unit_en": "Hello",
       "header": "Terms of address (Part 1)",
       "title": "Terms of address (Part 1)",
-      "meaning": "",
+      "meaning": "to address yourself and others depending on context",
       "examples": [
         {
           "vi": "**Tôi**",
-          "en": "**I**"
+          "en": "**I*** *self; formal"
         },
         {
           "vi": "**Anh**",
-          "en": ""
+          "en": "**You -*** *male peer; \"older brother\""
         },
         {
-          "vi": "chị",
-          "en": ""
+          "vi": "**Chị**",
+          "en": "**You -*** *female peer; \"older sister\""
         },
         {
-          "vi": "em",
-          "en": ""
+          "vi": "**Bà**",
+          "en": "**You -*** *female person; \"grandmother\""
         },
         {
-          "vi": "bà",
-          "en": ""
+          "vi": "**Ông**",
+          "en": "**You -*** *male person; \"grandfather\""
         },
         {
-          "vi": "ông",
-          "en": ""
+          "vi": "**Bác**",
+          "en": "**You -*** *male/female; \"senior uncle/aunt\""
         },
         {
-          "vi": "cô",
-          "en": ""
-        },
-        {
-          "vi": "chú",
-          "en": ""
+          "vi": "**Cháu**",
+          "en": "**I -*** *\"self; niece/nephew/grandchild after using bà/ông/bác\""
         }
       ],
       "notes": "",
@@ -190,7 +194,7 @@
       "unit_en": "Hello",
       "header": "Adopting an informal tone",
       "title": "Adopting an informal tone",
-      "meaning": "",
+      "meaning": "omitting \"là\"",
       "examples": [
         {
           "vi": "Em tên gì?",
@@ -203,7 +207,7 @@
       ],
       "notes": "The omission of là in both the question and the response indicates that the speakers have chosen to adopt an informal tone for their conversation. The intentional omission of có in “Em khỏe không?” is part of this same strategy.",
       "warning": "",
-      "pattern": "[pronoun] tên + [name]   (no “là”, informal)"
+      "pattern": "no “là”"
     },
     {
       "id": "u01_ai",
@@ -212,7 +216,7 @@
       "unit_en": "Hello",
       "header": "Using “ai” as a question word",
       "title": "ai",
-      "meaning": "as a question word",
+      "meaning": "to ask \"who?\"",
       "examples": [
         {
           "vi": "Ai đi với em?",
@@ -223,22 +227,9 @@
           "en": "Who are you going with?"
         }
       ],
-      "notes": "",
+      "notes": "Where you place **ai** in the sentence changes the emphasis",
       "warning": "",
-      "pattern": "ai + [verb]?   /   [verb] + với ai?"
-    },
-    {
-      "id": "u01_using_n_and_s_to_indicate_dialectal_variations",
-      "unit": 1,
-      "unit_vi": "Xin chào",
-      "unit_en": "Hello",
-      "header": "Using (N) and (S) to indicate dialectal variations",
-      "title": "Using (N) and (S) to indicate dialectal variations",
-      "meaning": "",
-      "examples": [],
-      "notes": "",
-      "warning": "",
-      "pattern": "[word] (N)   vs.   [word] (S)"
+      "pattern": "ai + [verb]? / [verb] + với ai?"
     },
     {
       "id": "u01_cua",
@@ -250,19 +241,19 @@
       "meaning": "to indicate “of” or ownership",
       "examples": [
         {
-          "vi": "Ɖây là em gái của tôi.",
+          "vi": "Ɖây là em gái **của** tôi.",
           "en": "This is my younger sister."
         },
         {
-          "vi": "Ɖây là em trai của tôi.",
+          "vi": "Ɖây là em trai **của** tôi.",
           "en": "This is my younger brother."
         },
         {
-          "vi": "Ɖây là chỗ của tôi.",
+          "vi": "Ɖây là chỗ **của** tôi.",
           "en": "This is my seat."
         }
       ],
-      "notes": "",
+      "notes": "Try to think of it as \"thing **of** mine\", or \"thing **of** theirs\" rather than \"my thing\" or \"their thing\" etc.",
       "warning": "",
       "pattern": "[noun] + của + [possessor]"
     },
@@ -273,7 +264,7 @@
       "unit_en": "Hello",
       "header": "Using “quá” to emphasize a feeling or quality of something",
       "title": "quá",
-      "meaning": "to emphasize a feeling or quality of something",
+      "meaning": "to \"emphasize\" a feeling/quality",
       "examples": [
         {
           "vi": "Tôi vui quá!",
@@ -284,9 +275,9 @@
           "en": "Iʼm so tired."
         }
       ],
-      "notes": "",
+      "notes": "Always emphasises the adjective it follows.",
       "warning": "",
-      "pattern": "[subject] + [adjective] + quá!"
+      "pattern": "[adjective] + quá!"
     },
     {
       "id": "u01_day",
@@ -295,7 +286,7 @@
       "unit_en": "Hello",
       "header": "Using “đây” as an ending particle to loosely express “now”",
       "title": "đây",
-      "meaning": "as an ending particle to loosely express “now”",
+      "meaning": "to loosely express “now”",
       "examples": [
         {
           "vi": "Tôi về đây.",
@@ -310,7 +301,7 @@
           "en": "Iʼm going to bed now."
         }
       ],
-      "notes": "",
+      "notes": "Always used as an ending particle to describe the action it follows.",
       "warning": "",
       "pattern": "[subject] + [verb] + đây"
     },
