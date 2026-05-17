@@ -492,7 +492,7 @@
       "unit_en": "At the airport",
       "header": "Using numbers from 0 to 99",
       "title": "Numbers (Part 1)",
-      "meaning": "to use numbers 0-99",
+      "meaning": "to use numbers 0-20",
       "examples": [
         {
           "vi": "**không**",
@@ -548,18 +548,10 @@
         },
         {
           "vi": "**hai mươi**",
-          "en": ""
-        },
-        {
-          "vi": "**năm mươi**",
-          "en": "fifty"
-        },
-        {
-          "vi": "**chín mươi chín**",
-          "en": "ninety nine"
+          "en": "twenty"
         }
       ],
-      "notes": "*Mười* when occurring after another number becomes *mươi*. Thus, twenty is “hai mươi,” without the tone mark above the vowel ơ. Some other examples are “ba mươi” (30), “bốn mươi” (40), “nǎm mươi” (50). Also, nǎm is changed to lǎm after mười. For example: “mười lǎm,” “hai mươi lǎm” (25), “ba mươi lǎm” (35), “bốn mươi lǎm” (45).",
+      "notes": "Mười when occurring after another number becomes mươi. Thus, twenty is “hai mươi,” without the tone mark above the vowel ơ. Some other examples are “ba mươi” (30), “bốn mươi” (40), “nǎm mươi” (50). Also, nǎm is changed to lǎm after mười. For example: “mười lǎm,” “hai mươi lǎm” (25), “ba mươi lǎm” (35), “bốn mươi lǎm” (45).",
       "warning": "",
       "pattern": "không, một - mười"
     },
@@ -635,7 +627,7 @@
           "en": "**That** is Alice."
         }
       ],
-      "notes": "*Ɖây (here)* is used when talking about something or someone close to the speaker. *Ɖó/Ɖấy (there, that)* is used when talking about something or someone far from the speaker but close to the listener. *Kia (there, that)* is used when talking about something or someone far from both the speaker and the listener.*",
+      "notes": "Ɖây (here) is used when talking about something or someone close to the speaker. Ɖó/Ɖấy (there, that) is used when talking about something or someone far from the speaker but close to the listener. Kia (there, that) is used when talking about something or someone far from both the speaker and the listener.",
       "warning": "",
       "pattern": "đây / kia / đó / đấy + là + [noun]"
     },
@@ -761,11 +753,11 @@
       "meaning": "to politely offer something",
       "examples": [
         {
-          "vi": "**Mời** anh chị ngồi đây.",
+          "vi": "**Mời anh chị** ngồi đây.",
           "en": "**Please** sit here."
         },
         {
-          "vi": "**Mời** anh chị uống nước.",
+          "vi": "**Mời anh chị** uống nước.",
           "en": "**Please** have some water."
         }
       ],
@@ -844,24 +836,24 @@
       "unit_en": "Arriving at the hotel",
       "header": "Using “bao nhiêu” with both countable and uncountable nouns",
       "title": "bao nhiêu",
-      "meaning": "with both countable and uncountable nouns",
+      "meaning": "to ask about any quantity\"",
       "examples": [
         {
-          "vi": "Xe đạp này giá bao nhiêu?",
-          "en": "How much does this bike cost?"
+          "vi": "Xe đạp này giá **bao nhiêu**?",
+          "en": "**How much** does this bike cost?"
         },
         {
-          "vi": "Khách sạn này có bao nhiêu phòng?",
-          "en": "How many rooms does this hotel have?"
+          "vi": "Khách sạn này có **bao nhiêu phòng**?",
+          "en": "**How many** rooms does this hotel have?"
         },
         {
-          "vi": "Ông Tony Blair được bao nhiêu tuổi?",
-          "en": "How old is Mr. Tony Blair?"
+          "vi": "Ông Tony Blair được **bao nhiêu tuổi**?",
+          "en": "**How old** is Mr. Tony Blair?"
         }
       ],
-      "notes": "",
+      "notes": "Used with both uncountable and countable quantities.",
       "warning": "",
-      "pattern": "[noun] + bao nhiêu?   /   bao nhiêu + [noun]?"
+      "pattern": "[noun] + bao nhiêu? / bao nhiêu + [noun]?"
     },
     {
       "id": "u03_may",
@@ -870,40 +862,40 @@
       "unit_en": "Arriving at the hotel",
       "header": "Using “mấy” mostly with countable nouns",
       "title": "mấy",
-      "meaning": "mostly with countable nouns",
+      "meaning": "to ask about a defined quantity",
       "examples": [
         {
-          "vi": "Anh chị sẽ ở đây mấy tháng?",
-          "en": "How many months will you be staying here?"
+          "vi": "Anh chị sẽ ở đây **mấy tháng**?",
+          "en": "**How many months** will you be staying here?"
         },
         {
-          "vi": "Chị có mấy con?",
-          "en": "How many children do you have?"
+          "vi": "Chị có **mấy con**?",
+          "en": "**How many children** do you have?"
         },
         {
-          "vi": "Cháu mấy tuổi?",
-          "en": "How old are you, niece/nephew?"
+          "vi": "Cháu **mấy tuổi**?",
+          "en": "**How old are you**, niece/nephew?"
         }
       ],
-      "notes": "",
+      "notes": "“Mấy” is usually used instead of “bao nhiêu” when we assume that a very small number, perhaps under ten or twelve, will be found in the response. Thus, we should bear in mind that it will be highly offensive when using “mấy tuổi” to ask how old a grown-up person is.",
       "warning": "",
       "pattern": "mấy + [countable noun]?"
     },
     {
-      "id": "u03_trong",
+      "id": "u03_o_trong_and_o_tren",
       "unit": 3,
       "unit_vi": "Đến khách sạn",
       "unit_en": "Arriving at the hotel",
       "header": "Using the prepositions “trong” and “trên”",
-      "title": "trong",
-      "meaning": "and “trên”",
+      "title": "ở trong and ở trên",
+      "meaning": "to denote inside and on respectively",
       "examples": [
         {
-          "vi": "Chúng tôi ở trong phòng.",
+          "vi": "Chúng tôi **ở trong phòng**.",
           "en": "We are inside the room."
         },
         {
-          "vi": "Tôi ở trên tầng nǎm.",
+          "vi": "Tôi **ở trên tầng nǎm**.",
           "en": "I am on the 5th floor."
         }
       ],
@@ -912,89 +904,138 @@
       "pattern": "trong / trên + [noun]"
     },
     {
-      "id": "u03_counting_from_20_to_1005",
+      "id": "u03_numbers_part_2",
       "unit": 3,
       "unit_vi": "Đến khách sạn",
       "unit_en": "Arriving at the hotel",
       "header": "Counting from 20 to 1005",
-      "title": "Counting from 20 to 1005",
-      "meaning": "",
-      "examples": [],
-      "notes": "Starting from twenty, một is changed to mốt and mười to mươi, with mươi being optional when occurring in parentheses. With regard to tư/bốn, linh/lẻ, nghìn/ngàn, the first choice of each pair is used in the Northern dialects and the second one in the Southern dialects.",
+      "title": "Numbers (Part 2)",
+      "meaning": "to use numbers 20 - 1005",
+      "examples": [
+        {
+          "vi": "hai (mươi) mốt",
+          "en": "21"
+        },
+        {
+          "vi": "hai (mươi) tư/bốn",
+          "en": "24"
+        },
+        {
+          "vi": "hai (mươi) lăm",
+          "en": "25"
+        },
+        {
+          "vi": "ba mươi",
+          "en": "30"
+        },
+        {
+          "vi": "ba (mươi) mốt",
+          "en": "31"
+        },
+        {
+          "vi": "ba (mươi) tư/bốn",
+          "en": "34"
+        },
+        {
+          "vi": "ba (mươi) lăm",
+          "en": "35"
+        },
+        {
+          "vi": "bốn mươi",
+          "en": "40"
+        },
+        {
+          "vi": "một trǎm",
+          "en": "100"
+        },
+        {
+          "vi": "một trăm linh/lẻ năm",
+          "en": "105"
+        },
+        {
+          "vi": "một nghìn/ngản",
+          "en": "1000"
+        },
+        {
+          "vi": "một nghìn/ngản không trăm linh/lẻ năm",
+          "en": "1005"
+        }
+      ],
+      "notes": "Starting from twenty, một is changed to mốt and mười to mươi,with mươi being optional when occurring in parentheses. With regard to tư/bốn, linh/lẻ, nghìn/ngàn, the first choice of each pair is used in the Northern dialects and the second one in the Southern dialects.",
       "warning": "",
-      "pattern": "[N] mươi + [N]   (e.g. hai mươi mốt = 21)"
+      "pattern": "một trăm, một trǎm linh/lẻ nǎm, một nghìn/ngàn"
     },
     {
-      "id": "u03_ngoai",
+      "id": "u03_ngoai_and_duoi",
       "unit": 3,
       "unit_vi": "Đến khách sạn",
       "unit_en": "Arriving at the hotel",
       "header": "Using the prepositions “ngoài” and “dưới”",
-      "title": "ngoài",
-      "meaning": "and “dưới”",
+      "title": "ngoài and “dưới”",
+      "meaning": "to indicate outside and down respectively",
       "examples": [
         {
-          "vi": "Xe tắc-xi chờ ngoài khách sạn.",
-          "en": "A taxi is waiting outside the hotel."
+          "vi": "Xe tắc-xi chờ **ngoài** khách sạn.",
+          "en": "A taxi is waiting **outside** the hotel."
         },
         {
-          "vi": "Thùy Dương chờ Angela ở dưới.",
-          "en": "Thùy Dương is waiting for Angela downstairs."
+          "vi": "Thùy Dương chờ Angela ở **dưới**.",
+          "en": "Thùy Dương is waiting for Angela **downstairs**."
         }
       ],
       "notes": "",
       "warning": "",
-      "pattern": "ngoài / dưới + [noun]"
+      "pattern": "chờ + ngoài / chờ + [noun] + dưới"
     },
     {
-      "id": "u03_co",
+      "id": "u03_co_nhieu",
       "unit": 3,
       "unit_vi": "Đến khách sạn",
       "unit_en": "Arriving at the hotel",
       "header": "Using “có” to name or list things",
-      "title": "có",
-      "meaning": "to name or list things",
+      "title": "có nhiều",
+      "meaning": "to point out many of something",
       "examples": [
         {
-          "vi": "Có nhiều khách sạn và nhà hàng ở Hội An.",
-          "en": "There are many hotels and restaurants in Hội An."
+          "vi": "**Có nhiều** khách sạn và nhà hàng ở Hội An.",
+          "en": "**There are many** hotels and restaurants in Hội An."
         },
         {
-          "vi": "Có nhiều phòng trống trong khách sạn này.",
-          "en": "There are many vacancies in this hotel."
+          "vi": "**Có nhiều** phòng trống trong khách sạn này.",
+          "en": "**There are many** vacancies in this hotel."
         }
       ],
       "notes": "",
       "warning": "",
-      "pattern": "có + [noun phrase]   (= “there is/are …”)"
+      "pattern": "có + [noun phrase]"
     },
     {
-      "id": "u03_talking_about_the_different_parts_of_a_day",
+      "id": "u03_sang_trua_chieu_toi_dem",
       "unit": 3,
       "unit_vi": "Đến khách sạn",
       "unit_en": "Arriving at the hotel",
       "header": "Talking about the different parts of a day",
-      "title": "Talking about the different parts of a day",
-      "meaning": "",
+      "title": "sáng, trưa, chiều, tối, đêm",
+      "meaning": "to talk about the parts of a day",
       "examples": [
         {
-          "vi": "sáng",
+          "vi": "**sáng**",
           "en": "morning (generally, the period from 3 a.m. to 10 a.m.)"
         },
         {
-          "vi": "trưa",
+          "vi": "**trưa**",
           "en": "noon (generally, the period from 11 a.m. to 2 p.m.)"
         },
         {
-          "vi": "chiều",
+          "vi": "**chiều**",
           "en": "evening (generally, the period from 3 p.m. to 6 p.m.)"
         },
         {
-          "vi": "tối",
+          "vi": "**tối**",
           "en": "night (generally, the period from 7 p.m. to 9 p.m.)"
         },
         {
-          "vi": "đêm",
+          "vi": "**đêm**",
           "en": "late at night (generally, the period from 10 p.m. to 2 a.m.)"
         }
       ],
@@ -1003,24 +1044,24 @@
       "pattern": "sáng, trưa, chiều, tối, đêm"
     },
     {
-      "id": "u03_talking_about_the_different_meals",
+      "id": "u03_bua_sang_bua_trua_bua_toi",
       "unit": 3,
       "unit_vi": "Đến khách sạn",
       "unit_en": "Arriving at the hotel",
       "header": "Talking about the different meals",
-      "title": "Talking about the different meals",
-      "meaning": "",
+      "title": "bữa sáng, bữa trưa, bữa tối",
+      "meaning": "to talk about meals",
       "examples": [
         {
-          "vi": "bữa sáng",
+          "vi": "**bữa sáng**",
           "en": "breakfast"
         },
         {
-          "vi": "bữa trưa",
+          "vi": "**bữa trưa**",
           "en": "lunch"
         },
         {
-          "vi": "bữa tối",
+          "vi": "**bữa tối**",
           "en": "dinner"
         }
       ],
@@ -1029,86 +1070,111 @@
       "pattern": "bữa sáng, bữa trưa, bữa tối"
     },
     {
-      "id": "u03_using_some_common_time_expressions",
+      "id": "u03_time_expressions",
       "unit": 3,
       "unit_vi": "Đến khách sạn",
       "unit_en": "Arriving at the hotel",
       "header": "Using some common time expressions",
-      "title": "Using some common time expressions",
-      "meaning": "",
+      "title": "Time expressions",
+      "meaning": "to express time",
       "examples": [
         {
-          "vi": "sáng mai",
+          "vi": "**sáng mai**",
           "en": "tomorrow morning"
         },
         {
-          "vi": "sáng nay",
+          "vi": "**sáng nay**",
           "en": "this morning"
         },
         {
-          "vi": "trưa nay",
+          "vi": "**trưa nay**",
           "en": "noon today"
         },
         {
-          "vi": "chiều nay",
+          "vi": "**chiều nay**",
           "en": "this evening"
         },
         {
-          "vi": "tối nay",
+          "vi": "**tối nay**",
           "en": "tonight"
         },
         {
-          "vi": "hôm nay",
+          "vi": "**hôm nay**",
           "en": "today"
         },
         {
-          "vi": "ngày mai",
+          "vi": "**ngày mai**",
           "en": "tomorrow"
         },
         {
-          "vi": "hôm qua",
+          "vi": "**hôm qua**",
           "en": "yesterday"
         }
       ],
       "notes": "",
       "warning": "",
-      "pattern": "[time word] + nay / mai / qua   (sáng mai, tối qua, …)"
+      "pattern": "[time word] + nay / mai / qua"
     },
     {
-      "id": "u03_eating_the_different_meals",
+      "id": "u03_eating",
       "unit": 3,
       "unit_vi": "Đến khách sạn",
       "unit_en": "Arriving at the hotel",
       "header": "Eating the different meals",
-      "title": "Eating the different meals",
-      "meaning": "",
+      "title": "Eating",
+      "meaning": "to express mealtimes",
       "examples": [
         {
-          "vi": "ǎn sáng",
+          "vi": "**ǎn sáng**",
           "en": "have breakfast"
         },
         {
-          "vi": "ǎn trưa",
+          "vi": "**ǎn trưa**",
           "en": "have lunch"
         },
         {
-          "vi": "ǎn tối",
+          "vi": "**ǎn tối**",
           "en": "have dinner"
         }
       ],
       "notes": "",
       "warning": "",
-      "pattern": "ăn + [meal]   (ăn sáng, ăn trưa, ăn tối)"
+      "pattern": "ăn + [meal]"
     },
     {
-      "id": "u03_more_terms_of_address_part_3",
+      "id": "u03_1st_2nd_and_3rd_person",
       "unit": 3,
       "unit_vi": "Đến khách sạn",
       "unit_en": "Arriving at the hotel",
       "header": "More terms of address (Part 3)",
-      "title": "More terms of address (Part 3)",
-      "meaning": "",
-      "examples": [],
+      "title": "1st, 2nd and 3rd person",
+      "meaning": "to address in different perspectives",
+      "examples": [
+        {
+          "vi": "Tôi",
+          "en": "1st person singular"
+        },
+        {
+          "vi": "Chúng tôi, chúng ta",
+          "en": "1st person plural"
+        },
+        {
+          "vi": "Ông, bà, bác, anh, chị, cô, em, cháu",
+          "en": "2nd person singular"
+        },
+        {
+          "vi": "**Các** ông, **các** bà, **các** bác, **các** anh, **các** chị, **các** cô, **các** em, **các** cháu",
+          "en": "2nd person plural"
+        },
+        {
+          "vi": "Ông **ấy**, bà **ấy**, bác **ấy**, anh **ấy**, chị **ấy**, cô **ấy**, em **ấy**, cháu **ấy**",
+          "en": "3rd person singular"
+        },
+        {
+          "vi": "**Các** ông **ấy**, **các** bà **ấy**, **các** bác **ấy**, **các** anh **ấy**, **các** chị **ấy**, **các** cô **ấy**, **các** em **ấy**, **các** cháu **ấy**",
+          "en": "3rd person plural"
+        }
+      ],
       "notes": "Ấy is added to turn a second person into a third person, and các is a plural marker turning a term of address from the singular into the plural.",
       "warning": "",
       "pattern": "[term of address] + ấy (3rd person)   /   các + [term] (plural)"
@@ -1123,12 +1189,12 @@
       "meaning": "to express “but”",
       "examples": [
         {
-          "vi": "Angela vui nhưng hơi mệt.",
-          "en": "Angela is happy but rather tired."
+          "vi": "Angela vui **nhưng** hơi mệt.",
+          "en": "Angela is happy **but** rather tired."
         },
         {
-          "vi": "Phòng này lớn nhưng hơi tối.",
-          "en": "This room is large but rather dark."
+          "vi": "Phòng này lớn **nhưng** hơi tối.",
+          "en": "This room is large **but** rather dark."
         }
       ],
       "notes": "",
