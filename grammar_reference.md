@@ -91,7 +91,7 @@ Adapted from *Colloquial Vietnamese: The Complete Course for Beginners* (Routled
 **Structure:** `[noun]`
 
 - **Tôi** 
-  I  
+  ***I***
 - **Anh**
   male peer; "older brother"  
 - chị  
