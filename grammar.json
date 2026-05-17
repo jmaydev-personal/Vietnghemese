@@ -12,15 +12,15 @@
       "examples": [
         {
           "vi": "Chào chị.",
-          "en": "Hello (to a female peer)."
+          "en": "**Hello** (to a female peer)."
         },
         {
           "vi": "Chào chị Anna.",
-          "en": "Hello (to a female peer named Anna)."
+          "en": "**Hello** (to a female peer named Anna)."
         },
         {
           "vi": "Chào anh Andrew.",
-          "en": "Hello (to a male peer named Andrew)."
+          "en": "**Hello** (to a male peer named Andrew)."
         }
       ],
       "notes": "Chào means both hello and goodbye. It is followed by a name or a term of address or both.",
@@ -37,12 +37,12 @@
       "meaning": "to ask \"what?\"",
       "examples": [
         {
-          "vi": "Anh tên là gì?",
-          "en": "What is your name? (to a male peer)"
+          "vi": "Anh tên là **gì**?",
+          "en": "**What** is your name? (to a male peer)"
         },
         {
-          "vi": "Tên chị là gì?",
-          "en": "What is your name? (to a female peer)"
+          "vi": "Tên chị là **gì**?",
+          "en": "**What** is your name? (to a female peer)"
         }
       ],
       "notes": "The question word “gì” is always placed at the end of the sentence. Also, “anh tên” and “tên anh” can be used interchangeably, with “anh tên” sounding a little more formal.",
@@ -60,11 +60,11 @@
       "examples": [
         {
           "vi": "Xin chị ngồi đây.",
-          "en": "Please sit here."
+          "en": "**Please** sit here."
         },
         {
           "vi": "Xin anh chị đứng đây.",
-          "en": "Please stand here."
+          "en": "**Please** stand here."
         }
       ],
       "notes": "",
@@ -78,7 +78,7 @@
       "unit_en": "Hello",
       "header": "Using “có … không” to ask yes–no questions",
       "title": "có … không",
-      "meaning": "to ask \"yes–no questions\"",
+      "meaning": "to ask \"closed questions\"",
       "examples": [
         {
           "vi": "Anh **có** khỏe **không**?",
@@ -103,19 +103,19 @@
       "meaning": "to answer a question",
       "examples": [
         {
-          "vi": "Anh có khoẻ không?",
+          "vi": "Q: Anh có khoẻ không?",
           "en": "How are you? (Are you well no?)"
         },
         {
-          "vi": "Vâng, **tôi khoẻ**.",
+          "vi": "A: Vâng, **tôi khoẻ**.",
           "en": "(Yes), Iʼm fine."
         },
         {
-          "vi": "Chị có vui không?",
+          "vi": "Q: Chị có vui không?",
           "en": "Are you happy? (Are you happy no?)"
         },
         {
-          "vi": "Không, **tôi không vui**.",
+          "vi": "A: Không, **tôi không vui**.",
           "en": "No, Iʼm not happy."
         }
       ],
@@ -156,34 +156,34 @@
       "examples": [
         {
           "vi": "**Tôi**",
-          "en": "**I*** *self; formal"
+          "en": "**I** self; formal"
         },
         {
           "vi": "**Anh**",
-          "en": "**You -*** *male peer; \"older brother\""
+          "en": "**You -** male peer; \"older brother\""
         },
         {
           "vi": "**Chị**",
-          "en": "**You -*** *female peer; \"older sister\""
+          "en": "**You -** female peer; \"older sister\""
         },
         {
           "vi": "**Bà**",
-          "en": "**You -*** *female person; \"grandmother\""
+          "en": "**You -** female person; \"grandmother\""
         },
         {
           "vi": "**Ông**",
-          "en": "**You -*** *male person; \"grandfather\""
+          "en": "**You -** male person; \"grandfather\""
         },
         {
           "vi": "**Bác**",
-          "en": "**You -*** *male/female; \"senior uncle/aunt\""
+          "en": "**You -** male/female; \"senior uncle/aunt\""
         },
         {
           "vi": "**Cháu**",
-          "en": "**I -*** *\"self; niece/nephew/grandchild after using bà/ông/bác\""
+          "en": "**I -** \"self; niece/nephew/grandchild after using bà/ông/bác\""
         }
       ],
-      "notes": "",
+      "notes": "The terms of address in Vietnamese are very complicated and vary from situation to situation, depending on many factors such as age, social status and relationship. Vietnamese people are very friendly. They tend to refer to other people in society as family members by calling them older brother, younger sister, aunt, uncle, etc.",
       "warning": "",
       "pattern": "[noun]"
     },
@@ -220,14 +220,14 @@
       "examples": [
         {
           "vi": "Ai đi với em?",
-          "en": "Who is going with you?"
+          "en": "**Who** is going with you?"
         },
         {
           "vi": "Em đi với ai?",
-          "en": "Who are you going with?"
+          "en": "**Who** are you going with?"
         }
       ],
-      "notes": "Where you place **ai** in the sentence changes the emphasis",
+      "notes": "Where you place *ai* in the sentence changes the emphasis in the question.",
       "warning": "",
       "pattern": "ai + [verb]? / [verb] + với ai?"
     },
@@ -242,18 +242,18 @@
       "examples": [
         {
           "vi": "Ɖây là em gái **của** tôi.",
-          "en": "This is my younger sister."
+          "en": "This is **my** younger sister."
         },
         {
           "vi": "Ɖây là em trai **của** tôi.",
-          "en": "This is my younger brother."
+          "en": "This is **my** younger brother."
         },
         {
           "vi": "Ɖây là chỗ **của** tôi.",
-          "en": "This is my seat."
+          "en": "This is **my** seat."
         }
       ],
-      "notes": "Try to think of it as \"thing **of** mine\", or \"thing **of** theirs\" rather than \"my thing\" or \"their thing\" etc.",
+      "notes": "Try to think of it as \"thing *of* mine\", or \"thing *of* theirs\" rather than \"my thing\" or \"their thing\" etc.",
       "warning": "",
       "pattern": "[noun] + của + [possessor]"
     },
@@ -268,11 +268,11 @@
       "examples": [
         {
           "vi": "Tôi vui quá!",
-          "en": "Iʼm so happy!"
+          "en": "Iʼm **so** happy!"
         },
         {
           "vi": "Tôi mệt quá.",
-          "en": "Iʼm so tired."
+          "en": "Iʼm **so** tired."
         }
       ],
       "notes": "Always emphasises the adjective it follows.",
@@ -312,7 +312,7 @@
       "unit_en": "At the airport",
       "header": "Using “nào” to express “which” in a question",
       "title": "nào",
-      "meaning": "to express “which” in a question",
+      "meaning": "to express “which?”",
       "examples": [
         {
           "vi": "Anh là người nước nào?",

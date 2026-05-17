@@ -54,6 +54,7 @@
     color: var(--accent);
     flex: 1;
   }
+  .header-title.sent { color: var(--accent2); }
   .header-sub {
     font-size: 13px;
     color: var(--text-dim);
@@ -1356,6 +1357,7 @@ function selectLesson(key, startWordIndex, sectionIdx) {
   progress.className = 'progress-fill' + (isSent ? ' sent-fill' : '');
   playBtn.classList.toggle('sent-play', isSent);
   wave.classList.toggle('sent-wave', isSent);
+  label.classList.toggle('sent', isSent);
 
   // Grammar mode is a scrollable, audio-less reading view with a footer nav.
   playerMain.classList.toggle('grammar', isSent);
