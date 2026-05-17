@@ -6,9 +6,10 @@
 # Python
 __pycache__/
 *.pyc
+serve.py
 *.py
 
 # md/json not necessary for repo
-*.md
-grammar_reference.json
-textbook_vocab.json
+*_reference.md
+*_reference.json
+textbook_vocab.*
