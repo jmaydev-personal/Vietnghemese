@@ -94,12 +94,12 @@
       "pattern": "[subject] có + [verb/adjective] + không?"
     },
     {
-      "id": "u01_sentence_structure_subject_adjective",
+      "id": "u01_omitting_la_part_1",
       "unit": 1,
       "unit_vi": "Xin chào",
       "unit_en": "Hello",
       "header": "Using the structure “subject + adjective”",
-      "title": "Sentence Structure: subject + adjective",
+      "title": "Omitting là (Part 1)",
       "meaning": "to answer a question",
       "examples": [
         {
@@ -146,12 +146,12 @@
       "pattern": "xin lỗi + [pronoun], + [clause]"
     },
     {
-      "id": "u01_terms_of_address_part_1",
+      "id": "u01_pronouns",
       "unit": 1,
       "unit_vi": "Xin chào",
       "unit_en": "Hello",
       "header": "Terms of address (Part 1)",
-      "title": "Terms of address (Part 1)",
+      "title": "Pronouns",
       "meaning": "to address yourself and others depending on context",
       "examples": [
         {
@@ -183,18 +183,18 @@
           "en": "**I -** \"self; niece/nephew/grandchild after using bà/ông/bác\""
         }
       ],
-      "notes": "The terms of address in Vietnamese are very complicated and vary from situation to situation, depending on many factors such as age, social status and relationship. Vietnamese people are very friendly. They tend to refer to other people in society as family members by calling them older brother, younger sister, aunt, uncle, etc.",
+      "notes": "The terms of address in Vietnamese are very complicated and vary from situation to situation, depending on many factors such as age, social status and relationship. Vietnamese people are very friendly. They tend to refer to other people in society as family members by calling them older brother, younger sister, aunt, uncle, etc. The formal Vietnamese pronouns for “I” and “you” are “tôi” and “anh” (male peer, literally meaning “older brother”) or “chị” (female peer, literally meaning “older sister”). More formal terms for “you” that are appropriate for an elderly person or person of high social status are “ông” (male person, literally meaning “grandfather”), “bà” (female person, literally meaning “grandmother”) and “bác” (either a male or female person, literally meaning “senior uncle/aunt”).",
       "warning": "",
       "pattern": "[noun]"
     },
     {
-      "id": "u01_adopting_an_informal_tone",
+      "id": "u01_omitting_la_part_2",
       "unit": 1,
       "unit_vi": "Xin chào",
       "unit_en": "Hello",
       "header": "Adopting an informal tone",
-      "title": "Adopting an informal tone",
-      "meaning": "omitting \"là\"",
+      "title": "Omitting là (Part 2)",
+      "meaning": "to adopt an informal tone",
       "examples": [
         {
           "vi": "Em tên gì?",
@@ -264,15 +264,15 @@
       "unit_en": "Hello",
       "header": "Using “quá” to emphasize a feeling or quality of something",
       "title": "quá",
-      "meaning": "to \"emphasize\" a feeling/quality",
+      "meaning": "to emphasize a feeling/quality",
       "examples": [
         {
-          "vi": "Tôi vui quá!",
-          "en": "Iʼm **so** happy!"
+          "vi": "Tôi **vui quá**!",
+          "en": "Iʼm **so happy**!"
         },
         {
-          "vi": "Tôi mệt quá.",
-          "en": "Iʼm **so** tired."
+          "vi": "Tôi **mệt quá**.",
+          "en": "Iʼm **so tired**."
         }
       ],
       "notes": "Always emphasises the adjective it follows.",
@@ -301,7 +301,7 @@
           "en": "Iʼm going to bed **now**."
         }
       ],
-      "notes": "Always used as an ending particle to describe the action it follows.",
+      "notes": "Always used as an ending particle to denote the action it follows.",
       "warning": "",
       "pattern": "[subject] + [verb] + đây"
     },
@@ -315,12 +315,12 @@
       "meaning": "to express “which?”",
       "examples": [
         {
-          "vi": "Anh là người nước nào?",
-          "en": "Which country are you from? (to a male peer)"
+          "vi": "Anh là người nước **nào**?",
+          "en": "**Which** country are you from? (to a male peer)"
         },
         {
-          "vi": "Bà là người nước nào?",
-          "en": "Which country are you from? (to an elderly woman)"
+          "vi": "Bà là người nước **nào**?",
+          "en": "**Which** country are you from? (to an elderly woman)"
         }
       ],
       "notes": "",
@@ -334,7 +334,7 @@
       "unit_en": "At the airport",
       "header": "Using the structure “noun + adjective”",
       "title": "người",
-      "meaning": "to express \"nationality\"",
+      "meaning": "to express nationality",
       "examples": [
         {
           "vi": "người **Mỹ**",
@@ -391,7 +391,7 @@
           "en": "**Whatʼs your purpose** in going to Saigon?"
         }
       ],
-      "notes": "",
+      "notes": "Used \"what\" rather than \"why\" to stay consistent with established understanding of \"gì\" as what.",
       "warning": "",
       "pattern": "[subject] + [verb] + để làm gì?"
     },
@@ -409,7 +409,7 @@
           "en": "Youʼre Peter, **right**?"
         },
         {
-          "vi": "Chị tên là Jennifer, có **phải không**?",
+          "vi": "Chị tên là Jennifer, **có phải không**?",
           "en": "Your nameʼs Jennifer, **right**?"
         },
         {
@@ -429,7 +429,7 @@
           "en": "No, Iʼm not Peter."
         }
       ],
-      "notes": "If the information is correct, the response to this type of tag question is phải/vâng. If the information is incorrect, the response should be không phải.",
+      "notes": "If the information is correct, the response to this type of tag question is phải/vâng (yes). If the information is incorrect, the response should be không phải. Generally used when it's assumed the listener will agree with the question/statement being made.",
       "warning": "",
       "pattern": "[statement], (có) phải không?"
     },
@@ -443,15 +443,15 @@
       "meaning": "to indicate future actions",
       "examples": [
         {
-          "vi": "Tôi **sẽ** đón chị ở sân bay/phi trường.",
-          "en": "I **will** pick you up at the airport."
+          "vi": "Tôi **sẽ đón chị** ở sân bay/phi trường.",
+          "en": "I **will pick you up** at the airport."
         },
         {
-          "vi": "Tôi **sẽ** gặp họ ở khách sạn.",
-          "en": "I **will** meet them at the hotel."
+          "vi": "Tôi **sẽ gặp họ** ở khách sạn.",
+          "en": "I **will meet them** at the hotel."
         }
       ],
-      "notes": "",
+      "notes": "Indicates that the action hasn't occurred yet.",
       "warning": "",
       "pattern": "[subject] sẽ + [verb phrase]"
     },
@@ -477,7 +477,7 @@
           "en": "**Where** do you live (at/in)?"
         },
         {
-          "vi": "Bà làm việc ở **đâu**?",
+          "vi": "Bà làm việc **ở đâu**?",
           "en": "**Where** do you work (at/in)?"
         }
       ],
@@ -495,71 +495,71 @@
       "meaning": "to use numbers 0-99",
       "examples": [
         {
-          "vi": "không",
+          "vi": "**không**",
           "en": "zero"
         },
         {
-          "vi": "một",
+          "vi": "**một**",
           "en": "one"
         },
         {
-          "vi": "hai",
+          "vi": "**hai**",
           "en": "two"
         },
         {
-          "vi": "ba",
+          "vi": "**ba**",
           "en": "three"
         },
         {
-          "vi": "bốn",
+          "vi": "**bốn**",
           "en": "four"
         },
         {
-          "vi": "năm",
+          "vi": "**năm**",
           "en": "five"
         },
         {
-          "vi": "sáu",
+          "vi": "**sáu**",
           "en": "six"
         },
         {
-          "vi": "bảy",
+          "vi": "**bảy**",
           "en": "seven"
         },
         {
-          "vi": "tám",
+          "vi": "**tám**",
           "en": "eight"
         },
         {
-          "vi": "chín",
+          "vi": "**chín**",
           "en": "nine"
         },
         {
-          "vi": "muòi",
+          "vi": "**muòi**",
           "en": "ten"
         },
         {
-          "vi": "mười một",
+          "vi": "**mười một**",
           "en": "eleven"
         },
         {
-          "vi": "muòi lăm",
+          "vi": "**muòi lăm**",
           "en": "fifteen"
         },
         {
-          "vi": "hai mươi",
+          "vi": "**hai mươi**",
           "en": ""
         },
         {
-          "vi": "năm mươi",
+          "vi": "**năm mươi**",
           "en": "fifty"
         },
         {
-          "vi": "chín mươi chín",
+          "vi": "**chín mươi chín**",
           "en": "ninety nine"
         }
       ],
-      "notes": "Mười when occurring after another number becomes mươi. Thus, twenty is “hai mươi,” without the tone mark above the vowel ơ. Some other examples are “ba mươi” (30), “bốn mươi” (40), “nǎm mươi” (50). Also, nǎm is changed to lǎm after mười. For example: “mười lǎm,” “hai mươi lǎm” (25), “ba mươi lǎm” (35), “bốn mươi lǎm” (45).",
+      "notes": "*Mười* when occurring after another number becomes *mươi*. Thus, twenty is “hai mươi,” without the tone mark above the vowel ơ. Some other examples are “ba mươi” (30), “bốn mươi” (40), “nǎm mươi” (50). Also, nǎm is changed to lǎm after mười. For example: “mười lǎm,” “hai mươi lǎm” (25), “ba mươi lǎm” (35), “bốn mươi lǎm” (45).",
       "warning": "",
       "pattern": "không, một - mười"
     },
@@ -635,18 +635,18 @@
           "en": "**That** is Alice."
         }
       ],
-      "notes": "Ɖây (here) is used when talking about something or someone close to the speaker. Ɖó/Ɖấy (there, that) is used when talking about something or someone far from the speaker but close to the listener. Kia (there, that) is used when talking about something or someone far from both the speaker and the listener.*",
+      "notes": "*Ɖây (here)* is used when talking about something or someone close to the speaker. *Ɖó/Ɖấy (there, that)* is used when talking about something or someone far from the speaker but close to the listener. *Kia (there, that)* is used when talking about something or someone far from both the speaker and the listener.*",
       "warning": "",
       "pattern": "đây / kia / đó / đấy + là + [noun]"
     },
     {
-      "id": "u02_mau_to_describe_colour",
+      "id": "u02_mau",
       "unit": 2,
       "unit_vi": "Ở sân bay",
       "unit_en": "At the airport",
       "header": "Some basic colours in Vietnamese",
-      "title": "màu - to describe colour",
-      "meaning": "",
+      "title": "màu",
+      "meaning": "to describe colour",
       "examples": [
         {
           "vi": "màu **trắng**",
@@ -694,12 +694,12 @@
       "pattern": "màu + [colour]"
     },
     {
-      "id": "u02_terms_of_address_part_2",
+      "id": "u02_chung_cac",
       "unit": 2,
       "unit_vi": "Ở sân bay",
       "unit_en": "At the airport",
       "header": "Terms of address (Part 2)",
-      "title": "Terms of address (Part 2)",
+      "title": "chúng/các",
       "meaning": "to address yourself and others in a group context",
       "examples": [
         {
@@ -711,27 +711,27 @@
           "en": "**we** (includes listener)"
         },
         {
-          "vi": "các ông",
+          "vi": "**các** ông",
           "en": "**you** (senior men, grandfathers)"
         },
         {
-          "vi": "các bà",
+          "vi": "**các** bà",
           "en": "**you** (senior women, grandmothers)"
         },
         {
-          "vi": "các anh",
+          "vi": "**các** anh",
           "en": "**you** (male peers, older brothers)"
         },
         {
-          "vi": "các chị",
+          "vi": "**các** chị",
           "en": "**you** (female peers, older sisters)"
         },
         {
-          "vi": "các cô",
+          "vi": "**các** cô",
           "en": "**you** (young ladies, teachers, junior aunts)"
         },
         {
-          "vi": "các em",
+          "vi": "**các** em",
           "en": "**you** (all of them younger than the speaker)"
         },
         {
@@ -799,7 +799,7 @@
           "en": "bus"
         },
         {
-          "vi": "**xe** ô-tô (N), xe hơi (S)",
+          "vi": "**xe** ô-tô (N), **xe** hơi (S)",
           "en": "car"
         },
         {
@@ -807,7 +807,7 @@
           "en": "motorbike taxi"
         },
         {
-          "vi": "**xe** cấp cứu (N), cứu thương (S)",
+          "vi": "**xe** cấp cứu (N), **xe** cứu thương (S)",
           "en": "ambulance"
         }
       ],
@@ -822,7 +822,7 @@
       "unit_en": "At the airport",
       "header": "Using “đang” to talk about an activity that is happening now or was happening at a certain time in the past",
       "title": "đang",
-      "meaning": "to describe an ongoing/recent action/event",
+      "meaning": "to describe an ongoing/recent action",
       "examples": [
         {
           "vi": "Họ **đang đến**.",
@@ -833,7 +833,7 @@
           "en": "Angelaʼs **talking** with Lan."
         }
       ],
-      "notes": "Designate something as currently happening or recently happened.",
+      "notes": "Designate something as currently happening or having recently happened.",
       "warning": "",
       "pattern": "[subject] đang + [verb]"
     },
