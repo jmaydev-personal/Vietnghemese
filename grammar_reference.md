@@ -58,18 +58,20 @@ Adapted from *Colloquial Vietnamese: The Complete Course for Beginners* (Routled
 
 > **Notes:** Có is placed before the verb and không at the end of the sentence. In an informal register, có is optional.
 
-### subject + adjective
+### Structure: subject + adjective - *answering a question*
 
 **Description:** Using the structure “subject + adjective”
 
-**Structure:** `[subject] + [adjective]   (no “là”)`
+**Structure:** `[subject] + [adjective] (no “là”)`
 
 - Tôi **khoẻ**.  
   *Iʼm fine.*
 - Tôi **vui**.  
   *Iʼm happy.*
 
-> **Notes:** In Vietnamese, the verb “to be” is omitted in this sentence pattern. “Tôi là khỏe” sounds very awkward. Vietnamese adjectives simply function differently from English adjectives. Also, the response to the question có … không can be có/vâng (in the positive) or không (in the negative). • Anh có khoẻ không? How are you? (Are you well no?) Vâng, tôi khoẻ. (Yes), Iʼm fine. • Chị có vui không? Are you happy? (Are you happy no?) Không, tôi không vui. No, Iʼm not happy.
+> **Notes:** In Vietnamese, the verb “to be” is omitted in this sentence pattern. “Tôi là khỏe” sounds very awkward. Vietnamese adjectives simply function differently from English adjectives. Also, the response to the question có … không can be có/vâng (in the positive) or không (in the negative). 
+• Anh có khoẻ không? How are you? (Are you well no?) Vâng, tôi khoẻ. (Yes), Iʼm fine. 
+• Chị có vui không? Are you happy? (Are you happy no?) Không, tôi không vui. No, Iʼm not happy.
 
 ### xin lỗi — *to politely get someone’s attention*
 
@@ -86,7 +88,25 @@ Adapted from *Colloquial Vietnamese: The Complete Course for Beginners* (Routled
 
 **Description:** Terms of address (Part 1)
 
-**Structure:** `anh / chị / em / bà / ông / cô / chú / …`
+**Structure:** `[noun]`
+
+- **Tôi** 
+  I  
+- **Anh**
+  male peer; "older brother"  
+- chị  
+- em  
+- bà  
+- ông 
+- cô 
+- chú
+
+**Notes:** The terms of address in Vietnamese are very complicated and vary from situation to situation, depending on many factors such as age, social status and relationship. Vietnamese people are very friendly. They tend to refer to other people in society as family members by calling them older brother, younger sister, aunt, uncle, etc.
+The formal Vietnamese pronouns for “I” and “you” are “tôi” and “anh” (male peer, literally meaning “older brother”) or “chị” (female peer, literally meaning “older sister”). More formal terms for “you” that are
+appropriate for an elderly person or person of high social status are “ông” (male person, literally meaning “grandfather”), “bà” (female person, literally meaning “grandmother”) and “bác” (either a male or female person, literally meaning “senior uncle/aunt”).
+Once you have addressed an older person as “ông” or “bà” or “bác,” please note that you should refer to yourself as “cháu” (literally, niece/nephew or grandchild), saving the formal “tôi” for when talking to your peers. However, after you have become well acquainted with
+a peer, it is friendlier to refer to yourself by using an appropriate family term such as “older brother” or “younger sister,” or even by your first name.
+In general, you can usually let your Vietnamese acquaintances take the lead in deciding which terms of address you should be using.
 
 ### Adopting an informal tone
 

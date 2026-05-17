@@ -94,13 +94,13 @@
       "pattern": "[subject] có + [verb/adjective] + không?"
     },
     {
-      "id": "u01_subject_adjective",
+      "id": "u01_structure_subject_adjective",
       "unit": 1,
       "unit_vi": "Xin chào",
       "unit_en": "Hello",
       "header": "Using the structure “subject + adjective”",
-      "title": "subject + adjective",
-      "meaning": "",
+      "title": "Structure: subject + adjective",
+      "meaning": "answering a question",
       "examples": [
         {
           "vi": "Tôi **khoẻ**.",
@@ -111,9 +111,9 @@
           "en": "Iʼm happy."
         }
       ],
-      "notes": "In Vietnamese, the verb “to be” is omitted in this sentence pattern. “Tôi là khỏe” sounds very awkward. Vietnamese adjectives simply function differently from English adjectives. Also, the response to the question có … không can be có/vâng (in the positive) or không (in the negative). • Anh có khoẻ không? How are you? (Are you well no?) Vâng, tôi khoẻ. (Yes), Iʼm fine. • Chị có vui không? Are you happy? (Are you happy no?) Không, tôi không vui. No, Iʼm not happy.",
+      "notes": "In Vietnamese, the verb “to be” is omitted in this sentence pattern. “Tôi là khỏe” sounds very awkward. Vietnamese adjectives simply function differently from English adjectives. Also, the response to the question có … không can be có/vâng (in the positive) or không (in the negative).",
       "warning": "",
-      "pattern": "[subject] + [adjective]   (no “là”)"
+      "pattern": "[subject] + [adjective] (no “là”)"
     },
     {
       "id": "u01_xin_loi",
@@ -145,10 +145,43 @@
       "header": "Terms of address (Part 1)",
       "title": "Terms of address (Part 1)",
       "meaning": "",
-      "examples": [],
+      "examples": [
+        {
+          "vi": "**Tôi**",
+          "en": ""
+        },
+        {
+          "vi": "**Anh**",
+          "en": ""
+        },
+        {
+          "vi": "chị",
+          "en": ""
+        },
+        {
+          "vi": "em",
+          "en": ""
+        },
+        {
+          "vi": "bà",
+          "en": ""
+        },
+        {
+          "vi": "ông",
+          "en": ""
+        },
+        {
+          "vi": "cô",
+          "en": ""
+        },
+        {
+          "vi": "chú",
+          "en": ""
+        }
+      ],
       "notes": "",
       "warning": "",
-      "pattern": "anh / chị / em / bà / ông / cô / chú / …"
+      "pattern": "[noun]"
     },
     {
       "id": "u01_adopting_an_informal_tone",
