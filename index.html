@@ -447,6 +447,7 @@
   }
   .gr-ex-vi:empty { display: none; }
   .gr-ex-vi b, .gr-ex-vi strong { color: var(--accent3); font-weight: 700; }
+  .gr-ex-en b, .gr-ex-en strong { color: var(--accent3); font-weight: 700; }
   .gr-ex-en {
     font-size: clamp(14px, 4vw, 16px);
     color: var(--text-dim);
@@ -1463,7 +1464,11 @@ function renderGrammarCard(e) {
   if (examples.length) {
     grExamples.innerHTML = examples.map(ex => {
       const viHtml = boldKeyword(ex.vi || '', e.title || '');
-      const enHtml = escapeHtml(ex.en || '');
+      // English keyword: manual **...** markup wins; otherwise we try to
+      // auto-match the entry's `meaning` against the gloss (will only fire
+      // when the meaning phrase appears verbatim — manual markup is the
+      // primary path for English).
+      const enHtml = boldKeyword(ex.en || '', e.meaning || '');
       return '<div class="gr-ex-pair">'
         +    '<div class="gr-ex-vi">' + viHtml + '</div>'
         +    '<div class="gr-ex-en">' + enHtml + '</div>'
