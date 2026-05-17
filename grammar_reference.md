@@ -197,188 +197,256 @@ In general, you can usually let your Vietnamese acquaintances take the lead in d
 - Bà là người nước nào?  
   *Which country are you from? (to an elderly woman)*
 
-### noun + adjective
+### người - *to express "nationality"*
 
 **Description:** Using the structure “noun + adjective”
 
-**Structure:** `[noun] + [adjective]`
+**Structure:** `người + [country]`
 
 - người **Mỹ**  
-  *American (person)*
+  ***American** (person)*
 - người **Nhật**  
-  *Japanese (person)*
+  ***Japanese** (person)*
 - người **Việt**  
-  *Vietnamese (person)*
+  ***Vietnamese** (person)*
 - người **Anh**  
-  *British (person)*
+  ***British** (person)*
 - người **Úc**  
-  *Australian (person)*
+  ***Australian** (person)*
 - người **Ɖức**  
-  *German (person)*
+  ***German** (person)*
 - người **Ɖài Loan**  
-  *Taiwanese (person)*
+  ***Taiwanese** (person)*
 - người **Pháp**  
-  *French (person)*
+  ***French** (person)*
 
-### để làm gì — *to find out someone’s purpose in doing something*
+### để làm gì — *to ask "What is the purpose (of your action)?"*
 
 **Description:** Using “để làm gì” to find out someone’s purpose in doing something
 
 **Structure:** `[subject] + [verb] + để làm gì?`
 
-- Chị học tiếng Việt để làm gì?  
-  *Whatʼs your purpose in learning Vietnamese?*
-- Anh đi Sài Gòn để làm gì?  
-  *Whatʼs your purpose in going to Saigon?*
+- Chị học tiếng Việt **để làm gì**?  
+  ***Whatʼs your purpose** in learning Vietnamese?*
+- Anh đi Sài Gòn **để làm gì**?  
+  ***Whatʼs your purpose** in going to Saigon?*
 
-### (có) phải không — *to seek confirmation of certain information*
+### (có) phải không — *to end a question with "right?"*
 
 **Description:** Using “(có) phải không” to seek confirmation of certain information
 
 **Structure:** `[statement], (có) phải không?`
 
-- Anh là Peter, phải không?  
-  *Youʼre Peter, right?*
-- Chị tên là Jennifer, có phải không?  
-  *Your nameʼs Jennifer, right?*
-- Anh là Peter, phải không?  
-  *You are Peter, right? Vâng/Phải, tôi là Peter.  Yes, Iʼm Peter.*
-- Anh là Peter, phải không?  
-  *You are Peter, right? Không phải, tôi không   No, Iʼm not Peter. phải là Peter.*
+- Anh là Peter, **phải không**?  
+  *Youʼre Peter, **right**?*
+- Chị tên là Jennifer, có **phải không**?  
+  *Your nameʼs Jennifer, **right**?*
+- Q: Anh là Peter, **phải không**?  
+  *You are Peter, **right**?*
+- A: Vâng/Phải, tôi là Peter.  
+  *Yes, Iʼm Peter.*
+- Anh là Peter, **phải không**?  
+  *You are Peter, **right**?*
+- Không phải, tôi không phải là Peter. 
+  *No, Iʼm not Peter.*
 
 > **Notes:** If the information is correct, the response to this type of tag question is phải/vâng. If the information is incorrect, the response should be không phải.
 
-### sẽ — *to talk about future activities*
+### sẽ — *to indicate future actions*
 
 **Description:** Using “sẽ” to talk about future activities
 
 **Structure:** `[subject] sẽ + [verb phrase]`
 
-- Tôi sẽ đón chị ở sân bay/phi trường.  
-  *I will pick you up at the airport.*
-- Tôi sẽ gặp họ ở khách sạn.  
-  *I will meet them at the hotel.*
+- Tôi **sẽ** đón chị ở sân bay/phi trường.  
+  *I **will** pick you up at the airport.*
+- Tôi **sẽ** gặp họ ở khách sạn.  
+  *I **will** meet them at the hotel.*
 
-### đâu — *to ask about a place or location*
+### (ở) đâu — *to ask "Where?"*
 
 **Description:** Using “đâu” to ask about a place or location
 
-**Structure:** `[subject] + [verb] + đâu?`
+**Structure:** `[subject] + [verb] + (ở) đâu?`
 
-- Bà muốn đi đâu?  
-  *Where do you want to go?*
-- Tom muốn ngồi đâu?  
-  *Where do you want to sit, Tom?*
-- Anh sống ở đâu?  
-  *Where do you live (at/in)?*
-- Bà làm việc ở đâu?  
-  *Where do you work (at/in)?*
+- Bà muốn đi **đâu**?  
+  ***Where** do you want to go?*
+- Tom muốn ngồi **đâu**?  
+  ***Where** do you want to sit, Tom?*
+- Anh sống **ở đâu**?  
+  ***Where** do you live (at/in)?*
+- Bà làm việc ở **đâu**?  
+  ***Where** do you work (at/in)?*
 
-### Using numbers from 0 to 20
+> **Notes:** ở is used to express at/in in relation to the location where something occurs
+
+### Numbers (Part 1) - *0 - 20*
 
 **Description:** Using numbers from 0 to 20
 
 **Structure:** `0–20: không, một, hai, ba, …, hai mươi`
 
-### lắm — *instead of “rất” to express “very”*
+- 0 không
+- 1 một     11 muòi một
+- 2 hai     12 muòi hai
+- 3 ba      13 muòi ba
+- 4 bốn     14 mười bốn
+- 5 năm     15 muòi lăm
+- 6 sáu     16 muòi sáu
+- 7 bảy     17 muòi bảy
+- 8 tám     18 muòi tám
+- 9 chín    19 muòi chín
+- 10 muòi   20 hai mươi
+
+> **Notes:** Mười when occurring after another number becomes mươi. Thus, twenty is “hai mươi,” without the tone mark above the vowel ơ. Some other examples are “ba mươi” (30), “bốn mươi” (40), “nǎm mươi” (50). Also, nǎm is changed to lǎm after mười. For example: “mười lǎm,” “hai mươi lǎm” (25), “ba mươi lǎm” (35), “bốn mươi lǎm” (45).
+
+### lắm — *to informally emphasise a feeling*
 
 **Description:** Using “lắm” instead of “rất” to express “very”
 
 **Structure:** `[adjective / adverb] + lắm`
 
-- Tôi vui lắm.  
-  *Iʼm very happy.*
-- Tôi đói lắm.  
-  *Iʼm very hungry.*
-- Tôi khát nước lắm.  
-  *Iʼm very thirsty.*
+- Tôi vui **lắm**.  
+  *Iʼm **very** happy.*
+- Tôi đói **lắm**.  
+  *Iʼm **very** hungry.*
+- Tôi khát nước **lắm**.  
+  *Iʼm **very** thirsty.*
 
 > **Notes:** Lắm comes after the adjective or adverb that it modifies, whereas rất comes before. Also, lắm sounds a little less formal than rất.
 
-### đây, — *“kia,” “đó,” “đấy” to indicate or point out things or people*
+### đây, kia, đó, đấy — *to indicate "this/that"*
 
 **Description:** Using “đây,” “kia,” “đó,” “đấy” to indicate or point out things or people
 
 **Structure:** `đây / kia / đó / đấy + là + [noun]`
 
-- Ɖây là chị Lan.  
-  *This is Lan.*
-- Ɖây là anh Oscar.  
-  *This is Oscar.*
-- Ɖây là bà Woolf.  
-  *This is Mrs. Woolf. Ɖó/Ɖấy (there, that) is used when talking about something or someone far from the speaker but close to the listener.*
-- Ɖó/Ɖấy là va-li của tôi.  
-  *That is my suitcase.*
-- Ɖó/Ɖấy là ông Wilde.  
-  *That is Mr. Wilde.*
-- Ɖó/Ɖấy là Khách sạn Rex.  
-  *That is the Rex Hotel. Kia (there, that) is used when talking about something or someone far from both the speaker and the listener.*
-- Kia là hành lý của tôi.  
-  *That is my luggage.*
-- Kia là nhà của tôi.  
-  *That is my house.*
-- Kia là Alice.  
-  *That is Alice.*
+- **Ɖây** là chị Lan.  
+  ***This** is Lan.*
+- **Ɖây** là anh Oscar.  
+  ***This** is Oscar.*
+- **Ɖây** là bà Woolf.  
+  ***This** is Mrs. Woolf. **
+- **Ɖó**/**Ɖấy** là va-li của tôi.  
+  ***That** is my suitcase.*
+- **Ɖó**/**Ɖấy** là ông Wilde.  
+  ***That** is Mr. Wilde.*
+- **Ɖó**/**Ɖấy** là Khách sạn Rex.  
+  ***That** is the Rex Hotel.* 
+- **Kia** là hành lý của tôi.  
+  ***That** is my luggage.*
+- **Kia** là nhà của tôi.  
+  ***That** is my house.*
+- **Kia** là Alice.  
+  ***That** is Alice.*
 
-### Some basic colors in Vietnamese
+> **Notes:** Ɖây (here) is used when talking about something or someone close to the speaker. Ɖó/Ɖấy (there, that) is used when talking about something or someone far from the speaker but close to the listener. Kia (there, that) is used when talking about something or someone far from both the speaker and the listener.*
 
-**Description:** Some basic colors in Vietnamese
+### màu - to describe colour
 
-**Structure:** `màu + [color]   (đỏ, vàng, xanh, …)`
+**Description:** Some basic colours in Vietnamese
 
-### Terms of address (Part 2)
+**Structure:** `màu + [colour]`
+
+- màu **trắng** 
+  *white*
+- màu **đỏ** 
+  *red*
+- màu **đen**
+  *black*
+- màu **nâu**
+  *brown*
+- màu **xanh dương**
+  *blue*
+- màu **da trời**
+  *blue*
+- màu **nước biển**
+  *blue*
+- màu **vàng**
+  *yellow*
+- màu **da cam**
+  *orange*
+- màu **xám**
+  *grey*
+
+> **Notes:** Lots of terms for blue.
+
+### Terms of address (Part 2) - *to address yourself and others in a group context*
 
 **Description:** Terms of address (Part 2)
 
-**Structure:** `chúng tôi (excl.)   vs.   chúng ta (incl.)`
+**Structure:** `chúng/các + [noun]`
+
+- **chúng** tôi
+  ***we** (excludes listener)*
+- **chúng** ta
+  ***we** (includes listener)*
+- các ông
+  ***you** (senior men, grandfathers)*
+- các bà
+  ***you** (senior women, grandmothers)*
+- các anh
+  ***you** (male peers, older brothers)*
+- các chị
+  ***you** (female peers, older sisters)*
+- các cô
+  ***you** (young ladies, teachers, junior aunts)*
+- các em
+  ***you** (all of them younger than the speaker)*
 
 - John and Emily are talking to a customs officer:  
-  *“Ɖây là va-li của chúng tôi.” (This excludes the customs officer. The suitcase belongs to John and Emily.)*
+  *“Ɖây là va-li của **chúng tôi**.” (This excludes the customs officer. The suitcase belongs to **John and Emily**.)*
 - John is talking to Emily:  
-  *“Ɖây là va-li của chúng ta.” (This includes Emily. The suitcase belongs to both John and Emily.)*
+  *“Ɖây là va-li của **chúng ta**.” (This includes Emily. The suitcase belongs to both **John and Emily**.)*
+- An airport employee is talking to Emily and Mary:
+  *“Ɖây là va-li của **các chị**.” (The suitcase belongs to both **Emily and Mary**.)*
 
-### mời — *to politely ask someone to do something*
+### mời — *to politely offer something*
 
 **Description:** Using “mời” to politely ask someone to do something
 
 **Structure:** `mời + [pronoun] + [verb phrase]`
 
-- Mời anh chị ngồi đây.  
-  *Please sit here.*
-- Mời anh chị uống nước.  
-  *Please have some water.*
+- **Mời** anh chị ngồi đây.  
+  ***Please** sit here.*
+- **Mời** anh chị uống nước.  
+  ***Please** have some water.*
 
-### xe — *to talk about various means of transport and/or types of vehicles*
+>**Notes:** To politely request an action of someone.
+
+### xe — *to describe a type of vehicle*
 
 **Description:** Using “xe” to talk about various means of transport and/or types of vehicles
 
-**Structure:** `xe + [type]   (xe đạp, xe máy, xe buýt, …)`
+**Structure:** `xe + [type]`
 
-- xe xích-lô  
+- **xe** xích-lô  
   *cyclo, pedicab*
-- xe đạp  
+- **xe** đạp  
   *bike*
-- xe (gắn) máy  
+- **xe** (gắn) máy  
   *motorbike*
-- xe buýt  
+- **xe** buýt  
   *bus*
-- xe ô-tô (N), xe hơi (S)  
+- **xe** ô-tô (N), xe hơi (S)  
   *car*
-- xe ôm  
+- **xe** ôm  
   *motorbike taxi*
-- xe cấp cứu (N),  
-  *ambulance cứu thương (S)*
+- **xe** cấp cứu (N), cứu thương (S) 
+  *ambulance*
 
-### đang — *to talk about an activity that is happening now or was happening at a certain time in the past*
+### đang — *to describe an ongoing/recent action/event*
 
 **Description:** Using “đang” to talk about an activity that is happening now or was happening at a certain time in the past
 
 **Structure:** `[subject] đang + [verb]`
 
-- Họ đang đến.  
-  *Theyʼre coming.*
-- Angela đang nói chuyện với Lan.  
-  *Angelaʼs talking with Lan.*
+- Họ **đang đến**.  
+  *Theyʼre **coming**.*
+- Angela **đang nói** chuyện với Lan.  
+  *Angelaʼs **talking** with Lan.*
+
+> **Notes:** Designate something as currently happening or recently happened.
 
 ## Unit 3 — Đến khách sạn (Arriving at the hotel)
 

@@ -289,16 +289,16 @@
       "meaning": "to loosely express “now”",
       "examples": [
         {
-          "vi": "Tôi về đây.",
-          "en": "Iʼm going home now."
+          "vi": "Tôi về **đây**.",
+          "en": "Iʼm going home **now**."
         },
         {
-          "vi": "Tôi đi đây.",
-          "en": "Iʼm going/leaving now."
+          "vi": "Tôi đi **đây**.",
+          "en": "Iʼm going/leaving **now**."
         },
         {
-          "vi": "Tôi đi ngủ đây.",
-          "en": "Iʼm going to bed now."
+          "vi": "Tôi đi ngủ **đây**.",
+          "en": "Iʼm going to bed **now**."
         }
       ],
       "notes": "Always used as an ending particle to describe the action it follows.",
@@ -328,50 +328,50 @@
       "pattern": "[noun] + nào?"
     },
     {
-      "id": "u02_noun_adjective",
+      "id": "u02_nguoi",
       "unit": 2,
       "unit_vi": "Ở sân bay",
       "unit_en": "At the airport",
       "header": "Using the structure “noun + adjective”",
-      "title": "noun + adjective",
-      "meaning": "",
+      "title": "người",
+      "meaning": "to express \"nationality\"",
       "examples": [
         {
           "vi": "người **Mỹ**",
-          "en": "American (person)"
+          "en": "**American** (person)"
         },
         {
           "vi": "người **Nhật**",
-          "en": "Japanese (person)"
+          "en": "**Japanese** (person)"
         },
         {
           "vi": "người **Việt**",
-          "en": "Vietnamese (person)"
+          "en": "**Vietnamese** (person)"
         },
         {
           "vi": "người **Anh**",
-          "en": "British (person)"
+          "en": "**British** (person)"
         },
         {
           "vi": "người **Úc**",
-          "en": "Australian (person)"
+          "en": "**Australian** (person)"
         },
         {
           "vi": "người **Ɖức**",
-          "en": "German (person)"
+          "en": "**German** (person)"
         },
         {
           "vi": "người **Ɖài Loan**",
-          "en": "Taiwanese (person)"
+          "en": "**Taiwanese** (person)"
         },
         {
           "vi": "người **Pháp**",
-          "en": "French (person)"
+          "en": "**French** (person)"
         }
       ],
       "notes": "",
       "warning": "",
-      "pattern": "[noun] + [adjective]"
+      "pattern": "người + [country]"
     },
     {
       "id": "u02_de_lam_gi",
@@ -380,15 +380,15 @@
       "unit_en": "At the airport",
       "header": "Using “để làm gì” to find out someone’s purpose in doing something",
       "title": "để làm gì",
-      "meaning": "to find out someone’s purpose in doing something",
+      "meaning": "to ask \"What is the purpose (of your action)?\"",
       "examples": [
         {
-          "vi": "Chị học tiếng Việt để làm gì?",
-          "en": "Whatʼs your purpose in learning Vietnamese?"
+          "vi": "Chị học tiếng Việt **để làm gì**?",
+          "en": "**Whatʼs your purpose** in learning Vietnamese?"
         },
         {
-          "vi": "Anh đi Sài Gòn để làm gì?",
-          "en": "Whatʼs your purpose in going to Saigon?"
+          "vi": "Anh đi Sài Gòn **để làm gì**?",
+          "en": "**Whatʼs your purpose** in going to Saigon?"
         }
       ],
       "notes": "",
@@ -402,23 +402,31 @@
       "unit_en": "At the airport",
       "header": "Using “(có) phải không” to seek confirmation of certain information",
       "title": "(có) phải không",
-      "meaning": "to seek confirmation of certain information",
+      "meaning": "to end a question with \"right?\"",
       "examples": [
         {
-          "vi": "Anh là Peter, phải không?",
-          "en": "Youʼre Peter, right?"
+          "vi": "Anh là Peter, **phải không**?",
+          "en": "Youʼre Peter, **right**?"
         },
         {
-          "vi": "Chị tên là Jennifer, có phải không?",
-          "en": "Your nameʼs Jennifer, right?"
+          "vi": "Chị tên là Jennifer, có **phải không**?",
+          "en": "Your nameʼs Jennifer, **right**?"
         },
         {
-          "vi": "Anh là Peter, phải không?",
-          "en": "You are Peter, right? Vâng/Phải, tôi là Peter.  Yes, Iʼm Peter."
+          "vi": "Q: Anh là Peter, **phải không**?",
+          "en": "You are Peter, **right**?"
         },
         {
-          "vi": "Anh là Peter, phải không?",
-          "en": "You are Peter, right? Không phải, tôi không   No, Iʼm not Peter. phải là Peter."
+          "vi": "A: Vâng/Phải, tôi là Peter.",
+          "en": "Yes, Iʼm Peter."
+        },
+        {
+          "vi": "Anh là Peter, **phải không**?",
+          "en": "You are Peter, **right**?"
+        },
+        {
+          "vi": "Không phải, tôi không phải là Peter.",
+          "en": "No, Iʼm not Peter."
         }
       ],
       "notes": "If the information is correct, the response to this type of tag question is phải/vâng. If the information is incorrect, the response should be không phải.",
@@ -432,15 +440,15 @@
       "unit_en": "At the airport",
       "header": "Using “sẽ” to talk about future activities",
       "title": "sẽ",
-      "meaning": "to talk about future activities",
+      "meaning": "to indicate future actions",
       "examples": [
         {
-          "vi": "Tôi sẽ đón chị ở sân bay/phi trường.",
-          "en": "I will pick you up at the airport."
+          "vi": "Tôi **sẽ** đón chị ở sân bay/phi trường.",
+          "en": "I **will** pick you up at the airport."
         },
         {
-          "vi": "Tôi sẽ gặp họ ở khách sạn.",
-          "en": "I will meet them at the hotel."
+          "vi": "Tôi **sẽ** gặp họ ở khách sạn.",
+          "en": "I **will** meet them at the hotel."
         }
       ],
       "notes": "",
@@ -448,45 +456,90 @@
       "pattern": "[subject] sẽ + [verb phrase]"
     },
     {
-      "id": "u02_dau",
+      "id": "u02_o_dau",
       "unit": 2,
       "unit_vi": "Ở sân bay",
       "unit_en": "At the airport",
       "header": "Using “đâu” to ask about a place or location",
-      "title": "đâu",
-      "meaning": "to ask about a place or location",
+      "title": "(ở) đâu",
+      "meaning": "to ask \"Where?\"",
       "examples": [
         {
-          "vi": "Bà muốn đi đâu?",
-          "en": "Where do you want to go?"
+          "vi": "Bà muốn đi **đâu**?",
+          "en": "**Where** do you want to go?"
         },
         {
-          "vi": "Tom muốn ngồi đâu?",
-          "en": "Where do you want to sit, Tom?"
+          "vi": "Tom muốn ngồi **đâu**?",
+          "en": "**Where** do you want to sit, Tom?"
         },
         {
-          "vi": "Anh sống ở đâu?",
-          "en": "Where do you live (at/in)?"
+          "vi": "Anh sống **ở đâu**?",
+          "en": "**Where** do you live (at/in)?"
         },
         {
-          "vi": "Bà làm việc ở đâu?",
-          "en": "Where do you work (at/in)?"
+          "vi": "Bà làm việc ở **đâu**?",
+          "en": "**Where** do you work (at/in)?"
         }
       ],
-      "notes": "",
+      "notes": "ở is used to express at/in in relation to the location where something occurs",
       "warning": "",
-      "pattern": "[subject] + [verb] + đâu?"
+      "pattern": "[subject] + [verb] + (ở) đâu?"
     },
     {
-      "id": "u02_using_numbers_from_0_to_20",
+      "id": "u02_numbers_part_1",
       "unit": 2,
       "unit_vi": "Ở sân bay",
       "unit_en": "At the airport",
       "header": "Using numbers from 0 to 20",
-      "title": "Using numbers from 0 to 20",
-      "meaning": "",
-      "examples": [],
-      "notes": "",
+      "title": "Numbers (Part 1)",
+      "meaning": "0 - 20",
+      "examples": [
+        {
+          "vi": "0 không",
+          "en": ""
+        },
+        {
+          "vi": "1 một     11 muòi một",
+          "en": ""
+        },
+        {
+          "vi": "2 hai     12 muòi hai",
+          "en": ""
+        },
+        {
+          "vi": "3 ba      13 muòi ba",
+          "en": ""
+        },
+        {
+          "vi": "4 bốn     14 mười bốn",
+          "en": ""
+        },
+        {
+          "vi": "5 năm     15 muòi lăm",
+          "en": ""
+        },
+        {
+          "vi": "6 sáu     16 muòi sáu",
+          "en": ""
+        },
+        {
+          "vi": "7 bảy     17 muòi bảy",
+          "en": ""
+        },
+        {
+          "vi": "8 tám     18 muòi tám",
+          "en": ""
+        },
+        {
+          "vi": "9 chín    19 muòi chín",
+          "en": ""
+        },
+        {
+          "vi": "10 muòi   20 hai mươi",
+          "en": ""
+        }
+      ],
+      "notes": "Mười when occurring after another number becomes mươi. Thus, twenty is “hai mươi,” without the tone mark above the vowel ơ. Some other examples are “ba mươi” (30), “bốn mươi” (40), “nǎm mươi” (50). Also, nǎm is changed to lǎm after mười. For example: “mười lǎm,” “hai mươi lǎm” (25), “ba mươi lǎm” (35), “bốn mươi lǎm” (45).",
       "warning": "",
       "pattern": "0–20: không, một, hai, ba, …, hai mươi"
     },
@@ -497,19 +550,19 @@
       "unit_en": "At the airport",
       "header": "Using “lắm” instead of “rất” to express “very”",
       "title": "lắm",
-      "meaning": "instead of “rất” to express “very”",
+      "meaning": "to informally emphasise a feeling",
       "examples": [
         {
-          "vi": "Tôi vui lắm.",
-          "en": "Iʼm very happy."
+          "vi": "Tôi vui **lắm**.",
+          "en": "Iʼm **very** happy."
         },
         {
-          "vi": "Tôi đói lắm.",
-          "en": "Iʼm very hungry."
+          "vi": "Tôi đói **lắm**.",
+          "en": "Iʼm **very** hungry."
         },
         {
-          "vi": "Tôi khát nước lắm.",
-          "en": "Iʼm very thirsty."
+          "vi": "Tôi khát nước **lắm**.",
+          "en": "Iʼm **very** thirsty."
         }
       ],
       "notes": "Lắm comes after the adjective or adverb that it modifies, whereas rất comes before. Also, lắm sounds a little less formal than rất.",
@@ -517,67 +570,108 @@
       "pattern": "[adjective / adverb] + lắm"
     },
     {
-      "id": "u02_day",
+      "id": "u02_day_kia_do_day",
       "unit": 2,
       "unit_vi": "Ở sân bay",
       "unit_en": "At the airport",
       "header": "Using “đây,” “kia,” “đó,” “đấy” to indicate or point out things or people",
-      "title": "đây,",
-      "meaning": "“kia,” “đó,” “đấy” to indicate or point out things or people",
+      "title": "đây, kia, đó, đấy",
+      "meaning": "to indicate \"this/that\"",
       "examples": [
         {
-          "vi": "Ɖây là chị Lan.",
-          "en": "This is Lan."
+          "vi": "**Ɖây** là chị Lan.",
+          "en": "**This** is Lan."
         },
         {
-          "vi": "Ɖây là anh Oscar.",
-          "en": "This is Oscar."
+          "vi": "**Ɖây** là anh Oscar.",
+          "en": "**This** is Oscar."
         },
         {
-          "vi": "Ɖây là bà Woolf.",
-          "en": "This is Mrs. Woolf. Ɖó/Ɖấy (there, that) is used when talking about something or someone far from the speaker but close to the listener."
+          "vi": "**Ɖây** là bà Woolf.",
+          "en": "**This** is Mrs. Woolf. *"
         },
         {
-          "vi": "Ɖó/Ɖấy là va-li của tôi.",
-          "en": "That is my suitcase."
+          "vi": "**Ɖó**/**Ɖấy** là va-li của tôi.",
+          "en": "**That** is my suitcase."
         },
         {
-          "vi": "Ɖó/Ɖấy là ông Wilde.",
-          "en": "That is Mr. Wilde."
+          "vi": "**Ɖó**/**Ɖấy** là ông Wilde.",
+          "en": "**That** is Mr. Wilde."
         },
         {
-          "vi": "Ɖó/Ɖấy là Khách sạn Rex.",
-          "en": "That is the Rex Hotel. Kia (there, that) is used when talking about something or someone far from both the speaker and the listener."
+          "vi": "**Ɖó**/**Ɖấy** là Khách sạn Rex.",
+          "en": "**That** is the Rex Hotel."
         },
         {
-          "vi": "Kia là hành lý của tôi.",
-          "en": "That is my luggage."
+          "vi": "**Kia** là hành lý của tôi.",
+          "en": "**That** is my luggage."
         },
         {
-          "vi": "Kia là nhà của tôi.",
-          "en": "That is my house."
+          "vi": "**Kia** là nhà của tôi.",
+          "en": "**That** is my house."
         },
         {
-          "vi": "Kia là Alice.",
-          "en": "That is Alice."
+          "vi": "**Kia** là Alice.",
+          "en": "**That** is Alice."
         }
       ],
-      "notes": "",
+      "notes": "Ɖây (here) is used when talking about something or someone close to the speaker. Ɖó/Ɖấy (there, that) is used when talking about something or someone far from the speaker but close to the listener. Kia (there, that) is used when talking about something or someone far from both the speaker and the listener.*",
       "warning": "",
       "pattern": "đây / kia / đó / đấy + là + [noun]"
     },
     {
-      "id": "u02_some_basic_colors_in_vietnamese",
+      "id": "u02_mau_to_describe_colour",
       "unit": 2,
       "unit_vi": "Ở sân bay",
       "unit_en": "At the airport",
-      "header": "Some basic colors in Vietnamese",
-      "title": "Some basic colors in Vietnamese",
+      "header": "Some basic colours in Vietnamese",
+      "title": "màu - to describe colour",
       "meaning": "",
-      "examples": [],
-      "notes": "",
+      "examples": [
+        {
+          "vi": "màu **trắng**",
+          "en": "white"
+        },
+        {
+          "vi": "màu **đỏ**",
+          "en": "red"
+        },
+        {
+          "vi": "màu **đen**",
+          "en": "black"
+        },
+        {
+          "vi": "màu **nâu**",
+          "en": "brown"
+        },
+        {
+          "vi": "màu **xanh dương**",
+          "en": "blue"
+        },
+        {
+          "vi": "màu **da trời**",
+          "en": "blue"
+        },
+        {
+          "vi": "màu **nước biển**",
+          "en": "blue"
+        },
+        {
+          "vi": "màu **vàng**",
+          "en": "yellow"
+        },
+        {
+          "vi": "màu **da cam**",
+          "en": "orange"
+        },
+        {
+          "vi": "màu **xám**",
+          "en": "grey"
+        }
+      ],
+      "notes": "Lots of terms for blue.",
       "warning": "",
-      "pattern": "màu + [color]   (đỏ, vàng, xanh, …)"
+      "pattern": "màu + [colour]"
     },
     {
       "id": "u02_terms_of_address_part_2",
@@ -586,20 +680,56 @@
       "unit_en": "At the airport",
       "header": "Terms of address (Part 2)",
       "title": "Terms of address (Part 2)",
-      "meaning": "",
+      "meaning": "to address yourself and others in a group context",
       "examples": [
         {
+          "vi": "**chúng** tôi",
+          "en": "**we** (excludes listener)"
+        },
+        {
+          "vi": "**chúng** ta",
+          "en": "**we** (includes listener)"
+        },
+        {
+          "vi": "các ông",
+          "en": "**you** (senior men, grandfathers)"
+        },
+        {
+          "vi": "các bà",
+          "en": "**you** (senior women, grandmothers)"
+        },
+        {
+          "vi": "các anh",
+          "en": "**you** (male peers, older brothers)"
+        },
+        {
+          "vi": "các chị",
+          "en": "**you** (female peers, older sisters)"
+        },
+        {
+          "vi": "các cô",
+          "en": "**you** (young ladies, teachers, junior aunts)"
+        },
+        {
+          "vi": "các em",
+          "en": "**you** (all of them younger than the speaker)"
+        },
+        {
           "vi": "John and Emily are talking to a customs officer:",
-          "en": "“Ɖây là va-li của chúng tôi.” (This excludes the customs officer. The suitcase belongs to John and Emily.)"
+          "en": "“Ɖây là va-li của **chúng tôi**.” (This excludes the customs officer. The suitcase belongs to **John and Emily**.)"
         },
         {
           "vi": "John is talking to Emily:",
-          "en": "“Ɖây là va-li của chúng ta.” (This includes Emily. The suitcase belongs to both John and Emily.)"
+          "en": "“Ɖây là va-li của **chúng ta**.” (This includes Emily. The suitcase belongs to both **John and Emily**.)"
+        },
+        {
+          "vi": "An airport employee is talking to Emily and Mary:",
+          "en": "“Ɖây là va-li của **các chị**.” (The suitcase belongs to both **Emily and Mary**.)"
         }
       ],
       "notes": "",
       "warning": "",
-      "pattern": "chúng tôi (excl.)   vs.   chúng ta (incl.)"
+      "pattern": "chúng/các + [noun]"
     },
     {
       "id": "u02_moi",
@@ -608,18 +738,18 @@
       "unit_en": "At the airport",
       "header": "Using “mời” to politely ask someone to do something",
       "title": "mời",
-      "meaning": "to politely ask someone to do something",
+      "meaning": "to politely offer something",
       "examples": [
         {
-          "vi": "Mời anh chị ngồi đây.",
-          "en": "Please sit here."
+          "vi": "**Mời** anh chị ngồi đây.",
+          "en": "**Please** sit here."
         },
         {
-          "vi": "Mời anh chị uống nước.",
-          "en": "Please have some water."
+          "vi": "**Mời** anh chị uống nước.",
+          "en": "**Please** have some water."
         }
       ],
-      "notes": "",
+      "notes": "To politely request an action of someone.",
       "warning": "",
       "pattern": "mời + [pronoun] + [verb phrase]"
     },
@@ -630,40 +760,40 @@
       "unit_en": "At the airport",
       "header": "Using “xe” to talk about various means of transport and/or types of vehicles",
       "title": "xe",
-      "meaning": "to talk about various means of transport and/or types of vehicles",
+      "meaning": "to describe a type of vehicle",
       "examples": [
         {
-          "vi": "xe xích-lô",
+          "vi": "**xe** xích-lô",
           "en": "cyclo, pedicab"
         },
         {
-          "vi": "xe đạp",
+          "vi": "**xe** đạp",
           "en": "bike"
         },
         {
-          "vi": "xe (gắn) máy",
+          "vi": "**xe** (gắn) máy",
           "en": "motorbike"
         },
         {
-          "vi": "xe buýt",
+          "vi": "**xe** buýt",
           "en": "bus"
         },
         {
-          "vi": "xe ô-tô (N), xe hơi (S)",
+          "vi": "**xe** ô-tô (N), xe hơi (S)",
           "en": "car"
         },
         {
-          "vi": "xe ôm",
+          "vi": "**xe** ôm",
           "en": "motorbike taxi"
         },
         {
-          "vi": "xe cấp cứu (N),",
-          "en": "ambulance cứu thương (S)"
+          "vi": "**xe** cấp cứu (N), cứu thương (S)",
+          "en": "ambulance"
         }
       ],
       "notes": "",
       "warning": "",
-      "pattern": "xe + [type]   (xe đạp, xe máy, xe buýt, …)"
+      "pattern": "xe + [type]"
     },
     {
       "id": "u02_dang",
@@ -672,18 +802,18 @@
       "unit_en": "At the airport",
       "header": "Using “đang” to talk about an activity that is happening now or was happening at a certain time in the past",
       "title": "đang",
-      "meaning": "to talk about an activity that is happening now or was happening at a certain time in the past",
+      "meaning": "to describe an ongoing/recent action/event",
       "examples": [
         {
-          "vi": "Họ đang đến.",
-          "en": "Theyʼre coming."
+          "vi": "Họ **đang đến**.",
+          "en": "Theyʼre **coming**."
         },
         {
-          "vi": "Angela đang nói chuyện với Lan.",
-          "en": "Angelaʼs talking with Lan."
+          "vi": "Angela **đang nói** chuyện với Lan.",
+          "en": "Angelaʼs **talking** with Lan."
         }
       ],
-      "notes": "",
+      "notes": "Designate something as currently happening or recently happened.",
       "warning": "",
       "pattern": "[subject] đang + [verb]"
     },
