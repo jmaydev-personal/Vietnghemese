@@ -798,7 +798,7 @@
 
         <!-- Details -->
         <div class="gr-section">
-          <div class="gr-section-header">Details</div>
+          <div class="gr-section-header">Structure</div>
           <div class="gr-details" id="grDetails"></div>
         </div>
 
@@ -1443,20 +1443,12 @@ function renderGrammarCard(e) {
     grWarning.classList.remove('show');
   }
 
-  // Details — show the textbook header (the framing description) and the
-  // hand-written structural template (e.g. "chào + [name / term of address]")
-  // so the user sees both the framing and the shape of the construction.
-  const description = e.header || '—';
-  const structure   = (e.pattern && e.pattern.trim()) || e.header || '—';
+  // Structure — just the hand-written structural template (e.g.
+  // "chào + [name / term of address]"). The textbook header is redundant
+  // with the meaning subtitle + examples shown above, so it's omitted here.
+  const structure = (e.pattern && e.pattern.trim()) || e.header || '—';
   grDetails.innerHTML =
-      '<div class="gr-detail-row">'
-    +   '<div class="gr-detail-label">Description</div>'
-    +   '<div class="gr-detail-value">' + escapeHtml(description) + '</div>'
-    + '</div>'
-    + '<div class="gr-detail-row">'
-    +   '<div class="gr-detail-label">Structure</div>'
-    +   '<div class="gr-detail-value gr-pattern">' + escapeHtml(structure) + '</div>'
-    + '</div>';
+      '<div class="gr-detail-value gr-pattern">' + escapeHtml(structure) + '</div>';
 
   // Examples — render each {vi, en} pair, bolding the title keyword in the
   // Vietnamese line so it stands out.
