@@ -874,7 +874,7 @@
         },
         {
           "vi": "Cháu **mấy tuổi**?",
-          "en": "**How old are you**, niece/nephew?"
+          "en": "**How old** are you, niece/nephew?"
         }
       ],
       "notes": "“Mấy” is usually used instead of “bao nhiêu” when we assume that a very small number, perhaps under ten or twelve, will be found in the response. Thus, we should bear in mind that it will be highly offensive when using “mấy tuổi” to ask how old a grown-up person is.",
@@ -882,21 +882,21 @@
       "pattern": "mấy + [countable noun]?"
     },
     {
-      "id": "u03_o_trong_and_o_tren",
+      "id": "u03_o_trong_o_tren",
       "unit": 3,
       "unit_vi": "Đến khách sạn",
       "unit_en": "Arriving at the hotel",
       "header": "Using the prepositions “trong” and “trên”",
-      "title": "ở trong and ở trên",
-      "meaning": "to denote inside and on respectively",
+      "title": "ở trong/ở trên",
+      "meaning": "to describe a relative location (inside/on)",
       "examples": [
         {
-          "vi": "Chúng tôi **ở trong phòng**.",
-          "en": "We are inside the room."
+          "vi": "Chúng tôi **ở trong** phòng.",
+          "en": "We are **inside** the room."
         },
         {
-          "vi": "Tôi **ở trên tầng nǎm**.",
-          "en": "I am on the 5th floor."
+          "vi": "Tôi **ở trên** tầng nǎm.",
+          "en": "I am **on** the 5th floor."
         }
       ],
       "notes": "",
@@ -961,18 +961,18 @@
           "en": "1005"
         }
       ],
-      "notes": "Starting from twenty, một is changed to mốt and mười to mươi,with mươi being optional when occurring in parentheses. With regard to tư/bốn, linh/lẻ, nghìn/ngàn, the first choice of each pair is used in the Northern dialects and the second one in the Southern dialects.",
+      "notes": "Starting from twenty, một is changed to mốt and mười to mươi, with mươi being optional when occurring in parentheses. With regard to tư/bốn, linh/lẻ, nghìn/ngàn, the first choice of each pair is used in the Northern dialects and the second one in the Southern dialects.",
       "warning": "",
       "pattern": "một trăm, một trǎm linh/lẻ nǎm, một nghìn/ngàn"
     },
     {
-      "id": "u03_ngoai_and_duoi",
+      "id": "u03_ngoai_duoi",
       "unit": 3,
       "unit_vi": "Đến khách sạn",
       "unit_en": "Arriving at the hotel",
       "header": "Using the prepositions “ngoài” and “dưới”",
-      "title": "ngoài and “dưới”",
-      "meaning": "to indicate outside and down respectively",
+      "title": "ngoài/dưới",
+      "meaning": "to indicate a relative location (outside/downstairs)",
       "examples": [
         {
           "vi": "Xe tắc-xi chờ **ngoài** khách sạn.",
@@ -1126,15 +1126,15 @@
       "examples": [
         {
           "vi": "**ǎn sáng**",
-          "en": "have breakfast"
+          "en": "have **breakfast**"
         },
         {
           "vi": "**ǎn trưa**",
-          "en": "have lunch"
+          "en": "have **lunch**"
         },
         {
           "vi": "**ǎn tối**",
-          "en": "have dinner"
+          "en": "have **dinner**"
         }
       ],
       "notes": "",
@@ -1142,12 +1142,12 @@
       "pattern": "ăn + [meal]"
     },
     {
-      "id": "u03_1st_2nd_and_3rd_person",
+      "id": "u03_more_terms_of_address",
       "unit": 3,
       "unit_vi": "Đến khách sạn",
       "unit_en": "Arriving at the hotel",
       "header": "More terms of address (Part 3)",
-      "title": "1st, 2nd and 3rd person",
+      "title": "More Terms of Address",
       "meaning": "to address in different perspectives",
       "examples": [
         {
@@ -1159,19 +1159,19 @@
           "en": "1st person plural"
         },
         {
-          "vi": "Ông, bà, bác, anh, chị, cô, em, cháu",
+          "vi": "Ông",
           "en": "2nd person singular"
         },
         {
-          "vi": "**Các** ông, **các** bà, **các** bác, **các** anh, **các** chị, **các** cô, **các** em, **các** cháu",
+          "vi": "**Các** ông",
           "en": "2nd person plural"
         },
         {
-          "vi": "Ông **ấy**, bà **ấy**, bác **ấy**, anh **ấy**, chị **ấy**, cô **ấy**, em **ấy**, cháu **ấy**",
+          "vi": "Ông **ấy**",
           "en": "3rd person singular"
         },
         {
-          "vi": "**Các** ông **ấy**, **các** bà **ấy**, **các** bác **ấy**, **các** anh **ấy**, **các** chị **ấy**, **các** cô **ấy**, **các** em **ấy**, **các** cháu **ấy**",
+          "vi": "**Các** ông **ấy**",
           "en": "3rd person plural"
         }
       ],
@@ -1202,17 +1202,30 @@
       "pattern": "[clause 1], nhưng + [clause 2]"
     },
     {
-      "id": "u04_making_a_phone_call",
+      "id": "u04_a_lo",
       "unit": 4,
       "unit_vi": "Gọi điện thoại",
       "unit_en": "Making a phone call",
       "header": "Making a phone call",
-      "title": "Making a phone call",
-      "meaning": "",
-      "examples": [],
+      "title": "A-lô",
+      "meaning": "to answer a phone call",
+      "examples": [
+        {
+          "vi": "A-lô",
+          "en": "Hello?"
+        },
+        {
+          "vi": "Xin lỗi, ai ở đầu dây đó?",
+          "en": "Who am I speaking with?"
+        },
+        {
+          "vi": "Cho tôi nói chuyện với + [name]",
+          "en": "Can I speak with [name]?"
+        }
+      ],
       "notes": "",
       "warning": "",
-      "pattern": "Alô… / Xin lỗi, cho tôi nói chuyện với + [name]"
+      "pattern": "As below"
     },
     {
       "id": "u04_do_vay",
@@ -1224,11 +1237,11 @@
       "meaning": "to soften the tone of a question",
       "examples": [
         {
-          "vi": "Jenny đang đi đâu đó/vậy?",
+          "vi": "Jenny đang đi đâu **đó**?",
           "en": "Where are you going, Jenny?"
         },
         {
-          "vi": "Ai gõ cửa đó/vậy?",
+          "vi": "Ai gõ cửa **vậy**?",
           "en": "Whoʼs knocking on the door?"
         }
       ],
@@ -1246,12 +1259,12 @@
       "meaning": "to talk about an activity or event that just happened",
       "examples": [
         {
-          "vi": "Tôi mới gặp Angela ở khách sạn.",
-          "en": "I just met Angela at the hotel."
+          "vi": "Tôi **mới gặp** Angela ở khách sạn.",
+          "en": "I **just met** Angela at the hotel."
         },
         {
-          "vi": "Angela mới gọi điện thoại cho Thùy Dương.",
-          "en": "Angela just called Thùy Dương."
+          "vi": "Angela **mới gọi điện thoại cho** Thùy Dương.",
+          "en": "Angela **just called** Thùy Dương."
         }
       ],
       "notes": "",
@@ -1290,20 +1303,20 @@
       "meaning": "to ask when a certain activity or event will take place",
       "examples": [
         {
-          "vi": "Khi nào anh (sẽ) đến đón tôi?",
-          "en": "When will you pick me up?"
+          "vi": "**Khi nào** anh (sẽ) đến đón tôi?",
+          "en": "**When will** you pick me up?"
         },
         {
-          "vi": "Khi nào chị muốn đi ǎn với chúng tôi?",
-          "en": "When do you want to go eat with us?"
+          "vi": "**Khi nào** chị muốn đi ǎn với chúng tôi?",
+          "en": "**When do** you want to go eat with us?"
         },
         {
-          "vi": "Khi nào anh chị (sẽ) đi thǎm Huế?",
-          "en": "When will you visit Hue?"
+          "vi": "**Khi nào** anh chị (sẽ) đi thǎm Huế?",
+          "en": "**When will** you visit Hue?"
         },
         {
-          "vi": "Khi nào chúng ta (sẽ) gặp bác ấy?",
-          "en": "When will we see him?"
+          "vi": "**Khi nào** chúng ta (sẽ) gặp bác ấy?",
+          "en": "**When will** we see him?"
         }
       ],
       "notes": "Sẽ can be omitted and used mostly for emphasis.",
